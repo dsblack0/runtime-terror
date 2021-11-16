@@ -13,3 +13,9 @@
 | Adrita | [@adritac-tech](https://github.com/adritac-tech) | [Tickets](https://github.com/dsblack0/runtime-terror/issues/assigned/adritac-tech) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1?card_filter_query=assignee%3Aadritac-tech) | [Commits](https://github.com/dsblack0/runtime-terror/commits?author=adritac-tech) |
 | Sami | [@SamiDeshatty](https://github.com/SamiDeshatty) | [Tickets](https://github.com/dsblack0/runtime-terror/issues/assigned/SamiDeshatty) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1?card_filter_query=assignee%3ASamiDeshatty) | [Commits](https://github.com/dsblack0/runtime-terror/commits?author=SamiDeshatty) |
 | Kaavya | [@KaavyaU](https://github.com/KaavyaU) | [Tickets](https://github.com/dsblack0/runtime-terror/issues/assigned/KaavyaU) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1?card_filter_query=assignee%3AKaavyaU) | [Commits](https://github.com/dsblack0/runtime-terror/commits?author=KaavyaU) |
+
+## Week 0
+| Topic | Issue/Link |
+| ---   | ---        |
+| Project Idea | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Brainstorm) |
+| Intro Organization | [Ticket](https://github.com/dsblack0/runtime-terror/issues/1) |
