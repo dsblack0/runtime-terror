@@ -5,7 +5,7 @@
 
 [Contributors](https://github.com/dsblack0/runtime-terror/graphs/contributors)
 
-## Contributors
+## Scrum Team
 | Name | Github Profile | Tasks | Scrum Board | Commits | Role |
 |  --- |  ---           | ---   | ---         | ---     | --- |
 | Rachel | [@rachelklee](https://github.com/rachelklee) | [Tickets](https://github.com/dsblack0/runtime-terror/issues/assigned/rachelklee) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1?card_filter_query=assignee%3Arachelklee) | [Commits](https://github.com/dsblack0/runtime-terror/commits?author=rachelklee) | Scrum Master |
