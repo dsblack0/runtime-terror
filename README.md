@@ -1,4 +1,4 @@
-# Runtime-Terror
+# Welcome to the Runtime-Terror Project
 
 ## Scrum Board
 [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1)
