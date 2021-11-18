@@ -4,8 +4,35 @@
 
 <head><div layout:fragment="metadata" th:remove="tag">
     <title>Sam Duggirala</title>
+
+    <style>
+        html, body{
+            margin: 0;
+            height: auto;
+            background: linear-gradient(#0e0e0e, #7a7878, #cbd2d2);
+            animation: fadein 2s;
+            -moz-animation: fadein 2s; /* Firefox */
+            -webkit-animation: fadein 2s; /* Safari and Chrome */
+            -o-animation: fadein 2s; /* Opera */
+
+        }
+    </style>
 </div></head>
 <body><div layout:fragment="content" th:remove="tag">
-        <p>Hi! My name is Sam.</p>
-</div></body>
+    <div class="info-about-me">
+         <div class="picture-card" style="width:500px; margin-top: 50px; margin-left: 20%">
+             <img id="sam" class="img-responsive py-3" th:src="@{/images/samaboutme.jpg}" width="50%" height="Auto" alt="">
+             <p>Hi! My name is Sam.</p>
+         </div>
+    </div>
+
+    <style>
+        .picture-card {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</div>
+
+</body>
 </html>
