@@ -17,5 +17,5 @@
 ## Week 0
 | Topic | Issue/Link |
 | ---   | ---        |
-| Project Idea | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Brainstorm) |
+| Project Ideas! | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Brainstorm) |
 | Intro Organization | [Ticket](https://github.com/dsblack0/runtime-terror/issues/1) |
