@@ -5,14 +5,15 @@
       layout:decorate="~{layout}" lang="en">
 
 <head><div layout:fragment="metadata" th:remove="tag">
-    <title>Main Page</title>
+    <title>Home</title>
 </div></head>
 
 <!-- layout::fragment="content" is heart of ThymeLeaf layout -->
-<body><div layout:fragment="content" th:remove="tag">
+<body style="background-color: #5aa7a7;font-family: Georgia, Serif;"><div layout:fragment="content" th:remove="tag">
     <!-- Start of body content specific to page -->
     <div id="main-page" class="articles" style="margin: 30px;">
-        <h1><strong>"Main Page"</strong></h1>
+        <h1><strong>Home</strong></h1>
+            <p>Welcome to *INSERT NAME HERE*</p>
     </div>
     <!-- End of body content specific to page -->
 </div></body>
