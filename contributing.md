@@ -1,6 +1,6 @@
 # Contributing
 
-## Policies
+## Commit Policies
 1. Multiple people should not be adding code to the same file at the same time. 
 2. Make sure that you have first pulled and merged before making a commit.
 3. Do not commit files that you don't remember changing or files with broken code.
