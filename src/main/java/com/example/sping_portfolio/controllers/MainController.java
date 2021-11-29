@@ -9,12 +9,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class MainController {
     @GetMapping("/adritaAbout")
     public String adritaAbout() {
-        return "/aboutMePages/adritaAbout";
+        return "/Pages/aboutMePages/adritaAbout";
     }
 
     @GetMapping("/samAbout")
     public String samAbout() {
-        return "/aboutMePages/samAbout";
+        return "/Pages/aboutMePages/samAbout";
     }
+
+    @GetMapping("/rachelAbout")
+    public String rachelAbout() { return "Pages/aboutMePages/rachelAbout";}
 
 }
