@@ -1,6 +1,6 @@
 # Welcome to the Runtime-Terror Project
 
-## Scrum Board
+## Project Info
 [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1)
 
 [Contributors](https://github.com/dsblack0/runtime-terror/graphs/contributors)
@@ -15,12 +15,14 @@
 | Kaavya | [@KaavyaU](https://github.com/KaavyaU) | [Tickets](https://github.com/dsblack0/runtime-terror/issues/assigned/KaavyaU) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1?card_filter_query=assignee%3AKaavyaU) | [Commits](https://github.com/dsblack0/runtime-terror/commits?author=KaavyaU) | Deployment Manager |
 
 > ## Table of Contents
-> | No. | Heading |
+> | Entry No. | Heading |
 > | --- | --- |
-> | 0 | [Week 0](# Week 0) |
-> | 1 | [Week 1](# Week 1 - Project Approval) |
-> | 2 | [Week 2](# Week 2 - Home Pages) |
-> | 3 | [Week 3](# Week 3 - WIP Project Review) |
+> | 0 | [Project Info](https://github.com/dsblack0/runtime-terror/blob/master/README.md#project-info) |
+> | 1 | [Team](https://github.com/dsblack0/runtime-terror/blob/master/README.md#scrum-team) |
+> | 2 | [Week 0](https://github.com/dsblack0/runtime-terror/blob/master/README.md#week-0) |
+> | 3 | [Week 1](https://github.com/dsblack0/runtime-terror/blob/master/README.md#week-1---project-approval) |
+> | 4 | [Week 2](https://github.com/dsblack0/runtime-terror/blob/master/README.md#week-2---home-pages) |
+> | 5 | [Week 3](https://github.com/dsblack0/runtime-terror/blob/master/README.md#week-3---wip-project-review) |
 
 ## Week 3 - WIP Project Review
 | Name | Requirement | Evidence | Complete | Grade |
