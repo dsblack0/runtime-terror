@@ -15,13 +15,13 @@
 | Kaavya | [@KaavyaU](https://github.com/KaavyaU) | [Tickets](https://github.com/dsblack0/runtime-terror/issues/assigned/KaavyaU) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1?card_filter_query=assignee%3AKaavyaU) | [Commits](https://github.com/dsblack0/runtime-terror/commits?author=KaavyaU) | Deployment Manager |
 
 ## Week 1
-| Name | Requirement | Evidence | Completion | Grade |
+| Name | Requirement | Evidence | Complete | Grade |
 | ---   | ---        | ---      | ---        | ---   |
-| | Design (Wiki Theme, Brain Write & Wire Frame) | [Issue]() | [] | ## |
-| | Technicals (10 to 12 key ideas) | [Issue]() | [] | ## |
-| | Github (On Wiki containing Management Plan, forking, branching, pull request, etc) | [Issue]() | [] | ## |
-| | Deployment (On Wiki containing Hardware, frequency, etc) | [Issue]() | [] | ## |
-| | Scrum Board (Assignments and Backlog) | [Issue]() | [] | ## |
+| | Design (Wiki Theme, Brain Write & Wire Frame) | [Issue]() | <ul><li>[x]</li></ul> | ## |
+| | Technicals (10 to 12 key ideas) | [Issue]() | <ul><li>[x]</li></ul> | ## |
+| | Github (On Wiki containing Management Plan, forking, branching, pull request, etc) | [Issue]() | <ul><li>[x]</li></ul> | ## |
+| | Deployment (On Wiki containing Hardware, frequency, etc) | [Issue]() | <ul><li>[x]</li></ul> | ## |
+| | Scrum Board (Assignments and Backlog) | [Issue]() | <ul><li>[x]</li></ul> | ## |
 
 
 ## Week 0
