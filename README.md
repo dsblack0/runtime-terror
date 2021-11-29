@@ -14,6 +14,13 @@
 | Sami | [@SamiDeshatty](https://github.com/SamiDeshatty) | [Tickets](https://github.com/dsblack0/runtime-terror/issues/assigned/SamiDeshatty) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1?card_filter_query=assignee%3ASamiDeshatty) | [Commits](https://github.com/dsblack0/runtime-terror/commits?author=SamiDeshatty) | Web Designer |
 | Kaavya | [@KaavyaU](https://github.com/KaavyaU) | [Tickets](https://github.com/dsblack0/runtime-terror/issues/assigned/KaavyaU) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1?card_filter_query=assignee%3AKaavyaU) | [Commits](https://github.com/dsblack0/runtime-terror/commits?author=KaavyaU) | Deployment Manager |
 
+> ## Table of Contents
+> | No. | Heading |
+> | 0 | [Week 0](# Week 0) |
+> | 1 | [Week 1](# Week 1 - Project Approval) |
+> | 2 | [Week 2](# Week 2 - Home Pages) |
+> | 3 | [Week 3](# Week 3 - WIP Project Review) |
+
 ## Week 3 - WIP Project Review
 | Name | Requirement | Evidence | Complete | Grade |
 | ---   | ---        | ---      | ---        | ---   |
