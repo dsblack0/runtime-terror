@@ -14,14 +14,33 @@
 | Sami | [@SamiDeshatty](https://github.com/SamiDeshatty) | [Tickets](https://github.com/dsblack0/runtime-terror/issues/assigned/SamiDeshatty) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1?card_filter_query=assignee%3ASamiDeshatty) | [Commits](https://github.com/dsblack0/runtime-terror/commits?author=SamiDeshatty) | Web Designer |
 | Kaavya | [@KaavyaU](https://github.com/KaavyaU) | [Tickets](https://github.com/dsblack0/runtime-terror/issues/assigned/KaavyaU) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1?card_filter_query=assignee%3AKaavyaU) | [Commits](https://github.com/dsblack0/runtime-terror/commits?author=KaavyaU) | Deployment Manager |
 
-## Week 1
+## Week 3 - WIP Project Review
 | Name | Requirement | Evidence | Complete | Grade |
 | ---   | ---        | ---      | ---        | ---   |
-| | Design (Wiki Theme, Brain Write & Wire Frame) | [Issue]() | <ul><li>[ ] DONE</li></ul> | ## |
-| | Technicals (10 to 12 key ideas) | [Issue]() | <ul><li>[ ] DONE</li></ul> | ## |
-| | Github (On Wiki containing Management Plan, forking, branching, pull request, etc) | [Issue]() | <ul><li>[ ] DONE</li></ul> | ## |
-| | Deployment (On Wiki containing Hardware, frequency, etc) | [Issue]() | <ul><li>[ ] DONE</li></ul> | ## |
-| | Scrum Board (Assignments and Backlog) | [Issue]() | <ul><li>[ ] DONE</li></ul> | ## |
+| Sami | Design Manager BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/18) | <ul><li>[ ] DONE</li></ul> | ## |
+| Rachel | Scrum Master BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/19) | <ul><li>[ ] DONE</li></ul> | ## |
+| Adrita | Technical Officer BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/20) | <ul><li>[ ] DONE</li></ul> | ## |
+| Kaavya | Deployment Manager BOF  | [Issue](https://github.com/dsblack0/runtime-terror/issues/21) | <ul><li>[ ] DONE</li></ul> | ## |
+| Sam | Github Admin BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/22) | <ul><li>[ ] DONE</li></ul> | ## |
+| Team | AP FRQ Test and Review | [Issue](https://github.com/dsblack0/runtime-terror/issues/23) | <ul><li>[ ] DONE</li></ul> | ## |
+| Team | Unit #3 FRQ Online | [Issue](https://github.com/dsblack0/runtime-terror/issues/24) | <ul><li>[ ] DONE</li></ul> | ## |
+
+
+## Week 2 - Home Pages
+| Name | Requirement | Evidence | Complete | Grade |
+| ---   | ---        | ---      | ---        | ---   |
+| Rachel | ReadME Quality | [Issue](https://github.com/dsblack0/runtime-terror/issues/17) | <ul><li>[ ] DONE</li></ul> | ## |
+| Kaavya | Deployed Website | [Issue](https://github.com/dsblack0/runtime-terror/issues/16) | <ul><li>[ ] DONE</li></ul> | ## |
+| Team | Individual About Pages | [Issue](https://github.com/dsblack0/runtime-terror/issues/8) | <ul><li>[ ] DONE</li></ul> | ## |
+| Team | TPT Journal and quiz (Unit #2 Deployed | [Issue](https://github.com/dsblack0/runtime-terror/issues/9) | <ul><li>[ ] DONE</li></ul> | ## |
+
+## Week 1 - Project Approval
+| Name | Requirement | Evidence | Complete | Grade |
+| ---   | ---        | ---      | ---        | ---   |
+| Sami | Design (Wiki Theme, Brain Write & Wire Frame) | [Issue](https://github.com/dsblack0/runtime-terror/issues/12) | <ul><li>[ ] DONE</li></ul> | ## |
+| Adrita | Technicals (10 to 12 key ideas) | [Issue](https://github.com/dsblack0/runtime-terror/issues/13) | <ul><li>[ ] DONE</li></ul> | ## |
+| Sam | Github (On Wiki containing Management Plan, forking, branching, pull request, etc) | [Issue](https://github.com/dsblack0/runtime-terror/issues/14) | <ul><li>[ ] DONE</li></ul> | ## |
+| Kaavya | Deployment (On Wiki containing Hardware, frequency, etc) | [Issue](https://github.com/dsblack0/runtime-terror/issues/15) | <ul><li>[ ] DONE</li></ul> | ## |
 
 
 ## Week 0
