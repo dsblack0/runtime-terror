@@ -1,5 +1,16 @@
 # Welcome to the Runtime-Terror Project
 
+
+> ## Table of Contents
+> | Entry No. | Heading |
+> | --- | --- |
+> | 0 | [Project Info](https://github.com/dsblack0/runtime-terror/blob/master/README.md#project-info) |
+> | 1 | [Team](https://github.com/dsblack0/runtime-terror/blob/master/README.md#scrum-team) |
+> | 2 | [Week 0](https://github.com/dsblack0/runtime-terror/blob/master/README.md#week-0) |
+> | 3 | [Week 1](https://github.com/dsblack0/runtime-terror/blob/master/README.md#week-1---project-approval) |
+> | 4 | [Week 2](https://github.com/dsblack0/runtime-terror/blob/master/README.md#week-2---home-pages) |
+> | 5 | [Week 3](https://github.com/dsblack0/runtime-terror/blob/master/README.md#week-3---wip-project-review) |
+
 ## Project Info
 [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1)
 
@@ -13,16 +24,6 @@
 | Adrita | [@adritac-tech](https://github.com/adritac-tech) | [Tickets](https://github.com/dsblack0/runtime-terror/issues/assigned/adritac-tech) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1?card_filter_query=assignee%3Aadritac-tech) | [Commits](https://github.com/dsblack0/runtime-terror/commits?author=adritac-tech) | Technical Officer |
 | Sami | [@SamiDeshatty](https://github.com/SamiDeshatty) | [Tickets](https://github.com/dsblack0/runtime-terror/issues/assigned/SamiDeshatty) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1?card_filter_query=assignee%3ASamiDeshatty) | [Commits](https://github.com/dsblack0/runtime-terror/commits?author=SamiDeshatty) | Web Designer |
 | Kaavya | [@KaavyaU](https://github.com/KaavyaU) | [Tickets](https://github.com/dsblack0/runtime-terror/issues/assigned/KaavyaU) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1?card_filter_query=assignee%3AKaavyaU) | [Commits](https://github.com/dsblack0/runtime-terror/commits?author=KaavyaU) | Deployment Manager |
-
-> ## Table of Contents
-> | Entry No. | Heading |
-> | --- | --- |
-> | 0 | [Project Info](https://github.com/dsblack0/runtime-terror/blob/master/README.md#project-info) |
-> | 1 | [Team](https://github.com/dsblack0/runtime-terror/blob/master/README.md#scrum-team) |
-> | 2 | [Week 0](https://github.com/dsblack0/runtime-terror/blob/master/README.md#week-0) |
-> | 3 | [Week 1](https://github.com/dsblack0/runtime-terror/blob/master/README.md#week-1---project-approval) |
-> | 4 | [Week 2](https://github.com/dsblack0/runtime-terror/blob/master/README.md#week-2---home-pages) |
-> | 5 | [Week 3](https://github.com/dsblack0/runtime-terror/blob/master/README.md#week-3---wip-project-review) |
 
 ## Week 3 - WIP Project Review
 | Name | Requirement | Evidence | Complete | Grade |
