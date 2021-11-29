@@ -20,4 +20,10 @@ public class MainController {
     @GetMapping("/rachelAbout")
     public String rachelAbout() { return "Pages/aboutMePages/rachelAbout";}
 
+    @GetMapping("/samiAbout")
+    public String samiAbout() { return "Pages/aboutMePages/samiAbout"; }
+
+    @GetMapping("/kaavyaAbout")
+    public String kaavyaAbout() { return "Pages/aboutMePages/kaavyaAbout"; }
+
 }
