@@ -16,6 +16,7 @@
 
 > ## Table of Contents
 > | No. | Heading |
+> | --- | --- |
 > | 0 | [Week 0](# Week 0) |
 > | 1 | [Week 1](# Week 1 - Project Approval) |
 > | 2 | [Week 2](# Week 2 - Home Pages) |
