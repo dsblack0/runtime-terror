@@ -14,6 +14,16 @@
 | Sami | [@SamiDeshatty](https://github.com/SamiDeshatty) | [Tickets](https://github.com/dsblack0/runtime-terror/issues/assigned/SamiDeshatty) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1?card_filter_query=assignee%3ASamiDeshatty) | [Commits](https://github.com/dsblack0/runtime-terror/commits?author=SamiDeshatty) | Web Designer |
 | Kaavya | [@KaavyaU](https://github.com/KaavyaU) | [Tickets](https://github.com/dsblack0/runtime-terror/issues/assigned/KaavyaU) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1?card_filter_query=assignee%3AKaavyaU) | [Commits](https://github.com/dsblack0/runtime-terror/commits?author=KaavyaU) | Deployment Manager |
 
+## Week 1
+| Name | Requirement | Evidence | Completion | Grade |
+| ---   | ---        | ---      | ---        | ---   |
+| | Design (Wiki Theme, Brain Write & Wire Frame) | [Issue]() | [ ] | ## |
+| | Technicals (10 to 12 key ideas) | [Issue]() | [ ] | ## |
+| | Github (On Wiki containing Management Plan, forking, branching, pull request, etc) | [Issue]() | [ ] | ## |
+| | Deployment (On Wiki containing Hardware, frequency, etc) | [Issue]() | [ ] | ## |
+| | Scrum Board (Assignments and Backlog) | [Issue]() | [ ] | ## |
+
+
 ## Week 0
 | Topic | Issue/Link |
 | ---   | ---        |
