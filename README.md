@@ -17,7 +17,7 @@
 ## Week 1
 | Name | Requirement | Evidence | Complete | Grade |
 | ---   | ---        | ---      | ---        | ---   |
-| | Design (Wiki Theme, Brain Write & Wire Frame) | [Issue]() | <ul><li>DONE [x]</li></ul> | ## |
+| | Design (Wiki Theme, Brain Write & Wire Frame) | [Issue]() | <ul><li>[x] done?</li></ul> | ## |
 | | Technicals (10 to 12 key ideas) | [Issue]() | <ul><li>DONE [x]</li></ul> | ## |
 | | Github (On Wiki containing Management Plan, forking, branching, pull request, etc) | [Issue]() | <ul><li>DONE [x]</li></ul> | ## |
 | | Deployment (On Wiki containing Hardware, frequency, etc) | [Issue]() | <ul><li>DONE [x]</li></ul> | ## |
