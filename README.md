@@ -48,14 +48,14 @@
 ## Week 1 - Project Approval
 | Name | Requirement | Evidence | Complete | Grade |
 | ---   | ---        | ---      | ---        | ---   |
-| Sami | Design (Wiki Theme, Brain Write & Wire Frame) | [Issue](https://github.com/dsblack0/runtime-terror/issues/12) | <ul><li>[ ] DONE</li></ul> | ## |
-| Adrita | Technicals (10 to 12 key ideas) | [Issue](https://github.com/dsblack0/runtime-terror/issues/13) | <ul><li>[ ] DONE</li></ul> | ## |
+| Sami | Design (Wiki Theme, Brain Write & Wire Frame) | [Issue](https://github.com/dsblack0/runtime-terror/issues/12) | <ul><li>[x] DONE</li></ul> | ## |
+| Adrita | Technicals (10 to 12 key ideas) | [Issue](https://github.com/dsblack0/runtime-terror/issues/13) | <ul><li>[x] DONE</li></ul> | ## |
 | Sam | Github (On Wiki containing Management Plan, forking, branching, pull request, etc) | [Issue](https://github.com/dsblack0/runtime-terror/issues/14) | <ul><li>[ ] DONE</li></ul> | ## |
 | Kaavya | Deployment (On Wiki containing Hardware, frequency, etc) | [Issue](https://github.com/dsblack0/runtime-terror/issues/15) | <ul><li>[ ] DONE</li></ul> | ## |
 
 
 ## Week 0
-| Topic | Issue/Link |
-| ---   | ---        |
-| Project Ideas! | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Brainstorm) |
-| Intro Organization | [Ticket](https://github.com/dsblack0/runtime-terror/issues/1) |
+| Topic | Issue/Link | Grade |
+| ---   | ---        | ---   |
+| Project Ideas! | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Brainstorm) | --
+| Intro Organization | [Ticket](https://github.com/dsblack0/runtime-terror/issues/1) | 0.5/0.5 |
