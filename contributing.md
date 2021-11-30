@@ -15,4 +15,4 @@
 1. On IntelliJ go to **Git** > **New Branches...**
 2. Set a descriptive name for the branch
 3. Check the option for **Checkout Branch** to switch to that branch
-4. 
+4. Publish the branch so everyone can access it
