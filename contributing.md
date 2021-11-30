@@ -16,3 +16,11 @@
 2. Set a descriptive name for the branch
 3. Check the option for **Checkout Branch** to switch to that branch
 4. Publish the branch so everyone can access it
+
+## Creating Pull Requests
+**Create a pull request after you have finished working on a branch and want to merge it with the master**
+1. On InteliJ fo to **Git** > **Github** > **Create Pull Request**
+2. Select the project you want to send the request to under **Base Fork**
+3. Select the branch in the project that you want your changes to be applied to under **Base Branch**
+4. Review the commits that you will be making under **Show Diff**
+5. Give a brief title and description to explain what changes will be applied
