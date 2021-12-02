@@ -66,7 +66,7 @@
 | Sam | Github (On Wiki containing Management Plan, forking, branching, pull request, etc) | [Issue](https://github.com/dsblack0/runtime-terror/issues/14) | <ul><li>[x] DONE</li></ul> | 1/1 |
 | Kaavya | Deployment (On Wiki containing Hardware, frequency, etc) | [Issue](https://github.com/dsblack0/runtime-terror/issues/15) | <ul><li>[x] DONE</li></ul> | 1/1 |
 | Rachel | Scrum Board (Assignments and Backlock) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1) | <ul><li>[x] DONE</li></ul> | 1/1 |
-(TOTAL: 5/5)
+| | | | | TOTAL: 5/5 |
 
 ## Week 0
 | Topic | Issue/Link | Grade |
