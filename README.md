@@ -54,7 +54,7 @@
 | Sami | Design (Wiki Theme, Brain Write & Wire Frame) | [Issue](https://github.com/dsblack0/runtime-terror/issues/12) | <ul><li>[x] DONE</li></ul> | ## |
 | Adrita | Technicals (10 to 12 key ideas) | [Issue](https://github.com/dsblack0/runtime-terror/issues/13) | <ul><li>[x] DONE</li></ul> | ## |
 | Sam | Github (On Wiki containing Management Plan, forking, branching, pull request, etc) | [Issue](https://github.com/dsblack0/runtime-terror/issues/14) | <ul><li>[x] DONE</li></ul> | ## |
-| Kaavya | Deployment (On Wiki containing Hardware, frequency, etc) | [Issue](https://github.com/dsblack0/runtime-terror/issues/15) | <ul><li>[ ] DONE</li></ul> | ## |
+| Kaavya | Deployment (On Wiki containing Hardware, frequency, etc) | [Issue](https://github.com/dsblack0/runtime-terror/issues/15) | <ul><li>[x] DONE</li></ul> | ## |
 
 
 ## Week 0
