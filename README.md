@@ -11,7 +11,7 @@
 > | 4 | [Week 2](https://github.com/dsblack0/runtime-terror/blob/master/README.md#week-2---home-pages) |
 > | 5 | [Week 3](https://github.com/dsblack0/runtime-terror/blob/master/README.md#week-3---wip-project-review) |
 
-## Project Info
+## Project Info and Notable Links
 [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1)
 
 [Contributors](https://github.com/dsblack0/runtime-terror/graphs/contributors)
