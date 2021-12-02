@@ -16,6 +16,8 @@
 
 [Contributors](https://github.com/dsblack0/runtime-terror/graphs/contributors)
 
+[Wiki](https://github.com/dsblack0/runtime-terror/wiki)
+
 ## Scrum Team
 | Name | Github Profile | Tasks | Scrum Board | Commits | Role |
 |  --- |  ---           | ---   | ---         | ---     | --- |
