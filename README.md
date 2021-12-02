@@ -18,6 +18,14 @@
 
 [Wiki](https://github.com/dsblack0/runtime-terror/wiki)
 
+| Name | Inidividual Journal | Pair Journal |
+| --- | --- | --- |
+| Adrita |
+| Kaavya |
+| Rachel |
+| Sam | 
+| Sami |
+
 ## Scrum Team
 | Name | Github Profile | Tasks | Scrum Board | Commits | Role |
 |  --- |  ---           | ---   | ---         | ---     | --- |
