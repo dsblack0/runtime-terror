@@ -60,5 +60,5 @@
 ## Week 0
 | Topic | Issue/Link | Grade |
 | ---   | ---        | ---   |
-| Project Ideas! | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Brainstorm) | --
+| Project Ideas! | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Brainstorm) | (Part of WK1) |
 | Intro Organization | [Ticket](https://github.com/dsblack0/runtime-terror/issues/1) | 0.5/0.5 |
