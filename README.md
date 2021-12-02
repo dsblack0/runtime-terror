@@ -57,15 +57,16 @@
 
 ## Week 1 - Project Approval
 
-**[Week 1 Live Grading Review Ticket](https://github.com/dsblack0/runtime-terror/issues/25)**
+**[Week 1 Live Grading Review Ticket](https://github.com/dsblack0/runtime-terror/issues/25)** 
 
 | Name | Requirement | Evidence | Complete | Grade |
 | ---   | ---        | ---      | ---        | ---   |
-| Sami | Design (Wiki Theme, Brain Write & Wire Frame) | [Issue](https://github.com/dsblack0/runtime-terror/issues/12) | <ul><li>[x] DONE</li></ul> | ## |
-| Adrita | Technicals (10 to 12 key ideas) | [Issue](https://github.com/dsblack0/runtime-terror/issues/13) | <ul><li>[x] DONE</li></ul> | ## |
-| Sam | Github (On Wiki containing Management Plan, forking, branching, pull request, etc) | [Issue](https://github.com/dsblack0/runtime-terror/issues/14) | <ul><li>[x] DONE</li></ul> | ## |
-| Kaavya | Deployment (On Wiki containing Hardware, frequency, etc) | [Issue](https://github.com/dsblack0/runtime-terror/issues/15) | <ul><li>[x] DONE</li></ul> | ## |
-
+| Sami | Design (Wiki Theme, Brain Write & Wire Frame) | [Issue](https://github.com/dsblack0/runtime-terror/issues/12) | <ul><li>[x] DONE</li></ul> | 1/1 |
+| Adrita | Technicals (10 to 12 key ideas) | [Issue](https://github.com/dsblack0/runtime-terror/issues/13) | <ul><li>[x] DONE</li></ul> | 1/1 |
+| Sam | Github (On Wiki containing Management Plan, forking, branching, pull request, etc) | [Issue](https://github.com/dsblack0/runtime-terror/issues/14) | <ul><li>[x] DONE</li></ul> | 1/1 |
+| Kaavya | Deployment (On Wiki containing Hardware, frequency, etc) | [Issue](https://github.com/dsblack0/runtime-terror/issues/15) | <ul><li>[x] DONE</li></ul> | 1/1 |
+| Rachel | Scrum Board (Assignments and Backlock) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1) | <ul><li>[x] DONE</li></ul> | 1/1 |
+(TOTAL: 5/5)
 
 ## Week 0
 | Topic | Issue/Link | Grade |
