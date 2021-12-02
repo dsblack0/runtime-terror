@@ -46,6 +46,9 @@
 | Team | TPT Journal and quiz (Unit #2 Deployed | [Issue](https://github.com/dsblack0/runtime-terror/issues/9) | <ul><li>[ ] DONE</li></ul> | ## |
 
 ## Week 1 - Project Approval
+
+**[Week 1 Live Grading Review Ticket](https://github.com/dsblack0/runtime-terror/issues/25)**
+
 | Name | Requirement | Evidence | Complete | Grade |
 | ---   | ---        | ---      | ---        | ---   |
 | Sami | Design (Wiki Theme, Brain Write & Wire Frame) | [Issue](https://github.com/dsblack0/runtime-terror/issues/12) | <ul><li>[x] DONE</li></ul> | ## |
