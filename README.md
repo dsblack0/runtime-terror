@@ -59,6 +59,8 @@
 
 **[Week 1 Live Grading Review Ticket](https://github.com/dsblack0/runtime-terror/issues/25)** 
 
+**[Week 1 Crossover Grading Review Ticket](https://github.com/dsblack0/runtime-terror/issues/26)** 
+
 | Name | Requirement | Evidence | Complete | Grade |
 | ---   | ---        | ---      | ---        | ---   |
 | Sami | Design (Wiki Theme, Brain Write & Wire Frame) | [Issue](https://github.com/dsblack0/runtime-terror/issues/12) | <ul><li>[x] DONE</li></ul> | 1/1 |
