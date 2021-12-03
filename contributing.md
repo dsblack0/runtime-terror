@@ -24,3 +24,4 @@
 3. Select the branch in the project that you want your changes to be applied to under **Base Branch**
 4. Review the commits that you will be making under **Show Diff**
 5. Give a brief title and description to explain what changes will be applied
+* Once your changes are reviewed by at least one person (Sam), the branch will be merged with the master
