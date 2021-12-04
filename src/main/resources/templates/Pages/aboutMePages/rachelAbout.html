@@ -1,11 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" layout:decorate="~{layout}" lang="en">
+<head><div layout:fragment="metadata" th:remove="tag">
     <meta charset="UTF-8">
     <title>Rachel Lee</title>
-</head>
-<body>
-<p> Hello, I'm Rachel. </p>
-<img src="/static/images/rachelaboutme.jpg" th:src="@{/images/rachelaboutme.jpg}" width="225" height="300" alt="Rachel's photo">
-</body>
+    <style>
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        body {
+            text-align: center;
+            alight-items: center;
+            align-content: center;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <!--End of head content-->
+</div></head>
+
+<body><div layout:fragment="content" th:remove="tag">
+    <div class="contact" style="height: 35vh;">
+        <div class="row justify-content-center">
+            <form action="/greetRachel" method="GET" id="greetForm">
+                <div>
+                    <h1 style="text-align: center;">ABOUT ME</h1>
+                    <!-- <p th:text="'Hello, I'm Rachel.'"></p> -->
+                    <p>Hello, I'm Rachel.</p>
+                    <label for="greetField">What's your name?</label>
+                    <input name="name" id="greetField">
+                    <button>Hello!</button>
+                    <p th:text="'Hello, ' + ${name} + '!'"></p>
+                    <img src="/static/images/rachelaboutme.jpg" th:src="@{/images/rachelaboutme.jpg}" width="225" height="300" alt="Rachel's photo">
+                </div>
+            </form>
+        </div>
+    </div>
+</div></body>
 </html>
