@@ -8,6 +8,7 @@
 5. Make sure to resolve any conflicts when you pull or push
 6. If you do need to commit code with some problems, save it to a separate branch instead of the master.
 7. Each main feature should be worked on through a separate branch designated for that feature. All commits regarding that feature should be made only to that branch.
+   * Branches should only be used for large project features (don't make a new branch for cb work or about pages unless necessary)
    * When that feature is completely working, you must create a pull request that will be reviewed before merging the branch with the master
 
 ## Creating Branches
