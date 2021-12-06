@@ -1,18 +1,31 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-    ...
+
 </head>
 <body>
-    <!-- Begin contact info fragment  -->
     <div th:fragment="footer">
-        <div class="contact" style="height: 35vh;">
-            <!-- title jump -->
-            <div class="row justify-content-center" style="margin-top: 2%;">
-                <h3 style="margin-top: 3%;">Contact Us</h3>
-            </div>
+        <div class="foot">
+            <p>Contact Us</p>
         </div>
+
+        <style>
+            .foot{
+                width: 100%;
+                bottom: 0px;
+                background-color: #2c6975;
+                color: #fff;
+                position: absolute;
+                padding-top:20px;
+                padding-bottom:50px;
+                text-align:center;
+                font-size:30px;
+                font-weight:bold;
+            }
+
+        </style>
     </div>
-    <!-- End contact info fragment  -->
+
 </body>
 </html>
