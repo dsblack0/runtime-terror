@@ -3,7 +3,41 @@
       layout:decorate="~{layout}" lang="en">
 
 <head><div layout:fragment="metadata" th:remove="tag">
-    <title>Sam Duggirala</title>
+    <title>Samhitha Duggirala</title>
+</div></head>
+
+<body><div layout:fragment="content" th:remove="tag">
+    <script th:inline="javascript">
+        function changeImage() {
+            document.getElementById("sam").src = "images/samaboutme.jpg";
+        }
+    </script>
+    <div class="info-about-me" style="width:500px;  margin: auto;">
+         <div class="picture-card" style="margin-top: 50px;">
+             <div style="width:100%; text-align:center">
+                <img id="sam" class="img-responsive py-3" th:src="@{/images/samaboutme_mask.jpg}" width="50%" height="Auto" alt="" style="width:50%; height:50%;">
+             <form action="/samAbout" method="GET" id="samForm">
+                 <div>
+                     <label for="name">What is you name?</label>
+                     <input name="name" id="name">
+                     <button>Answer</button>
+                     <input type="button"  onclick="changeImage();" value="Greet">
+                     <p th:text="'Hi, ' + ${name} + '! My name is Sam.'"></p>
+                 </div>
+             </form>
+             </div>
+         </div>
+        <table class="table" style="margin-top: 25px;">
+            <tr>
+            <td th:text="${quotes}"></td>
+            </tr>
+        </table>
+        <div class="row justify-content-md-center" style="margin-top: 10px;">
+            <form action="/samAbout" method="GET" id="quoteForm">
+                <button>Get Quote!</button>
+            </form>
+        </div>
+    </div>
 
     <style>
         html, body{
@@ -14,19 +48,8 @@
             -moz-animation: fadein 2s; /* Firefox */
             -webkit-animation: fadein 2s; /* Safari and Chrome */
             -o-animation: fadein 2s; /* Opera */
-
         }
-    </style>
-</div></head>
-<body><div layout:fragment="content" th:remove="tag">
-    <div class="info-about-me">
-         <div class="picture-card" style="width:500px; margin-top: 50px; margin-left: 20%">
-             <img id="sam" class="img-responsive py-3" th:src="@{/images/samaboutme.jpg}" width="50%" height="Auto" alt="">
-             <p>Hi! My name is Sam.</p>
-         </div>
-    </div>
 
-    <style>
         .picture-card {
             background-color: black;
             color: white;
