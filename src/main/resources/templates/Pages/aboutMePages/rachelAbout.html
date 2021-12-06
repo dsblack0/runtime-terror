@@ -1,43 +1,53 @@
-<!DOCTYPE html>
-<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" layout:decorate="~{layout}" lang="en">
+<!DOCTYPE HTML>
+
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
 <head><div layout:fragment="metadata" th:remove="tag">
-    <meta charset="UTF-8">
-    <title>Rachel Lee</title>
+    <!-- Start of head content specific to page -->
+    <title>Rachel</title>
     <style>
-        img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        body {
-            text-align: center;
-            alight-items: center;
-            align-content: center;
-        }
-        html, body {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
-    <!--End of head content-->
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    body{
+      text-align: center;
+      align-items: center;
+      align-content: center;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+    <!-- End of head content specific to page -->
 </div></head>
 
 <body><div layout:fragment="content" th:remove="tag">
+    <!-- Start of body content specific to page -->
     <div class="contact" style="height: 35vh;">
         <div class="row justify-content-center">
             <form action="/greetRachel" method="GET" id="greetForm">
                 <div>
-                    <h1 style="text-align: center;">ABOUT ME</h1>
-                    <!-- <p th:text="'Hello, I'm Rachel.'"></p> -->
-                    <p>Hello, I'm Rachel.</p>
+                    <h1 style="text-align: center;">ABOUT US</h1>
+                    <p th:text="'Greetings! My name is Rachel.'"></p>
                     <label for="greetField">What's your name?</label>
                     <input name="name" id="greetField">
-                    <button>Hello!</button>
+                    <button>Greetings!</button>
                     <p th:text="'Hello, ' + ${name} + '!'"></p>
-                    <img src="/static/images/rachelaboutme.jpg" th:src="@{/images/rachelaboutme.jpg}" width="225" height="300" alt="Rachel's photo">
+                    <img src="/static/images/rachelaboutme.jpg" th:src="@{/images/rachelaboutme.jpg}" width="112" height="150" alt="Rachel's photo">
                 </div>
             </form>
         </div>
+        <h2>FRQs</h2>
+        <p style="text-align: center;">UNIT 2</p>
     </div>
+    <!-- End of body content specific to page -->
 </div></body>
+
 </html>
+
+
+<!--test-->
