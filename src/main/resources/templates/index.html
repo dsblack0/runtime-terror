@@ -1,21 +1,43 @@
-<!-- This page is illustrative and contains ideas about HTML formatting -->
-<!DOCTYPE HTML>
-<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
-<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+
+
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml " xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layout}" lang="en">
+<html>
+<head>
+    <title>Page Layout</title>
+    <style>
+        .head1 {
+            font-size:40px;
+            color:#009900;
+            font-weight:bold;
+        }
 
-<head><div layout:fragment="metadata" th:remove="tag">
-    <title>Home</title>
-</div></head>
+        body {
+            margin: 0 auto;
+            background-position:center;
+            background-size: contain;
+        }
 
-<!-- layout::fragment="content" is heart of ThymeLeaf layout -->
-<body style="background-color: #5aa7a7;font-family: Georgia, Serif;"><div layout:fragment="content" th:remove="tag">
-    <!-- Start of body content specific to page -->
-    <div id="main-page" class="articles" style="margin: 30px;">
-        <h1><strong>Home</strong></h1>
-            <p>Welcome to *INSERT NAME HERE*</p>
-    </div>
-    <!-- End of body content specific to page -->
-</div></body>
+        .body_sec {
+            margin-left:20px;
+        }
+    </style>
+</head>
 
+<body>
+
+
+<header>
+    <div class="head1">Home</div>
+
+</header>
+
+<div class = "body_sec">
+    <section id="Content">
+        <h3>Content section</h3>
+    </section>
+</div>
+
+</body>
 </html>
