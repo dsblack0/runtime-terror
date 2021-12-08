@@ -11,6 +11,11 @@
    * Branches should only be used for large project features (don't make a new branch for cb work or about pages unless necessary)
    * When that feature is completely working, you must create a pull request that will be reviewed before merging the branch with the master
 
+## Making Commits
+1. Try to make each commit focused on a specific feature. Break apart large commits based on those specific features.
+2. Make sure all of your commmits have clear descriptions that explain the changes made
+  * When updating the ReadMe, include a description at least when making significant changes.
+
 ## Creating Branches
 **Make a new branch whenever you start working on a new feature**
 1. On IntelliJ go to **Git** > **New Branches...**
