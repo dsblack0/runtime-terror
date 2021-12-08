@@ -10,6 +10,21 @@
 <body style="background-color:lightblue">
 <h1 style="border:2px solid #6c35c6;"> "About Adrita:" </h1>
 <p style="font-family: 'Times New Roman'"> Hi, I'm Adrita. I am a junior at Del Norte High School and am currently in AP CSA. I collaborated on this project to help students find clubs and be able to navigate the details of clubs easily. </p>
-<img src="/static/images/adrita_about.jpg" th:src="@{/images/adrita_about.jpg}" width="225" height="350" alt="Adrita's photo">
+<script th:inline="javascript">
+    function changeImage() {
+        document.getElementById("sam").src = "images/adrita_about.jpg";
+    }
+</script>
+<div class="info-about-me" style="width:500px;  margin: auto;">
+    <div class="picture-card" style="margin-top: 50px;">
+        <div style="width:100%; text-align:center">
+            <img id="sam" class="img-responsive py-3" th:src="@{/images/adrita_mask.png}" width="50%" height="Auto" alt="" style="width:50%; height:50%;">
+            <form action="/adritaAbout" method="GET" id="adritaForm">
+                <div>
+                    <input type="button"  onclick="changeImage();" value="Change Picture">
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
