@@ -36,11 +36,13 @@ public class LightSequence
         return newSeq;
     }
 
+
     public static void questionF(double a, double b)
     {
         double c = Math.sqrt(a*a + b * b);
         System.out.println(c);
     }
+
 
     public static void main(String []args)
     {
