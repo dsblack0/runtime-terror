@@ -22,6 +22,39 @@
       height: 100%;
       background: #d2e7d6;
     }
+    .btn-group button {
+      background-color: #2c6975; /* Green background */
+      border: 1px solid white; /* Green border */
+      color: white; /* White text */
+      padding: 10px 24px; /* Some padding */
+      cursor: pointer; /* Pointer/hand icon */
+      float: left; /* Float the buttons side by side */
+    }
+    .btn-group:after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    .btn-group button:not(:last-child) {
+      border-right: none;
+    }
+    .btn-group button:hover{
+      background-color: #d2e7d6;
+    }
+      table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
   </style>
     <!-- End of head content specific to page -->
 </div></head>
@@ -32,7 +65,34 @@
             <div>
                 <h1>ABOUT ME</h1>
                 <p th:text="'Hello! My name is Rachel.'"></p>
-                <img src="/static/images/rachelaboutme.jpg" th:src="@{/images/rachelaboutme.jpg}" width="112" height="150" alt="Rachel's photo">
+                <img src="/static/images/rachelaboutme.jpg" th:src="@{/images/rachelaboutme.jpg}" width="112" height="150" alt="Rachel's photo" id="myImg">
+                <br></br>
+                <div class="btn-group">
+                    <script>
+                    function origin() {
+                        document.getElementById("myImg").style.filter = "grayscale(0%)";
+                    }
+                    function gs25() {
+                        document.getElementById("myImg").style.filter = "grayscale(25%)";
+                    }
+                    function gs50() {
+                        document.getElementById("myImg").style.filter = "grayscale(50%)";
+                    }
+                    function gs75() {
+                        document.getElementById("myImg").style.filter = "grayscale(75%)";
+                    }
+                    function gs100() {
+                        document.getElementById("myImg").style.filter = "grayscale(100%)";
+                    }
+                </script>
+                    <button id="button0" onclick="origin()">Original</button><br><br>
+                    <button id="button1" onclick="gs25()">Greyscale 25%</button><br><br>
+                    <button id="button2" onclick="gs50()()">Greyscale 50%</button><br><br>
+                    <button id="button3" onclick="gs75()">Greyscale 75%</button><br><br>
+                    <button id="button4" onclick="gs100()">Greyscale 100%</button><br><br>
+
+                </div>
+
                 <form action="/rachelAbout" method="GET" id="rachelForm">
                     <div>
                         <br></br>
@@ -72,6 +132,25 @@
             <h2>
                 Rachel's Links
             </h2>
+            <table>
+                <tr>
+                    <th>Entry</th>
+                    <th>Link</th>
+                </tr>
+                <tr>
+                    <td>Github Profile</td>
+                    <td>https://github.com/rachelklee</td>
+                </tr>
+                <try>
+                    <td>Team Repository</td>
+                    <td>https://github.com/dsblack0/runtime-terror</td>
+                </try>
+                <tr>
+                    <td>Individual Journal</td>
+                    <td>https://docs.google.com/document/d/15mil-mSpv7Ma4rNcUr_b5NjWCx2yM9FR3MIMcpM767U/edit?usp=sharing</td>
+                </tr>
+            </table>
+
             <h2>
                 CB FRQs
             </h2>
