@@ -1,10 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Sameeksha Deshatty</title>
-</head>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+<head><div layout:fragment="metadata" th:remove="
+tag">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384qQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Sami's About Me Page </title>
+ </style>
+</div></head>
+
+
 <body>
-<p> Hello, I'm Sami! </p>
-</body>
+<div layout:fragment="content" th:remove="tag">
+    <!-- Start of body content specific to page -->
+    <div id="spring_intro" class="articles" style="margin: 30px;font-family: Georgia, serif;">
+
+        <div class="container d-flex h-400">
+            <div class="row align-self-center w-100 h-200">
+                <div class="col-6 mx-auto">
+                    <div class="jumbotron">
+                        <div style="text-align:center;">
+                            <img id="sami" th:src="@{/images/aboutMEtri2.jpg}">
+                                 <!--<width="200;" style="float: left; margin-right: 15px;">-->
+                                <h1 style="color:#2c6975"><strong>Welcome!</strong></h1>
+                                <a href=""><button style="background-color:#FFF;">Mask Picture</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>>
+
+
+<div layout:fragment="script" th:remove="tag">
+  <!-- Start of custom script specific to page -->
+  <script src="/static/vanta/three.r119.min.js" th:src="@{/vanta/three.r119.min.js}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    VANTA.NET({
+      el: "body",
+      color: "#E3DDF4",
+      backgroundColor: "#1E1F1F",
+      points: 10,
+      maxDistance: 20,
+      spacing: 15,
+      showDots: true
+    })
+            </script>
+            </div>
+
 </html>
