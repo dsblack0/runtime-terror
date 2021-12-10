@@ -1,10 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Kaavya Uppala</title>
+    <div layout:fragment="metadata" th:remove="tag"><title>Kaavya Uppala</title>
+    </div>
+    <th:block th:fragment="header">
+        <style>
+            :root{
+                --mistyBlue: #D8E3EC;
+                --babyBlue: #9DBED1;
+                --teal: #14829F;
+                --midnightBlue: #004F76;
+            }
+        </style>
+    </th:block>
 </head>
 <body>
-<p> Hello, I'm Kaavya. </p>
+    <div layout:fragment="content" th:remove="tag">
+        <script>
+            fetch("https://brianiswu-cat-facts-v1.p.rapidapi.com/facts", {
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "brianiswu-cat-facts-v1.p.rapidapi.com",
+                    "x-rapidapi-key": "5160560674msh71fe7bcad890509p159e0ajsnc0f73e8a4ad9"
+                }
+            })
+                .then(response => {
+                    <!--console.log(response.text());-->
+                    <!--console.log(JSON.stringify(response.text()));-->
+                    return response.json();
+                })
+                .then(catFacts => {
+                    document.getElementById("fact").innerHTML = catFacts[1].text;
+                })
+                .catch(err => {
+                    console.error(err);
+                });
+        </script>
+        <div id="kaavyaAbout" class="articles">
+            <style>
+                html,body{
+                    line-height: 2.0;
+                    background-color: #9DBED1;
+                    margin: 30px;
+                }
+                img {
+                    display: block;
+                    margin-left: 10px;
+                    margain-right: auto;
+                }
+                h3{
+                    font-size: 3vw;
+                    color: #004F76;
+                }
+            </style>
+            <ol>
+                <h3> About Kaavya </h3>
+                <div class="container" >
+                    <img src="/static/images/kaavyaaboutme.jpg" th:src="@{/images/kaavyaaboutme.jpg}" width="220" height="300" alt="Kaavya">
+                </div>
+            </ol>
+        </div>
+        <div class="card-columns" style="margin: 30px;">
+            <style>
+                p{
+                    font-size: 1vw;
+                    color: #004F76;
+
+                }
+            </style>
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">Trimester 1 Digital Journals</p>
+                    <a1 href="https://docs.google.com/document/d/1RIIQLuQYmd7VfgwVUuagS0k8c6wzEtOcaqYy5M8PtLE/edit?usp=sharing" target="_blank" class="btn btn-primary">AP Journal</a1>
+                    <a2 href="https://docs.google.com/document/d/1h_vjHIhu1bZy4lrPlD3wR9qwJQ-ecefa4nxaJv8pvRg/edit?usp=sharing" target="_blank" class="btn btn-primary">PBL Journal</a2>
+                    <p class="card-text">Trimester 2 Digital Journals</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">Cat Fact with Web API</p>
+                    <h4 id="fact"></h4>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
