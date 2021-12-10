@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layout}" lang="en">
-<head><div layout:fragment="metadata" th:remove="
-tag">
+<head>
+    <script>
+        function changeImage()
+        {
+            var img = document.getElementById("image");
+            img.src="samiMaskAboutMe";
+            return false;
+        }
+    </script>
+
+    <div layout:fragment="metadata" th:remove="tag">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384qQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <title>Sami's About Me Page </title>
  </style>
@@ -19,10 +28,93 @@ tag">
                 <div class="col-6 mx-auto">
                     <div class="jumbotron">
                         <div style="text-align:center;">
-                            <img id="sami" th:src="@{/images/aboutMEtri2.jpg}">
+                            <img id="image" th:src="@{/images/aboutMEtri2.jpg}" style="width: 100%; height: 15vw;object-fit: cover;">
                                  <!--<width="200;" style="float: left; margin-right: 15px;">-->
                                 <h1 style="color:#2c6975"><strong>Welcome!</strong></h1>
-                                <a href=""><button style="background-color:#FFF;">Mask Picture</button></a>
+                                <button id="clickme" onclick="changeImage();">Mask Picture</button>
+
+
+                            <form action="/samiAbout" method="GET" id="samiForm">
+                                <div>
+                                    <br></br>
+                                    <p>What is your name?</p>
+                                    <!-- <label for="name">What is your name?</label> -->
+                                    <input name="name" id="name">
+                                    <button>Hello!</button>
+                                    <p th:text="'Hello, ' + ${name} + '!'"></p>
+                                </div>
+                            </form>
+                            <div>
+                                <h2>
+                                    Sami's Links
+                                </h2>
+                                <table>
+                                    <tr>
+                                        <th>Entry</th>
+                                        <th>Link</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Github Profile</td>
+                                        <td>https://github.com/SamiDeshatty</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Team Repository</td>
+                                        <td>https://github.com/dsblack0/runtime-terror</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Individual Journal</td>
+                                        <td>https://padlet.com/samantadanvers/fje6b94iwjnjwg7y1630177436</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Commits</td>
+                                        <td>https://github.com/dsblack0/runtime-terror/commits?author=rachelklee</td>
+                                    </tr>
+                                </table>
+
+                                <h2>
+                                    CB FRQs
+                                </h2>
+                                <div class="unit2">
+                                    <br></br>
+                                    <h3>
+                                        Unit 2
+                                    </h3>
+                                    <form action="/samiAbout" method="GET" id="changesegment">
+                                        <div>
+                                            <label for="name" style="color: teal;">Original sequence?</label>
+                                            <input name="oldseq" id="oldseq">
+                                            <label for="name" style="color: teal;">Pick a segment to remove</label>
+                                            <input name="segment" id="segment">
+                                            <button>Answer</button>
+                                            <p><b th:text="'New sequence: ' + ${newSeq}" style="color: teal;"></b></p>
+                                        </div>
+                                    </form>
+                                    <form>
+                                        <div>
+                                            <p><b th:text="'Original sequence: ' + ${originalSeq}" style="color: teal;"></b></p>
+                                            <label for="name" style="color: teal;">Pick a segment to insert</label>
+                                            <input name="instsegment" id="instsegment">
+                                            <label for="name" style="color: teal;">Index?</label>
+                                            <input name="ind" id="ind">
+                                            <button>Answer</button>
+                                            <p><b th:text="'Resulting sequence: ' + ${resultSeq}" style="color: teal;"></b></p>
+                                        </div>
+                                    </form>
+                                    <form>
+                                        <div>
+                                            <label for="name" style="color: teal;">Pick to numbers to find their distance</label>
+                                            <input name="num1" id="num1">
+                                            <input name="num2" id="num2">
+                                            <button>Answer</button>
+                                            <p><b th:text="'Distance from ' + ${num1} + ' to ' + ${num2} + '= ' + ${distance}" style="color: teal;"></b></p>
+                                        </div>
+                                    </form>
+
+                                </div>
+                                </form>
+
+                            </div>
+                        </div>
                             </div>
                         </div>
                     </div>
@@ -31,7 +123,7 @@ tag">
         </div>
     </div>
 </div>
-</body>>
+</body>
 
 
 <div layout:fragment="script" th:remove="tag">
@@ -49,7 +141,8 @@ tag">
       spacing: 15,
       showDots: true
     })
-            </script>
-            </div>
+
+  </script>
+</div>
 
 </html>

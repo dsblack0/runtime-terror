@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Adrita Chakraborty</title>
+    <form action="/adritaAbout" method="GET" id="adritaForm">
+        <div>
+            <br></br>
+            <p>What is your name?</p>
+            <!-- <label for="name">What is your name?</label> -->
+            <input name="name" id="name">
+            <button>Hello!</button>
+            <p th:text="'Hello, ' + ${name} + '!'"></p>
+        </div>
+    </form>
     <style>
 
     </style>
@@ -10,6 +20,91 @@
 <body style="background-color:lightblue">
 <h1 style="border:2px solid #6c35c6;"> "About Adrita:" </h1>
 <p style="font-family: 'Times New Roman'"> Hi, I'm Adrita. I am a junior at Del Norte High School and am currently in AP CSA. I collaborated on this project to help students find clubs and be able to navigate the details of clubs easily. </p>
-<img src="/static/images/adrita_about.jpg" th:src="@{/images/adrita_about.jpg}" width="225" height="350" alt="Adrita's photo">
+<script th:inline="javascript">
+    function changeImage() {
+        document.getElementById("sam").src = "images/adrita_about.jpg";
+    }
+
+</script>
+<div class="info-about-me" style="width:500px;  margin: auto;">
+    <div class="picture-card" style="margin-top: 50px;">
+        <div style="width:100%; text-align:center">
+            <img id="sam" class="img-responsive py-3" th:src="@{/images/adrita_mask.png}" width="50%" height="Auto" alt="" style="width:50%; height:50%;">
+            <form action="/adritaAbout" method="GET" id="adritaForm">
+                <div>
+                    <input type="button"  onclick="changeImage();" value="Change Picture">
+                </div>
+            </form>
+        </div>
+        <h2>
+            Adrita's Links
+        </h2>
+        <table>
+            <tr>
+                <th>Entry</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>Github Profile</td>
+                <td>https://github.com/adritac-tech</td>
+            </tr>
+            <tr>
+                <td>Team Repository</td>
+                <td>https://github.com/dsblack0/runtime-terror</td>
+            </tr>
+            <tr>
+                <td>Individual Journal</td>
+                <td>https://docs.google.com/document/d/1-DGh7TOpalZAqyC21Y3ph3RLOcLXpgnM3MTVz8K2T4I/edit?usp=sharing</td>
+            </tr>
+            <tr>
+                <td>Tickets</td>
+                <td>https://github.com/dsblack0/runtime-terror/issues/assigned/adritac-tech</td>
+            </tr>
+            <tr>
+                <td>Commits</td>
+                <td>https://github.com/dsblack0/runtime-terror/commits?author=adritac-tech</td>
+            </tr>
+        </table>
+        <h2>
+            CB FRQs
+        </h2>
+        <div class="unit2">
+            <br></br>
+            <h3>
+                Unit 2
+            </h3>
+            <form action="/adritaAbout" method="GET" id="changesegment">
+                <div>
+                    <label for="name" style="color: teal;">Original sequence?</label>
+                    <input name="oldseq" id="oldseq">
+                    <label for="name" style="color: teal;">Pick a segment to remove</label>
+                    <input name="segment" id="segment">
+                    <button>Answer</button>
+                    <p><b th:text="'New sequence: ' + ${newSeq}" style="color: teal;"></b></p>
+                </div>
+            </form>
+            <form>
+                <div>
+                    <p><b th:text="'Original sequence: ' + ${originalSeq}" style="color: teal;"></b></p>
+                    <label for="name" style="color: teal;">Pick a segment to insert</label>
+                    <input name="instsegment" id="instsegment">
+                    <label for="name" style="color: teal;">Index?</label>
+                    <input name="ind" id="ind">
+                    <button>Answer</button>
+                    <p><b th:text="'Resulting sequence: ' + ${resultSeq}" style="color: teal;"></b></p>
+                </div>
+            </form>
+            <form>
+                <div>
+                    <label for="name" style="color: teal;">Pick to numbers to find their distance</label>
+                    <input name="num1" id="num1">
+                    <input name="num2" id="num2">
+                    <button>Answer</button>
+                    <p><b th:text="'Distance from ' + ${num1} + ' to ' + ${num2} + '= ' + ${distance}" style="color: teal;"></b></p>
+                </div>
+            </form>
+
+        </div>
+    </div>
 </body>
 </html>
