@@ -23,7 +23,8 @@ public class samAboutMe {
                            @RequestParam(name="ind", required = false, defaultValue = "4") String ind,
                            @RequestParam(name="num1", required = false, defaultValue = "3.0") String num1,
                            @RequestParam(name="num2", required = false, defaultValue = "4.0") String num2,
-                           Model model) throws IOException, InterruptedException, ParseException {
+                           Model model)
+            throws IOException, InterruptedException, ParseException {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://motivational-quotes1.p.rapidapi.com/motivation"))
                 .header("content-type", "application/json")

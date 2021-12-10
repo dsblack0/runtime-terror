@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layout}" lang="en">
-<head><div layout:fragment="metadata" th:remove="
-tag">
+<head>
+    <script>
+        function changeImage()
+        {
+            var img = document.getElementById("image");
+            img.src="samiMaskAboutMe";
+            return false;
+        }
+    </script>
+
+    <div layout:fragment="metadata" th:remove="tag">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384qQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <title>Sami's About Me Page </title>
  </style>
@@ -19,10 +28,10 @@ tag">
                 <div class="col-6 mx-auto">
                     <div class="jumbotron">
                         <div style="text-align:center;">
-                            <img id="sami" th:src="@{/images/aboutMEtri2.jpg}">
+                            <img id="image" th:src="@{/images/aboutMEtri2.jpg}" style="width: 100%; height: 15vw;object-fit: cover;">
                                  <!--<width="200;" style="float: left; margin-right: 15px;">-->
                                 <h1 style="color:#2c6975"><strong>Welcome!</strong></h1>
-                                <a href=""><button style="background-color:#FFF;">Mask Picture</button></a>
+                                <button id="clickme" onclick="changeImage();">Mask Picture</button>
                             </div>
                         </div>
                     </div>
@@ -31,7 +40,7 @@ tag">
         </div>
     </div>
 </div>
-</body>>
+</body>
 
 
 <div layout:fragment="script" th:remove="tag">
@@ -49,7 +58,8 @@ tag">
       spacing: 15,
       showDots: true
     })
-            </script>
-            </div>
+
+  </script>
+</div>
 
 </html>
