@@ -20,32 +20,173 @@
     html, body {
       width: 100%;
       height: 100%;
+      background: #d2e7d6;
     }
+    .unit2 {
+      text-align:left;
+      margin:10px;
+    }
+    .btn-group button {
+      background-color: #2c6975; /* Green background */
+      border: 1px solid white; /* Green border */
+      color: white; /* White text */
+      padding: 10px 24px; /* Some padding */
+      cursor: pointer; /* Pointer/hand icon */
+      float: left; /* Float the buttons side by side */
+    }
+    .btn-group:after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    .btn-group button:not(:last-child) {
+      border-right: none;
+    }
+    .btn-group button:hover{
+      background-color: #d2e7d6;
+    }
+      table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
   </style>
     <!-- End of head content specific to page -->
 </div></head>
 
 <body><div layout:fragment="content" th:remove="tag">
-    <!-- Start of body content specific to page -->
     <div class="contact" style="height: 35vh;">
-        <div class="row justify-content-center">
-            <form action="/greetRachel" method="GET" id="greetForm">
-                <div>
-                    <h1 style="text-align: center;">ABOUT US</h1>
-                    <p th:text="'Greetings! My name is Rachel.'"></p>
-                    <label for="greetField">What's your name?</label>
-                    <input name="name" id="greetField">
-                    <button>Greetings!</button>
-                    <p th:text="'Hello, ' + ${name} + '!'"></p>
-                    <img src="/static/images/rachelaboutme.jpg" th:src="@{/images/rachelaboutme.jpg}" width="112" height="150" alt="Rachel's photo">
+        <div class="row justify-content-center" style="margin: 2%;">
+            <div>
+                <h1>ABOUT ME</h1>
+                <p th:text="'Hello! My name is Rachel.'"></p>
+                <img src="/static/images/rachelaboutme.jpg" th:src="@{/images/rachelaboutme.jpg}" width="112" height="150" alt="Rachel's photo" id="myImg">
+                <br></br>
+                <div class="btn-group">
+                    <script>
+                    function origin() {
+                        document.getElementById("myImg").style.filter = "grayscale(0%)";
+                    }
+                    function gs25() {
+                        document.getElementById("myImg").style.filter = "grayscale(25%)";
+                    }
+                    function gs50() {
+                        document.getElementById("myImg").style.filter = "grayscale(50%)";
+                    }
+                    function gs75() {
+                        document.getElementById("myImg").style.filter = "grayscale(75%)";
+                    }
+                    function gs100() {
+                        document.getElementById("myImg").style.filter = "grayscale(100%)";
+                    }
+                </script>
+                    <button id="button0" onclick="origin()">Original</button><br><br>
+                    <button id="button1" onclick="gs25()">Greyscale 25%</button><br><br>
+                    <button id="button2" onclick="gs50()()">Greyscale 50%</button><br><br>
+                    <button id="button3" onclick="gs75()">Greyscale 75%</button><br><br>
+                    <button id="button4" onclick="gs100()">Greyscale 100%</button><br><br>
+
+                </div>
+
+                <form action="/rachelAbout" method="GET" id="rachelForm">
+                    <div>
+                        <br></br>
+                        <p>What is your name?</p>
+                        <!-- <label for="name">What is your name?</label> -->
+                        <input name="name" id="name">
+                        <button>Hello!</button>
+                        <p th:text="'Hello, ' + ${name} + '!'"></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr style="height: 3px; background-color: #FFFFFF;">
+        <table class="table" id="factsTable" style="margin-top: 2%;">
+            <tr>
+                <th>Fact</th>
+                <th>Year</th>
+                <th>Number</th>
+                <th>Found?</th>
+                <th>Type</th>
+            </tr>
+            <tbody>
+            <td th:text="${data.text}"></td>
+            <td th:text="${data.year}"></td>
+            <td th:text="${data.number}"></td>
+            <td th:text="${data.found}"></td>
+            <td th:text="${data.type}"></td>
+            </tbody>
+            <div class="row justify-content-center" style="margin-top: 10px;">
+                <form action="/rachelAbout" method="GET" id="factsForm">
+                    <button>New Fact!</button>
+                </form>
+            </div>
+        </table>
+        <hr style="height: 3px; background-color: #FFFFFF;">
+        <div>
+            <h2>
+                Rachel's Links
+            </h2>
+            <table>
+                <tr>
+                    <th>Entry</th>
+                    <th>Link</th>
+                </tr>
+                <tr>
+                    <td>Github Profile</td>
+                    <td>https://github.com/rachelklee</td>
+                </tr>
+                <try>
+                    <td>Team Repository</td>
+                    <td>https://github.com/dsblack0/runtime-terror</td>
+                </try>
+                <tr>
+                    <td>Individual Journal</td>
+                    <td>https://docs.google.com/document/d/15mil-mSpv7Ma4rNcUr_b5NjWCx2yM9FR3MIMcpM767U/edit?usp=sharing</td>
+                </tr>
+            </table>
+
+            <h2>
+                CB FRQs
+            </h2>
+            <form action="/unit2" method="GET" id="unit2">
+                <div class="unit2">
+                    <br></br>
+                    <h3>
+                        Unit 2
+                    </h3>
+                    <strong>Part a: Write a statement to create a LightSequence object gradShow that has the initial light sequence "0101 0101 0101".</strong>
+                    <p>LightSequence gradShow = new LightSequence("0101 0101 0101");</p>
+                    <strong>Part b: Write a statement that will call the display method to display the light sequence for the gradShow object.</strong>
+                    <p>gradShow.display();</p>
+                    <strong>Part c: Write a statement that will be used to update the gradShow light sequence to "0011 0011 0011".</strong>
+                    <p>gradShow.changeSequence("0011 0011 0011");</p>
+                    <strong>Part d: Write a code segment that will call the insertSegment method to insert the segment "1111 1111" in the current sequence for gradShow at index 4. The resulting sequence will be stored in the string resultSeq.</strong>
+                    <p>gradShow.insertSegment("1111 1111", 4);</p>
+                    <strong>Part e: Assume that the string oldSeq has been properly declared and initialized and contains the string segment. Write a code segment that will remove the first occurrence of segment from oldSeq and store it in the string newSeq. Consider the following examples.
+
+                        If oldSeq is "1100000111" and segment is "11", then "00000111" should be stored in newSeq.
+                        If oldSeq is "0000011" and segment is "11", then "00000" should be stored in newSeq.
+                        If oldSeq is "1100000111" and segment is "00", then "11000111" should be stored in newSeq.</strong>
+                    <p>String newSeq = oldSeq.replaceFirst(oldSegment, newSegment);</p>
+                    <strong>Part f: Two lights will be arranged on a two-dimensional plane. The vertical distance between the two lights is stored in the double variable a. The horizontal distance between the two lights is stored in the double variable b.</strong>
+                    <p>double c = Math.sqrt(a*a + b * b);</p>
                 </div>
             </form>
+
         </div>
-        <h2>FRQs</h2>
-        <p style="text-align: center;">UNIT 2</p>
     </div>
-    <!-- End of body content specific to page -->
-</div></body>
+</div>
+</body>
 
 </html>
 
