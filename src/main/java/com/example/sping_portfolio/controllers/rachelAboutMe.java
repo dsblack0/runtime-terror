@@ -1,5 +1,5 @@
 package com.example.sping_portfolio.controllers;
-import lombok.Getter;
+//import lombok.Getter;
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
