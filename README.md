@@ -48,6 +48,9 @@
 
 
 ## Week 2 - Home Pages
+
+**[Week 2 Review Ticket](https://github.com/dsblack0/runtime-terror/issues/31)**
+
 | Name | Requirement | Evidence | Complete | Grade |
 | ---   | ---        | ---      | ---        | ---   |
 | Rachel | ReadME Quality | [Issue](https://github.com/dsblack0/runtime-terror/issues/17) | <ul><li>[ ] DONE</li></ul> | ## |
