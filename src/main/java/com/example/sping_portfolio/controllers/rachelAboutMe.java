@@ -1,5 +1,4 @@
 package com.example.sping_portfolio.controllers;
-
 import lombok.Getter;
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.stereotype.Controller;
@@ -33,7 +32,7 @@ public class rachelAboutMe {
 
     @GetMapping("/rachelAbout")
 
-    public String rachelAbout(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) throws IOException, InterruptedException, ParseException {
+    public String rachelAbout(@RequestParam(name = "name", required = false, defaultValue = "World") String name, Model model) throws IOException, InterruptedException, ParseException {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://numbersapi.p.rapidapi.com/6/21/date?fragment=true&json=true"))
                 .header("x-rapidapi-host", "numbersapi.p.rapidapi.com")
@@ -53,11 +52,6 @@ public class rachelAboutMe {
         model.addAttribute("name", name);
 
         return "Pages/aboutMePages/rachelAbout";
+
     }
-
-
-
-
-
-
 }
