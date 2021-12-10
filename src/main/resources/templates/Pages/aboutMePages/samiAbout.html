@@ -6,7 +6,7 @@
         function changeImage()
         {
             var img = document.getElementById("image");
-            img.src="samiMaskAboutMe";
+            img.src="samiMaskAboutMe.jpg";
             return false;
         }
     </script>
@@ -28,7 +28,7 @@
                 <div class="col-6 mx-auto">
                     <div class="jumbotron">
                         <div style="text-align:center;">
-                            <img id="image" th:src="@{/images/aboutMEtri2.jpg}" style="width: 100%; height: 15vw;object-fit: cover;">
+                            <img id="image" src="images/aboutMEtri2/" style="object-fit: cover;">
                                  <!--<width="200;" style="float: left; margin-right: 15px;">-->
                                 <h1 style="color:#2c6975"><strong>Welcome!</strong></h1>
                                 <button id="clickme" onclick="changeImage();">Mask Picture</button>
