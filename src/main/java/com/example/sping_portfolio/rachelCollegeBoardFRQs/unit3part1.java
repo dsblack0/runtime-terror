@@ -7,6 +7,14 @@ public class unit3part1 {
         String option1 = "Thank you for attending. You will be served ";
         String option2 = "Sorry you can't make it";
 
+        //part d
+        if(option1 == option2){
+            System.out.println("true");
+        }
+        else{
+            System.out.println("false");
+        }
+
         //part c
         if(rsvp ==true){
             String choice = "";
