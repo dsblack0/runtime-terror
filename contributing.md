@@ -15,6 +15,7 @@
 1. Try to make each commit focused on a specific feature. Break apart large commits based on those specific features.
 2. Make sure all of your commmits have clear descriptions that explain the changes made
   * When updating the ReadMe, include a description at least when making significant changes.
+3. You should be aiming commit your working code each day after or during class.
 
 ## Creating Branches
 **Make a new branch whenever you start working on a new feature**

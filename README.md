@@ -48,12 +48,15 @@
 
 
 ## Week 2 - Home Pages
+
+**[Week 2 Review Ticket](https://github.com/dsblack0/runtime-terror/issues/31)**
+
 | Name | Requirement | Evidence | Complete | Grade |
 | ---   | ---        | ---      | ---        | ---   |
-| Rachel | ReadME Quality | [Issue](https://github.com/dsblack0/runtime-terror/issues/17) | <ul><li>[ ] DONE</li></ul> | ## |
-| Kaavya | Deployed Website | [Issue](https://github.com/dsblack0/runtime-terror/issues/16) | <ul><li>[ ] DONE</li></ul> | ## |
-| Team | Individual About Pages | [Issue](https://github.com/dsblack0/runtime-terror/issues/8) | <ul><li>[ ] DONE</li></ul> | ## |
-| Team | TPT Journal and quiz (Unit #2 Deployed | [Issue](https://github.com/dsblack0/runtime-terror/issues/9) | <ul><li>[ ] DONE</li></ul> | ## |
+| Rachel | ReadME Quality | [Issue](https://github.com/dsblack0/runtime-terror/issues/17) | <ul><li>[x] DONE</li></ul> | ## |
+| Kaavya | Deployed Website | [Issue](https://github.com/dsblack0/runtime-terror/issues/16) | <ul><li>[x] DONE</li></ul> | ## |
+| Team | Individual About Pages | [Issue](https://github.com/dsblack0/runtime-terror/issues/8) | <ul><li>[x] DONE</li></ul> | ## |
+| Team | TPT Journal and quiz (Unit #2 Deployed | [Issue](https://github.com/dsblack0/runtime-terror/issues/9) | <ul><li>[x] DONE</li></ul> | ## |
 
 ## Week 1 - Project Approval
 
