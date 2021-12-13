@@ -4,8 +4,8 @@ public class unit3part1 {
     public static void main(String[] args) {
         boolean rsvp = true;
         int selection = 100; //1 is beef, 2 is chicken, 3 is pasta, other is fish
-        String option1 = "Thank you for attending. You will be served ";
-        String option2 = "Sorry you can't make it";
+        String option1 = "";
+        String option2 = "";
 
         //part d
         if(option1 == option2){
@@ -33,10 +33,12 @@ public class unit3part1 {
             else{
                 choice = "Fish.";
             }
-            System.out.println(option1 + choice);
+            option1 = "Thank you for attending. You will be served " + choice;
+            System.out.println(option1);
         }
         else{
-            System.out.println(option2);
+            option1 = "Sorry you can't make it";
+            System.out.println(option1);
         }
 
         //part a
