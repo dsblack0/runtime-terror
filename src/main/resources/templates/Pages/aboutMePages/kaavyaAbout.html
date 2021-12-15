@@ -58,7 +58,25 @@
             <ol>
                 <h3> About Kaavya </h3>
                 <div class="container" >
-                    <img src="/static/images/kaavyaaboutme.jpg" th:src="@{/images/kaavyaaboutme.jpg}" width="220" height="300" alt="Kaavya">
+                    <img id = "kaavyaImage" class = "image" src = "/static/images/kaavyaaboutme.jpg">
+                    <img id = "kaavyaDrawing" class = "image" src = "/static/images/kaavyadrawing.jpg">
+                    <button id = "button2" type = "button">Toggle Image</button>
+                    <script type="text/javascript">
+                        let Image1 = document.getElementById("kaavyaImage");
+                        let button2 = document.getElementById("button2");
+
+                        function toggleImage() {
+
+                            if (Image1.getAttribute('src') === "/static/images/kaavyaaboutme.jpg") {
+                                Image1.setAttribute('src', "/static/images/kaavyadrawing.jpg");
+                            }
+                            else {
+                                Image1.setAttribute('src', "/static/images/kaavyaaboutme.jpg");
+                            }
+                        }
+
+                        button2.addEventListener("click", toggleImage);
+                    </script>
                 </div>
             </ol>
         </div>
@@ -84,6 +102,52 @@
                 </div>
             </div>
         </div>
+        <div>
+            <h2>FRQ #2</h2>
+            <div class="Unit 2">
+
+            </div>
+        </div>
+        <h2>
+            CB FRQs
+        </h2>
+        <!---<div class="unit2">
+            <br></br>
+            <h3>
+                Unit 2
+            </h3>
+            <form action="/kaavyaAbout" method="GET" id="changesegment">
+                <div>
+                    <label for="name" style="color: teal;">Original sequence?</label>
+                    <input name="oldseq" id="oldseq">
+                    <label for="name" style="color: teal;">Pick a segment to remove</label>
+                    <input name="segment" id="segment">
+                    <button>Answer</button>
+                    <p><b th:text="'New sequence: ' + ${newSeq}" style="color: teal;"></b></p>
+                </div>
+            </form>
+            <form>
+                <div>
+                    <p><b th:text="'Original sequence: ' + ${originalSeq}" style="color: teal;"></b></p>
+                    <label for="name" style="color: teal;">Pick a segment to insert</label>
+                    <input name="instsegment" id="instsegment">
+                    <label for="name" style="color: teal;">Index?</label>
+                    <input name="ind" id="ind">
+                    <button>Answer</button>
+                    <p><b th:text="'Resulting sequence: ' + ${resultSeq}" style="color: teal;"></b></p>
+                </div>
+            </form>
+            <form>
+                <div>
+                    <label for="name" style="color: teal;">Pick to numbers to find their distance</label>
+                    <input name="num1" id="num1">
+                    <input name="num2" id="num2">
+                    <button>Answer</button>
+                    <p><b th:text="'Distance from ' + ${num1} + ' to ' + ${num2} + '= ' + ${distance}" style="color: teal;"></b></p>
+                </div>
+            </form>
+            -->
+
     </div>
 </body>
 </html>
