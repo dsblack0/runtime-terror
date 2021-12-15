@@ -7,12 +7,30 @@ public class unit3part1 {
         String option1 = "";
         String option2 = "";
 
-        //part d
-        if(option1 == option2){
-            System.out.println("true");
+
+        //part a
+        if(rsvp == true){
+            System.out.println("Attending");
         }
         else{
-            System.out.println("false");
+            System.out.println("Not Attending");
+        }
+
+        //part b
+        if(selection==0){
+            System.out.println("No Selection");
+        }
+        else if(selection == 1){
+            System.out.println("Beef");
+        }
+        else if(selection == 2){
+            System.out.println("chicken");
+        }
+        else if(selection == 3){
+            System.out.println("pasta");
+        }
+        else{
+            System.out.println("fish");
         }
 
         //part c
@@ -41,29 +59,13 @@ public class unit3part1 {
             System.out.println(option1);
         }
 
-        //part a
-        if(rsvp == true){
-            System.out.println("Attending");
-        }
-        else{
-            System.out.println("Not Attending");
-        }
 
-        //part b
-        if(selection==0){
-            System.out.println("No Selection");
-        }
-        else if(selection == 1){
-            System.out.println("Beef");
-        }
-        else if(selection == 2){
-            System.out.println("chicken");
-        }
-        else if(selection == 3){
-            System.out.println("pasta");
+        //part d
+        if(option1 == option2){
+            System.out.println("true");
         }
         else{
-            System.out.println("fish");
+            System.out.println("false");
         }
 
 
