@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head><div layout:fragment="metadata" th:remove="tag">
+  <!-- Start of head content specific to page -->
+  <!---<title>Register</title> --->
+  <style>
+    .block {
+      display: inline-block;
+      width: 50%;
+      height: 65px;
+      border: none;
+      background-color: #df9c36;
+      color: white;
+      padding: 14px 28px;
+      font-size: 20px;
+      cursor: pointer;
+      text-align: center;
+      margin: 10px;
+      position: relative;
+      top: 25%;
+      left: 49.2%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    .block:hover {
+      background-color: #ddd;
+      color: black;
+      width: 100%;
+      transition: all .4s cubic-bezier(0.65, 0, 0.076, 1);
+    }
+    .pageTitle {
+      text-align: center;
+      margin: 20px;
+    }
+  </style>
+  <!-- End of head content specific to page -->
+</div></head>
+
+<body><div layout:fragment="content" th:remove="tag">
+  <!-- Start of body content specific to page -->
+
+  <div style="text-align: center">
+    <h1>Register</h1>
+    <form action="register" method="get">
+      <label for="firstname">Firstname:</label>
+      <input name="firstname" size="30" />
+      <br><br>
+      <label for="password">Password:</label>
+      <input type="password" name="password" size="30" />
+      <br><br>
+      <h1><th:block th:text="${registerStatus}"></th:block></h1>
+      <br>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+</div>
+<!-- End of body content specific to page -->
+</div></body>"
+
+</html>
