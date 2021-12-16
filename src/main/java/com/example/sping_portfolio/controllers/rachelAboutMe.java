@@ -41,6 +41,11 @@ public class rachelAboutMe {
                               @RequestParam(name="ind", required = false, defaultValue = "4") String ind,
                               @RequestParam(name="num1", required = false, defaultValue = "3.0") String num1,
                               @RequestParam(name="num2", required = false, defaultValue = "4.0") String num2,
+                              @RequestParam(name="rsvp", required = false, defaultValue = "False") Boolean rsvp,
+                              @RequestParam(name="selection", required = false, defaultValue = "0") Integer selection,
+                              @RequestParam(name="slength", required = false, defaultValue = "4") Integer slength,
+                              @RequestParam(name="startx", required = false, defaultValue = "1") Integer startx,
+                              @RequestParam(name="starty", required = false, defaultValue = "1") Integer starty,
                               Model model) throws IOException, InterruptedException, ParseException {
             HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://numbersapi.p.rapidapi.com/6/21/date?fragment=true&json=true"))
@@ -78,6 +83,74 @@ public class rachelAboutMe {
         model.addAttribute("num1", num1);
         model.addAttribute("num2", num2);
         model.addAttribute("distance", distance);
+
+        //unit 3 part 1
+        //part a
+        String option1 = "";
+        String option2 = "";
+
+        if(rsvp == true){
+            System.out.println("Attending");
+        }
+        else{
+            System.out.println("Not Attending");
+        }
+
+        //part b
+        if(selection==0){
+            System.out.println("No Selection");
+        }
+        else if(selection == 1){
+            System.out.println("Beef");
+        }
+        else if(selection == 2){
+            System.out.println("chicken");
+        }
+        else if(selection == 3){
+            System.out.println("pasta");
+        }
+        else{
+            System.out.println("fish");
+        }
+
+        //part c
+        if(rsvp ==true){
+            String choice = "";
+            if(selection==0){
+                choice = "No Selection.";
+            }
+            else if(selection == 1){
+                choice = "Beef.";
+            }
+            else if(selection == 2){
+                choice = "Chicken.";
+            }
+            else if(selection == 3){
+                choice = "Pasta.";
+            }
+            else{
+                choice = "Fish.";
+            }
+            option1 = "Thank you for attending. You will be served " + choice;
+            System.out.println(option1);
+        }
+        else{
+            option1 = "Sorry you can't make it";
+            System.out.println(option1);
+        }
+
+
+        //part d
+        if(option1 == option2){
+            System.out.println("true");
+        }
+        else{
+            System.out.println("false");
+        }
+
+        model.addAttribute("rsvp", rsvp);
+        model.addAttribute("selection", selection);
+        model.addAttribute("option1", option1);
 
         var data = new ObjectMapper().readValue(response.body(), HashMap.class);
         model.addAttribute("data", data);
