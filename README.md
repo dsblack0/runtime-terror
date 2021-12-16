@@ -22,7 +22,7 @@
 | --- | --- | --- |
 | Adrita |
 | Kaavya |
-| Rachel [Individual Journal](https://docs.google.com/document/d/15mil-mSpv7Ma4rNcUr_b5NjWCx2yM9FR3MIMcpM767U/edit?usp=sharing)|
+| Rachel | [Individual Journal](https://docs.google.com/document/d/15mil-mSpv7Ma4rNcUr_b5NjWCx2yM9FR3MIMcpM767U/edit?usp=sharing) |
 | Sam | [Individual Journal](https://drive.google.com/drive/folders/1Ro14W_1HDCUj0L_E7oSZH-VPDESge9l5?usp=sharing) | |
 | Sami |
 
@@ -36,6 +36,9 @@
 | Kaavya | [@KaavyaU](https://github.com/KaavyaU) | [Tickets](https://github.com/dsblack0/runtime-terror/issues/assigned/KaavyaU) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1?card_filter_query=assignee%3AKaavyaU) | [Commits](https://github.com/dsblack0/runtime-terror/commits?author=KaavyaU) | Deployment Manager |
 
 ## Week 3 - WIP Project Review
+
+**[Week 3 Review Ticket](https://github.com/dsblack0/runtime-terror/issues/41)**
+
 | Name | Requirement | Evidence | Complete | Grade |
 | ---   | ---        | ---      | ---        | ---   |
 | Sami | Design Manager BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/18) | <ul><li>[ ] DONE</li></ul> | ## |
@@ -43,7 +46,7 @@
 | Adrita | Technical Officer BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/20) | <ul><li>[x] DONE</li></ul> | ## |
 | Kaavya | Deployment Manager BOF  | [Issue](https://github.com/dsblack0/runtime-terror/issues/21) | <ul><li>[ ] DONE</li></ul> | ## |
 | Sam | Github Admin BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/22) | <ul><li>[x] DONE</li></ul> | ## |
-| Team | AP FRQ Test and Review | [Issue](https://github.com/dsblack0/runtime-terror/issues/23) | <ul><li>[ ] DONE</li></ul> (OPTIONAL)| ## |
+| Team | AP FRQ Test and Review | [Issue](https://github.com/dsblack0/runtime-terror/issues/23) | <ul><li>[x] DONE</li></ul> (OPTIONAL)| ## |
 | Team | Unit #3 FRQ Online | [Issue](https://github.com/dsblack0/runtime-terror/issues/24) | <ul><li>[x] DONE</li></ul> | ## |
 
 
