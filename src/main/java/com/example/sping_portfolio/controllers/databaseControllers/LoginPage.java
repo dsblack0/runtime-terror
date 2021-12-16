@@ -23,19 +23,19 @@ public class LoginPage {
         System.out.println("password from form " + password);
         if(checkFirstnamePassword(firstname, password)) {
             model.addAttribute("loginStatus", "Login Success");
-            return "index"; // returns HTML VIEW (greeting)
+            return "databasePages/loginHome"; // returns HTML VIEW (greeting)
 
 
         } else {
             model.addAttribute("loginStatus", "Login Fail");
         }
-        return "login"; // returns HTML VIEW (greeting)
+        return "databasePages/login"; // returns HTML VIEW (greeting)
     }
 
     /**
      * Connect to database
      */
-    public static Connection connect() {
+    public static Connection connect() throws SQLException {
         Connection conn = null;
         try {
             // db parameters
