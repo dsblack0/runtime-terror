@@ -23,7 +23,7 @@
 | Adrita |
 | Kaavya |
 | Rachel |
-| Sam | 
+| Sam | [Journal](https://drive.google.com/drive/folders/1Ro14W_1HDCUj0L_E7oSZH-VPDESge9l5?usp=sharing) | |
 | Sami |
 
 ## Scrum Team
@@ -42,7 +42,7 @@
 | Rachel | Scrum Master BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/19) | <ul><li>[ ] DONE</li></ul> | ## |
 | Adrita | Technical Officer BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/20) | <ul><li>[ ] DONE</li></ul> | ## |
 | Kaavya | Deployment Manager BOF  | [Issue](https://github.com/dsblack0/runtime-terror/issues/21) | <ul><li>[ ] DONE</li></ul> | ## |
-| Sam | Github Admin BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/22) | <ul><li>[ ] DONE</li></ul> | ## |
+| Sam | Github Admin BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/22) | <ul><li>[x] DONE</li></ul> | ## |
 | Team | AP FRQ Test and Review | [Issue](https://github.com/dsblack0/runtime-terror/issues/23) | <ul><li>[ ] DONE</li></ul> | ## |
 | Team | Unit #3 FRQ Online | [Issue](https://github.com/dsblack0/runtime-terror/issues/24) | <ul><li>[ ] DONE</li></ul> | ## |
 
