@@ -69,18 +69,18 @@
             ctx.lineWidth = 5;
 
             // length of sides is 4 units
-            const l = unit * sidelength;
+            const l = Math.abs(unit * sidelength);
 
             // starting coordinates
             const x = unit + width*0.5 + inx*unit - unit;
-            const y = unit + height*0.5 - l + inx*unit - unit;
+            const y = unit + height*0.5 - iny*unit - unit;
 
             // draw a square
             ctx.beginPath();
             ctx.moveTo(x, y);
-            ctx.lineTo(x, y+l);
-            ctx.lineTo(x+l, y+l);
             ctx.lineTo(x+l, y);
+            ctx.lineTo(x+l, y+l);
+            ctx.lineTo(x, y+l);
             ctx.lineTo(x, y);
             ctx.stroke();
         }
