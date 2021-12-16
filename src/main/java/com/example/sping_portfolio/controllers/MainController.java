@@ -24,3 +24,4 @@ public class MainController {
         return "/Pages/aboutMePages/teamAbout";
     }
 }
+

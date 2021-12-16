@@ -102,15 +102,43 @@
                 </div>
             </div>
         </div>
-        <div>
-            <h2>FRQ #2</h2>
-            <div class="Unit 2">
-
+    <h2>
+        FRQ#3
+    </h2>
+        <form action="/kaavyaAbout" method="GET" id="frq3_1">
+            <div>
+                <label for = "rsvp" style="color: teal;">Attending? ("yes" or "no")</label>
+                <input name="rsvp" id="rsvp">
+                <button>Answer</button>
+                <p><b th:text="'rsvp: ' + ${response}" style="color: teal;"></b></p>
             </div>
-        </div>
-        <h2>
-            CB FRQs
-        </h2>
+            <div>
+                <label for = "selection" style="color: teal;">Select a dinner option (1 = "beef", 2 = "chicken", 3 = "pasta", else "fish"</label>
+                <input name="selection" id="selection">
+                <button>Answer</button>
+                <p><b th:text="'selection: ' + ${selection}" style="color: teal;"></b></p>
+            </div>
+        </form>
+        <form action="/kaavyaAbout" method="GET" id="frq3_11">
+            <div>
+                <label for = "rsvp1" style="color: teal;">Enter Option 1 rsvp (Attending?)</label>
+                <input name="rsvp1" id="rsvp1">
+                <label for = "selection1" style="color: teal;">Enter Option 1 Selection</label>
+                <input name="selection1" id="selection1">
+                <p><b th:text="'Option 1: ' + ${option1}" style="color: teal;"></b></p>
+            </div>
+            <div>
+                <label for = "rsvp2" style="color: teal;">Enter Option 2 rsvp (Attending?)</label>
+                <input name="rsvp2" id="rsvp2">
+                <label for = "selection2" style="color: teal;">Enter Option 2 Selection</label>
+                <input name="selection2" id="selection2">
+                <button>Answer</button>
+                <p><b th:text="'Option 2: ' + ${option2}" style="color: teal;"></b></p>
+            </div>
+            <div>
+                <p><b th:text="'Options 1 and 2 are the same? ' + ${compareOptions}" style="color: teal;"></b></p>
+            </div>
+        </form>
         <!---<div class="unit2">
             <br></br>
             <h3>
