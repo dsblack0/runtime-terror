@@ -1,5 +1,6 @@
 package com.example.sping_portfolio.controllers.samAboutMe;
 
+import com.example.sping_portfolio.controllers.samAboutMe.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +14,116 @@ import java.net.http.HttpResponse;
 import java.text.ParseException;
 import java.lang.Math;
 
+//Unit2 FRQ
+class LightSequence {
+    String resultSeq;
+
+    public LightSequence(String seq) {
+
+        resultSeq = seq;
+    }
+
+    public String insertSegment(String oldSeq, String segment, int ind) {
+        resultSeq = oldSeq.substring(0, ind + 1) + segment + oldSeq.substring(ind + 1);
+        return resultSeq;
+    }
+
+    public void changeSequence(String seq) {
+
+        resultSeq = seq;
+    }
+
+    public void display() {
+        System.out.println(resultSeq);
+    }
+
+    public String getSeq() {
+
+        return resultSeq;
+    }
+
+    public static String changeSegment(String oldSeq, String segment) {
+        int index = oldSeq.indexOf(segment);
+        String newSeq = oldSeq.substring(0, index) + oldSeq.substring(index + segment.length());
+        System.out.println("changedSegment = " + newSeq);
+        return newSeq;
+    }
+
+    public static double mathSqrt(double a, double b) {
+        double c = Math.sqrt(a * a + b * b);
+        return c;
+    }
+}
+
+//Unit3 FRQ
+class Party {
+    boolean rsvp;
+    int selection;
+    String option1;
+    String option2;
+    String attendance;
+    String food;
+    String person;
+    String compare;
+
+
+    public Party(String name) {
+        person = name;
+    }
+
+    public String Attendance(boolean rsvp) {
+        if (rsvp) {
+            attendance = "attending";
+            return attendance;
+        } else {
+            attendance = "not attending";
+            return attendance;
+        }
+    }
+
+    public String Food(int selection) {
+        if (selection == 1) {
+            food = "beef";
+            return food;
+        } else if (selection == 2) {
+            food = "chicken";
+            return food;
+        } else if (selection == 3) {
+            food = "pasta";
+            return food;
+        } else {
+            food = "fish";
+            return food;
+        }
+    }
+
+    public String Information(boolean rsvp, int selection) {
+        option2 = "Sorry you can't make it.";
+        if (!rsvp) {
+            option1 = "Sorry you can't make it.";
+        } else {
+            option1 = "Thanks for attending. You will be served ";
+            if (selection == 1) {
+                option1 += "beef.";
+            } else if (selection == 2) {
+                option1 += "chicken.";
+            } else if (selection == 3) {
+                option1 += "pasta.";
+            } else {
+                option1 += "fish.";
+            }
+        }
+        if (option1.equals(option2)) {
+            compare = "true";
+        } else {
+            compare = "false";
+        }
+        return option1;
+    }
+    public String compare() {
+        return compare;
+    }
+}
 
 @Controller
 public class samAboutMe {
@@ -24,9 +135,10 @@ public class samAboutMe {
                            @RequestParam(name="ind", required = false, defaultValue = "4") String ind,
                            @RequestParam(name="num1", required = false, defaultValue = "3.0") String num1,
                            @RequestParam(name="num2", required = false, defaultValue = "4.0") String num2,
-                           @RequestParam(name="inputx", required = false, defaultValue = "0") String inputx,
-                           @RequestParam(name="inputy", required = false, defaultValue = "0") String inputy,
-                           @RequestParam(name="length", required = false, defaultValue = "4") String length,
+                           @RequestParam(name="rsvpattendance", required = false, defaultValue = "false") String rsvpattendance,
+                           @RequestParam(name="foodselection", required = false, defaultValue = "5") String foodselection,
+                           @RequestParam(name="rsvpattendance2", required = false, defaultValue = "false") String rsvpattendance2,
+                           @RequestParam(name="foodselection2", required = false, defaultValue = "5") String foodselection2,
                            Model model)
             throws IOException, InterruptedException, ParseException {
         HttpRequest request = HttpRequest.newBuilder()
@@ -39,41 +151,44 @@ public class samAboutMe {
         HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
         System.out.println(response.body());
 
-        int inpx = Integer.parseInt(inputx);
-        int inpy = Integer.parseInt(inputy);
-        int slength = Integer.parseInt(length);
+        //Unit 2 FRQ
+        int indx = Integer.parseInt(ind);
+        LightSequence gradshow = new LightSequence(name);
+        String newSeq = LightSequence.changeSegment(oldSeq, segment);
+        String resultSeq = gradshow.insertSegment(oldSeq, instsegment, indx);
+        double a = Double.parseDouble(num1);
+        double b = Double.parseDouble(num2);
+        double c = LightSequence.mathSqrt(a, b);
+        String distance = String.valueOf(c);
 
+        //Unit 3 FRQ
+        int selection = Integer.parseInt(foodselection);
+        boolean rsvp = Boolean.parseBoolean(rsvpattendance);
+        int selection2 = Integer.parseInt(foodselection2);
+        boolean rsvp2 = Boolean.parseBoolean(rsvpattendance2);
+        Party person = new Party(name);
+        String option1 = person.Information(rsvp, selection);
+        String option2 = person.Information(rsvp2, selection2);
+        String compare = "";
+        if (option1.equals(option2)) {
+            compare = "true";
+        } else {
+            compare = "false";
+        }
 
-            //remove segment
-            String newSeq = "";
-            int index = oldSeq.indexOf(segment);
-            newSeq = oldSeq.substring(0, index) + oldSeq.substring(index+segment.length());
-
-            //insert segment
-            String originalSeq = "0011 0011 0011";
-            String resultSeq = "";
-            int indx = Integer.parseInt(ind);
-            resultSeq = originalSeq.substring(0,indx+1) + instsegment + originalSeq.substring(indx+1);
-
-            //math sqrt
-            String distance = "";
-            double a = Double.parseDouble(num1);
-            double b = Double.parseDouble(num2);
-            double c = Math.sqrt(a*a + b * b);
-            distance = String.valueOf(c);
 
         var quotes = response.body();
         model.addAttribute("quotes", quotes);
         model.addAttribute("name", name);
         model.addAttribute("newSeq", newSeq);
-        model.addAttribute("originalSeq", originalSeq);
+        model.addAttribute("oldSeq", oldSeq);
         model.addAttribute("resultSeq", resultSeq);
         model.addAttribute("num1", num1);
         model.addAttribute("num2", num2);
         model.addAttribute("distance", distance);
-        model.addAttribute("slength", slength);
-        model.addAttribute("inpx", inpx);
-        model.addAttribute("inpy", inpy);
+        model.addAttribute("option1", option1);
+        model.addAttribute("compare", compare);
+        model.addAttribute("option2", option2);
 
         return "/Pages/aboutMePages/samAbout";
     }

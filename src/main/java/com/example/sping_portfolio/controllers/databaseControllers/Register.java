@@ -22,13 +22,13 @@ public class Register {
         System.out.println("password from form " + password);
         inputFirstnamePassword(firstname, password);
 
-        return "register"; // returns HTML VIEW (greeting)
+        return "databasePages/register"; // returns HTML VIEW (greeting)
     }
 
     /**
      * Connect to database
      */
-    public static Connection connect() {
+    public static Connection connect() throws SQLException {
         Connection conn = null;
         try {
             // db parameters

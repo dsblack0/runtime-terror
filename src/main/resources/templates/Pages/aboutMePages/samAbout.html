@@ -49,16 +49,11 @@
             <form action="/samAbout" method="GET" id="changesegment">
                 <div>
                     <label for="name" style="color: white;">Original sequence?</label>
-                    <input name="oldseq" id="oldseq">
+                    <input name="oldSeq" id="oldSeq">
                     <label for="name" style="color: white;">Pick a segment to remove</label>
                     <input name="segment" id="segment">
-                    <button>Answer</button>
                     <p><b th:text="'New sequence: ' + ${newSeq}" style="color: white;"></b></p>
-                </div>
-            </form>
-            <form>
-                <div>
-                    <p><b th:text="'Original sequence: ' + ${originalSeq}" style="color: white;"></b></p>
+                    <p><b th:text="'Original sequence: ' + ${oldSeq}" style="color: white;"></b></p>
                     <label for="name" style="color: white;">Pick a segment to insert</label>
                     <input name="instsegment" id="instsegment">
                     <label for="name" style="color: white;">Index?</label>
@@ -78,86 +73,38 @@
             </form>
         </div>
     </div>
-    <div class="unit-two" style="margin-top: 20px; background-color: #555b65;">
-        <form>
-            <div>
-                <label for="name" style="color: white;">Pick x, y, and side length values</label>
-                <input name="inputx" id="inputx">
-                <input name="inputy" id="inputy">
-                <input name="length" id="length">
-                <button>Answer</button>
+    <div>
+        <div class="unit-three" style="margin-top: 20px; background-color: #555b65;">
+            <div style="margin-left: 50px;">
+                <h2 style="color: white;">Unit 3 FRQ</h2>
+                <h5 style="color: white;">Set Option 1</h5>
+                <form action="/samAbout" method="GET" id="attendance">
+                    <div style="margin-left: 10px;">
+                        <p class="rsvpattendance" style="color: white;">Will you rsvp?</p>
+                        <select name="rsvpattendance" id="rsvpattendance">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                        <p class="foodselection" style="color: white;">What food will you want? Input an integer</p>
+                        <input name="foodselection" id="foodselection">
+                        <p><b th:text="${option1}" style="color: white;"></b></p>
+                    </div>
+                    <h5 style="color: white;">Set Option 2</h5>
+                    <div style="margin-left: 10px;">
+                        <p class="rsvpattendance2" style="color: white;">Will you rsvp?</p>
+                        <select name="rsvpattendance2" id="rsvpattendance2">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                        <p class="foodselection2" style="color: white;">What food will you want? Input an integer</p>
+                        <input name="foodselection2" id="foodselection2">
+                        <button>Answer</button>
+                        <p><b th:text="${option2}" style="color: white;"></b></p>
+                        <p><b th:text="'Option1 = Option2: ' + ${compare}" style="color: white"></b></p>
+                    </div>
+                </form>
             </div>
-        </form>
-        <canvas id="canvas" width="512" height="384" ></canvas>
-    </div>
-
-    <script>
-        const canvas = document.getElementById('canvas');
-        const ctx = canvas.getContext('2d');
-        const width = canvas.width;
-        const height = canvas.height;
-        const unit = 16;   // unit block size
-        const inx = [[${inpx}]];
-        const iny = [[${inpy}]];
-        const sidelength = [[${slength}]];
-
-
-        // grid based off of width, height
-        function grid(){
-            // color and pen width
-            ctx.strokeStyle = 'white';
-            ctx.lineWidth = 1;
-            // make graph paper look
-            for (let col = 0; col < width; col += unit) {
-                for (let row = 0; row < height; row += unit) {
-                    ctx.strokeRect(col, row, unit, unit);
-                }
-            }
-        }
-        function axis() {
-            // color and pen width
-            ctx.strokeStyle = 'red';
-            ctx.lineWidth = 3;
-
-            // x & y zero midpoints of grid
-            const x0 = width*.5;
-            const y0 = height*.5;
-            // x-axis
-            ctx.moveTo(0, y0);
-            ctx.lineTo(width, y0);
-            ctx.stroke();
-            // y-axis
-            ctx.moveTo(x0, 0);
-            ctx.lineTo(x0, height);
-            ctx.stroke();
-        }
-
-        // square using lines
-        function square() {
-            ctx.strokeStyle = 'black';
-            ctx.lineWidth = 5;
-
-            // starting coordinates
-            const x = unit*16+(inx*16);
-            const y = unit*8+(iny);
-            // length of sides is 4 units
-            const l = unit * sidelength;
-
-            // draw a square
-            ctx.beginPath();
-            ctx.moveTo(x, y);
-            ctx.lineTo(x, y+l);
-            ctx.lineTo(x+l, y+l);
-            ctx.lineTo(x+l, y);
-            ctx.lineTo(x, y);
-            ctx.stroke();
-        }
-        // three actions
-        grid();
-        axis();
-        square();
-    </script>
-
+        </div>
     <style>
         html, body{
             margin: 0;
