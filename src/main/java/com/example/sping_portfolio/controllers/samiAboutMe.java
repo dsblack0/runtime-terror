@@ -1,6 +1,5 @@
-package com.example.sping_portfolio.controllers.samiAboutMe;
+package com.example.sping_portfolio.controllers;
 
-import com.example.sping_portfolio.controllers.samAboutMe.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
