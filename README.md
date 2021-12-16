@@ -23,7 +23,7 @@
 | Adrita |
 | Kaavya |
 | Rachel |
-| Sam | 
+| Sam | [Journal](https://drive.google.com/drive/folders/1Ro14W_1HDCUj0L_E7oSZH-VPDESge9l5?usp=sharing) | |
 | Sami |
 
 ## Scrum Team
@@ -39,21 +39,24 @@
 | Name | Requirement | Evidence | Complete | Grade |
 | ---   | ---        | ---      | ---        | ---   |
 | Sami | Design Manager BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/18) | <ul><li>[ ] DONE</li></ul> | ## |
-| Rachel | Scrum Master BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/19) | <ul><li>[ ] DONE</li></ul> | ## |
-| Adrita | Technical Officer BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/20) | <ul><li>[ ] DONE</li></ul> | ## |
+| Rachel | Scrum Master BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/19) | <ul><li>[x] DONE</li></ul> | ## |
+| Adrita | Technical Officer BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/20) | <ul><li>[x] DONE</li></ul> | ## |
 | Kaavya | Deployment Manager BOF  | [Issue](https://github.com/dsblack0/runtime-terror/issues/21) | <ul><li>[ ] DONE</li></ul> | ## |
-| Sam | Github Admin BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/22) | <ul><li>[ ] DONE</li></ul> | ## |
-| Team | AP FRQ Test and Review | [Issue](https://github.com/dsblack0/runtime-terror/issues/23) | <ul><li>[ ] DONE</li></ul> | ## |
-| Team | Unit #3 FRQ Online | [Issue](https://github.com/dsblack0/runtime-terror/issues/24) | <ul><li>[ ] DONE</li></ul> | ## |
+| Sam | Github Admin BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/22) | <ul><li>[x] DONE</li></ul> | ## |
+| Team | AP FRQ Test and Review | [Issue](https://github.com/dsblack0/runtime-terror/issues/23) | <ul><li>[ ] DONE</li></ul> (OPTIONAL)| ## |
+| Team | Unit #3 FRQ Online | [Issue](https://github.com/dsblack0/runtime-terror/issues/24) | <ul><li>[x] DONE</li></ul> | ## |
 
 
 ## Week 2 - Home Pages
+
+**[Week 2 Review Ticket](https://github.com/dsblack0/runtime-terror/issues/31)**
+
 | Name | Requirement | Evidence | Complete | Grade |
 | ---   | ---        | ---      | ---        | ---   |
-| Rachel | ReadME Quality | [Issue](https://github.com/dsblack0/runtime-terror/issues/17) | <ul><li>[ ] DONE</li></ul> | ## |
-| Kaavya | Deployed Website | [Issue](https://github.com/dsblack0/runtime-terror/issues/16) | <ul><li>[ ] DONE</li></ul> | ## |
-| Team | Individual About Pages | [Issue](https://github.com/dsblack0/runtime-terror/issues/8) | <ul><li>[ ] DONE</li></ul> | ## |
-| Team | TPT Journal and quiz (Unit #2 Deployed | [Issue](https://github.com/dsblack0/runtime-terror/issues/9) | <ul><li>[ ] DONE</li></ul> | ## |
+| Rachel | ReadME Quality | [Issue](https://github.com/dsblack0/runtime-terror/issues/17) | <ul><li>[x] DONE</li></ul> | ## |
+| Kaavya | Deployed Website | [Issue](https://github.com/dsblack0/runtime-terror/issues/16) | <ul><li>[x] DONE</li></ul> | ## |
+| Team | Individual About Pages | [Issue](https://github.com/dsblack0/runtime-terror/issues/8) | <ul><li>[x] DONE</li></ul> | ## |
+| Team | TPT Journal and quiz (Unit #2 Deployed | [Issue](https://github.com/dsblack0/runtime-terror/issues/9) | <ul><li>[x] DONE</li></ul> | ## |
 
 ## Week 1 - Project Approval
 

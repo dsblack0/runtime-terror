@@ -1,4 +1,4 @@
-package com.example.sping_portfolio.rachelCollegeBoardFRQs;
+package com.example.sping_portfolio.adritaCollegeBoardFRQs;
 
 import java.lang.Math;
 

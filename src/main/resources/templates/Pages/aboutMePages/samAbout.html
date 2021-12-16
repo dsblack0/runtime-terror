@@ -3,7 +3,7 @@
       layout:decorate="~{layout}" lang="en">
 
 <head><div layout:fragment="metadata" th:remove="tag">
-    <title>Samhitha Duggirala</title>
+    <title>Sam Duggirala</title>
 </div></head>
 
 <body><div layout:fragment="content" th:remove="tag">
@@ -16,7 +16,7 @@
          <div class="picture-card" style="margin-top: 50px;">
              <div style="width:100%; text-align:center">
                 <img id="sam" class="img-responsive py-3" th:src="@{/images/samaboutme_mask.jpg}" width="50%" height="Auto" alt="" style="width:50%; height:50%;">
-             <form action="/samAbout" method="GET" id="samForm">
+                <form action="/samAbout" method="GET" id="samForm">
                  <div>
                      <label for="name">What is you name?</label>
                      <input name="name" id="name">
@@ -38,7 +38,73 @@
             </form>
         </div>
     </div>
+    <div class="info" style="margin-top: 20px; text-align: center; background-color: #555b65;">
+        <p><a href=https://drive.google.com/drive/folders/1Ro14W_1HDCUj0L_E7oSZH-VPDESge9l5?usp=sharing style="color: white;">CB FRQs/Journals</a></p>
+        <p><a href=https://github.com/dsblack0/runtime-terror/commits?author=dsblack0 style="color: white;">Project Contributions</a></p>
+    </div>
 
+    <div class="unit-two" style="margin-top: 20px; background-color: #555b65;">
+        <div style="margin-left: 50px;">
+            <h2 style="color: white;">Unit 2 FRQ</h2>
+            <form action="/samAbout" method="GET" id="changesegment">
+                <div>
+                    <label for="name" style="color: white;">Original sequence?</label>
+                    <input name="oldSeq" id="oldSeq">
+                    <label for="name" style="color: white;">Pick a segment to remove</label>
+                    <input name="segment" id="segment">
+                    <p><b th:text="'New sequence: ' + ${newSeq}" style="color: white;"></b></p>
+                    <p><b th:text="'Original sequence: ' + ${oldSeq}" style="color: white;"></b></p>
+                    <label for="name" style="color: white;">Pick a segment to insert</label>
+                    <input name="instsegment" id="instsegment">
+                    <label for="name" style="color: white;">Index?</label>
+                    <input name="ind" id="ind">
+                    <button>Answer</button>
+                    <p><b th:text="'Resulting sequence: ' + ${resultSeq}" style="color: white;"></b></p>
+                </div>
+            </form>
+            <form>
+                <div>
+                    <label for="name" style="color: white;">Pick to numbers to find their distance</label>
+                    <input name="num1" id="num1">
+                    <input name="num2" id="num2">
+                    <button>Answer</button>
+                    <p><b th:text="'Distance from ' + ${num1} + ' to ' + ${num2} + '= ' + ${distance}" style="color: white;"></b></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <div class="unit-three" style="margin-top: 20px; background-color: #555b65;">
+            <div style="margin-left: 50px;">
+                <h2 style="color: white;">Unit 3 FRQ</h2>
+                <h5 style="color: white;">Set Option 1</h5>
+                <form action="/samAbout" method="GET" id="attendance">
+                    <div style="margin-left: 10px;">
+                        <p class="rsvpattendance" style="color: white;">Will you rsvp?</p>
+                        <select name="rsvpattendance" id="rsvpattendance">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                        <p class="foodselection" style="color: white;">What food will you want? Input an integer</p>
+                        <input name="foodselection" id="foodselection">
+                        <p><b th:text="${option1}" style="color: white;"></b></p>
+                    </div>
+                    <h5 style="color: white;">Set Option 2</h5>
+                    <div style="margin-left: 10px;">
+                        <p class="rsvpattendance2" style="color: white;">Will you rsvp?</p>
+                        <select name="rsvpattendance2" id="rsvpattendance2">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                        <p class="foodselection2" style="color: white;">What food will you want? Input an integer</p>
+                        <input name="foodselection2" id="foodselection2">
+                        <button>Answer</button>
+                        <p><b th:text="${option2}" style="color: white;"></b></p>
+                        <p><b th:text="'Option1 = Option2: ' + ${compare}" style="color: white"></b></p>
+                    </div>
+                </form>
+            </div>
+        </div>
     <style>
         html, body{
             margin: 0;
