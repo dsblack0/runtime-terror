@@ -8,17 +8,17 @@
     </style>
 </head>
 <body style="background-color:lightblue">
-<h1 style="border:2px solid #6c35c6;"> "About Adrita:" </h1>
+<h1 style="border:2px solid #6c35c6;"> About Adrita: </h1>
 <p style="font-family: 'Times New Roman'"> Hi, I'm Adrita. I am a junior at Del Norte High School and am currently in AP CSA. I collaborated on this project to help students find clubs and be able to navigate the details of clubs easily. </p>
 <script th:inline="javascript">
     function changeImage() {
-        document.getElementById("sam").src = "images/adrita_about.jpg";
+        document.getElementById("adrita").src = "images/adrita_about.jpg";
     }
 </script>
 <div class="info-about-me" style="width:500px;  margin: auto;">
     <div class="picture-card" style="margin-top: 50px;">
         <div style="width:100%; text-align:center">
-            <img id="sam" class="img-responsive py-3" th:src="@{/images/adrita_mask.png}" width="50%" height="Auto" alt="" style="width:50%; height:50%;">
+            <img id="adrita" class="img-responsive py-3" th:src="@{/images/adrita_mask.png}" width="50%" height="Auto" alt="" style="width:50%; height:50%;">
             <form action="/adritaAbout" method="GET" id="adritaForm">
                 <div>
                     <input type="button"  onclick="changeImage();" value="Change Picture">
@@ -30,7 +30,7 @@
     <div class="unit-two" style="margin-top: 20px; background-color: #555b65;">
         <div style="margin-left: 50px;">
             <h2 style="color: white;">Unit 2 FRQ</h2>
-            <form action="/samAbout" method="GET" id="changesegment">
+            <form action="/adritaAbout" method="GET" id="changesegment">
                 <div>
                     <label for="name" style="color: white;">Original sequence?</label>
                     <input name="oldSeq" id="oldSeq">
@@ -62,7 +62,7 @@
             <div style="margin-left: 50px;">
                 <h2 style="color: white;">Unit 3 FRQ</h2>
                 <h5 style="color: white;">Set Option 1</h5>
-                <form action="/samAbout" method="GET" id="attendance">
+                <form action="/adritaAbout" method="GET" id="attendance">
                     <div style="margin-left: 10px;">
                         <p class="rsvpattendance" style="color: white;">Will you rsvp?</p>
                         <select name="rsvpattendance" id="rsvpattendance">
