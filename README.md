@@ -41,13 +41,14 @@
 
 | Name | Requirement | Evidence | Complete | Grade |
 | ---   | ---        | ---      | ---        | ---   |
-| Sami | Design Manager BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/18) | <ul><li>[ ] DONE</li></ul> | ## |
-| Rachel | Scrum Master BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/19) | <ul><li>[x] DONE</li></ul> | ## |
-| Adrita | Technical Officer BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/20) | <ul><li>[x] DONE</li></ul> | ## |
-| Kaavya | Deployment Manager BOF  | [Issue](https://github.com/dsblack0/runtime-terror/issues/21) | <ul><li>[ ] DONE</li></ul> | ## |
-| Sam | Github Admin BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/22) | <ul><li>[x] DONE</li></ul> | ## |
+| Sami | Design Manager BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/18) | <ul><li>[ ] DONE</li></ul> | .5/1 |
+| Rachel | Scrum Master BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/19) | <ul><li>[x] DONE</li></ul> | .75/1 |
+| Adrita | Technical Officer BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/20) | <ul><li>[x] DONE</li></ul> | .75/1 |
+| Kaavya | Deployment Manager BOF  | [Issue](https://github.com/dsblack0/runtime-terror/issues/21) | <ul><li>[ ] DONE</li></ul> | .5/1 |
+| Sam | Github Admin BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/22) | <ul><li>[x] DONE</li></ul> | 1/1 |
 | Team | AP FRQ Test and Review | [Issue](https://github.com/dsblack0/runtime-terror/issues/23) | <ul><li>[x] DONE</li></ul> (OPTIONAL)| ## |
-| Team | Unit #3 FRQ Online | [Issue](https://github.com/dsblack0/runtime-terror/issues/24) | <ul><li>[x] DONE</li></ul> | ## |
+| Team | Unit #3 FRQ Online | [Issue](https://github.com/dsblack0/runtime-terror/issues/24) | <ul><li>[x] DONE</li></ul> | 0.75/1 |
+| Team | Unit #2 FRQ Online | [Issue](https://github.com/dsblack0/runtime-terror/issues/9) | <ul><li>[x] DONE</li></ul> | 0.75-1/1 |
 
 
 ## Week 2 - Home Pages
