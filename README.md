@@ -22,8 +22,8 @@
 | --- | --- | --- |
 | Adrita |
 | Kaavya |
-| Rachel |
-| Sam | [Journal](https://drive.google.com/drive/folders/1Ro14W_1HDCUj0L_E7oSZH-VPDESge9l5?usp=sharing) | |
+| Rachel [Individual Journal](https://docs.google.com/document/d/15mil-mSpv7Ma4rNcUr_b5NjWCx2yM9FR3MIMcpM767U/edit?usp=sharing)|
+| Sam | [Individual Journal](https://drive.google.com/drive/folders/1Ro14W_1HDCUj0L_E7oSZH-VPDESge9l5?usp=sharing) | |
 | Sami |
 
 ## Scrum Team
