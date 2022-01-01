@@ -21,7 +21,7 @@ public class MainController {
         model.addAttribute("inpx", inpx);
         model.addAttribute("inpy", inpy);
 
-        return "/Pages/aboutMePages/teamAbout";
+        return "Pages/aboutMePages/teamAbout";
     }
 }
 

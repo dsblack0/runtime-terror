@@ -190,7 +190,7 @@ public class samAboutMe {
         model.addAttribute("compare", compare);
         model.addAttribute("option2", option2);
 
-        return "/Pages/aboutMePages/samAbout";
+        return "Pages/aboutMePages/samAbout";
     }
 
 
