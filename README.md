@@ -20,11 +20,11 @@
 
 | Name | Inidividual Journal | Pair Journal |
 | --- | --- | --- |
-| Adrita |
-| Kaavya |
-| Rachel | [Individual Journal](https://docs.google.com/document/d/15mil-mSpv7Ma4rNcUr_b5NjWCx2yM9FR3MIMcpM767U/edit?usp=sharing) |
-| Sam | [Individual Journal](https://drive.google.com/drive/folders/1Ro14W_1HDCUj0L_E7oSZH-VPDESge9l5?usp=sharing) | |
-| Sami |
+| Adrita | [Individual Journal](https://github.com/dsblack0/runtime-terror/wiki/0-Adrita-Individual-Journal) |
+| Kaavya | [Individual Journal](https://github.com/dsblack0/runtime-terror/wiki/0-Kaavya-Individual-Journal) |
+| Rachel | [Individual Journal](https://github.com/dsblack0/runtime-terror/wiki/0-Rachel-Individual-Journal) |
+| Sam | [Individual Journal](https://github.com/dsblack0/runtime-terror/wiki/0-Sam-Individual-Journal) |
+| Sami | [Individual Journal](https://github.com/dsblack0/runtime-terror/wiki/0-Sami-Individual-Journal)
 
 ## Scrum Team
 | Name | Github Profile | Tasks | Scrum Board | Commits | Role |
