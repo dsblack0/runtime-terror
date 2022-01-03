@@ -43,7 +43,7 @@
 | Rachel | | | <ul><li>[ ] DONE</li></ul> | |
 | Adrita | | | <ul><li>[ ] DONE</li></ul> | |
 | Kaavya | | | <ul><li>[ ] DONE</li></ul> | |
-| Sam | | | | <ul><li>[ ] DONE</li></ul> | |
+| Sam | | | <ul><li>[ ] DONE</li></ul> | |
 
 ## Week 4 - New Year "Time to be Resolute"
 
@@ -53,7 +53,7 @@
 | Rachel | | | <ul><li>[ ] DONE</li></ul> | |
 | Adrita | | | <ul><li>[ ] DONE</li></ul> | |
 | Kaavya | | | <ul><li>[ ] DONE</li></ul> | |
-| Sam | | | | <ul><li>[ ] DONE</li></ul> | |
+| Sam | | | <ul><li>[ ] DONE</li></ul> | |
 
 ## Week 3 - WIP Project Review
 
