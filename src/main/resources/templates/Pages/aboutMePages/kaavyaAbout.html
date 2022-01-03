@@ -85,7 +85,6 @@
                 p{
                     font-size: 1vw;
                     color: #004F76;
-
                 }
             </style>
             <div class="card">
@@ -102,7 +101,43 @@
                 </div>
             </div>
         </div>
-        <div>
+        <div  class="container" style="margin: 30px">
+            <h2>
+                FRQ #2
+            </h2>
+            <form action="/kaavyaAbout" method="GET" id="frq_2">
+                <div>
+                    <label for="seq" style="color: teal;">Original sequence?</label>
+                    <input name="seq" id="seq">
+                    <label for="segment" style="color: teal;">Segment to remove</label>
+                    <input name="segment" id="segment">
+                    <button>Answer</button>
+                    <p><b th:text="'Original sequence: ' + ${seq}" style="color: teal;"></b></p>
+                    <p><b th:text="'New sequence: ' + ${newSeq}" style="color: teal;"></b></p>
+                </div>
+            </form>
+            <form>
+                <div>
+                    <label for="segment2" style="color: teal;">Segment to insert</label>
+                    <input name="segment2" id="segment2">
+                    <label for="ind" style="color: teal;">Index?</label>
+                    <input name="ind" id="ind">
+                    <button>Answer</button>
+                    <p><b th:text="'Resulting sequence: ' + ${insertSeq}" style="color: teal;"></b></p>
+                </div>
+            </form>
+            <form>
+                <div>
+                    <label for="a" style="color: teal;">Pick to numbers to find their distance</label>
+                    <input name="a" id="a">
+                    <label for="b" style="color: teal;"></label>
+                    <input name="b" id="b">
+                    <button>Answer</button>
+                    <p><b th:text="'Distance from ' + ${a} + ' to ' + ${b} + '= ' + ${straightDist}" style="color: teal;"></b></p>
+                </div>
+            </form>
+        </div>
+        <div class="container" style="margin: 30px">
             <h2>
                 FRQ#3
             </h2>
@@ -141,41 +176,6 @@
                 </div>
             </form>
         </div>
-        <!--<div>
-            <h3>
-                Unit 2
-            </h3>
-            <form action="/kaavyaAbout" method="GET" id="frq_2">
-                <div>
-                    <label for="seq" style="color: teal;">Original sequence?</label>
-                    <input name="seq" id="seq">
-                    <button>Answer</button>
-                    <p><b th:text="'New sequence: ' + ${seq}" style="color: teal;"></b></p>
-                </div>
-            </form>
-            <form>
-                <div>
-                    <p><b th:text="'Original sequence: ' + ${originalSeq}" style="color: teal;"></b></p>
-                    <label for="name" style="color: teal;">Pick a segment to insert</label>
-                    <input name="instsegment" id="instsegment">
-                    <label for="name" style="color: teal;">Index?</label>
-                    <input name="ind" id="ind">
-                    <button>Answer</button>
-                    <p><b th:text="'Resulting sequence: ' + ${resultSeq}" style="color: teal;"></b></p>
-                </div>
-            </form>
-            <form>
-                <div>
-                    <label for="name" style="color: teal;">Pick to numbers to find their distance</label>
-                    <input name="num1" id="num1">
-                    <input name="num2" id="num2">
-                    <button>Answer</button>
-                    <p><b th:text="'Distance from ' + ${num1} + ' to ' + ${num2} + '= ' + ${distance}" style="color: teal;"></b></p>
-                </div>
-            </form>
-
-        </div>
-        -->
     </div>
 </body>
 </html>

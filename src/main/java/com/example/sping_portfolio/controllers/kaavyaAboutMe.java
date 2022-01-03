@@ -1,6 +1,7 @@
 package com.example.sping_portfolio.controllers;
 
 import com.example.sping_portfolio.kaavyaCollegeBoardFRQs.DinnerFRQ3;
+import com.example.sping_portfolio.kaavyaCollegeBoardFRQs.LightSequence;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,12 +10,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class kaavyaAboutMe {
     @GetMapping("/kaavyaAbout")
-    public String kaavyaAbout(@RequestParam(name="seq", required=false, defaultValue = "110000011") String seq,
+    public String kaavyaAbout(@RequestParam(name ="seq", required = false, defaultValue = "1100000111") String seq,
                               @RequestParam(name="segment", required = false, defaultValue = "11") String segment,
-                              @RequestParam(name ="oldSeq", required = false, defaultValue = "1100000111") String oldSeq,
-                              @RequestParam(name="ind", required = false, defaultValue = "4") String ind,
-                              @RequestParam(name="a", required = false, defaultValue = "3.0") String a,
-                              @RequestParam(name="b", required = false, defaultValue = "4.0") String b,
+                              @RequestParam(name="segment2", required = false, defaultValue = "11") String segment2,
+                              @RequestParam(name="ind", required = false, defaultValue = "4") int ind,
+                              @RequestParam(name="a", required = false, defaultValue = "3.0") double a,
+                              @RequestParam(name="b", required = false, defaultValue = "4.0") double b,
                               @RequestParam(name="rsvp", required = false, defaultValue = "no") String rsvp,
                               @RequestParam(name="selection", required = false, defaultValue = "1") int selection,
                               @RequestParam(name="rsvp1", required = false, defaultValue = "no") String rsvp1,
@@ -24,9 +25,13 @@ public class kaavyaAboutMe {
                               @RequestParam(name="response", required = false, defaultValue = "attending") String response,
                               Model model) {
 
+        LightSequence frq2 = new LightSequence();
+        model.addAttribute("newSeq", frq2.oldToNew(seq, segment));
+        model.addAttribute("insertSeq", frq2.insertSegment(segment2, ind));
+        model.addAttribute("straightDist", frq2.distance(a, b));
+
         //Converting "yes" and "no" to true and false for attending
         DinnerFRQ3 frq3_1 = new DinnerFRQ3();
-
         model.addAttribute("response", frq3_1.printAttending(frq3_1.rsvpBoolean(rsvp)));
         model.addAttribute("selection", frq3_1.printSelection(selection));
         model.addAttribute("option1", frq3_1.dinnerSelection1(frq3_1.rsvpBoolean(rsvp1),selection1));

@@ -4,28 +4,25 @@ import java.sql.Array;
 
 public class LightSequence {
     // attributes not shown
-    private String seq;
+    private String sequence;
     /** The parameter seq is the initial sequence used for
      * the light display
      */
 
-    public LightSequence(String seq) {
-        this.seq = seq;
-    }
-
     /** Inserts the string segment in the current sequence,
      * starting at the index ind. Returns the new sequence.
      */
-    public String insertSegment(String segment, int ind) {
-        this.seq = seq.substring(0,ind) + segment + seq.substring(4);
-        return seq;
+    public String insertSegment(String segment2, int ind) {
+        String insertSeq = sequence.substring(0,ind) + segment2 + sequence.substring(4);
+        return insertSeq;
     }
 
     /** Updates the sequence to the value in seq
      */
 
-    public void changeSequence(String seq) {
-        this.seq = seq;
+    public String changeSequence(String seq) {
+        sequence = seq;
+        return sequence;
     }
 
     /** Uses the current sequence to turn the light on and off
@@ -33,25 +30,27 @@ public class LightSequence {
      */
 
     public void display() {
-        System.out.println(seq);
+        System.out.println(sequence);
     }
 
-    public void oldToNew (String oldSeq, String segment) {
+    public String oldToNew (String seq, String segment) {
+        sequence = seq;
         String newSeq;
-        int index = oldSeq.indexOf(segment);
-        newSeq = oldSeq.substring(0, index) + oldSeq.substring((segment.length() + index)-1);
+        int index = seq.indexOf(segment);
+        newSeq = seq.substring(0, index) + seq.substring((segment.length() + index));
+        return newSeq;
     }
 
-    public void distance (double a, double b){
+    public double distance (double a, double b){
         double vertical = a;
         double horizontal = b;
         double straightDist = Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
-        System.out.println(straightDist);
+        return straightDist;
     }
 
     //will have to move into controller
     public void gradShow (){
-        LightSequence gradShow = new LightSequence("0101 0101 0101");
+        LightSequence gradShow = new LightSequence();
         gradShow.display();
         gradShow.changeSequence("0011 0011 0011");
         gradShow.insertSegment("1111 1111", 4);
