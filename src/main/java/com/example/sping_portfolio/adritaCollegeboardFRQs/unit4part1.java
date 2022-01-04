@@ -6,6 +6,7 @@ public class unit4part1 {
     public static void Streak(String word){
         int streak_length = 0;
         // int answer = 0;
+        //hi
         char previous = word.charAt(0);
         char streak_letter = previous;
         // int index_final = 0;
