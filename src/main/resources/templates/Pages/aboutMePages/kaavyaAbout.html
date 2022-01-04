@@ -176,6 +176,31 @@
                 </div>
             </form>
         </div>
+        <div class="container" style="margin: 30px">
+            <h2>
+                FRQ#4
+            </h2>
+            <p>Question 1: Longest Consecutive Substring</p>
+            <form action="/kaavyaAbout" method="GET" id="frq4_1">
+                <div>
+                    <label for = "str" style="color: teal;">Add String</label>
+                    <input name="str" id="str">
+                    <button>Answer</button>
+                    <p><b th:text="'Most common consecutive char: ' + ${output}" style="color: teal;"></b></p>
+                </div>
+            </form>
+            <p>Question 2: Coin Game</p>
+            <form action="/kaavyaAbout" method="GET" id="frq4_2">
+                <div>
+                    <label for = "startingCoins" style="color: teal;">Initial Number of Coins</label>
+                    <input name="startingCoins" id="startingCoins">
+                    <label for = "maxRounds" style="color: teal;">Total Number of Rounds</label>
+                    <input name="maxRounds" id="maxRounds">
+                    <button>Game Outcome</button>
+                    <p><b th:text="'Outcome: ' + ${outcome}" style="color: teal;"></b></p>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>

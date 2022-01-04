@@ -1,7 +1,9 @@
 package com.example.sping_portfolio.controllers;
 
+import com.example.sping_portfolio.kaavyaCollegeBoardFRQs.CoinCountFRQ4;
 import com.example.sping_portfolio.kaavyaCollegeBoardFRQs.DinnerFRQ3;
 import com.example.sping_portfolio.kaavyaCollegeBoardFRQs.LightSequence;
+import com.example.sping_portfolio.kaavyaCollegeBoardFRQs.LongestStreakFRQ4;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +25,9 @@ public class kaavyaAboutMe {
                               @RequestParam(name="rsvp2", required = false, defaultValue = "no") String rsvp2,
                               @RequestParam(name="selection2", required = false, defaultValue = "1") int selection2,
                               @RequestParam(name="response", required = false, defaultValue = "attending") String response,
+                              @RequestParam(name="str", required = false, defaultValue = "CCAAAAATTT!") String str,
+                              @RequestParam(name="startingCoins", required = false, defaultValue = "10") int startingCoins,
+                              @RequestParam(name="maxRounds", required = false, defaultValue = "5") int maxRounds,
                               Model model) {
 
         LightSequence frq2 = new LightSequence();
@@ -37,5 +42,11 @@ public class kaavyaAboutMe {
         model.addAttribute("option1", frq3_1.dinnerSelection1(frq3_1.rsvpBoolean(rsvp1),selection1));
         model.addAttribute("option2", frq3_1.dinnerSelection2(frq3_1.rsvpBoolean(rsvp2), selection2));
         model.addAttribute("compareOptions",frq3_1.compareOptions());
+
+        LongestStreakFRQ4 frq4_1 = new LongestStreakFRQ4();
+        model.addAttribute("output", frq4_1.longestStreak(str));
+        CoinCountFRQ4 frq4_2 = new CoinCountFRQ4();
+        model.addAttribute("outcome", frq4_2.playGame(startingCoins, maxRounds));
+
         return "Pages/aboutMePages/kaavyaAbout"; }
 }
