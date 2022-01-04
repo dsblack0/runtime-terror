@@ -1,6 +1,5 @@
 package com.example.sping_portfolio.controllers.samAboutMe;
 
-import com.example.sping_portfolio.controllers.samAboutMe.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,118 +11,6 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.text.ParseException;
-import java.lang.Math;
-
-//Unit2 FRQ
-class LightSequence {
-    String resultSeq;
-
-    public LightSequence(String seq) {
-
-        resultSeq = seq;
-    }
-
-    public String insertSegment(String oldSeq, String segment, int ind) {
-        resultSeq = oldSeq.substring(0, ind + 1) + segment + oldSeq.substring(ind + 1);
-        return resultSeq;
-    }
-
-    public void changeSequence(String seq) {
-
-        resultSeq = seq;
-    }
-
-    public void display() {
-        System.out.println(resultSeq);
-    }
-
-    public String getSeq() {
-
-        return resultSeq;
-    }
-
-    public static String changeSegment(String oldSeq, String segment) {
-        int index = oldSeq.indexOf(segment);
-        String newSeq = oldSeq.substring(0, index) + oldSeq.substring(index + segment.length());
-        System.out.println("changedSegment = " + newSeq);
-        return newSeq;
-    }
-
-    public static double mathSqrt(double a, double b) {
-        double c = Math.sqrt(a * a + b * b);
-        return c;
-    }
-}
-
-//Unit3 FRQ
-class Party {
-    boolean rsvp;
-    int selection;
-    String option1;
-    String option2;
-    String attendance;
-    String food;
-    String person;
-    String compare;
-
-
-    public Party(String name) {
-        person = name;
-    }
-
-    public String Attendance(boolean rsvp) {
-        if (rsvp) {
-            attendance = "attending";
-            return attendance;
-        } else {
-            attendance = "not attending";
-            return attendance;
-        }
-    }
-
-    public String Food(int selection) {
-        if (selection == 1) {
-            food = "beef";
-            return food;
-        } else if (selection == 2) {
-            food = "chicken";
-            return food;
-        } else if (selection == 3) {
-            food = "pasta";
-            return food;
-        } else {
-            food = "fish";
-            return food;
-        }
-    }
-
-    public String Information(boolean rsvp, int selection) {
-        option2 = "Sorry you can't make it.";
-        if (!rsvp) {
-            option1 = "Sorry you can't make it.";
-        } else {
-            option1 = "Thanks for attending. You will be served ";
-            if (selection == 1) {
-                option1 += "beef.";
-            } else if (selection == 2) {
-                option1 += "chicken.";
-            } else if (selection == 3) {
-                option1 += "pasta.";
-            } else {
-                option1 += "fish.";
-            }
-        }
-        if (option1.equals(option2)) {
-            compare = "true";
-        } else {
-            compare = "false";
-        }
-        return option1;
-    }
-    public String compare() {
-        return compare;
-    }
-}
 
 @Controller
 public class samAboutMe {
@@ -139,6 +26,8 @@ public class samAboutMe {
                            @RequestParam(name="foodselection", required = false, defaultValue = "5") String foodselection,
                            @RequestParam(name="rsvpattendance2", required = false, defaultValue = "false") String rsvpattendance2,
                            @RequestParam(name="foodselection2", required = false, defaultValue = "5") String foodselection2,
+                           @RequestParam(name="Coins", required = false, defaultValue = "10") String Coins,
+                           @RequestParam(name="Rounds", required = false, defaultValue = "5") String Rounds,
                            Model model)
             throws IOException, InterruptedException, ParseException {
         HttpRequest request = HttpRequest.newBuilder()
@@ -153,12 +42,12 @@ public class samAboutMe {
 
         //Unit 2 FRQ
         int indx = Integer.parseInt(ind);
-        LightSequence gradshow = new LightSequence(name);
-        String newSeq = LightSequence.changeSegment(oldSeq, segment);
+        Unit2LightSequence gradshow = new Unit2LightSequence(name);
+        String newSeq = Unit2LightSequence.changeSegment(oldSeq, segment);
         String resultSeq = gradshow.insertSegment(oldSeq, instsegment, indx);
         double a = Double.parseDouble(num1);
         double b = Double.parseDouble(num2);
-        double c = LightSequence.mathSqrt(a, b);
+        double c = Unit2LightSequence.mathSqrt(a, b);
         String distance = String.valueOf(c);
 
         //Unit 3 FRQ
@@ -166,7 +55,7 @@ public class samAboutMe {
         boolean rsvp = Boolean.parseBoolean(rsvpattendance);
         int selection2 = Integer.parseInt(foodselection2);
         boolean rsvp2 = Boolean.parseBoolean(rsvpattendance2);
-        Party person = new Party(name);
+        Unit3Party person = new Unit3Party(name);
         String option1 = person.Information(rsvp, selection);
         String option2 = person.Information(rsvp2, selection2);
         String compare = "";
@@ -175,6 +64,14 @@ public class samAboutMe {
         } else {
             compare = "false";
         }
+
+        //Unit 4 FRQ
+        int startingCoins = Integer.parseInt(Coins);
+        int maxRounds = Integer.parseInt(Rounds);
+        Unit4CoinGame game = new Unit4CoinGame(startingCoins, maxRounds);
+        String p1Move = String.valueOf(game.getPlayer1Move(maxRounds));
+        String p2Move = String.valueOf(game.getPlayer2Move(maxRounds));
+        String gameResult = game.playGame();
 
 
         var quotes = response.body();
@@ -189,6 +86,9 @@ public class samAboutMe {
         model.addAttribute("option1", option1);
         model.addAttribute("compare", compare);
         model.addAttribute("option2", option2);
+        model.addAttribute("p1Move", p1Move);
+        model.addAttribute("p2Move", p2Move);
+        model.addAttribute("gameResult", gameResult);
 
         return "Pages/aboutMePages/samAbout";
     }
