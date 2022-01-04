@@ -1,1 +1,6 @@
+#!/bin/bash
+git pull
+./mvnw package
+sudo systemctl stop runtime_terror
+sudo systemctl start runtime_terror
 
