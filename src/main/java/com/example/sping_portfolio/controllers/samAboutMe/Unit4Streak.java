@@ -1,28 +1,33 @@
 package com.example.sping_portfolio.controllers.samAboutMe;
 
 public class Unit4Streak {
-    public static char longestStreak(String str) {
-        char character = 0;
-        String largestStreak= "";
-        String currentStreak= "";
+    char streakCharacter = ' ';
+    int length = 0;
 
-        for (int i=0; i<str.length(); i++) {
-            if (character == str.charAt(i)) {
-                currentStreak += str.charAt(i);
-                System.out.println(currentStreak);
+    public Unit4Streak(String name) {
+    }
+
+    public char longestStreak(String str) {
+        char character = '_';
+        String largestStreak = "";
+        String currentStreak = "";
+
+        for (int i=0; i < str.length(); i++) {
+            if (str.charAt(i) != character) {
+                currentStreak = "";
             }
+            currentStreak += str.charAt(i);
             if (currentStreak.length() > largestStreak.length()) {
                 largestStreak = currentStreak;
-                System.out.println(largestStreak);
             }
             character = str.charAt(i);
         }
-        int length = largestStreak.length();
-        return character;
-
+        streakCharacter = largestStreak.charAt(0);
+        length = largestStreak.length();
+        return streakCharacter;
     }
 
-    public static void main(String[] args) {
-        System.out.println(longestStreak("CCAAAAATTT"));
+    public int displayLength() {
+        return length;
     }
 }

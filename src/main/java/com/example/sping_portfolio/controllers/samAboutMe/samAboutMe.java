@@ -28,6 +28,7 @@ public class samAboutMe {
                            @RequestParam(name="foodselection2", required = false, defaultValue = "5") String foodselection2,
                            @RequestParam(name="Coins", required = false, defaultValue = "10") String Coins,
                            @RequestParam(name="Rounds", required = false, defaultValue = "5") String Rounds,
+                           @RequestParam(name="originalString", required = false, defaultValue = "CCAAAAATTT!") String originalString,
                            Model model)
             throws IOException, InterruptedException, ParseException {
         HttpRequest request = HttpRequest.newBuilder()
@@ -73,6 +74,9 @@ public class samAboutMe {
         String p2Move = String.valueOf(game.getPlayer2Move(maxRounds));
         String gameResult = game.playGame();
 
+        Unit4Streak streak = new Unit4Streak("streak1");
+        char streakChar = streak.longestStreak(originalString);
+        int streakLength = streak.displayLength();
 
         var quotes = response.body();
         model.addAttribute("quotes", quotes);
@@ -89,6 +93,8 @@ public class samAboutMe {
         model.addAttribute("p1Move", p1Move);
         model.addAttribute("p2Move", p2Move);
         model.addAttribute("gameResult", gameResult);
+        model.addAttribute("streakChar", streakChar);
+        model.addAttribute("streakLength", streakLength);
 
         return "Pages/aboutMePages/samAbout";
     }
