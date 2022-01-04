@@ -18,7 +18,12 @@ public class LongestStreakFRQ4 {
         mostCommon = longestSegment(str).substring(0,1);
         count = longestSegment(str).length();
         output = mostCommon + " " + count;
-        System.out.println("Most consecutive char: " + output);
+
+        //Print statements for TPT Hackathon
+        System.out.println("Most Common Char: " + mostCommon);
+        System.out.println("Starting index: " + startIndex(str) + ", Ending index: " + endIndex(str));
+        System.out.println("substring length: " + longest.length());
+
         return output;
     }
 
@@ -35,7 +40,6 @@ public class LongestStreakFRQ4 {
                 substrings.add(element);
                 element = "";
             }
-            System.out.println("element: " + element);
         }
         longest = substrings.get(0);
         for (int i = 1; i < substrings.size(); i++){
@@ -45,5 +49,15 @@ public class LongestStreakFRQ4 {
             }
         }
         return longest;
+    }
+
+    //Created for TPT Hackathon
+    public int startIndex (String str){
+        int start = str.indexOf(longest);
+        return start;
+    }
+    public int endIndex (String str){
+        int end = str.indexOf(longest) + longest.length() - 1;
+        return end;
     }
 }
