@@ -49,11 +49,11 @@
 
 | Name | Requirement | Evidence | Complete | Grade |
 | ---   | ---        | ---      | ---        | ---   |
-| Sami | | | <ul><li>[ ] DONE</li></ul> | |
-| Rachel | | | <ul><li>[ ] DONE</li></ul> | |
-| Adrita | | | <ul><li>[ ] DONE</li></ul> | |
-| Kaavya | | | <ul><li>[ ] DONE</li></ul> | |
-| Sam | | | <ul><li>[ ] DONE</li></ul> | |
+| Sami | Calendar Page Setup and Technicals| [Issue](https://github.com/dsblack0/runtime-terror/issues/52) | <ul><li>[ ] DONE</li></ul> | |
+| Rachel | Jekyll | [Issue](https://github.com/dsblack0/runtime-terror/issues/47) | <ul><li>[ ] DONE</li></ul> | |
+| Adrita | Database Setup | [Issue](https://github.com/dsblack0/runtime-terror/issues/43) | <ul><li>[ ] DONE</li></ul> | |
+| Kaavya | Deployment | [Issue](https://github.com/dsblack0/runtime-terror/issues/42) | <ul><li>[ ] DONE</li></ul> | |
+| Sam | Home Page Technicals | [Issue](https://github.com/dsblack0/runtime-terror/issues/48) | <ul><li>[ ] DONE</li></ul> | |
 
 ## Week 3 - WIP Project Review
 
