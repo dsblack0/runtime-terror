@@ -1,9 +1,12 @@
 package com.example.sping_portfolio.controllers;
 
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import samiCollegeBoard.Coingame;
+import samiCollegeBoard.Coingame;
 
 import java.io.IOException;
 import java.net.URI;
@@ -188,6 +191,10 @@ public class samiAboutMe {
                 model.addAttribute("option1", option1);
                 model.addAttribute("compare", compare);
                 model.addAttribute("option2", option2);
+
+                /*Coingame frq4 = new Coingame();
+                result = frq4.Playgame(startingCoins, maxRounds);
+                model.addAttribute("result", );*/
 
                 return "Pages/aboutMePages/samiAbout";
         }
