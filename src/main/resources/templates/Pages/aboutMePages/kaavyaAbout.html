@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <div layout:fragment="metadata" th:remove="tag"><title>Kaavya Uppala</title>
+    </div>
+    <th:block th:fragment="header">
+        <style>
+            :root{
+                --mistyBlue: #D8E3EC;
+                --babyBlue: #9DBED1;
+                --teal: #14829F;
+                --midnightBlue: #004F76;
+            }
+        </style>
+    </th:block>
+</head>
+<body>
+    <div layout:fragment="content" th:remove="tag">
+        <script>
+            fetch("https://brianiswu-cat-facts-v1.p.rapidapi.com/facts", {
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "brianiswu-cat-facts-v1.p.rapidapi.com",
+                    "x-rapidapi-key": "5160560674msh71fe7bcad890509p159e0ajsnc0f73e8a4ad9"
+                }
+            })
+                .then(response => {
+                    <!--console.log(response.text());-->
+                    <!--console.log(JSON.stringify(response.text()));-->
+                    return response.json();
+                })
+                .then(catFacts => {
+                    document.getElementById("fact").innerHTML = catFacts[1].text;
+                })
+                .catch(err => {
+                    console.error(err);
+                });
+        </script>
+        <div id="kaavyaAbout" class="articles">
+            <style>
+                html,body{
+                    line-height: 2.0;
+                    background-color: #9DBED1;
+                    margin: 30px;
+                }
+                img {
+                    display: block;
+                    margin-left: 10px;
+                    margain-right: auto;
+                }
+                h3{
+                    font-size: 3vw;
+                    color: #004F76;
+                }
+            </style>
+            <ol>
+                <h3> About Kaavya </h3>
+                <div class="container" >
+                    <img id = "kaavyaImage" class = "image" src = "/static/images/kaavyaaboutme.jpg">
+                    <img id = "kaavyaDrawing" class = "image" src = "/static/images/kaavyadrawing.jpg">
+                    <button id = "button2" type = "button">Toggle Image</button>
+                    <script type="text/javascript">
+                        let Image1 = document.getElementById("kaavyaImage");
+                        let button2 = document.getElementById("button2");
+
+                        function toggleImage() {
+
+                            if (Image1.getAttribute('src') === "/static/images/kaavyaaboutme.jpg") {
+                                Image1.setAttribute('src', "/static/images/kaavyadrawing.jpg");
+                            }
+                            else {
+                                Image1.setAttribute('src', "/static/images/kaavyaaboutme.jpg");
+                            }
+                        }
+
+                        button2.addEventListener("click", toggleImage);
+                    </script>
+                </div>
+            </ol>
+        </div>
+        <div class="card-columns" style="margin: 30px;">
+            <style>
+                p{
+                    font-size: 1vw;
+                    color: #004F76;
+                }
+            </style>
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">Trimester 1 Digital Journals</p>
+                    <a href="https://docs.google.com/document/d/1RIIQLuQYmd7VfgwVUuagS0k8c6wzEtOcaqYy5M8PtLE/edit?usp=sharing" target="_blank" class="card-link">AP Journal</a>
+                    <a href="https://docs.google.com/document/d/1h_vjHIhu1bZy4lrPlD3wR9qwJQ-ecefa4nxaJv8pvRg/edit?usp=sharing" target="_blank" class="card-link">PBL Journal</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">Cat Fact with Web API</p>
+                    <h4 id="fact"></h4>
+                </div>
+            </div>
+        </div>
+        <div  class="container" style="margin: 30px">
+            <h2>
+                FRQ #2
+            </h2>
+            <form action="/kaavyaAbout" method="GET" id="frq_2">
+                <div>
+                    <label for="seq" style="color: teal;">Original sequence?</label>
+                    <input name="seq" id="seq">
+                    <label for="segment" style="color: teal;">Segment to remove</label>
+                    <input name="segment" id="segment">
+                    <button>Answer</button>
+                    <p><b th:text="'Original sequence: ' + ${seq}" style="color: teal;"></b></p>
+                    <p><b th:text="'New sequence: ' + ${newSeq}" style="color: teal;"></b></p>
+                </div>
+            </form>
+            <form>
+                <div>
+                    <label for="segment2" style="color: teal;">Segment to insert</label>
+                    <input name="segment2" id="segment2">
+                    <label for="ind" style="color: teal;">Index?</label>
+                    <input name="ind" id="ind">
+                    <button>Answer</button>
+                    <p><b th:text="'Resulting sequence: ' + ${insertSeq}" style="color: teal;"></b></p>
+                </div>
+            </form>
+            <form>
+                <div>
+                    <label for="a" style="color: teal;">Pick to numbers to find their distance</label>
+                    <input name="a" id="a">
+                    <label for="b" style="color: teal;"></label>
+                    <input name="b" id="b">
+                    <button>Answer</button>
+                    <p><b th:text="'Distance from ' + ${a} + ' to ' + ${b} + '= ' + ${straightDist}" style="color: teal;"></b></p>
+                </div>
+            </form>
+        </div>
+        <div class="container" style="margin: 30px">
+            <h2>
+                FRQ#3
+            </h2>
+            <form action="/kaavyaAbout" method="GET" id="frq3_1">
+                <div>
+                    <label for = "rsvp" style="color: teal;">Attending? ("yes" or "no")</label>
+                    <input name="rsvp" id="rsvp">
+                    <button>Answer</button>
+                    <p><b th:text="'rsvp: ' + ${response}" style="color: teal;"></b></p>
+                </div>
+                <div>
+                    <label for = "selection" style="color: teal;">Select a dinner option (1 = "beef", 2 = "chicken", 3 = "pasta", else "fish"</label>
+                    <input name="selection" id="selection">
+                    <button>Answer</button>
+                    <p><b th:text="'selection: ' + ${selection}" style="color: teal;"></b></p>
+                </div>
+            </form>
+            <form action="/kaavyaAbout" method="GET" id="frq3_11">
+                <div>
+                    <label for = "rsvp1" style="color: teal;">Enter Option 1 rsvp (Attending?)</label>
+                    <input name="rsvp1" id="rsvp1">
+                    <label for = "selection1" style="color: teal;">Enter Option 1 Selection</label>
+                    <input name="selection1" id="selection1">
+                    <p><b th:text="'Option 1: ' + ${option1}" style="color: teal;"></b></p>
+                </div>
+                <div>
+                    <label for = "rsvp2" style="color: teal;">Enter Option 2 rsvp (Attending?)</label>
+                    <input name="rsvp2" id="rsvp2">
+                    <label for = "selection2" style="color: teal;">Enter Option 2 Selection</label>
+                    <input name="selection2" id="selection2">
+                    <button>Answer</button>
+                    <p><b th:text="'Option 2: ' + ${option2}" style="color: teal;"></b></p>
+                </div>
+                <div>
+                    <p><b th:text="'Options 1 and 2 are the same? ' + ${compareOptions}" style="color: teal;"></b></p>
+                </div>
+            </form>
+        </div>
+        <div class="container" style="margin: 30px">
+            <h2>
+                FRQ#4
+            </h2>
+            <p>Question 1: Longest Consecutive Substring</p>
+            <form action="/kaavyaAbout" method="GET" id="frq4_1">
+                <div>
+                    <label for = "str" style="color: teal;">Add String</label>
+                    <input name="str" id="str">
+                    <button>Answer</button>
+                    <p><b th:text="'Most common consecutive char: ' + ${output}" style="color: teal;"></b></p>
+                </div>
+            </form>
+            <p>Question 2: Coin Game</p>
+            <form action="/kaavyaAbout" method="GET" id="frq4_2">
+                <div>
+                    <label for = "startingCoins" style="color: teal;">Initial Number of Coins</label>
+                    <input name="startingCoins" id="startingCoins">
+                    <label for = "maxRounds" style="color: teal;">Total Number of Rounds</label>
+                    <input name="maxRounds" id="maxRounds">
+                    <button>Game Outcome</button>
+                    <p><b th:text="'Outcome: ' + ${outcome}" style="color: teal;"></b></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

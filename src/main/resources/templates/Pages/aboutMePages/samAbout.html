@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head><div layout:fragment="metadata" th:remove="tag">
+    <title>Sam Duggirala</title>
+</div></head>
+
+<body><div layout:fragment="content" th:remove="tag">
+    <script th:inline="javascript">
+        function changeImage() {
+            document.getElementById("sam").src = "images/samaboutme.jpg";
+        }
+    </script>
+    <div class="info-about-me" style="width:500px;  margin: auto;">
+         <div class="picture-card" style="margin-top: 50px;">
+             <div style="width:100%; text-align:center">
+                <img id="sam" class="img-responsive py-3" th:src="@{/images/samaboutme_mask.jpg}" width="50%" height="Auto" alt="" style="width:50%; height:50%;">
+                <form action="/samAbout" method="GET" id="samForm">
+                 <div>
+                     <label for="name">What is you name?</label>
+                     <input name="name" id="name">
+                     <button>Answer</button>
+                     <input type="button"  onclick="changeImage();" value="Greet">
+                     <p th:text="'Hi, ' + ${name} + '! My name is Sam.'"></p>
+                 </div>
+             </form>
+             </div>
+         </div>
+        <table class="table" style="margin-top: 25px;">
+            <tr>
+            <td th:text="${quotes}"></td>
+            </tr>
+        </table>
+        <div class="row justify-content-md-center" style="margin-top: 10px;">
+            <form action="/samAbout" method="GET" id="quoteForm">
+                <button>Get Quote!</button>
+            </form>
+        </div>
+    </div>
+    <div class="info" style="margin-top: 20px; text-align: center; background-color: #555b65;">
+        <p><a href=https://drive.google.com/drive/folders/1Ro14W_1HDCUj0L_E7oSZH-VPDESge9l5?usp=sharing style="color: white;">CB FRQs/Journals</a></p>
+        <p><a href=https://github.com/dsblack0/runtime-terror/commits?author=dsblack0 style="color: white;">Project Contributions</a></p>
+    </div>
+
+    <div class="unit-two" style="margin-top: 20px; background-color: #555b65;">
+        <div style="margin-left: 50px;">
+            <h2 style="color: white;">Unit 2 FRQ</h2>
+            <form action="/samAbout" method="GET" id="changesegment">
+                <div>
+                    <label for="name" style="color: white;">Original sequence?</label>
+                    <input name="oldSeq" id="oldSeq">
+                    <label for="name" style="color: white;">Pick a segment to remove</label>
+                    <input name="segment" id="segment">
+                    <p><b th:text="'New sequence: ' + ${newSeq}" style="color: white;"></b></p>
+                    <p><b th:text="'Original sequence: ' + ${oldSeq}" style="color: white;"></b></p>
+                    <label for="name" style="color: white;">Pick a segment to insert</label>
+                    <input name="instsegment" id="instsegment">
+                    <label for="name" style="color: white;">Index?</label>
+                    <input name="ind" id="ind">
+                    <button>Answer</button>
+                    <p><b th:text="'Resulting sequence: ' + ${resultSeq}" style="color: white;"></b></p>
+                </div>
+            </form>
+            <form>
+                <div>
+                    <label for="name" style="color: white;">Pick to numbers to find their distance</label>
+                    <input name="num1" id="num1">
+                    <input name="num2" id="num2">
+                    <button>Answer</button>
+                    <p><b th:text="'Distance from ' + ${num1} + ' to ' + ${num2} + '= ' + ${distance}" style="color: white;"></b></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <div class="unit-three" style="margin-top: 20px; background-color: #555b65;">
+            <div style="margin-left: 50px;">
+                <h2 style="color: white;">Unit 3 FRQ</h2>
+                <h5 style="color: white;">Set Option 1</h5>
+                <form action="/samAbout" method="GET" id="attendance">
+                    <div style="margin-left: 10px;">
+                        <p class="rsvpattendance" style="color: white;">Will you rsvp?</p>
+                        <select name="rsvpattendance" id="rsvpattendance">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                        <p class="foodselection" style="color: white;">What food will you want? Input an integer</p>
+                        <input name="foodselection" id="foodselection">
+                        <p><b th:text="${option1}" style="color: white;"></b></p>
+                    </div>
+                    <h5 style="color: white;">Set Option 2</h5>
+                    <div style="margin-left: 10px;">
+                        <p class="rsvpattendance2" style="color: white;">Will you rsvp?</p>
+                        <select name="rsvpattendance2" id="rsvpattendance2">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                        <p class="foodselection2" style="color: white;">What food will you want? Input an integer</p>
+                        <input name="foodselection2" id="foodselection2">
+                        <button>Answer</button>
+                        <p><b th:text="${option2}" style="color: white;"></b></p>
+                        <p><b th:text="'Option1 = Option2: ' + ${compare}" style="color: white"></b></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="unit-four" style="margin-top: 20px; background-color: #555b65;">
+            <div style="margin-left: 50px;">
+                <h2 style="color: white;">Unit 4 FRQ</h2>
+                <h5 style="color: white;">Longest Streak</h5>
+                <form action="/samAbout" method="GET" id="streak">
+                    <div style="margin-left: 10px;">
+                        <p class="originalString" style="color: white;">Input a string to find its longest streak</p>
+                        <input name="originalString" id="originalString">
+                        <button>Answer</button>
+                        <p style="color:white;">Default string: CAAAAATTT!</p>
+                        <p><b th:text="'Longest Streak: ' + ${streakChar} + ' ' + ${streakLength}" style="color: white;"></b></p>
+                    </div>
+                </form>
+                <h5 style="color: white;">Coin Game</h5>
+                <form action="/samAbout" method="GET" id="coingame">
+                    <div style="margin-left: 10px;">
+                        <p class="Coins" style="color: white;">What is your starting amount of coins?</p>
+                        <input name="Coins" id="Coins">
+                        <p class="Rounds" style="color: white;">How many rounds will you have?</p>
+                        <input name="Rounds" id="Rounds">
+                        <button>Answer</button>
+                        <p style="color:white;">Default values: Starting coins = 10 & Rounds = 5</p>
+                        <p><b th:text="'Player 1 played ' + ${p1Move} + ' coins in their last round'" style="color: white;"></b></p>
+                        <p><b th:text="'Player 2 played ' + ${p2Move} + ' coins in their last round'" style="color: white;"></b></p>
+                        <p><b th:text="'Game Result: ' + ${gameResult}" style="color: white;"></b></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    <style>
+        html, body{
+            margin: 0;
+            height: auto;
+            background: linear-gradient(#0e0e0e, #7a7878, #cbd2d2);
+            animation: fadein 2s;
+            -moz-animation: fadein 2s; /* Firefox */
+            -webkit-animation: fadein 2s; /* Safari and Chrome */
+            -o-animation: fadein 2s; /* Opera */
+        }
+
+        .picture-card {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adrita Chakraborty</title>
+    <style>
+
+    </style>
+</head>
+<body style="background-color:lightblue">
+<h1 style="border:2px solid #6c35c6;"> About Adrita: </h1>
+<p style="font-family: 'Times New Roman'"> Hi, I'm Adrita. I am a junior at Del Norte High School and am currently in AP CSA. I collaborated on this project to help students find clubs and be able to navigate the details of clubs easily. </p>
+<script th:inline="javascript">
+    function changeImage() {
+        document.getElementById("adrita").src = "images/adrita_about.jpg";
+    }
+</script>
+<div class="info-about-me" style="width:500px;  margin: auto;">
+    <div class="picture-card" style="margin-top: 50px;">
+        <div style="width:100%; text-align:center">
+            <img id="adrita" class="img-responsive py-3" th:src="@{/images/adrita_mask.png}" width="50%" height="Auto" alt="" style="width:50%; height:50%;">
+            <form action="/adritaAbout" method="GET" id="adritaForm">
+                <div>
+                    <input type="button"  onclick="changeImage();" value="Change Picture">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="unit-two" style="margin-top: 20px; background-color: #555b65;">
+        <div style="margin-left: 50px;">
+            <h2 style="color: white;">Unit 2 FRQ</h2>
+            <form action="/adritaAbout" method="GET" id="changesegment">
+                <div>
+                    <label for="name" style="color: white;">Original sequence?</label>
+                    <input name="oldSeq" id="oldSeq">
+                    <label for="name" style="color: white;">Pick a segment to remove</label>
+                    <input name="segment" id="segment">
+                    <p><b th:text="'New sequence: ' + ${newSeq}" style="color: white;"></b></p>
+                    <p><b th:text="'Original sequence: ' + ${oldSeq}" style="color: white;"></b></p>
+                    <label for="name" style="color: white;">Pick a segment to insert</label>
+                    <input name="instsegment" id="instsegment">
+                    <label for="name" style="color: white;">Index?</label>
+                    <input name="ind" id="ind">
+                    <button>Answer</button>
+                    <p><b th:text="'Resulting sequence: ' + ${resultSeq}" style="color: white;"></b></p>
+                </div>
+            </form>
+            <form>
+                <div>
+                    <label for="name" style="color: white;">Pick to numbers to find their distance</label>
+                    <input name="num1" id="num1">
+                    <input name="num2" id="num2">
+                    <button>Answer</button>
+                    <p><b th:text="'Distance from ' + ${num1} + ' to ' + ${num2} + '= ' + ${distance}" style="color: white;"></b></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <div class="unit-three" style="margin-top: 20px; background-color: #555b65;">
+            <div style="margin-left: 50px;">
+                <h2 style="color: white;">Unit 3 FRQ</h2>
+                <h5 style="color: white;">Set Option 1</h5>
+                <form action="/adritaAbout" method="GET" id="attendance">
+                    <div style="margin-left: 10px;">
+                        <p class="rsvpattendance" style="color: white;">Will you rsvp?</p>
+                        <select name="rsvpattendance" id="rsvpattendance">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                        <p class="foodselection" style="color: white;">What food will you want? Input an integer</p>
+                        <input name="foodselection" id="foodselection">
+                        <p><b th:text="${option1}" style="color: white;"></b></p>
+                    </div>
+                    <h5 style="color: white;">Set Option 2</h5>
+                    <div style="margin-left: 10px;">
+                        <p class="rsvpattendance2" style="color: white;">Will you rsvp?</p>
+                        <select name="rsvpattendance2" id="rsvpattendance2">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                        <p class="foodselection2" style="color: white;">What food will you want? Input an integer</p>
+                        <input name="foodselection2" id="foodselection2">
+                        <button>Answer</button>
+                        <p><b th:text="${option2}" style="color: white;"></b></p>
+                        <p><b th:text="'Option1 = Option2: ' + ${compare}" style="color: white"></b></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+</body>
+</html>
