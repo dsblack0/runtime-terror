@@ -2,6 +2,7 @@
 
 
 > ## Table of Contents
+> 
 > | Entry No. | Heading |
 > | --- | --- |
 > | 0 | [Project Info](https://github.com/dsblack0/runtime-terror/blob/master/README.md#project-info) |
@@ -27,6 +28,7 @@
 | Sami | [Individual Journal](https://github.com/dsblack0/runtime-terror/wiki/0-Sami-Individual-Journal)
 
 ## Scrum Team
+
 | Name | Github Profile | Tasks | Scrum Board | Commits | Role |
 |  --- |  ---           | ---   | ---         | ---     | --- |
 | Rachel | [@rachelklee](https://github.com/rachelklee) | [Tickets](https://github.com/dsblack0/runtime-terror/issues/assigned/rachelklee) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1?card_filter_query=assignee%3Arachelklee) | [Commits](https://github.com/dsblack0/runtime-terror/commits?author=rachelklee) | Scrum Master |
@@ -99,6 +101,7 @@
 | | | | | TOTAL: 5/5 |
 
 ## Week 0
+
 | Topic | Issue/Link | Grade |
 | ---   | ---        | ---   |
 | Project Ideas! | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Brainstorm) | (Part of WK1) |
