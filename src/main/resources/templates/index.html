@@ -3,17 +3,16 @@
 <!DOCTYPE html>
 <html xmlns:layout="http://www.w3.org/1999/xhtml " xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layout}" lang="en">
-<html>
-<head>
-    <title>Page Layout</title>
+<head><div layout:fragment="metadata" th:remove="tag">
+    <title>Home Page</title>
     <style>
-             /* Week Bar in ome page with days of the week css */
-         .btn-group button {
-             background-color: #96d7c6;
-             color: #003060;
-             padding: 10px 24px; /* Some padding */
-             float: left; /* Float the buttons side by side */
-         }
+        /* Week Bar in ome page with days of the week css */
+        .btn-group button {
+            background-color: #96d7c6;
+            color: #003060;
+            padding: 10px 24px; /* Some padding */
+            float: left; /* Float the buttons side by side */
+        }
 
         /* Clear floats (clearfix hack) */
         .btn-group:after {
@@ -30,32 +29,147 @@
         .btn-group button:hover {
             background-color: #f7cb2d;
         }
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .more-details-box{
+            visibility: hidden;
+            background-color: #60a8ad;
+            color:#ffffff;
+            padding:20px;
+            float:bottom;
+            margin:20px;
+            position: absolute;
+            z-index: 1;
+        }
+        .more-details:hover .more-details-box{
+            visibility:visible;
+            opacity:1;
+        }
     </style>
+</div>
 </head>
 
-<body><div layout:fragment="content" th:remove="tag">
-<header>
+<body onload="getSchedule()"><div layout:fragment="content" th:remove="tag">
+    <header>
 
-</header>
+    </header>
 
-<div class = "body_sec">
-    <section id="Content">
-    <img th:src="@{/images/del-norte-hs-01.jpg}" style="width: 100%; height: 450px">
+    <div class = "body_sec">
+        <section id="Content">
+            <div style="position: relative;">
+                <div class="slideshow">
+                    <div class="pop-up-box" style="padding-top: 50px; position: absolute; background-color: midnightblue; width: 33%; height: 33%; margin-top: 100px; margin-left: 33%;">
+                        <div class="text" style="color: white;">Upcoming Events!</div>
+                    </div>
+                    <div class="pop-up-box" style="padding-top: 50px; position: absolute; background-color: midnightblue; width: 33%; height: 33%; margin-top: 100px; margin-left: 33%;">
+                        <div class="text" style="color: white;">Page2</div>
+                    </div>
+                    <div class="pop-up-box" style="padding-top: 50px; position: absolute; background-color: midnightblue; width: 33%; height: 33%; margin-top: 100px; margin-left: 33%;">
+                        <div class="text" style="color: white;">Upcoming Events!</div>
+                    </div>
+                    <div style="text-align:center;">
+                        <span class="dot" onclick="currentSlide(1)" style="margin-top: 250px; margin-left: -35px; position: absolute;"></span>
+                        <span class="dot" onclick="currentSlide(2)" style="margin-top: 250px; margin-left: -15px; position: absolute;"></span>
+                        <span class="dot" onclick="currentSlide(3)" style="margin-top: 250px; margin-left: 5px;position: absolute;" ></span>
+                    </div>
+                </div>
+                <img th:src="@{/images/del-norte-hs-01.jpg}" style="width: 100%; height: 450px;">
+            </div>
 
-    <div class="btn-group" style="background-color:#96d7c6; width: 100%; height: 15%">
-    <button style="width:20%">Monday</button>
-    <button style="width:20%">Tuesday</button>
-    <button style="width:20%">Wednesday</button>
-    <button style="width:20%">Thursday</button>
-    <button style="width:20%">Friday</button>
+            <div class="btn-group" style="background-color:#96d7c6; width: 100%; height: 15%">
+                <button style="width:20%">Monday</button>
+                <button style="width:20%">Tuesday</button>
+                <button style="width:20%">Wednesday</button>
+                <button style="width:20%">Thursday</button>
+                <button style="width:20%">Friday</button>
+            </div>
+
+            <div class="club icons" style="background-color: #5aa7a7; width: 100%; height: 400px">
+                <div class="card" style="width: 18rem; margin-top: 10px; margin-left:50px; margin-right: 50px; display: inline-block;" th:each ="clubs : ${list}">
+                    <div class="card-body" style="background-color: #f7cb2d">
+                        <h5 class="card-title" th:text="${clubs.title}">Club title</h5>
+                        <p class="card-text" th:text="${clubs.description}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="more-details">
+                            <button class="more-details-btn" style="width:9rem; height:4rem; margin-left: 50px; background-color: #96d7c6; border-color: #96d7c6; border-radius: 50px; font-size: large; color: black;">More details</button>
+                            <div class="more-details-box">
+                                <p class="card-details" th:text="${clubs.details}">Some more details and information</p>
+                                <p class="card-date" th:text="'Date: ' + ${clubs.date}">Days of Week</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </div>
-
-    <div class="club icons" style="background-color: #5aa7a7; width: 100%; height: 400px">
-    <p>Hello<p>
-    </div>
-
-    </section>
 </div>
-</div>
+
+<!-- sideshow script -->
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("pop-up-box");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+<!-- schedule script -->
+<script>
+    function getSchedule(){
+        const dt = new Date();
+        const day = dt.getDay();
+
+        if(day === 0){
+            document.getElementById("schedule").innerHTML = "Sunday</br></br>No school today! Catch up on your work!";
+        }
+        if(day === 1){
+            document.getElementById("schedule").innerHTML =
+        }
+        if(day === 2){
+            document.getElementById("schedule").innerHTML =
+        }
+        if(day === 3){
+            document.getElementById("schedule").innerHTML =
+        }
+        if(day === 4){
+            document.getElementById("schedule").innerHTML =
+        }
+        if(day === 5){
+            document.getElementById("schedule").innerHTML =
+        }
+        if(day === 6){
+            document.getElementById("schedule").innerHTML = "Saturday</br></br>No school today! Catch up on your work!";
+        }
+    }
+</script>
 </body>
 </html>

@@ -1,16 +1,18 @@
 package com.example.sping_portfolio.controllers.samAboutMe;
 
 public class Unit4Streak {
-    char streakCharacter = ' ';
-    int length = 0;
+    static char streakCharacter = ' ';
+    static int length = 0;
 
     public Unit4Streak(String name) {
     }
 
-    public char longestStreak(String str) {
+    public static char longestStreak(String str) {
         char character = '_';
         String largestStreak = "";
         String currentStreak = "";
+        int endingIndex = 0;
+        int startingIndex = 0;
 
         for (int i=0; i < str.length(); i++) {
             if (str.charAt(i) != character) {
@@ -19,15 +21,24 @@ public class Unit4Streak {
             currentStreak += str.charAt(i);
             if (currentStreak.length() > largestStreak.length()) {
                 largestStreak = currentStreak;
+                endingIndex = i;
             }
             character = str.charAt(i);
         }
+        System.out.println(largestStreak);
+
         streakCharacter = largestStreak.charAt(0);
+        startingIndex = str.indexOf(largestStreak);
         length = largestStreak.length();
+        System.out.println("Char: " + streakCharacter + length + " Start: " + startingIndex + " End: " + endingIndex);
         return streakCharacter;
     }
 
-    public int displayLength() {
+    public static int displayLength() {
         return length;
+    }
+
+    public static void main(String[] args) {
+        longestStreak("CCAACAAAATTT!");
     }
 }

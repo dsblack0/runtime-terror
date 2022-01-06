@@ -1,29 +1,26 @@
 package com.example.sping_portfolio.rachelCollegeBoardFRQs;
 
+import org.springframework.web.bind.annotation.GetMapping;
+
 import java.sql.SQLOutput;
 
 public class CoinGame {
 
-    public static void main(String[] args) {
-        startingCoins=10;
-        maxRounds=5;
-        System.out.println("Both players start with " + startingCoins + " coins.");
-        System.out.println("Playing game with " + maxRounds + " rounds.");
-        playGame();
-    }
-
-    private static int startingCoins; // starting number of coins
-    private static int maxRounds; // maximum number of rounds played
+    private int startingCoins;
+    private int maxRounds;
 
     public CoinGame(int s, int r) {
 
         startingCoins = s;
         maxRounds = r;
 
+        System.out.println("Both players start with " + startingCoins + " coins.");
+        System.out.println("Playing game with " + maxRounds + " rounds.");
+
     }
 
     /** Returns the number of coins (1, 2, or 3) that player 1 will spend.*/
-    public static int getPlayer1Move(int round) {
+    public int getPlayer1Move(int round) {
 
         int result1 = 0;
 
@@ -44,7 +41,7 @@ public class CoinGame {
 
     /** Returns the number of coins (1, 2, or 3) that player 2 will spend, as described in part (a).*/
 
-    public static int getPlayer2Move(int round) {
+    public int getPlayer2Move(int round) {
 
         int result2 = 0;
 
@@ -69,7 +66,7 @@ public class CoinGame {
 
      */
 
-    public static void playGame() {
+    public Object playGame(Integer startingCoins, Integer maxRounds) {
         int p1coins = startingCoins;
         int p2coins= startingCoins;
         int p1played;
@@ -96,16 +93,22 @@ public class CoinGame {
         }
         System.out.println("end of game");
 
+        String result = "Result: null";
+
         if(p1coins==p2coins) {
-            System.out.println("Result: tie game");
+            result = "Result: tie game";
         }
         if(p1coins>p2coins) {
-          System.out.println("Result: player 1 wins");
+            result = "Result: player 1 wins";
         }
         if(p1coins<p2coins) {
-          System.out.println("Result: player 2 wins");
+            result = "Result: player 2 wins";
         }
 
+        System.out.println(result);
+        return result;
+
     }
+
 
 }
