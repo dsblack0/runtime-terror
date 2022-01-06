@@ -1,6 +1,9 @@
 package com.example.sping_portfolio.controllers;
 //import lombok.Getter;
+import com.example.sping_portfolio.rachelCollegeBoardFRQs.CoinGame;
+import com.example.sping_portfolio.rachelCollegeBoardFRQs.Dinner;
 import org.apache.tomcat.util.codec.binary.Base64;
+import org.hibernate.annotations.Parameter;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import java.awt.*;
@@ -46,6 +49,9 @@ public class rachelAboutMe {
                               @RequestParam(name="slength", required = false, defaultValue = "4") Integer slength,
                               @RequestParam(name="startx", required = false, defaultValue = "1") Integer startx,
                               @RequestParam(name="starty", required = false, defaultValue = "1") Integer starty,
+                              @RequestParam(name="streakstr", required = false, defaultValue = "test") String streakstr,
+                              @RequestParam(name="startingCoins", required = false, defaultValue = "1") Integer startingCoins,
+                              @RequestParam(name="maxRounds", required = false, defaultValue = "1") Integer maxRounds,
                               Model model) throws IOException, InterruptedException, ParseException {
             HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://numbersapi.p.rapidapi.com/6/21/date?fragment=true&json=true"))
@@ -84,74 +90,20 @@ public class rachelAboutMe {
         model.addAttribute("num2", num2);
         model.addAttribute("distance", distance);
 
-        //unit 3 part 1
-        //part a
-        String option1 = "";
-        String option2 = "";
+        //unit 3
+        Dinner unit3frq1 = new Dinner();
+        model.addAttribute("rsvp", unit3frq1.rsvp(rsvp));
+        model.addAttribute("selection", unit3frq1.printSelection(selection));
+        model.addAttribute("option1", unit3frq1.dinnerOption1(rsvp, selection));
+        model.addAttribute("option2", unit3frq1.dinnerOption2(rsvp, selection));
+        model.addAttribute("compare", unit3frq1.compare());
 
-        if(rsvp == true){
-            System.out.println("Attending");
-        }
-        else{
-            System.out.println("Not Attending");
-        }
-
-        //part b
-        if(selection==0){
-            System.out.println("No Selection");
-        }
-        else if(selection == 1){
-            System.out.println("Beef");
-        }
-        else if(selection == 2){
-            System.out.println("chicken");
-        }
-        else if(selection == 3){
-            System.out.println("pasta");
-        }
-        else{
-            System.out.println("fish");
-        }
-
-        //part c
-        if(rsvp ==true){
-            String choice = "";
-            if(selection==0){
-                choice = "No Selection.";
-            }
-            else if(selection == 1){
-                choice = "Beef.";
-            }
-            else if(selection == 2){
-                choice = "Chicken.";
-            }
-            else if(selection == 3){
-                choice = "Pasta.";
-            }
-            else{
-                choice = "Fish.";
-            }
-            option1 = "Thank you for attending. You will be served " + choice;
-            System.out.println(option1);
-        }
-        else{
-            option1 = "Sorry you can't make it";
-            System.out.println(option1);
-        }
+        //unit 4
+        CoinGame unit4frq2 = new CoinGame(startingCoins, maxRounds);
+        model.addAttribute("result", unit4frq2.playGame(startingCoins, maxRounds));
 
 
-        //part d
-        if(option1 == option2){
-            System.out.println("true");
-        }
-        else{
-            System.out.println("false");
-        }
-
-        model.addAttribute("rsvp", rsvp);
-        model.addAttribute("selection", selection);
-        model.addAttribute("option1", option1);
-
+        //api
         var data = new ObjectMapper().readValue(response.body(), HashMap.class);
         model.addAttribute("data", data);
         model.addAttribute("text", data.get("text"));

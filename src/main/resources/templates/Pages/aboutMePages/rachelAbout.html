@@ -22,7 +22,7 @@
       height: 100%;
       background: #d2e7d6;
     }
-    .unit2, .unit3 {
+    .unit2, .unit3, .unit4 {
       text-align:left;
       margin:10px;
     }
@@ -169,9 +169,7 @@ tr:nth-child(even) {
             </h2>
                 <div class="unit2">
                     <br></br>
-                    <h3>
-                        Unit 2
-                    </h3>
+                    <h3>Unit 2</h3>
                     <form action="/rachelAbout" method="GET" id="changesegment">
                         <div>
                             <label for="name" style="color: teal;">Original sequence?</label>
@@ -205,9 +203,7 @@ tr:nth-child(even) {
                 </div>
             <div class="unit3">
                 <br></br>
-                <h3>
-                    Unit 3
-                </h3>
+                <h3>Unit 3</h3>
                 <form action="/rachelAbout" method="GET" id="attendance">
                     <div>
                         <label for="name" style="color: teal;">Will you be attending (Type True for Yes, False for No)</label>
@@ -218,6 +214,18 @@ tr:nth-child(even) {
                         <p><b th:text="${option1}" style="color: teal;"></b></p>
                     </div>
                 </form>
+            </div>
+            <div class="unit4">
+                <h3>Unit 4</h3>
+                <form action="/rachelAbout" method="GET" id="coingame">
+                    <div>
+                        <label for="name" style="color: teal;">How many coins should each user start with?</label>
+                        <input name="startingCoins" id="startingCoins">
+                        <label for="name" style="color: teal;">How many rounds should the game last for?</label>
+                        <input name="maxRounds" id="maxRounds">
+                        <button>Play</button>
+                        <p><b th:text="'Result: ' + ${result}" style="color: teal;"></b></p>
+                    </div>
             </div>
         </div>
     </div>
