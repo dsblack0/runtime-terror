@@ -51,7 +51,7 @@
 
 | Name | Requirement | Evidence | Complete | Grade |
 | ---   | ---        | ---      | ---        | ---   |
-| Sami | Calendar Page Setup and Technicals| [Issue](https://github.com/dsblack0/runtime-terror/issues/52) | <ul><li>[ ] DONE</li></ul> | |
+| Sami | Calendar Page Setup and Technicals| [Issue](https://github.com/dsblack0/runtime-terror/issues/52) | <ul><li>[x] DONE</li></ul> | |
 | Rachel | Jekyll | [Issue](https://github.com/dsblack0/runtime-terror/issues/47) | <ul><li>[ ] DONE</li></ul> | |
 | Adrita | Database Setup | [Issue](https://github.com/dsblack0/runtime-terror/issues/43) | <ul><li>[ ] DONE</li></ul> | |
 | Kaavya | Deployment | [Issue](https://github.com/dsblack0/runtime-terror/issues/42) | <ul><li>[ ] DONE</li></ul> | |
