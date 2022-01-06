@@ -26,9 +26,9 @@ public class Coingame {
 
         int numberOfRoundsLeft = this.maxRounds;
 
-        while(playerOneCoins > 3 && playerTwoCoins > 3 && numberOfRoundsLeft > 0) {
+        while (playerOneCoins > 3 && playerTwoCoins > 3 && numberOfRoundsLeft > 0) {
 
-            numberOfRoundsLeft --;
+            numberOfRoundsLeft--;
             int m1 = getPlayer1Move(startingCoins);
             int m2 = getPlayer2Move(startingCoins);
 
@@ -41,17 +41,22 @@ public class Coingame {
 
         }
         String result;
-        if (playerOneCoins > playerTwoCoins){
-            result = "Player 1 wins!";
-        }
-        else if (playerTwoCoins > playerOneCoins) {
-            result = "Player 2 wins!";
-        }
-        else {
-            result = "Tie game!";
+        result = "Hello";
+        if (playerOneCoins > playerTwoCoins) {
+            System.out.println("The number of Starting Coins: " + startingCoins);
+            System.out.println("The number of rounds is: " + maxRounds);
+            System.out.println("Player 1 wins!");
+        } else if (playerTwoCoins > playerOneCoins) {
+            System.out.println("The number of Starting Coins: " + startingCoins);
+            System.out.println("The number of rounds is: " + maxRounds);
+            System.out.println("Player 2 wins!");
+        } else {
+            System.out.println("The number of Starting Coins: " + startingCoins);
+            System.out.println("The number of rounds is: " + maxRounds);
+            System.out.println("Tie game!");
         }
         return result;
-    }
 
+    }
 }
 
