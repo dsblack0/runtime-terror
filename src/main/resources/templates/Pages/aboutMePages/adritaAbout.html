@@ -26,7 +26,27 @@
             </form>
         </div>
     </div>
-
+    <table class="table" id="factsTable" style="margin-top: 2%;">
+        <tr>
+            <th>Fact</th>
+            <th>Year</th>
+            <th>Number</th>
+            <th>Found?</th>
+            <th>Type</th>
+        </tr>
+        <tbody>
+        <td th:text="${data.text}"></td>
+        <td th:text="${data.year}"></td>
+        <td th:text="${data.number}"></td>
+        <td th:text="${data.found}"></td>
+        <td th:text="${data.type}"></td>
+        </tbody>
+        <div class="row justify-content-center" style="margin-top: 10px;">
+            <form action="/adritaAbout" method="GET" id="factsForm">
+                <button>New Fact!</button>
+            </form>
+        </div>
+    </table>
     <div class="unit-two" style="margin-top: 20px; background-color: #555b65;">
         <div style="margin-left: 50px;">
             <h2 style="color: white;">Unit 2 FRQ</h2>

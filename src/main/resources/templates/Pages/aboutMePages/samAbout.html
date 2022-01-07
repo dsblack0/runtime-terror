@@ -105,6 +105,35 @@
                 </form>
             </div>
         </div>
+        <div class="unit-four" style="margin-top: 20px; background-color: #555b65;">
+            <div style="margin-left: 50px;">
+                <h2 style="color: white;">Unit 4 FRQ</h2>
+                <h5 style="color: white;">Longest Streak</h5>
+                <form action="/samAbout" method="GET" id="streak">
+                    <div style="margin-left: 10px;">
+                        <p class="originalString" style="color: white;">Input a string to find its longest streak</p>
+                        <input name="originalString" id="originalString">
+                        <button>Answer</button>
+                        <p style="color:white;">Default string: CAAAAATTT!</p>
+                        <p><b th:text="'Longest Streak: ' + ${streakChar} + ' ' + ${streakLength}" style="color: white;"></b></p>
+                    </div>
+                </form>
+                <h5 style="color: white;">Coin Game</h5>
+                <form action="/samAbout" method="GET" id="coingame">
+                    <div style="margin-left: 10px;">
+                        <p class="Coins" style="color: white;">What is your starting amount of coins?</p>
+                        <input name="Coins" id="Coins">
+                        <p class="Rounds" style="color: white;">How many rounds will you have?</p>
+                        <input name="Rounds" id="Rounds">
+                        <button>Answer</button>
+                        <p style="color:white;">Default values: Starting coins = 10 & Rounds = 5</p>
+                        <p><b th:text="'Player 1 played ' + ${p1Move} + ' coins in their last round'" style="color: white;"></b></p>
+                        <p><b th:text="'Player 2 played ' + ${p2Move} + ' coins in their last round'" style="color: white;"></b></p>
+                        <p><b th:text="'Game Result: ' + ${gameResult}" style="color: white;"></b></p>
+                    </div>
+                </form>
+            </div>
+        </div>
     <style>
         html, body{
             margin: 0;
