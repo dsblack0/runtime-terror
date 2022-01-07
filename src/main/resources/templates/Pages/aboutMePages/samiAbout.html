@@ -1,10 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Sameeksha Deshatty</title>
-</head>
+    <script>
+        function changeImage()
+        {
+            var img = document.getElementById("image");
+            img.src="samiMaskAboutMe";
+            return false;
+        }
+    </script>
+
+    <div layout:fragment="metadata" th:remove="tag">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384qQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Sami's About Me Page </title>
+ </style>
+</div></head>
+
+
 <body>
-<p> Hello, I'm Sami! </p>
+<div layout:fragment="content" th:remove="tag">
+    <!-- Start of body content specific to page -->
+    <div id="spring_intro" class="articles" style="margin: 30px;font-family: Georgia, serif;">
+
+        <div class="container d-flex h-400">
+            <div class="row align-self-center w-200 h-200">
+                <div class="col-6 mx-auto">
+                    <div class="jumbotron">
+                        <div style="text-align:center;">
+                            <img id="image" th:src="@{/images/aboutMEtri2.jpg}" style="width: 100%; height: 15vw;object-fit: cover;">
+                                 <!--<width="200;" style="float: left; margin-right: 15px;">-->
+                                <h1 style="color:#2c6975"><strong>Welcome!</strong></h1>
+                                <button id="clickme" onclick="changeImage();">Mask Picture</button>
+
+
+                            <form action="/samiAbout" method="GET" id="samiForm">
+                                <div>
+                                    <br></br>
+                                    <p>What is your name?</p>
+                                    <!-- <label for="name">What is your name?</label> -->
+                                    <input name="name" id="name">
+                                    <button>Hello!</button>
+                                    <p th:text="'Hello, ' + ${name} + '!'"></p>
+                                </div>
+                            </form>
+                            <div>
+                                <h2>
+                                    Sami's Links
+                                </h2>
+                                <table>
+                                    <tr>
+                                        <th>Entry</th>
+                                        <th>Link</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Github Profile</td>
+                                        <td>https://github.com/SamiDeshatty</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Team Repository</td>
+                                        <td>https://github.com/dsblack0/runtime-terror</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Individual Journal</td>
+                                        <td>https://padlet.com/samantadanvers/fje6b94iwjnjwg7y1630177436</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Commits</td>
+                                        <td>https://github.com/dsblack0/runtime-terror/commits?author=rachelklee</td>
+                                    </tr>
+                                </table>
+
+                                <h2>
+                                    CB FRQs
+                                </h2>
+                                <div class="unit2">
+                                    <br></br>
+                                    <h3>
+                                        Unit 2
+                                    </h3>
+                                    <form action="/samiAbout" method="GET" id="changesegment">
+                                        <div>
+                                            <label for="name" style="color: teal;">Original sequence?</label>
+                                            <input name="oldseq" id="oldseq">
+                                            <label for="name" style="color: teal;">Pick a segment to remove</label>
+                                            <input name="segment" id="segment">
+                                            <button>Answer</button>
+                                            <p><b th:text="'New sequence: ' + ${newSeq}" style="color: teal;"></b></p>
+                                        </div>
+                                    </form>
+                                    <form>
+                                        <div>
+                                            <p><b th:text="'Original sequence: ' + ${originalSeq}" style="color: teal;"></b></p>
+                                            <label for="name" style="color: teal;">Pick a segment to insert</label>
+                                            <input name="instsegment" id="instsegment">
+                                            <label for="name" style="color: teal;">Index?</label>
+                                            <input name="ind" id="ind">
+                                            <button>Answer</button>
+                                            <p><b th:text="'Resulting sequence: ' + ${resultSeq}" style="color: teal;"></b></p>
+                                        </div>
+                                    </form>
+                                    <form>
+                                        <div>
+                                            <label for="name" style="color: teal;">Pick to numbers to find their distance</label>
+                                            <input name="num1" id="num1">
+                                            <input name="num2" id="num2">
+                                            <button>Answer</button>
+                                            <p><b th:text="'Distance from ' + ${num1} + ' to ' + ${num2} + '= ' + ${distance}" style="color: teal;"></b></p>
+                                        </div>
+                                    </form>
+
+                                    <h3>
+                                        Unit 4
+                                    </h3>
+                                    <form>
+                                        <div>
+                                            <label for = "startingCoins">Enter the initial Number of Coins</label>
+                                            <input name="startingCoins" id="startingCoins">
+                                            <label for = "maxRounds"> Enter the Total Number of Rounds</label>
+                                            <input name="maxRounds" id="maxRounds">
+                                            <button>The result of the Game</button>
+                                            <p><b th:text="'Result: ' + ${result}"></b></p>
+                                        </div>
+                                    </form>
+
+                                </div>
+                                </form>
+                                    <div>
+                                        <h5>FUN FACT!</h5>
+                                        <p>The $500 bank note depicts President William McKinley, while the $1,000 denomination features a portrait of President Grover Cleveland. To put the scarcity of these notes into perspective, the total number of $500 & $1,000 bills printed in all three series (1928, 1934, 1934-A) is just over 6.5 million.</p>
+
+
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
+
+
+<div layout:fragment="script" th:remove="tag">
+  <!-- Start of custom script specific to page -->
+  <script src="/static/vanta/three.r119.min.js" th:src="@{/vanta/three.r119.min.js}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    VANTA.NET({
+      el: "body",
+      color: "#E3DDF4",
+      backgroundColor: "#1E1F1F",
+      points: 10,
+      maxDistance: 20,
+      spacing: 15,
+      showDots: true,
+      width: 100,
+      height: 100,
+    })
+
+  </script>
+</div>
+
 </html>

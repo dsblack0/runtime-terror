@@ -1,11 +1,237 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Rachel Lee</title>
-</head>
-<body>
-<p> Hello, I'm Rachel. </p>
-<img src="/static/images/rachelaboutme.jpg" th:src="@{/images/rachelaboutme.jpg}" width="225" height="300" alt="Rachel's photo">
+<!DOCTYPE HTML>
+
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head><div layout:fragment="metadata" th:remove="tag">
+    <!-- Start of head content specific to page -->
+    <title>Rachel</title>
+    <style>
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    body{
+      text-align: center;
+      align-items: center;
+      align-content: center;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: #d2e7d6;
+    }
+    .unit2, .unit3, .unit4 {
+      text-align:left;
+      margin:10px;
+    }
+    .btn-group button {
+      background-color: #2c6975; /* Green background */
+      border: 1px solid white; /* Green border */
+      color: white; /* White text */
+      padding: 10px 24px; /* Some padding */
+      cursor: pointer; /* Pointer/hand icon */
+      float: left; /* Float the buttons side by side */
+    }
+    .btn-group:after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    .btn-group button:not(:last-child) {
+      border-right: none;
+    }
+    .btn-group button:hover{
+      background-color: #d2e7d6;
+    }
+      table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+  </style>
+    <!-- End of head content specific to page -->
+</div></head>
+
+<body><div layout:fragment="content" th:remove="tag">
+    <div class="contact" style="height: 35vh;">
+        <div class="row justify-content-center" style="margin: 2%;">
+            <div>
+                <h1>ABOUT ME</h1>
+                <p th:text="'Hello! My name is Rachel.'"></p>
+                <img src="/static/images/rachelaboutme.jpg" th:src="@{/images/rachelaboutme.jpg}" width="112" height="150" alt="Rachel's photo" id="myImg">
+                <br></br>
+                <div class="btn-group">
+                    <script>
+                    function origin() {
+                        document.getElementById("myImg").style.filter = "grayscale(0%)";
+                    }
+                    function gs25() {
+                        document.getElementById("myImg").style.filter = "grayscale(25%)";
+                    }
+                    function gs50() {
+                        document.getElementById("myImg").style.filter = "grayscale(50%)";
+                    }
+                    function gs75() {
+                        document.getElementById("myImg").style.filter = "grayscale(75%)";
+                    }
+                    function gs100() {
+                        document.getElementById("myImg").style.filter = "grayscale(100%)";
+                    }
+                </script>
+                    <button id="button0" onclick="origin()">Original</button><br><br>
+                    <button id="button1" onclick="gs25()">Greyscale 25%</button><br><br>
+                    <button id="button2" onclick="gs50()()">Greyscale 50%</button><br><br>
+                    <button id="button3" onclick="gs75()">Greyscale 75%</button><br><br>
+                    <button id="button4" onclick="gs100()">Greyscale 100%</button><br><br>
+
+                </div>
+
+                <form action="/rachelAbout" method="GET" id="rachelForm">
+                    <div>
+                        <br></br>
+                        <p>What is your name?</p>
+                        <!-- <label for="name">What is your name?</label> -->
+                        <input name="name" id="name">
+                        <button>Hello!</button>
+                        <p th:text="'Hello, ' + ${name} + '!'"></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr style="height: 3px; background-color: #FFFFFF;">
+        <table class="table" id="factsTable" style="margin-top: 2%;">
+            <tr>
+                <th>Fact</th>
+                <th>Year</th>
+                <th>Number</th>
+                <th>Found?</th>
+                <th>Type</th>
+            </tr>
+            <tbody>
+            <td th:text="${data.text}"></td>
+            <td th:text="${data.year}"></td>
+            <td th:text="${data.number}"></td>
+            <td th:text="${data.found}"></td>
+            <td th:text="${data.type}"></td>
+            </tbody>
+            <div class="row justify-content-center" style="margin-top: 10px;">
+                <form action="/rachelAbout" method="GET" id="factsForm">
+                    <button>New Fact!</button>
+                </form>
+            </div>
+        </table>
+        <hr style="height: 3px; background-color: #FFFFFF;">
+        <div>
+            <h2>
+                Rachel's Links
+            </h2>
+            <table>
+                <tr>
+                    <th>Entry</th>
+                    <th>Link</th>
+                </tr>
+                <tr>
+                    <td>Github Profile</td>
+                    <td>https://github.com/rachelklee</td>
+                </tr>
+                <tr>
+                    <td>Team Repository</td>
+                    <td>https://github.com/dsblack0/runtime-terror</td>
+                </tr>
+                <tr>
+                    <td>Individual Journal</td>
+                    <td>https://docs.google.com/document/d/15mil-mSpv7Ma4rNcUr_b5NjWCx2yM9FR3MIMcpM767U/edit?usp=sharing</td>
+                </tr>
+                <tr>
+                    <td>Tickets</td>
+                    <td>https://github.com/dsblack0/runtime-terror/issues/assigned/rachelklee</td>
+                </tr>
+                <tr>
+                    <td>Commits</td>
+                    <td>https://github.com/dsblack0/runtime-terror/commits?author=rachelklee</td>
+                </tr>
+            </table>
+        </div>
+
+            <h2>
+                CB FRQs
+            </h2>
+                <div class="unit2">
+                    <br></br>
+                    <h3>Unit 2</h3>
+                    <form action="/rachelAbout" method="GET" id="changesegment">
+                        <div>
+                            <label for="name" style="color: teal;">Original sequence?</label>
+                            <input name="oldseq" id="oldseq">
+                            <label for="name" style="color: teal;">Pick a segment to remove</label>
+                            <input name="segment" id="segment">
+                            <button>Answer</button>
+                            <p><b th:text="'New sequence: ' + ${newSeq}" style="color: teal;"></b></p>
+                        </div>
+                    </form>
+                    <form>
+                        <div>
+                            <p><b th:text="'Original sequence: ' + ${originalSeq}" style="color: teal;"></b></p>
+                            <label for="name" style="color: teal;">Pick a segment to insert</label>
+                            <input name="instsegment" id="instsegment">
+                            <label for="name" style="color: teal;">Index?</label>
+                            <input name="ind" id="ind">
+                            <button>Answer</button>
+                            <p><b th:text="'Resulting sequence: ' + ${resultSeq}" style="color: teal;"></b></p>
+                        </div>
+                    </form>
+                    <form>
+                        <div>
+                            <label for="name" style="color: teal;">Pick to numbers to find their distance</label>
+                            <input name="num1" id="num1">
+                            <input name="num2" id="num2">
+                            <button>Answer</button>
+                            <p><b th:text="'Distance from ' + ${num1} + ' to ' + ${num2} + '= ' + ${distance}" style="color: teal;"></b></p>
+                        </div>
+                    </form>
+                </div>
+            <div class="unit3">
+                <br></br>
+                <h3>Unit 3</h3>
+                <form action="/rachelAbout" method="GET" id="attendance">
+                    <div>
+                        <label for="name" style="color: teal;">Will you be attending (Type True for Yes, False for No)</label>
+                        <input name="rsvp" id="rsvp">
+                        <label for="name" style="color: teal;">What meal would you like? (1=Beef, 2=Chicken, 3=Pasta, Anything 4 or greater=Fish</label>
+                        <input name="selection" id="selection">
+                        <button>RSVP</button>
+                        <p><b th:text="${option1}" style="color: teal;"></b></p>
+                    </div>
+                </form>
+            </div>
+            <div class="unit4">
+                <h3>Unit 4</h3>
+                <form action="/rachelAbout" method="GET" id="coingame">
+                    <div>
+                        <label for="name" style="color: teal;">How many coins should each user start with?</label>
+                        <input name="startingCoins" id="startingCoins">
+                        <label for="name" style="color: teal;">How many rounds should the game last for?</label>
+                        <input name="maxRounds" id="maxRounds">
+                        <button>Play</button>
+                        <p><b th:text="'Result: ' + ${result}" style="color: teal;"></b></p>
+                    </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
+
+
+<!--test-->
