@@ -44,7 +44,7 @@
 | Sami | Calendar Page and CSS | [Issue#1](https://github.com/dsblack0/runtime-terror/issues/52) [Issue#2](https://github.com/dsblack0/runtime-terror/issues/63) | <ul><li>[ ] DONE</li></ul> | |
 | Rachel | Search Bar and Jekyll| [Issue#1](https://github.com/dsblack0/runtime-terror/issues/47) [Issue#2](https://github.com/dsblack0/runtime-terror/issues/62) | <ul><li>[ ] DONE</li></ul> | |
 | Adrita | Database | [Issue](https://github.com/dsblack0/runtime-terror/issues/43) | <ul><li>[ ] DONE</li></ul> | |
-| Kaavya | Individual Club Page and Jekyll | [Issue#2](https://github.com/dsblack0/runtime-terror/issues/47) | <ul><li>[ ] DONE</li></ul> | |
+| Kaavya | Individual Club Page and Jekyll | [Issue#1](https://github.com/dsblack0/runtime-terror/issues/68) [Issue#2](https://github.com/dsblack0/runtime-terror/issues/47) | <ul><li>[ ] DONE</li></ul> | |
 | Sam | Home Page | [Issue](https://github.com/dsblack0/runtime-terror/issues/48) | <ul><li>[ ] DONE</li></ul> | |
 | Team | Unit #5 FRQ Online | [Issue](https://github.com/dsblack0/runtime-terror/issues/66) | <ul><li>[x] DONE</li></ul> | |
 
