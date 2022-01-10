@@ -1,4 +1,4 @@
-package samiCollegeBoard;
+package com.example.sping_portfolio.controllers.samiCollegeBoard;
 
 public class Coingame {
     private int startingCoins; // starting number of coins
@@ -41,19 +41,13 @@ public class Coingame {
 
         }
         String result;
-        result = "Hello";
+
         if (playerOneCoins > playerTwoCoins) {
-            System.out.println("The number of Starting Coins: " + startingCoins);
-            System.out.println("The number of rounds is: " + maxRounds);
-            System.out.println("Player 1 wins!");
+            result = "Player 1 wins!";
         } else if (playerTwoCoins > playerOneCoins) {
-            System.out.println("The number of Starting Coins: " + startingCoins);
-            System.out.println("The number of rounds is: " + maxRounds);
-            System.out.println("Player 2 wins!");
+            result = "Player 2 wins!";
         } else {
-            System.out.println("The number of Starting Coins: " + startingCoins);
-            System.out.println("The number of rounds is: " + maxRounds);
-            System.out.println("Tie game!");
+            result = "Tie game!";
         }
         return result;
 
