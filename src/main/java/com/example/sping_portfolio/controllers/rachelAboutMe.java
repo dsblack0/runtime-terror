@@ -90,7 +90,7 @@ public class rachelAboutMe {
         model.addAttribute("num2", num2);
         model.addAttribute("distance", distance);
 
-        //unit 3
+        //unit 3.
         Dinner unit3frq1 = new Dinner();
         model.addAttribute("rsvp", unit3frq1.rsvp(rsvp));
         model.addAttribute("selection", unit3frq1.printSelection(selection));
