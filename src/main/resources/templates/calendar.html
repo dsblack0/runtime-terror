@@ -2,148 +2,264 @@
 <html xmlns:layout="http://www.w3.org/1999/xhtml " xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layout}" lang="en">
 <head>
+
     <style>
-    /*CALENDAR CSS. */
-    @import url(https://fonts.googleapis.com/css?family=Fjalla+One:400|Roboto:400,400italic,700);
 
-    body {
-    background-color:#282423;
-    }
 
-    .jzdbox1 {
-    width:315px;
-    background:#332f2e;
-    border-radius:5px;
-    overflow:hidden;
-    display:block;
-    margin-bottom:10px;
-    box-shadow:0 0 10px #201d1c;
-    margin:0 auto;
-    margin-top:100px;
-    }
+        /* ---------- FONTAWESOME ---------- */
+        /* ---------- https://fortawesome.github.com/Font-Awesome/ ---------- */
+        /* ---------- http://weloveiconfonts.com/ ---------- */
 
-    .jzdcal {
-    padding:0 10px 10px 10px;
-    box-sizing:border-box!important;
-    background:#749d9e;
-    background: -webkit-linear-gradient(#749d9e, #b3a68b)!important;
-    background: -o-linear-gradient(#749d9e, #b3a68b)!important;
-    background: -moz-linear-gradient(#749d9e, #b3a68b)!important;
-    background: linear-gradient(#749d9e, #b3a68b)!important;
-    }
+        @import url(https://weloveiconfonts.com/api/?family=fontawesome);
 
-    .jzdcalt {
-    font:18px 'Roboto';
-    font-weight:700;
-    color:#f7f3eb;
-    display:block;
-    margin:18px 0 0 0;
-    text-transform:uppercase;
-    text-align:center;
-    letter-spacing:1px;
-    }
+        *[class*="fontawesome-"]:before {
+            font-family: 'FontAwesome', sans-serif;
+        }
 
-    .jzdcal span {
-    font:11px 'Roboto';
-    font-weight:400;
-    color:#f7f3eb;
-    text-align:center;
-    width:42px;
-    height:42px;
-    display:inline-block;
-    float:left;
-    overflow:hidden;
-    line-height:40px;
-    }
+        /* ---------- GENERAL ---------- */
 
-    .jzdcal .jzdb:before {
-    opacity:0.3;
-    content:'o';
-    }
+        body {
+            background: #f9f9f9;
+            color: #0e171c;
+            display: grid;
+            font: 300 100%/1.5em 'Lato', sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            place-items: center;
+        }
 
-    .circle {
-    border:1px solid #f7f3eb;
-    box-sizing:border-box!important;
-    border-radius:200px!important;
-    }
+        a {
+            text-decoration: none;
+        }
 
-    span[data-title]:hover:after,
-    div[data-title]:hover:after {
-    font:11px 'Roboto';
-    font-weight:400;
-    content:attr(data-title);
-    position:absolute;
-    margin:0 0 100px;
-    background:#282423;
-    border:1px solid #f7f3eb;
-    color:#f7f3eb;
-    padding:5px;
-    z-index:9999;
-    min-width:150px;
-    max-width:150px;
-    }
+        h2 {
+            font-size: 2em;
+            line-height: 1.25em;
+            margin: .25em 0;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            line-height: 1em;
+            margin: .33em 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        .container {
+            width: 510px;
+        }
+
+        /* ---------- CALENDAR ---------- */
+
+        .calendar {
+            text-align: center;
+        }
+
+        .calendar header {
+            position: center;
+        }
+
+        .calendar h2 {
+            text-transform: uppercase;
+        }
+
+        .calendar thead {
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .calendar tbody {
+            color: #7c8a95;
+        }
+
+        .calendar tbody td:hover {
+            border: 2px solid #00addf;
+        }
+
+        .calendar td {
+            border: 2px solid transparent;
+            border-radius: 50%;
+            display: inline-block;
+            height: 4em;
+            line-height: 4em;
+            text-align: center;
+            width: 4em;
+        }
+
+        .calendar .prev-month,
+        .calendar .next-month {
+            color: #cbd1d2;
+        }
+
+        .calendar .prev-month:hover,
+        .calendar .next-month:hover {
+            border: 2px solid #cbd1d2;
+        }
+
+        .current-day {
+            background: #00addf;
+            color: #f9f9f9;
+        }
+
+        .event {
+            cursor: pointer;
+            position: relative;
+        }
+
+        .event:after {
+            background: #00addf;
+            border-radius: 50%;
+            bottom: .5em;
+            display: block;
+            content: '';
+            height: .5em;
+            left: 50%;
+            margin: -.25em 0 0 -.25em;
+            position: absolute;
+            width: .5em;
+        }
+
+        .event.current-day:after {
+            background: #f9f9f9;
+        }
+
+        .btn-prev,
+        .btn-next {
+            border: 2px solid #cbd1d2;
+            border-radius: 50%;
+            color: #cbd1d2;
+            height: 2em;
+            font-size: .75em;
+            line-height: 2em;
+            margin: -1em;
+            position: absolute;
+            top: 50%;
+            width: 2em;
+        }
+
+        .btn-prev:hover,
+        .btn-next:hover {
+            background: #cbd1d2;
+            color: #f9f9f9;
+        }
+
+        .btn-prev {
+            left: 6em;
+        }
+
+        .btn-next {
+            right: 6em;
+        }
     </style>
 
 </head>
 <body><div layout:fragment="content" th:remove="tag">
 
+    <div class="container">
 
-<div class="jzdbox1 jzdbasf jzdcal">
+        <div class="calendar">
 
-    <div class="jzdcalt">January 2022</div>
+            <header>
 
-    <span>Su</span>
-    <span>Mo</span>
-    <span>Tu</span>
-    <span>We</span>
-    <span>Th</span>
-    <span>Fr</span>
-    <span>Sa</span>
+                <h2>January</h2>
+
+                <a class="btn-prev fontawesome-angle-left" href="#"></a>
+                <a class="btn-next fontawesome-angle-right" href="#"></a>
+
+            </header>
+
+            <table>
+
+                <thead>
+
+                <tr>
+
+                    <td>Mo</td>
+                    <td>Tu</td>
+                    <td>We</td>
+                    <td>Th</td>
+                    <td>Fr</td>
+                    <td>Sa</td>
+                    <td>Su</td>
+
+                </tr>
+
+                </thead>
+
+                <tbody>
+
+                <tr>
+                    <td class="prev-month">26</td>
+                    <td class="prev-month">27</td>
+                    <td class="prev-month">28</td>
+                    <td class="prev-month">29</td>
+                    <td class="prev-month">30</td>
+                    <td class="prev-month">31</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="event">10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td class="event">21</td>
+                    <td>22</td>
+                </tr>
+
+                <tr>
+                    <td class="current-day event">23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td class="next-month">1</td>
+                    <td class="next-month">2</td>
+                    <td class="next-month">3</td>
+                    <td class="next-month">4</td>
+                    <td class="next-month">5</td>
+                    <td class="next-month">6</td>
+                </tr>
+
+                </tbody>
+
+            </table>
+
+        </div> <!-- end calendar -->
+
+    </div> <!-- end container -->
 
 
-    <span class="jzdb"><!--BLANK--></span>
-    <span class="jzdb"><!--BLANK--></span>
-    <span class="jzdb"><!--BLANK--></span>
-    <span class="jzdb"><!--BLANK--></span>
-    <span class="jzdb"><!--BLANK--></span>
-    <span class="jzdb"><!--BLANK--></span>
-    <span>1</span>
-    <span class="circle" data-title="My 25th birthday!">2</span>
-    <span>3</span>
-    <span>4</span>
-    <span>5</span>
-    <span>6</span>
-    <span>7</span>
-    <span>8</span>
-    <span>9</span>
-    <span>10</span>
-    <span>11</span>
-    <span class="circle" data-title="2 month anniversary!">12</span>
-    <span>13</span>
-    <span>14</span>
-    <span>15</span>
-    <span>16</span>
-    <span>17</span>
-    <span>18</span>
-    <span>19</span>
-    <span>20</span>
-    <span>21</span>
-    <span class="circle" data-title="#MusicMonday - share your favorite song!">22</span>
-    <span>23</span>
-    <span>24</span>
-    <span>25</span>
-    <span>26</span>
-    <span>27</span>
-    <span>28</span>
-    <span>29</span>
-    <span>30</span>
-    <span class="jzdb"><!--BLANK--></span>
-    <span class="jzdb"><!--BLANK--></span>
-    <span class="jzdb"><!--BLANK--></span>
-    <span class="jzdb"><!--BLANK--></span>
-    <span class="jzdb"><!--BLANK--></span>
-    <span class="jzdb"><!--BLANK--></span>
-</div>
+    </script>
+
+
 </div>
 </body>
 </html>
