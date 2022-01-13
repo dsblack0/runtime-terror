@@ -40,76 +40,75 @@
             display: inline-block;
             transition: background-color 0.6s ease;
         }
-        .more-details-box{
-            visibility: hidden;
-            background-color: #60a8ad;
-            color:#ffffff;
-            padding:20px;
-            float:bottom;
-            margin:20px;
-            position: absolute;
-            z-index: 1;
+        .card-flip > div {
+            backface-visibility: hidden;
+            transition: transform 300ms;
+            transition-timing-function: linear;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            display: flex;
         }
-        .more-details:hover .more-details-box{
-            visibility:visible;
-            opacity:1;
+
+        .card-front {
+            transform: rotateY(0deg);
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+            position: absolute;
+            top: 0;
+            background-color: #60a8ad;
+        }
+
+        .card-flip:hover .card-front {
+            transform: rotateY(-180deg);
+        }
+
+        .card-flip:hover .card-back {
+            transform: rotateY(0deg);
         }
     </style>
 </div>
 </head>
 
 <body onload="getSchedule()"><div layout:fragment="content" th:remove="tag">
-    <header>
-
-    </header>
-
-    <div class = "body_sec">
-        <section id="Content">
-            <div style="position: relative;">
-                <div class="slideshow">
-                    <div class="pop-up-box" style="padding-top: 50px; position: absolute; background-color: midnightblue; width: 33%; height: 33%; margin-top: 100px; margin-left: 33%;">
-                        <div class="text" style="color: white;">Upcoming Events!</div>
-                    </div>
-                    <div class="pop-up-box" style="padding-top: 50px; position: absolute; background-color: midnightblue; width: 33%; height: 33%; margin-top: 100px; margin-left: 33%;">
-                        <div class="text" style="color: white;">Page2</div>
-                    </div>
-                    <div class="pop-up-box" style="padding-top: 50px; position: absolute; background-color: midnightblue; width: 33%; height: 33%; margin-top: 100px; margin-left: 33%;">
-                        <div class="text" style="color: white;">Upcoming Events!</div>
-                    </div>
-                    <div style="text-align:center;">
-                        <span class="dot" onclick="currentSlide(1)" style="margin-top: 250px; margin-left: -35px; position: absolute;"></span>
-                        <span class="dot" onclick="currentSlide(2)" style="margin-top: 250px; margin-left: -15px; position: absolute;"></span>
-                        <span class="dot" onclick="currentSlide(3)" style="margin-top: 250px; margin-left: 5px;position: absolute;" ></span>
-                    </div>
-                </div>
-                <img th:src="@{/images/del-norte-hs-01.jpg}" style="width: 100%; height: 450px;">
+    <div class="banner" style="position: relative;">
+        <div class="slideshow">
+            <div class="pop-up-box" style="padding-top: 50px; position: absolute; background-color: midnightblue; width: 33%; height: 33%; margin-top: 100px; margin-left: 33%;">
+                <div class="text" style="color: white;">Upcoming Events!</div>
             </div>
-
-            <div class="btn-group" style="background-color:#96d7c6; width: 100%; height: 15%">
-                <button style="width:20%">Monday</button>
-                <button style="width:20%">Tuesday</button>
-                <button style="width:20%">Wednesday</button>
-                <button style="width:20%">Thursday</button>
-                <button style="width:20%">Friday</button>
+            <div class="pop-up-box" style="padding-top: 50px; position: absolute; background-color: midnightblue; width: 33%; height: 33%; margin-top: 100px; margin-left: 33%;">
+                <div class="text" style="color: white;">Page2</div>
             </div>
-
-            <div class="club icons" style="background-color: #5aa7a7; width: 100%; height: 400px">
-                <div class="card" style="width: 18rem; margin-top: 10px; margin-left:50px; margin-right: 50px; display: inline-block;" th:each ="clubs : ${list}">
-                    <div class="card-body" style="background-color: #f7cb2d">
-                        <h5 class="card-title" th:text="${clubs.title}">Club title</h5>
-                        <p class="card-text" th:text="${clubs.description}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <div class="more-details">
-                            <button class="more-details-btn" style="width:9rem; height:4rem; margin-left: 50px; background-color: #96d7c6; border-color: #96d7c6; border-radius: 50px; font-size: large; color: black;">More details</button>
-                            <div class="more-details-box">
-                                <p class="card-details" th:text="${clubs.details}">Some more details and information</p>
-                                <p class="card-date" th:text="'Date: ' + ${clubs.date}">Days of Week</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="pop-up-box" style="padding-top: 50px; position: absolute; background-color: midnightblue; width: 33%; height: 33%; margin-top: 100px; margin-left: 33%;">
+                <div class="text" style="color: white;">Upcoming Events!</div>
             </div>
-
-        </section>
+            <div style="text-align:center;">
+                <span class="dot" onclick="currentSlide(1)" style="margin-top: 250px; margin-left: -35px; position: absolute;"></span>
+                <span class="dot" onclick="currentSlide(2)" style="margin-top: 250px; margin-left: -15px; position: absolute;"></span>
+                <span class="dot" onclick="currentSlide(3)" style="margin-top: 250px; margin-left: 5px;position: absolute;" ></span>
+            </div>
+        </div>
+        <img th:src="@{/images/del-norte-hs-01.jpg}" style="width: 100%; height: 450px;">
+    </div>
+    <div class="btn-group" style="background-color:#96d7c6; width: 100%; height: 15%">
+        <button style="width:20%">Monday</button>
+        <button style="width:20%">Tuesday</button>
+        <button style="width:20%">Wednesday</button>
+        <button style="width:20%">Thursday</button>
+        <button style="width:20%">Friday</button>
+    </div>
+    <div class="club-icons" style="width: 100%; height: 400px">
+        <div class="card card-flip" style="width: 18rem; margin-top: 10px; margin-left:50px; margin-right: 50px; display: inline-block;" th:each="clubs : ${list}">
+            <div class="card-front" style="background-color: #f7cb2d">
+                <h5 class="card-title" th:text="${clubs.title}">Club name</h5>
+                <p class="card-text" th:text="${clubs.description}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="card-back">
+                <p class="card-details" th:text="${clubs.details}">Some more details and information</p>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -152,19 +151,19 @@
             document.getElementById("schedule").innerHTML = "Sunday</br></br>No school today! Catch up on your work!";
         }
         if(day === 1){
-            document.getElementById("schedule").innerHTML =
+            document.getElementById("schedule").innerHTML = "Monday"
         }
         if(day === 2){
-            document.getElementById("schedule").innerHTML =
+            document.getElementById("schedule").innerHTML = "Tuesday"
         }
         if(day === 3){
-            document.getElementById("schedule").innerHTML =
+            document.getElementById("schedule").innerHTML = "Wednesday"
         }
         if(day === 4){
-            document.getElementById("schedule").innerHTML =
+            document.getElementById("schedule").innerHTML = "Thursday"
         }
         if(day === 5){
-            document.getElementById("schedule").innerHTML =
+            document.getElementById("schedule").innerHTML = "Friday"
         }
         if(day === 6){
             document.getElementById("schedule").innerHTML = "Saturday</br></br>No school today! Catch up on your work!";
