@@ -13,6 +13,7 @@ public class Unit5Invitation {
         this.hostName = "Host";
     }
     public String getHostName() {
+
         return hostName;
     }
     public String setAddress(String ad) {
