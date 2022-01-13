@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Individual Club Page</title>
+    <th:block th:fragment="header"></th:block>
+</head>
+<body>
+    <div layout:fragment="content" th:remove="tag">
+        <div id="clubPage" class="articles">
+            <style>
+                html,body{
+                    line-height: 2.0;
+                    background-color: #9DBED1;
+                }
+                h3{
+                    font-size: 3vw;
+                    color: #004F76;
+                }
+            </style>
+            <div class="container">
+                <br>
+                <h3>Club Name</h3>
+                <br>
+                <div class="card-columns">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Club Description</h4>
+                            <p id = "text"></p>
+                            <button type="button" onclick="edit()">Edit Description</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <script>
+                        function display() {
+                            var text = document.getElementById("description").value;
+                            document.getElementById("text").innerHTML = text;
+                            document.getElementById("description").style.visibility = "none";
+                        }
+                        function edit() {
+                            document.getElementById("description").style.visibility = "show";
+                        }
+                    </script>
+                    <label for="description"></label>
+                    <textarea class="form-control" rows="5" id="description" placeholder="Add Club Description Here"></textarea>
+                    <button type="button" onclick="display()">Update Description</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

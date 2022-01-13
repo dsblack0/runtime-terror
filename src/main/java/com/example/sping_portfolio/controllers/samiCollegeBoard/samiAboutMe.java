@@ -1,12 +1,11 @@
-package com.example.sping_portfolio.controllers;
+package com.example.sping_portfolio.controllers.samiCollegeBoard;
 
 
+import org.apache.coyote.Request;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import samiCollegeBoard.Coingame;
-import samiCollegeBoard.Coingame;
 
 import java.io.IOException;
 import java.net.URI;
@@ -141,7 +140,11 @@ public class samiAboutMe {
                                @RequestParam(name="foodselection", required = false, defaultValue = "5") String foodselection,
                                @RequestParam(name="rsvpattendance2", required = false, defaultValue = "false") String rsvpattendance2,
                                @RequestParam(name="foodselection2", required = false, defaultValue = "5") String foodselection2,
+                               @RequestParam(name="startingCoins", required = false, defaultValue = "0") String startingCoins,
+                               @RequestParam(name="maxRounds", required = false, defaultValue = "0") String maxRounds,
                                Model model)
+
+
                 throws IOException, InterruptedException, ParseException {
                 HttpRequest request = HttpRequest.newBuilder()
                         .uri(URI.create("https://motivational-quotes1.p.rapidapi.com/motivation"))
@@ -192,9 +195,16 @@ public class samiAboutMe {
                 model.addAttribute("compare", compare);
                 model.addAttribute("option2", option2);
 
-                /*Coingame frq4 = new Coingame();
-                result = frq4.Playgame(startingCoins, maxRounds);
-                model.addAttribute("result", );*/
+
+                //FRQ 4
+
+
+                int y = Integer.parseInt(startingCoins);
+                int x = Integer.parseInt(maxRounds);
+                Coingame frq4 = new Coingame(y, x);
+                String result = "";
+                result = frq4.playGame(y, x);
+                model.addAttribute("result", result);
 
                 return "Pages/aboutMePages/samiAbout";
         }

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+<head><div layout:fragment="metadata" th:remove="tag">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f7cb2d;
+}
+</style>
+</div></head>
+<body style="background-color:#17a2b8;"><div layout:fragment="content" th:remove="tag">
+<h2 style="text-align:center; padding:30px;">Find my Club</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%; text-align:center;">Club Name</th>
+  </tr>
+  <tr>
+    <td>Club0</td>
+  </tr>
+  <tr>
+    <td>Club1</td>
+  </tr>
+  <tr>
+    <td>Club2</td>
+  </tr>
+  <tr>
+    <td>Club3</td>
+  </tr>
+  <tr>
+    <td>Club4</td>
+  </tr>
+  <tr>
+    <td>Club5</td>
+  </tr>
+  <tr>
+    <td>Club6</td>
+  </tr>
+  <tr>
+    <td>Club7</td>
+  </tr>
+  <tr>
+    <td>Club8</td>
+  </tr>
+  <tr>
+    <td>Club9</td>
+  </tr>
+  <tr>
+    <td>Club10</td>
+  </tr>
+
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+
+</div></body>
+</html>

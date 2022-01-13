@@ -3,6 +3,7 @@ package com.example.sping_portfolio.rachelCollegeBoardFRQs;
 import java.lang.Math;
 
 public class LightSequence
+    //.
 {
     private String resultSeq;
 
