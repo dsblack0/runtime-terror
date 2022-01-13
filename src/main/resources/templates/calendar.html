@@ -22,8 +22,7 @@
             background: #f9f9f9;
             color: #0e171c;
             display: grid;
-            font: 300 100%/1.5em 'Lato', sans-serif;
-            margin: 0;
+            width: 100%;
             min-height: 100vh;
             place-items: center;
         }
@@ -50,13 +49,16 @@
         }
 
         .container {
-            width: 510px;
+            float: right;
+            display: inline-block;
         }
 
         /* ---------- CALENDAR ---------- */
 
         .calendar {
             text-align: center;
+            float: right;
+            display: inline-block;
         }
 
         .calendar header {
@@ -154,23 +156,73 @@
         .btn-next {
             right: 6em;
         }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            width: 200px;
+            background-color: #264d59;
+            text-align: center;
+            padding: 14px 16px;
+            margin-top: 37px;
+        }
+
+        li a {
+            display: block;
+            color: #ffffff;
+            padding: 8px 16px;
+            text-decoration: none;
+
+            display: inline-block;
+
+        }
+
+        /* Change the link color on hover */
+        li a:hover {
+            background-color: #f7cb2d;
+            color: white;
+
+            display: inline-block;
+        }
     </style>
 
 </head>
-<body><div layout:fragment="content" th:remove="tag">
 
-    <div class="container">
 
-        <div class="calendar">
+<body>
 
-            <header>
+<!--<div layout:fragment="vertical" th:remove="tag">-->
+
+<div layout:fragment="content" th:remove="tag">
+
+    <ul>
+        <li><a href="#January">January</a></li>
+        <li><a href="#Feburary">Feburary</a></li>
+        <li><a href="#March">March</a></li>
+        <li><a href="#April">April</a></li>
+        <li><a href="#May">May</a></li>
+        <li><a href="#June">June</a></li>
+        <li><a href="#July">July</a></li>
+        <li><a href="#August">August</a></li>
+        <li><a href="#September">September</a></li>
+        <li><a href="#October">October</a></li>
+        <li><a href="#November">November</a></li>
+        <li><a href="#December">December</a></li>
+    </ul>
+
+    <div class="container" >
+
+
+        <center><div class="calendar">
+
+
 
                 <h2>January</h2>
 
-                <a class="btn-prev fontawesome-angle-left" href="#"></a>
-                <a class="btn-next fontawesome-angle-right" href="#"></a>
+                <!--<a class="btn-prev fontawesome-angle-left" href="#"></a>
+                <a class="btn-next fontawesome-angle-right" href="#"></a>-->
 
-            </header>
+
 
             <table>
 
@@ -253,13 +305,16 @@
             </table>
 
         </div> <!-- end calendar -->
-
-    </div> <!-- end container -->
+        </center>
+    </div>
+</div><!-- end container -->
 
 
     </script>
 
 
 </div>
+
+
 </body>
 </html>
