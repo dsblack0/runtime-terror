@@ -2,6 +2,16 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>...</title>
+
+    <style>
+        body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+
+    </style>
 </head>
 <body>
     <!-- Begin navigation fragments -->
@@ -71,12 +81,14 @@
                 <label class="custom-control-label" for="darkSwitch"></label>
             </div>
             <!-- Navigation bar JavaScript support -->
+            <button onclick="myFunction()">Toggle dark mode</button>
+
             <script>
-                // Dark Mode Toggle
-                function darkFunction() {
-                    let element = document.body;
+                function myFunction() {
+                    var element = document.body;
                     element.classList.toggle("dark-mode");
                 }
+
                 // Clock controller
                 let clockElement = document.getElementById('clock');
                 function clock() {
