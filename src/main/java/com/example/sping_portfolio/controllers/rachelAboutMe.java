@@ -54,8 +54,8 @@ public class rachelAboutMe {
                               @RequestParam(name="startingCoins", required = false, defaultValue = "1") Integer startingCoins,
                               @RequestParam(name="maxRounds", required = false, defaultValue = "1") Integer maxRounds,
                               @RequestParam(name="host", required = false, defaultValue = "host") String host,
+                              @RequestParam(name="host", required = false, defaultValue = "guest") String guest,
                               @RequestParam(name="address", required = false, defaultValue = "12345 Address Street") String address,
-                              @RequestParam(name="guest", required = false, defaultValue = "guest") String guest,
                               Model model) throws IOException, InterruptedException, ParseException {
             HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://numbersapi.p.rapidapi.com/6/21/date?fragment=true&json=true"))
@@ -110,7 +110,8 @@ public class rachelAboutMe {
         Invitation unit5frq1 = new Invitation(host, address);
         model.addAttribute("host", unit5frq1.returnHost());
         model.addAttribute("address", unit5frq1.updateAddress(address));
-        model.addAttribute("address", unit5frq1.invited(guest));
+        model.addAttribute("invite", unit5frq1.invited(guest));
+
 
         //api
         var data = new ObjectMapper().readValue(response.body(), HashMap.class);

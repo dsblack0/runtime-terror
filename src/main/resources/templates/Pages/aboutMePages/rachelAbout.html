@@ -226,7 +226,23 @@ tr:nth-child(even) {
                             <button>Play</button>
                             <p><b th:text="'Result: ' + ${result}" style="color: teal;"></b></p>
                         </div>
+                    </form>
                 </div>
+            <div class="unit5">
+                <h3>Unit 5</h3>
+                <form action="/rachelAbout" method="GET" id="invitation">
+                    <div>
+                        <label for="name" style="color: teal;">Who is the host?</label>
+                        <input name="host" id="host">
+                        <label for="name" style="color: teal;">What is the address?</label>
+                        <input name="address" id="address">
+                        <label for="name" style="color: teal;">Who is the guest?</label>
+                        <input name="guest" id="guest">
+                      <button>Generate Invitation</button>
+                        <p><b th:text="'Invitation: ' + ${invite}" style="color: teal;"></b></p>
+                  </div>
+                </form>
+            </div>
 
 
         </div>
