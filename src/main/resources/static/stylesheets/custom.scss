@@ -43,7 +43,7 @@ $theme-colors: (
 
 // redefine colors
 $secondary: #5B9D82;
-$body-bg: #cfd8dc;
+$body-bg: #ffff77;
 
 // redefine body background
 @import "../../../../../node_modules/bootstrap/scss/bootstrap";
@@ -51,21 +51,19 @@ $body-bg: #cfd8dc;
 // setup default background
 html, body {
   background-image: var(--bs-gradient);
-  background-color: var(--bs-body-bg);
+  background-color: var(--bs-danger);
 }
 
 // setup dark mode styling
 .dark-mode {
   $enable-gradients: true;
 
-  /* redefine body background */
+  /* redefine theme colors */
+  $primary: #5c7ba8;
+  $secondary: $green-600;
   $body-bg: #455a64;
   /* set background values */
   --#{$variable-prefix}body-bg: #{$body-bg};
-
-  /* redefine theme colors */
-  $primary: $purple;
-  $secondary: $green-600;
 
   $theme-colors: (
           "primary": $primary,
