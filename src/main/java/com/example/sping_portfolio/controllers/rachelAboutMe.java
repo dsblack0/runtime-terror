@@ -2,6 +2,7 @@ package com.example.sping_portfolio.controllers;
 //import lombok.Getter;
 import com.example.sping_portfolio.rachelCollegeBoardFRQs.CoinGame;
 import com.example.sping_portfolio.rachelCollegeBoardFRQs.Dinner;
+import com.example.sping_portfolio.rachelCollegeBoardFRQs.Invitation;
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.hibernate.annotations.Parameter;
 import org.springframework.stereotype.Controller;
@@ -52,6 +53,9 @@ public class rachelAboutMe {
                               @RequestParam(name="streakstr", required = false, defaultValue = "test") String streakstr,
                               @RequestParam(name="startingCoins", required = false, defaultValue = "1") Integer startingCoins,
                               @RequestParam(name="maxRounds", required = false, defaultValue = "1") Integer maxRounds,
+                              @RequestParam(name="host", required = false, defaultValue = "host") String host,
+                              @RequestParam(name="address", required = false, defaultValue = "12345 Address Street") String address,
+                              @RequestParam(name="guest", required = false, defaultValue = "guest") String guest,
                               Model model) throws IOException, InterruptedException, ParseException {
             HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://numbersapi.p.rapidapi.com/6/21/date?fragment=true&json=true"))
@@ -102,6 +106,11 @@ public class rachelAboutMe {
         CoinGame unit4frq2 = new CoinGame(startingCoins, maxRounds);
         model.addAttribute("result", unit4frq2.playGame(startingCoins, maxRounds));
 
+        //unit 5
+        Invitation unit5frq1 = new Invitation(host, address);
+        model.addAttribute("host", unit5frq1.returnHost());
+        model.addAttribute("address", unit5frq1.updateAddress(address));
+        model.addAttribute("address", unit5frq1.invited(guest));
 
         //api
         var data = new ObjectMapper().readValue(response.body(), HashMap.class);

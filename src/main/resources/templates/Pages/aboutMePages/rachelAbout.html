@@ -201,32 +201,34 @@ tr:nth-child(even) {
                         </div>
                     </form>
                 </div>
-            <div class="unit3">
+                <div class="unit3">
                 <br></br>
-                <h3>Unit 3</h3>
-                <form action="/rachelAbout" method="GET" id="attendance">
-                    <div>
-                        <label for="name" style="color: teal;">Will you be attending? (Type True for Yes, False for No)</label>
-                        <input name="rsvp" id="rsvp">
-                        <label for="name" style="color: teal;">What meal would you like? (1=Beef, 2=Chicken, 3=Pasta, Anything 4 or greater=Fish</label>
-                        <input name="selection" id="selection">
-                        <button>RSVP</button>
-                        <p><b th:text="${option1}" style="color: teal;"></b></p>
-                    </div>
-                </form>
-            </div>
-            <div class="unit4">
-                <h3>Unit 4</h3>
-                <form action="/rachelAbout" method="GET" id="coingame">
-                    <div>
-                        <label for="name" style="color: teal;">How many coins should each user start with?</label>
-                        <input name="startingCoins" id="startingCoins">
-                        <label for="name" style="color: teal;">How many rounds should the game last for?</label>
-                        <input name="maxRounds" id="maxRounds">
-                        <button>Play</button>
-                        <p><b th:text="'Result: ' + ${result}" style="color: teal;"></b></p>
-                    </div>
-            </div>
+                    <h3>Unit 3</h3>
+                    <form action="/rachelAbout" method="GET" id="attendance">
+                        <div>
+                            <label for="name" style="color: teal;">Will you be attending? (Type True for Yes, False for No)</label>
+                            <input name="rsvp" id="rsvp">
+                            <label for="name" style="color: teal;">What meal would you like? (1=Beef, 2=Chicken, 3=Pasta, Anything 4 or greater=Fish</label>
+                            <input name="selection" id="selection">
+                            <button>RSVP</button>
+                            <p><b th:text="${option1}" style="color: teal;"></b></p>
+                        </div>
+                    </form>
+                </div>
+                <div class="unit4">
+                    <h3>Unit 4</h3>
+                    <form action="/rachelAbout" method="GET" id="coingame">
+                        <div>
+                            <label for="name" style="color: teal;">How many coins should each user start with?</label>
+                            <input name="startingCoins" id="startingCoins">
+                            <label for="name" style="color: teal;">How many rounds should the game last for?</label>
+                            <input name="maxRounds" id="maxRounds">
+                            <button>Play</button>
+                            <p><b th:text="'Result: ' + ${result}" style="color: teal;"></b></p>
+                        </div>
+                </div>
+
+
         </div>
     </div>
 </body>
