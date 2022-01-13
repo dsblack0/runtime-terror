@@ -2,6 +2,7 @@ package com.example.sping_portfolio.controllers;
 //import lombok.Getter;
 import com.example.sping_portfolio.rachelCollegeBoardFRQs.CoinGame;
 import com.example.sping_portfolio.rachelCollegeBoardFRQs.Dinner;
+import com.example.sping_portfolio.rachelCollegeBoardFRQs.Invitation;
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.hibernate.annotations.Parameter;
 import org.springframework.stereotype.Controller;
@@ -52,6 +53,9 @@ public class rachelAboutMe {
                               @RequestParam(name="streakstr", required = false, defaultValue = "test") String streakstr,
                               @RequestParam(name="startingCoins", required = false, defaultValue = "1") Integer startingCoins,
                               @RequestParam(name="maxRounds", required = false, defaultValue = "1") Integer maxRounds,
+                              @RequestParam(name="host", required = false, defaultValue = "host") String host,
+                              @RequestParam(name="host", required = false, defaultValue = "guest") String guest,
+                              @RequestParam(name="address", required = false, defaultValue = "12345 Address Street") String address,
                               Model model) throws IOException, InterruptedException, ParseException {
             HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://numbersapi.p.rapidapi.com/6/21/date?fragment=true&json=true"))
@@ -90,7 +94,7 @@ public class rachelAboutMe {
         model.addAttribute("num2", num2);
         model.addAttribute("distance", distance);
 
-        //unit 3
+        //unit 3.
         Dinner unit3frq1 = new Dinner();
         model.addAttribute("rsvp", unit3frq1.rsvp(rsvp));
         model.addAttribute("selection", unit3frq1.printSelection(selection));
@@ -101,6 +105,12 @@ public class rachelAboutMe {
         //unit 4
         CoinGame unit4frq2 = new CoinGame(startingCoins, maxRounds);
         model.addAttribute("result", unit4frq2.playGame(startingCoins, maxRounds));
+
+        //unit 5
+        Invitation unit5frq1 = new Invitation(host, address);
+        model.addAttribute("host", unit5frq1.returnHost());
+        model.addAttribute("address", unit5frq1.updateAddress(address));
+        model.addAttribute("invite", unit5frq1.invited(guest));
 
 
         //api
