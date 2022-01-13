@@ -37,25 +37,27 @@
 | Sami | [@SamiDeshatty](https://github.com/SamiDeshatty) | [Tickets](https://github.com/dsblack0/runtime-terror/issues/assigned/SamiDeshatty) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1?card_filter_query=assignee%3ASamiDeshatty) | [Commits](https://github.com/dsblack0/runtime-terror/commits?author=SamiDeshatty) | Web Designer |
 | Kaavya | [@KaavyaU](https://github.com/KaavyaU) | [Tickets](https://github.com/dsblack0/runtime-terror/issues/assigned/KaavyaU) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1?card_filter_query=assignee%3AKaavyaU) | [Commits](https://github.com/dsblack0/runtime-terror/commits?author=KaavyaU) | Deployment Manager |
 
-## Week 5 - 
+## Week 5 - PBL showing the How, Theme, Technicals
 
 | Name | Requirement | Evidence | Complete | Grade |
 | ---   | ---        | ---      | ---        | ---   |
-| Sami | | | <ul><li>[ ] DONE</li></ul> | |
-| Rachel | | | <ul><li>[ ] DONE</li></ul> | |
-| Adrita | | | <ul><li>[ ] DONE</li></ul> | |
-| Kaavya | | | <ul><li>[ ] DONE</li></ul> | |
-| Sam | | | <ul><li>[ ] DONE</li></ul> | |
+| Sami | Calendar Page and CSS | [Issue#1](https://github.com/dsblack0/runtime-terror/issues/52) [Issue#2](https://github.com/dsblack0/runtime-terror/issues/63) | <ul><li>[ ] DONE</li></ul> | |
+| Rachel | Search Bar and Jekyll| [Issue#1](https://github.com/dsblack0/runtime-terror/issues/47) [Issue#2](https://github.com/dsblack0/runtime-terror/issues/62) | <ul><li>[ ] DONE</li></ul> | |
+| Adrita | Database | [Issue](https://github.com/dsblack0/runtime-terror/issues/43) | <ul><li>[ ] DONE</li></ul> | |
+| Kaavya | Individual Club Page and Jekyll | [Issue#1](https://github.com/dsblack0/runtime-terror/issues/68) [Issue#2](https://github.com/dsblack0/runtime-terror/issues/47) | <ul><li>[ ] DONE</li></ul> | |
+| Sam | Home Page | [Issue](https://github.com/dsblack0/runtime-terror/issues/48) | <ul><li>[ ] DONE</li></ul> | |
+| Team | Unit #5 FRQ Online | [Issue](https://github.com/dsblack0/runtime-terror/issues/66) | <ul><li>[x] DONE</li></ul> | |
 
 ## Week 4 - New Year "Time to be Resolute"
 
 | Name | Requirement | Evidence | Complete | Grade |
 | ---   | ---        | ---      | ---        | ---   |
-| Sami | Calendar Page Setup and Technicals| [Issue](https://github.com/dsblack0/runtime-terror/issues/52) | <ul><li>[ ] DONE</li></ul> | |
+| Sami | Calendar Page Setup and Technicals| [Issue](https://github.com/dsblack0/runtime-terror/issues/52) | <ul><li>[x] DONE</li></ul> | |
 | Rachel | Jekyll | [Issue](https://github.com/dsblack0/runtime-terror/issues/47) | <ul><li>[ ] DONE</li></ul> | |
 | Adrita | Database Setup | [Issue](https://github.com/dsblack0/runtime-terror/issues/43) | <ul><li>[ ] DONE</li></ul> | |
 | Kaavya | Deployment | [Issue](https://github.com/dsblack0/runtime-terror/issues/42) | <ul><li>[ ] DONE</li></ul> | |
 | Sam | Home Page Technicals | [Issue](https://github.com/dsblack0/runtime-terror/issues/48) | <ul><li>[ ] DONE</li></ul> | |
+| Team | Unit #4 FRQ Online | [Issue](https://github.com/dsblack0/runtime-terror/issues/46) | <ul><li>[x] DONE</li></ul> | |
 
 ## Week 3 - WIP Project Review
 
