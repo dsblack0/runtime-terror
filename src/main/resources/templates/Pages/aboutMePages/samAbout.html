@@ -7,11 +7,6 @@
 </div></head>
 
 <body><div layout:fragment="content" th:remove="tag">
-    <script th:inline="javascript">
-        function changeImage() {
-            document.getElementById("sam").src = "images/samaboutme.jpg";
-        }
-    </script>
     <div class="info-about-me" style="width:500px;  margin: auto;">
          <div class="picture-card" style="margin-top: 50px;">
              <div style="width:100%; text-align:center">
@@ -134,6 +129,35 @@
                 </form>
             </div>
         </div>
+        <div class="unit-five" style="margin-top: 20px; background-color: #555b65;">
+            <div style="margin-left: 50px;">
+                <h2 style="color: white;">Unit 5 FRQ</h2>
+                <h5 style="color: white;">Invitation</h5>
+                <form action="/samAbout" method="GET" id="invite">
+                    <div style="margin-left: 10px;">
+                        <p class="hostName" style="color: white;">Who is the host?</p>
+                        <input name="hostName" id="hostName">
+                        <p class="hostName" style="color: white;">Who are you inviting?</p>
+                        <input name="inviteName" id="inviteName">
+                        <p class="address" style="color: white;">What is the address?</p>
+                        <input name="address" id="address">
+                        <button>Answer</button>
+                        <p><b th:text="'Invite: ' + ${invite}" style="color: white;"></b></p>
+                    </div>
+                </form>
+                <h5 style="color: white;">Password Generator</h5>
+                <form action="/samAbout" method="GET" id="password">
+                    <div style="margin-left: 10px;">
+                        <p class="prefix" style="color: white;">What is your desired prefix?</p>
+                        <input name="prefix" id="prefix">
+                        <p class="length" style="color: white;">How long do you want your password to b?</p>
+                        <input name="length" id="length">
+                        <button>Answer</button>
+                        <p><b th:text="'Random Password: ' + ${pwd}" style="color: white;"></b></p>
+                    </div>
+                </form>
+            </div>
+        </div>
     <style>
         html, body{
             margin: 0;
@@ -151,6 +175,43 @@
         }
     </style>
 </div>
+    <script th:inline="javascript">
+        function changeImage() {
+            document.getElementById("sam").src = "images/samaboutme.jpg";
+        }
 
+        // StringOps
+
+   /*    function unit5(action) {
+            const url = '/api/Pages.aboutMePages/samAboutMe/';  // url contains api location for stringops
+            const body = {  // body contains all data from user input form
+                action: action,
+                hostName: document.getElementById("hostName").value,
+                inviteName: document.getElementById("inviteName").value,
+                address: document.getElementById("address").value,
+                prefix: document.getElementById("prefix").value,
+                length: document.getElementById("length").value,
+            };
+            const request = {  // request sets up payload for api
+                method: "POST",
+                body: JSON.stringify(body),
+                cache: "no-cache",
+                headers: {
+                    "content-type": "application/json"
+                }
+            };
+            fetch(url, request)
+                .then(response => response.json())
+                .then(data => {
+                    // build a visual response from JSON data to DOM element IDs
+                    document.getElementById("title").innerHTML = data.title;
+                    document.getElementById("invite").innerHTML = data.data;
+                    // cleanup event history (from previous display)
+                    const bodyContainer = document.getElementById("body");
+                    while (bodyContainer.firstChild) {
+                        bodyContainer.removeChild(bodyContainer.firstChild);
+                    }
+        } */
+    </script>
 </body>
 </html>
