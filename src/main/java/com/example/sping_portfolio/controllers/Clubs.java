@@ -29,15 +29,15 @@ public class Clubs implements Serializable {
         return description;
     }
 
-    public String getDetails() {
+    public String getDates() {
         return dates;
     }
 
     public ArrayList<Clubs> clubslist(){
         Clubs club1 = new Clubs();//creating an object of Student
         Clubs club2 = new Clubs();
-        club1.clubCreate("Math homework", "DO YOUR MATH!!!!!", "detail");
-        club2.clubCreate("English Homework", "Write a whole essay boyyyyy", "detail");
+        club1.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
+        club2.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
 
         ArrayList<Clubs> list = new ArrayList<>();
         list.add(club1);
@@ -65,17 +65,15 @@ public class Clubs implements Serializable {
         Clubs club6 = new Clubs();
         Clubs club7 = new Clubs();//creating an object of Student
         Clubs club8 = new Clubs();
-        Clubs club9 = new Clubs();
 
-        club1.clubCreate("Math homework", "DO YOUR MATH!!!!!", "detail");
-        club2.clubCreate("English Homework", "Write a whole essay", "detail");
-        club3.clubCreate("CompSci Homework", "Doing it right now :)", "detail");
-        club4.clubCreate("Math homework", "DO YOUR MATH!!!!!", "detail");
-        club5.clubCreate("English Homework", "Write a whole essay", "detail");
-        club6.clubCreate("CompSci Homework", "Doing it right now :)", "detail");
-        club7.clubCreate("Math homework", "DO YOUR MATH!!!!!", "detail");
-        club8.clubCreate("English Homework", "Write a whole essay", "detail");
-        club9.clubCreate("CompSci Homework", "Doing it right now :)", "detail");
+        club1.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
+        club2.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
+        club3.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
+        club4.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
+        club5.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
+        club6.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
+        club7.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
+        club8.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
 
         ArrayList<Clubs> list = new ArrayList<>();
         list.add(club1);
@@ -86,7 +84,6 @@ public class Clubs implements Serializable {
         list.add(club6);
         list.add(club7);
         list.add(club8);
-        list.add(club9);
         model.addAttribute("list", list);
 
         return "index"; // returns HTML VIEW (greeting)
