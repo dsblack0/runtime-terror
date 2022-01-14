@@ -201,6 +201,62 @@
                 </div>
             </form>
         </div>
+        <div class="container" style="margin: 30px">
+            <h2>
+                FRQ#5
+            </h2>
+            <p>Question 1: Invitation</p>
+            <script>
+                function inviteMessage() {
+                    const body = {  // body contains all data from user input form
+                        hostName: document.getElementById("hostName").value,
+                        attendee: document.getElementById("attendee").value,
+                        address: document.getElementById("address").value,
+                    };
+                    const request = {  // request sets up payload for api
+                        method: "POST",
+                        body: JSON.stringify(body),
+                        cache: "no-cache",
+                        headers: {
+                            "content-type": "application/json"
+                        }
+                    };
+
+                fetch("/inviteMessage", request)
+                    .then(response => {
+                        return response.text();
+                    })
+                    .then(inviteMessage => {
+                        document.getElementById("inviteMessage").innerHTML = inviteMessage;
+                    })
+                    .catch(err => {
+                        console.error(err);
+                    });
+                }
+            </script>
+                <div>
+                    <label for = "hostName" style="color: teal;">Host Name (default:"Host") :</label>
+                    <input name="hostName" id="hostName">
+                    <label for = "address" style="color: teal;">Address:</label>
+                    <input name="address" id="address">
+                    <label for = "attendee" style="color: teal;">Attendee:</label>
+                    <input name="attendee" id="attendee">
+                    <button onclick="inviteMessage()">Generate Invitation</button>
+                    <p><b id="inviteMessage" style="color: teal;"></b></p>
+                </div>
+            <p>Question 2: Password Generator</p>
+            <form action="/kaavyaAbout" method="GET" id="frq5_2">
+                <div>
+                    <label for = "digits" style="color: teal;">Number of digits:</label>
+                    <input name="digits" id="digits">
+                    <label for = "prefix" style="color: teal;">Password's prefix (Default: "A"): </label>
+                    <input name="prefix" id="prefix">
+                    <button>Generate Password</button>
+                    <p><b th:text="'New Password: ' + ${pw}" style="color: teal;"></b></p>
+                    <p><b th:text="${count} + ' passwords have been generated.'" style="color: teal;"></b></p>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>

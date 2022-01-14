@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<!-- Start of head content specific to page -->
+<head><div layout:fragment="metadata" th:remove="tag">
+
+
+    <title>Search</title>
+    <style>
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    body{
+      text-align: center;
+      align-items: center;
+      align-content: center;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+
+      .container{
+        align-content: center;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        align: center;
+        border-width: 10px;
+        border-color: var(--white);
+        border-radius: 5px;
+      }
+
+    }
+  </style>
+    <!-- End of head content specific to page -->
+</div></head>
+
+<body><div layout:fragment="content" th:remove="tag">
+    <!-- Start of body content specific to page -->
+    <div class="contact" style="height: 35vh;">
+        <div class="container">
+            <form action="/search" method="GET" id="search">
+                <div class="container">
+                    <h1 style="text-align: center;">Search</h1>
+                    <label for="search">Input stock symbol:</label>
+                    <input name="sym" id="sym">
+                    <button>Search</button>
+                </div>
+            </form>
+            <br>
+            <br>
+            <p>Symbol: <span th:text="${data.Data.Symbol}"></span></p>
+            <br>
+            <p>Name: <span th:text="${data.Data.Name}"></span></p>
+            <br>
+            <p>Close: <span th:text="${data.Data.Stock.Close}" ></span></p>
+            <br>
+            <p>Last Exchange Date: <span th:text="${data.Data.Stock.LastExchangeDate}"></span></p>
+        </div>
+    </div>
+    <!-- End of body content specific to page -->
+</div></body>
+
+</html>

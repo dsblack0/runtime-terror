@@ -52,7 +52,7 @@ public class Dinner {
 
     public String dinnerOption2(boolean rsvp, int selection) {
         if (rsvp == true) {
-            this.option2 = "Thank you for attending. You will be served " + choice;
+            this.option2 = "Thank you for attending! You will be served " + choice;
         } else {
             this.option2 = "Sorry you can't make it.";
         }

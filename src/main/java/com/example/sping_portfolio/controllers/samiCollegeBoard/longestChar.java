@@ -1,4 +1,4 @@
-package samiCollegeBoard;
+package com.example.sping_portfolio.controllers.samiCollegeBoard;
 
 public class longestChar{
         public static void longestStreak(String str){
