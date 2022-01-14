@@ -1,9 +1,7 @@
 package com.example.sping_portfolio.controllers;
 
-import com.example.sping_portfolio.kaavyaCollegeBoardFRQs.CoinCountFRQ4;
-import com.example.sping_portfolio.kaavyaCollegeBoardFRQs.DinnerFRQ3;
+import com.example.sping_portfolio.kaavyaCollegeBoardFRQs.*;
 import com.example.sping_portfolio.kaavyaCollegeBoardFRQs.LightSequence;
-import com.example.sping_portfolio.kaavyaCollegeBoardFRQs.LongestStreakFRQ4;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,6 +26,11 @@ public class kaavyaAboutMe {
                               @RequestParam(name="str", required = false, defaultValue = "CCAAAAATTT!") String str,
                               @RequestParam(name="startingCoins", required = false, defaultValue = "10") int startingCoins,
                               @RequestParam(name="maxRounds", required = false, defaultValue = "5") int maxRounds,
+                              @RequestParam(name="hostName", required = false, defaultValue = "Host") String hostName,
+                              @RequestParam(name="address", required = false, defaultValue = "1234 Walnut Street") String address,
+                              @RequestParam(name="attendee", required = false, defaultValue = "Cheryl") String attendee,
+                              @RequestParam(name="prefix", required = false, defaultValue = "A") String prefix,
+                              @RequestParam(name="digits", required = false, defaultValue = "4") int digits,
                               Model model) {
 
         LightSequence frq2 = new LightSequence();
@@ -47,6 +50,24 @@ public class kaavyaAboutMe {
         model.addAttribute("output", frq4_1.longestStreak(str));
         CoinCountFRQ4 frq4_2 = new CoinCountFRQ4();
         model.addAttribute("outcome", frq4_2.playGame(startingCoins, maxRounds));
+
+        InvitationFRQ5 frq5_1;
+        if (hostName.equals("Host")){
+            frq5_1 = new InvitationFRQ5(address);
+        }
+        else {
+            frq5_1 = new InvitationFRQ5(hostName, address);
+        }
+        model.addAttribute("message", frq5_1.invite(attendee));
+        PasswordGeneratorFRQ5 frq5_2;
+        if (prefix.equals("A")){
+            frq5_2 = new PasswordGeneratorFRQ5(digits);
+        }
+        else {
+            frq5_2 = new PasswordGeneratorFRQ5(digits, prefix);
+        }
+        model.addAttribute("pw", frq5_2.pwGen());
+        model.addAttribute("count", frq5_2.pwCount());
 
         return "Pages/aboutMePages/kaavyaAbout"; }
 }
