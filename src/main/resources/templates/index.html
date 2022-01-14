@@ -35,188 +35,232 @@
             height: 15px;
             width: 15px;
             margin: 0 2px;
-            background-color: #bbb;
+            background-color: #f7cb2d;
             border-radius: 50%;
             display: inline-block;
             transition: background-color 0.6s ease;
         }
-        .more-details-box{
-            visibility: hidden;
-            background-color: #60a8ad;
-            color:#ffffff;
-            padding:20px;
-            float:bottom;
-            margin:20px;
-            position: absolute;
-            z-index: 1;
-        }
-        .more-details:hover .more-details-box{
-            visibility:visible;
-            opacity:1;
-        }
-
-        .pop-up-box{
-            padding-top: 50px;
-            position: absolute;
-            background-color: midnightblue;
-            width: 33%;
-            height: 33%;
-            margin-top: 100px;
-            margin-left: 33%;
-
-        }
-
-        .text{
-            font-color: white;
-        }
-
-        .club icons{
-            background-color: #5aa7a7;
+        .card-flip > div {
+            backface-visibility: hidden;
+            transition: transform 300ms;
+            transition-timing-function: linear;
             width: 100%;
-            height: 400px
+            height: 100%;
+            margin: 0;
+            display: flex;
         }
 
-        .card{
-            width: 18rem;
-            margin-top: 10px;
-            margin-left:50px;
-            margin-right: 50px;
-            display: inline-block;
+        .card-front {
+            transform: rotateY(0deg);
         }
 
-        .card-body{
-            background-color: #f7cb2d
+        .card-back {
+            transform: rotateY(180deg);
+            position: absolute;
+            top: 0;
+            background-color: #60a8ad;
         }
 
-        .dark-mode{
-            background-color: green;
-            
-
+        .card-flip:hover .card-front {
+            transform: rotateY(-180deg);
         }
 
+        .card-flip:hover .card-back {
+            transform: rotateY(0deg);
+        }
+        .monday, .tuesday, .wednesday, .thursday, .friday {
+            display: none;
+        }
     </style>
+    <!-- sideshow script -->
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("pop-up-box");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+
+        <!-- Weekday buttons -->
+        function monday() {
+            const x = document.getElementById("monday");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        function tuesday() {
+            const x = document.getElementById("tuesday");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        function wednesday() {
+            const x = document.getElementById("wednesday");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        function thursday() {
+            const x = document.getElementById("thursday");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        function friday() {
+            const x = document.getElementById("friday");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        <!-- schedule script -->
+        /*   function getSchedule(){
+               const dt = new Date();
+               const day = dt.getDay();
+
+               if(day === 1){
+                   document.getElementById("club-icons").classList.add("monday-clubs");
+               }
+               if(day === 2){
+                   document.getElementById("schedule").innerHTML = "Tuesday"
+               }
+               if(day === 3){
+                   document.getElementById("schedule").innerHTML = "Wednesday"
+               }
+               if(day === 4){
+                   document.getElementById("schedule").innerHTML = "Thursday"
+               }
+               if(day === 5){
+                   document.getElementById("schedule").innerHTML = "Friday"
+               }
+               if(day === 6){
+                   document.getElementById("schedule").innerHTML+
+                       = "Saturday</br></br>No school today! Catch up on your work!";
+               }
+           } */
+    </script>
 </div>
 </head>
 
-<body>
-<!--<body onload="getSchedule()">--><div layout:fragment="content" th:remove="tag">
-    <header>
-
-    </header>
-
-    <div class = "body_sec">
-        <section id="Content">
-            <div style="position: relative;">
-                <div class="slideshow">
-                    <div class="pop-up-box" >
-                        <div class="text">Upcoming Events!</div>
-                    </div>
-                    <div class="pop-up-box" >
-                    <div class="text">Page2</div>
-                    </div>
-                    <div class="pop-up-box">
-                        <div class="text">Upcoming Events!</div>
-                    </div>
-                    <div style="text-align:center;">
-                        <span class="dot" onclick="currentSlide(1)" style="margin-top: 250px; margin-left: -35px; position: absolute;"></span>
-                        <span class="dot" onclick="currentSlide(2)" style="margin-top: 250px; margin-left: -15px; position: absolute;"></span>
-                        <span class="dot" onclick="currentSlide(3)" style="margin-top: 250px; margin-left: 5px;position: absolute;" ></span>
-                    </div>
+<body onload="getSchedule()"><div layout:fragment="content" th:remove="tag">
+    <div class="banner" style="position: relative;">
+        <div class="slideshow">
+            <div class="pop-up-box" style="padding-top: 50px; text-align: center; position: absolute; background-color: midnightblue; width: 33%; height: 33%; margin-top: 100px; margin-left: 33%;">
+                <div class="text" style="color: white;">Upcoming Events!</div>
+            </div>
+            <div class="pop-up-box" style="padding-top: 50px; text-align: center; position: absolute; background-color: midnightblue; width: 33%; height: 33%; margin-top: 100px; margin-left: 33%;">
+                <div class="text" style="color: white;">Events Page 2</div>
+            </div>
+            <div class="pop-up-box" style="padding-top: 50px; text-align: center; position: absolute; background-color: midnightblue; width: 33%; height: 33%; margin-top: 100px; margin-left: 33%;">
+                <div class="text" style="color: white;">Events Page 3</div>
+            </div>
+            <div style="text-align:center;">
+                <span class="dot" onclick="currentSlide(1)" style="margin-top: 250px; margin-left: -40px; position: absolute;"></span>
+                <span class="dot" onclick="currentSlide(2)" style="margin-top: 250px; margin-left: -15px; position: absolute;"></span>
+                <span class="dot" onclick="currentSlide(3)" style="margin-top: 250px; margin-left: 10px;position: absolute;" ></span>
+            </div>
+        </div>
+        <img th:src="@{/images/del-norte-hs-01.jpg}" style="width: 100%; height: 450px;">
+    </div>
+    <div class="btn-group" style="background-color:#96d7c6; width: 100%; height: 15%">
+        <button style="width:20%" onclick=monday()>Monday</button>
+        <button style="width:20%" onclick="tuesday()">Tuesday</button>
+        <button style="width:20%" onclick="wednesday()">Wednesday</button>
+        <button style="width:20%" onclick="thursday()">Thursday</button>
+        <button style="width:20%" onclick="friday()">Friday</button>
+    </div>
+    <div class="club-icons" style="padding-left: 25px;">
+        <div class="monday" id="monday" style="width: 100%; height: 400px; margin-top: 15px;">
+            <h4>Monday Clubs</h4>
+            <div class="card card-flip" style="width: 16rem; height: 16rem; margin-top: 10px; margin-left:50px; margin-right: 50px; display: inline-block;" th:each="clubs : ${list}">
+                <div class="card-front" style="background-color: #f7cb2d">
+                    <h5 class="card-title" th:text="${clubs.title}">Club name</h5>
                 </div>
-                <img th:src="@{/images/del-norte-hs-01.jpg}" style="width: 100%; height: 450px;">
-            </div>
-
-            <div class="btn-group" style="background-color:#96d7c6; width: 100%; height: 15%">
-                <button style="width:20%">Monday</button>
-                <button style="width:20%">Tuesday</button>
-                <button style="width:20%">Wednesday</button>
-                <button style="width:20%">Thursday</button>
-                <button style="width:20%">Friday</button>
-            </div>
-
-            <div class="club icons">
-                <div class="card" th:each ="clubs : ${list}">
-                    <div class="card-body">
-                        <h5 class="card-title" th:text="${clubs.title}">Club title</h5>
-                        <p class="card-text" th:text="${clubs.description}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <div class="more-details">
-                            <button class="more-details-btn" style="width:9rem; height:4rem; margin-left: 50px; background-color: #96d7c6; border-color: #96d7c6; border-radius: 50px; font-size: large; color: black;">More details</button>
-                            <div class="more-details-box">
-                                <p class="card-details" th:text="${clubs.details}">Some more details and information</p>
-                                <p class="card-date" th:text="'Date: ' + ${clubs.date}">Days of Week</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="card-back">
+                    <p class="card-text" th:text="${clubs.description}">Brief description</p>
+                    <p class="card-details" th:text="${clubs.dates}">Meeting Date</p>
                 </div>
             </div>
-
-
-
-        </section>
+        </div>
+        <div class="tuesday" id="tuesday" style="width: 100%; height: 400px; margin-top: 15px;">
+            <h4>Tuesday Clubs</h4>
+            <div class="card card-flip" style="width: 16rem; height: 16rem; margin-top: 10px; margin-left:50px; margin-right: 50px; display: inline-block;" th:each="clubs : ${list}">
+                <div class="card-front" style="background-color: #f7cb2d">
+                    <h5 class="card-title" th:text="${clubs.title}">Club name</h5>
+                </div>
+                <div class="card-back">
+                    <p class="card-text" th:text="${clubs.description}">Brief description</p>
+                    <p class="card-details" th:text="${clubs.dates}">Meeting Date</p>
+                </div>
+            </div>
+        </div>
+        <div class="wednesday" id="wednesday" style="width: 100%; height: 400px; margin-top: 15px;">
+            <h4>Wednesday Clubs</h4>
+            <div class="card card-flip" style="width: 16rem; height: 16rem; margin-top: 10px; margin-left:50px; margin-right: 50px; display: inline-block;" th:each="clubs : ${list}">
+                <div class="card-front" style="background-color: #f7cb2d">
+                    <h5 class="card-title" th:text="${clubs.title}">Club name</h5>
+                </div>
+                <div class="card-back">
+                    <p class="card-text" th:text="${clubs.description}">Brief description</p>
+                    <p class="card-details" th:text="${clubs.dates}">Meeting Date</p>
+                </div>
+            </div>
+        </div>
+        <div class="thursday" id="thursday" style="width: 100%; height: 400px; margin-top: 15px;">
+            <h4>Thursday Clubs</h4>
+            <div class="card card-flip" style="width: 16rem; height: 16rem; margin-top: 10px; margin-left:50px; margin-right: 50px; display: inline-block;" th:each="clubs : ${list}">
+                <div class="card-front" style="background-color: #f7cb2d">
+                    <h5 class="card-title" th:text="${clubs.title}">Club name</h5>
+                </div>
+                <div class="card-back">
+                    <p class="card-text" th:text="${clubs.description}">Brief description</p>
+                    <p class="card-details" th:text="${clubs.dates}">Meeting Date</p>
+                </div>
+            </div>
+        </div>
+        <div class="friday" id="friday" style="width: 100%; height: 400px; margin-top: 15px;">
+            <h4>Friday Clubs</h4>
+            <div class="card card-flip" style="width: 16rem; height: 16rem; margin-top: 10px; margin-left:50px; margin-right: 50px; display: inline-block;" th:each="clubs : ${list}">
+                <div class="card-front" style="background-color: #f7cb2d">
+                    <h5 class="card-title" th:text="${clubs.title}">Club name</h5>
+                </div>
+                <div class="card-back">
+                    <p class="card-text" th:text="${clubs.description}">Brief description</p>
+                    <p class="card-details" th:text="${clubs.dates}">Meeting Date</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<!-- sideshow script -->
-<script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("pop-up-box");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-    }
-
-    function myHomeDark() {
-        var element = document.body;
-        element.classList.toggle("dark-mode");
-    }
-
-    /*function getSchedule(){
-        const dt = new Date();
-        const day = dt.getDay();
-
-        if(day === 0){
-            document.getElementById("schedule").innerHTML = "Sunday</br></br>No school today! Catch up on your work!";
-        }
-        if(day === 1){
-            document.getElementById("schedule").innerHTML =
-        }
-        if(day === 2){
-            document.getElementById("schedule").innerHTML =
-        }
-        if(day === 3){
-            document.getElementById("schedule").innerHTML =
-        }
-        if(day === 4){
-            document.getElementById("schedule").innerHTML =
-        }
-        if(day === 5){
-            document.getElementById("schedule").innerHTML =
-        }
-        if(day === 6){
-            document.getElementById("schedule").innerHTML = "Saturday</br></br>No school today! Catch up on your work!";
-        }
-    }
-*/
-</script>
 </body>
 </html>

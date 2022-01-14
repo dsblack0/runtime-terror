@@ -6,11 +6,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+
 @RestController
 public class frq5 {
     @PostMapping("/inviteMessage")
+  
     //https://codingnconcepts.com/spring-boot/jackson-json-request-response-mapping/ --> Use seperate class to get params and use getter to access in Controller
-
     public String inviteMessage(@RequestBody InviteParams params,
                                 Model model) {
         InvitationFRQ5 frq5_1;
