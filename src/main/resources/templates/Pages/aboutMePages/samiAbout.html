@@ -2,6 +2,17 @@
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layout}" lang="en">
 <head>
+
+    <style>
+        html {
+            background: no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+    </style>
     <script>
         function changeImage()
         {
@@ -14,7 +25,6 @@
     <div layout:fragment="metadata" th:remove="tag">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384qQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <title>Sami's About Me Page </title>
- </style>
 </div></head>
 
 
@@ -81,32 +91,32 @@
                                     </h3>
                                     <form action="/samiAbout" method="GET" id="changesegment">
                                         <div>
-                                            <label for="name" style="color: teal;">Original sequence?</label>
+                                            <label for="name">Original sequence?</label>
                                             <input name="oldseq" id="oldseq">
                                             <label for="name" style="color: teal;">Pick a segment to remove</label>
                                             <input name="segment" id="segment">
                                             <button>Answer</button>
-                                            <p><b th:text="'New sequence: ' + ${newSeq}" style="color: teal;"></b></p>
+                                            <p><b th:text="'New sequence: ' + ${newSeq}"></b></p>
                                         </div>
                                     </form>
                                     <form>
                                         <div>
-                                            <p><b th:text="'Original sequence: ' + ${originalSeq}" style="color: teal;"></b></p>
-                                            <label for="name" style="color: teal;">Pick a segment to insert</label>
+                                            <p><b th:text="'Original sequence: ' + ${originalSeq}"></b></p>
+                                            <label for="name">Pick a segment to insert</label>
                                             <input name="instsegment" id="instsegment">
-                                            <label for="name" style="color: teal;">Index?</label>
+                                            <label for="name">Index?</label>
                                             <input name="ind" id="ind">
                                             <button>Answer</button>
-                                            <p><b th:text="'Resulting sequence: ' + ${resultSeq}" style="color: teal;"></b></p>
+                                            <p><b th:text="'Resulting sequence: ' + ${resultSeq}"></b></p>
                                         </div>
                                     </form>
                                     <form>
                                         <div>
-                                            <label for="name" style="color: teal;">Pick to numbers to find their distance</label>
+                                            <label for="name">Pick to numbers to find their distance</label>
                                             <input name="num1" id="num1">
                                             <input name="num2" id="num2">
                                             <button>Answer</button>
-                                            <p><b th:text="'Distance from ' + ${num1} + ' to ' + ${num2} + '= ' + ${distance}" style="color: teal;"></b></p>
+                                            <p><b th:text="'Distance from ' + ${num1} + ' to ' + ${num2} + '= ' + ${distance}"></b></p>
                                         </div>
                                     </form>
 
@@ -164,5 +174,8 @@
 
   </script>
 </div>
+
+
+
 
 </html>

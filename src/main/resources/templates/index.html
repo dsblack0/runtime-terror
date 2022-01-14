@@ -54,11 +54,51 @@
             visibility:visible;
             opacity:1;
         }
+
+        .pop-up-box{
+            padding-top: 50px;
+            position: absolute;
+            background-color: midnightblue;
+            width: 33%;
+            height: 33%;
+            margin-top: 100px;
+            margin-left: 33%;
+
+        }
+
+        .text{
+            font-color: white;
+        }
+
+        .club icons{
+            background-color: #5aa7a7;
+            width: 100%;
+            height: 400px
+        }
+
+        .card{
+            width: 18rem;
+            margin-top: 10px;
+            margin-left:50px;
+            margin-right: 50px;
+            display: inline-block;
+        }
+
+        .card-body{
+            background-color: #f7cb2d
+        }
+
+        .dark-mode{
+            background-color: #0c63e4;
+            font-color: green;
+        }
+
     </style>
 </div>
 </head>
 
-<body onload="getSchedule()"><div layout:fragment="content" th:remove="tag">
+<body>
+<!--<body onload="getSchedule()">--><div layout:fragment="content" th:remove="tag">
     <header>
 
     </header>
@@ -67,14 +107,14 @@
         <section id="Content">
             <div style="position: relative;">
                 <div class="slideshow">
-                    <div class="pop-up-box" style="padding-top: 50px; position: absolute; background-color: midnightblue; width: 33%; height: 33%; margin-top: 100px; margin-left: 33%;">
-                        <div class="text" style="color: white;">Upcoming Events!</div>
+                    <div class="pop-up-box" >
+                        <div class="text">Upcoming Events!</div>
                     </div>
-                    <div class="pop-up-box" style="padding-top: 50px; position: absolute; background-color: midnightblue; width: 33%; height: 33%; margin-top: 100px; margin-left: 33%;">
-                        <div class="text" style="color: white;">Page2</div>
+                    <div class="pop-up-box" >
+                    <div class="text">Page2</div>
                     </div>
-                    <div class="pop-up-box" style="padding-top: 50px; position: absolute; background-color: midnightblue; width: 33%; height: 33%; margin-top: 100px; margin-left: 33%;">
-                        <div class="text" style="color: white;">Upcoming Events!</div>
+                    <div class="pop-up-box">
+                        <div class="text">Upcoming Events!</div>
                     </div>
                     <div style="text-align:center;">
                         <span class="dot" onclick="currentSlide(1)" style="margin-top: 250px; margin-left: -35px; position: absolute;"></span>
@@ -93,9 +133,9 @@
                 <button style="width:20%">Friday</button>
             </div>
 
-            <div class="club icons" style="background-color: #5aa7a7; width: 100%; height: 400px">
-                <div class="card" style="width: 18rem; margin-top: 10px; margin-left:50px; margin-right: 50px; display: inline-block;" th:each ="clubs : ${list}">
-                    <div class="card-body" style="background-color: #f7cb2d">
+            <div class="club icons">
+                <div class="card" th:each ="clubs : ${list}">
+                    <div class="card-body">
                         <h5 class="card-title" th:text="${clubs.title}">Club title</h5>
                         <p class="card-text" th:text="${clubs.description}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <div class="more-details">
@@ -108,6 +148,8 @@
                     </div>
                 </div>
             </div>
+
+
 
         </section>
     </div>
@@ -141,10 +183,13 @@
         slides[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " active";
     }
-</script>
-<!-- schedule script -->
-<script>
-    function getSchedule(){
+
+    function myHomeDark() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    }
+
+    /*function getSchedule(){
         const dt = new Date();
         const day = dt.getDay();
 
@@ -170,6 +215,7 @@
             document.getElementById("schedule").innerHTML = "Saturday</br></br>No school today! Catch up on your work!";
         }
     }
+*/
 </script>
 </body>
 </html>
