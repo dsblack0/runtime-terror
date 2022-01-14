@@ -9,7 +9,7 @@ public class Unit5PwGenerator {
 
     public Unit5PwGenerator(int length) {
         this.prefix = "A";
-        this.length = length;
+        this.length = 5;
     }
 
     public Unit5PwGenerator(int length, String prefix) {

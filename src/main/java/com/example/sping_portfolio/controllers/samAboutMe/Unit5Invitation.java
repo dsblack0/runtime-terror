@@ -3,10 +3,12 @@ package com.example.sping_portfolio.controllers.samAboutMe;
 public class Unit5Invitation {
     private String hostName;
     private String address;
+    private String inviteName;
 
-    public Unit5Invitation(String n, String a) {
+    public Unit5Invitation(String n, String a, String in) {
         hostName = n;
         address = a;
+        inviteName = in;
     }
     public void Invitation(String host, String address) {
         this.address = address;
@@ -20,14 +22,12 @@ public class Unit5Invitation {
         address = ad;
         return address;
     }
-    public String invite(String name)
+    public String getInvite()
     {
-        String message = "Dear " +name +", please attend my event at " +address+". See you then, " +hostName+".";
-        return message;
+        return "Dear " +inviteName +", please attend my event at " +address+". See you then, " +hostName+".";
     }
 
     public static void main(String[] args) {
-        Unit5Invitation invite1 = new Unit5Invitation("sally", "17024 Silver Pine Rd");
-        System.out.println(invite1.invite("sam"));
+        Unit5Invitation invite1 = new Unit5Invitation("sally", "1234 Random St", "sam");
     }
 }
