@@ -1,5 +1,6 @@
 package com.example.sping_portfolio.controllers;
 //import lombok.Getter;
+import com.example.sping_portfolio.controllers.samAboutMe.Unit5Invitation;
 import com.example.sping_portfolio.rachelCollegeBoardFRQs.CoinGame;
 import com.example.sping_portfolio.rachelCollegeBoardFRQs.Dinner;
 import com.example.sping_portfolio.rachelCollegeBoardFRQs.Invitation;
@@ -54,7 +55,7 @@ public class rachelAboutMe {
                               @RequestParam(name="startingCoins", required = false, defaultValue = "1") Integer startingCoins,
                               @RequestParam(name="maxRounds", required = false, defaultValue = "1") Integer maxRounds,
                               @RequestParam(name="host", required = false, defaultValue = "host") String host,
-                              @RequestParam(name="host", required = false, defaultValue = "guest") String guest,
+                              @RequestParam(name="guest", required = false, defaultValue = "guest") String guest,
                               @RequestParam(name="address", required = false, defaultValue = "12345 Address Street") String address,
                               Model model) throws IOException, InterruptedException, ParseException {
             HttpRequest request = HttpRequest.newBuilder()
@@ -107,10 +108,10 @@ public class rachelAboutMe {
         model.addAttribute("result", unit4frq2.playGame(startingCoins, maxRounds));
 
         //unit 5
-        Invitation unit5frq1 = new Invitation(host, address);
-        model.addAttribute("host", unit5frq1.returnHost());
-        model.addAttribute("address", unit5frq1.updateAddress(address));
-        model.addAttribute("invite", unit5frq1.invited(guest));
+        Invitation unit5frq1 = new Invitation(host, address, guest);
+        String invite = unit5frq1.invited();
+        //model.addAttribute("invite", invite);
+        model.addAttribute("invite", unit5frq1.invited());
 
 
         //api
