@@ -22,9 +22,7 @@
             background: #f9f9f9;
             color: #0e171c;
             display: grid;
-            width: 100%;
             min-height: 100vh;
-            place-items: center;
         }
 
         a {
@@ -43,23 +41,27 @@
             margin: .33em 0;
         }
 
-        table {
+        /*table {
             border-collapse: collapse;
             border-spacing: 0;
-        }
+        }*/
 
-        .container {
+        /*.container {
             float: right;
             display: inline-block;
-        }
+        }*/
 
         /* ---------- CALENDAR ---------- */
 
         .calendar {
-            text-align: center;
+            /*text-align: center;*/
             float: right;
-            display: inline-block;
+            vertical-align: top;
+
         }
+
+
+
 
         .calendar header {
             position: center;
@@ -160,11 +162,13 @@
         ul {
             list-style-type: none;
             margin: 0;
-            width: 200px;
+            width: fit-content;
             background-color: #264d59;
             text-align: center;
             padding: 14px 16px;
             margin-top: 37px;
+            display: inline-block;
+
         }
 
         li a {
@@ -172,7 +176,6 @@
             color: #ffffff;
             padding: 8px 16px;
             text-decoration: none;
-            display: inline-block;
 
         }
 
@@ -180,20 +183,21 @@
         li a:hover {
             background-color: #f7cb2d;
             color: white;
-
-            display: inline-block;
         }
+
+        /*nav { display: inline-block; vertical-align: top; }
+        .container { display: inline-block; }*/
+
+
     </style>
 
 </head>
 
 
 <body>
-
-<!--<div layout:fragment="vertical" th:remove="tag">-->
-
 <div layout:fragment="content" th:remove="tag">
 
+<div>
     <ul>
         <li><a href="#January">January</a></li>
         <li><a href="#Feburary">Feburary</a></li>
@@ -209,22 +213,14 @@
         <li><a href="#December">December</a></li>
     </ul>
 
-    <div class="container" >
 
-
-        <center><div class="calendar">
-
-
+        <div class="calendar" style="padding-right: 550px">
 
                 <h2>January</h2>
 
                 <!--<a class="btn-prev fontawesome-angle-left" href="#"></a>
                 <a class="btn-next fontawesome-angle-right" href="#"></a>-->
-
-
-
-            <table>
-
+<table>
                 <thead>
 
                 <tr>
@@ -301,19 +297,16 @@
 
                 </tbody>
 
-            </table>
+</table>
 
         </div> <!-- end calendar -->
-        </center>
+
     </div>
 </div><!-- end container -->
 
 
-    </script>
-
 
 </div>
-
 
 </body>
 </html>

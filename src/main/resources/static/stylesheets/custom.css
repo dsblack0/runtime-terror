@@ -11182,6 +11182,8 @@ html, body {
 
 .dark-mode {
   /* redefine theme colors */
+  background-color: #0a53be;
+  font-color: red;
   /* set background values */
   --bs-body-bg: #455a64;
   /* redefine theme color variables */

@@ -62,6 +62,8 @@ html, body {
   $primary: #5c7ba8;
   $secondary: $green-600;
   $body-bg: #455a64;
+  background-color: #0a53be;
+  font-color: red;
   /* set background values */
   --#{$variable-prefix}body-bg: #{$body-bg};
 
