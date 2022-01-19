@@ -158,6 +158,34 @@
                 </form>
             </div>
         </div>
+        <div class="unit-six" style="margin-top: 20px; background-color: #555b65;">
+            <div style="margin-left: 50px;">
+                <h2 style="color: white;">Unit 6 FRQ</h2>
+                <h5 style="color: white;">Word Select</h5>
+                <form action="/samAbout" method="GET" id="words">
+                    <div style="margin-left: 10px;">
+                        <p class="wordsList" style="color: white;">Input a list of words separated with commas</p>
+                        <input name="wordsList" id="wordsList">
+                        <p class="wordsEnding" style="color: white;">Pick a word ending</p>
+                        <input name="wordsEnding" id="wordsEnding">
+                        <button>Answer</button>
+                        <p><b th:text="'New Words List: ' + ${invite}" style="color: white;"></b></p>
+                    </div>
+                </form>
+                <h5 style="color: white;">Payroll</h5>
+                <form action="/samAbout" method="GET" id="password">
+                    <div style="margin-left: 10px;">
+                        <p class="itemsSold" style="color: white;">Input a list of amounts of items sold for different employees. Separate each integer with a comma.</p>
+                        <input name="itemsSold" id="itemsSold">
+                        <p class="employeeIndex" style="color: white;">In your list, what is the index of the employees who's wage you want to find?</p>
+                        <input name="employeeIndex" id="employeeIndex">
+                        <button>Answer</button>
+                        <p><b th:text="'BonusThreshold: ' + ${pwd}" style="color: white;"></b></p>
+                        <p><b th:text="'Wage: ' + ${pwd}" style="color: white;"></b></p>
+                    </div>
+                </form>
+            </div>
+        </div>
     <style>
         html, body{
             margin: 0;
