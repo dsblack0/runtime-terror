@@ -4,6 +4,7 @@ import com.example.sping_portfolio.controllers.samAboutMe.Unit5Invitation;
 import com.example.sping_portfolio.rachelCollegeBoardFRQs.CoinGame;
 import com.example.sping_portfolio.rachelCollegeBoardFRQs.Dinner;
 import com.example.sping_portfolio.rachelCollegeBoardFRQs.Invitation;
+import com.example.sping_portfolio.rachelCollegeBoardFRQs.wordArray;
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.hibernate.annotations.Parameter;
 import org.springframework.stereotype.Controller;
@@ -57,6 +58,11 @@ public class rachelAboutMe {
                               @RequestParam(name="host", required = false, defaultValue = "host") String host,
                               @RequestParam(name="guest", required = false, defaultValue = "guest") String guest,
                               @RequestParam(name="address", required = false, defaultValue = "12345 Address Street") String address,
+                              @RequestParam(name="stringA", required = false, defaultValue = "testing") String stringA,
+                              @RequestParam(name="stringB", required = false, defaultValue = "testing") String stringB,
+                              @RequestParam(name="stringC", required = false, defaultValue = "testing") String stringC,
+                              @RequestParam(name="stringD", required = false, defaultValue = "testing") String stringD,
+                              @RequestParam(name="stringE", required = false, defaultValue = "testing") String stringE,
                               Model model) throws IOException, InterruptedException, ParseException {
             HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://numbersapi.p.rapidapi.com/6/21/date?fragment=true&json=true"))
@@ -113,6 +119,13 @@ public class rachelAboutMe {
         //model.addAttribute("invite", invite);
         model.addAttribute("invite", unit5frq1.invited());
 
+        //unit 6
+        wordArray unit6frq1 = new wordArray(stringA, stringB, stringC, stringD, stringE);
+        //array1.checkArray();
+        unit6frq1.checkSuffix();
+        unit6frq1.outputSuffixWords();
+        unit6frq1.generatedSuffixList();
+        model.addAttribute("wordArray", unit6frq1.generatedSuffixList());
 
         //api
         var data = new ObjectMapper().readValue(response.body(), HashMap.class);

@@ -243,6 +243,21 @@ tr:nth-child(even) {
                   </div>
                 </form>
             </div>
+            <div class="unit6">
+                <h3>Unit 6</h3>
+                <form action="/rachelAbout" method="GET" id="wordArray">
+                    <div>
+                        <label for="name" style="color: teal;">What words would you like to add to the array? (One word per input)</label>
+                        <input name="stringA" id="stringA">
+                        <input name="stringB" id="stringB">
+                        <input name="stringC" id="stringC">
+                        <input name="stringD" id="stringD">
+                        <input name="stringE" id="stringE">
+                        <button>Generate List</button>
+                        <p><b th:text="${wordArray}" style="color: teal;"></b></p>
+                    </div>
+                </form>
+            </div>
 
 
         </div>
