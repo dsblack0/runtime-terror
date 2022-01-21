@@ -4,21 +4,27 @@ import java.util.ArrayList;
 
 public class Unit6StringSelect {
     private String [] words;
-    private ArrayList<String> ingWords;
+    private String ending;
+    private String resultWords;
 
     public Unit6StringSelect() {
         words = new String[] {"ten", "fading", "post", "card", "thunder", "hinge", "trailing", "batting"};
-        ingWords = new ArrayList<>();
+        ending = "ing";
     }
 
-    public ArrayList<String> selectWords() {
+    public Unit6StringSelect(String[] w, String e) {
+        words = w;
+        ending = e;
+    }
+
+    public String selectWords() {
         for(String ingWord : words)
         {
-            if (ingWord.endsWith("ing")) {
-                ingWords.add(ingWord);
+            if (ingWord.endsWith(ending)) {
+                resultWords += ingWord + ", ";
             }
         }
-        return ingWords;
+        return resultWords;
     }
 
     public static void main(String[] args) {
