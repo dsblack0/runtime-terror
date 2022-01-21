@@ -12,6 +12,10 @@ public class PasswordGenerator {
         this.digits = d;
         this.prefix = p;
     }
+    public PasswordGenerator(int digits) {
+        this.digits = digits;
+        prefix = "A";
+    }
     public String pwGen() {
         password = prefix + ".";
         Random rand = new Random();
