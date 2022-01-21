@@ -3,13 +3,13 @@ package com.example.sping_portfolio.rachelCollegeBoardFRQs;
 import javax.persistence.criteria.CriteriaBuilder;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Payroll {
     ArrayList<Integer> itemsSold = new ArrayList<Integer>(); //number of items sold by each employee
     ArrayList<Double> wages = new ArrayList<Double>(); //wages to be computed in part (b)
     Double fixedWage = 10.00;
-    Integer maxSold = itemsSold.get(0);
-    Integer minSold = itemsSold.get(0);
+    Double perItemWage = 1.50;
     Integer employee0Sold;
     Integer employee1Sold;
     Integer employee2Sold;
@@ -34,22 +34,47 @@ public class Payroll {
     }
 
     /** returns the bonus threshold as described in part (a)*/
-    public double computeBonusThreshold() {
-        for (Integer n : itemsSold) {
-            if (n > maxSold) {
-                n = maxSold;
+    public String removeMinMax() {
+        ArrayList<Integer> itemsSoldThreshold = (ArrayList)itemsSold.clone();
+        Integer maxSold = itemsSoldThreshold.get(0);
+        Integer minSold = itemsSoldThreshold.get(0);
+        int n = itemsSoldThreshold.size();
+
+        for (int i = 1; i < n; i++) {
+            if (itemsSoldThreshold.get(i) < minSold) {
+                minSold = itemsSoldThreshold.get(i);
             }
-            if (n < minSold) {
-                n = minSold;
+        }
+
+        // loop to find maximum from ArrayList
+        for (int i = 0; i < n; i++) {
+            if (itemsSoldThreshold.get(i) > maxSold) {
+                maxSold = itemsSoldThreshold.get(i);
             }
         }
         System.out.println("The minimum is: " + minSold);
         System.out.println("The maximum is " + maxSold);
 
-        itemsSold.remove(minSold);
-        itemsSold.remove(maxSold);
+        itemsSoldThreshold.remove(minSold);
+        itemsSoldThreshold.remove(maxSold);
 
-        return itemsSold;
+        System.out.println(itemsSoldThreshold);
+
+        return "max sold is" + maxSold + ". min sold is" + minSold;
+    }
+
+    public double computeBonusThreshold() {
+        double itemsSoldSum = 0;
+        double bonusThreshold;
+        int n = itemsSold.size()-2;
+        for (int i = 0; i < n; i++) {
+            itemsSoldSum += itemsSold.get(i);
+        }
+        bonusThreshold = itemsSoldSum/n;
+
+        System.out.println("the bonus threshold is: " + bonusThreshold);
+
+        return bonusThreshold;
     }
 
     /**computes employee wages as described in part (b)
@@ -60,8 +85,34 @@ public class Payroll {
      * is paid per item sold.
      */
      public void computeWages(double fixedWage, double perItemWage) {
-
+         double bonusThreshold =computeBonusThreshold();
+         for (int i = 0; i < itemsSold.size(); i++) {
+            if (itemsSold.get(i) > bonusThreshold){
+                double wage = (fixedWage + perItemWage * itemsSold.get(i)) * 1.1;
+                System.out.println("Employee " + i + " wage is: " + wage);
+                wages.add(i,wage);
+            }
+            else {
+                double wage = (fixedWage + perItemWage * itemsSold.get(i));
+                System.out.println("Employee " + i + " wage is: " + wage);
+                wages.add(i,wage);
+            }
+        }
+         System.out.println("Employee wages are: " + wages);
      }
+     public String generatedWage() {
+         System.out.println("Items sold per employee are: " + itemsSold);
+         System.out.println("Employee wages are: " + wages);
+         return "items sold: " + itemsSold + "; employee wages: " + wages;
+     }
+
+    public static void main(String[] args) {
+        Payroll payroll1 = new Payroll(10, 20, 30, 40, 50, 60);
+        payroll1.removeMinMax();
+        payroll1.computeWages(10.00, 1.50);
+        payroll1.generatedWage();
+
+    }
 
 
 }

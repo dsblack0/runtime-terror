@@ -1,10 +1,7 @@
 package com.example.sping_portfolio.controllers;
 //import lombok.Getter;
 import com.example.sping_portfolio.controllers.samAboutMe.Unit5Invitation;
-import com.example.sping_portfolio.rachelCollegeBoardFRQs.CoinGame;
-import com.example.sping_portfolio.rachelCollegeBoardFRQs.Dinner;
-import com.example.sping_portfolio.rachelCollegeBoardFRQs.Invitation;
-import com.example.sping_portfolio.rachelCollegeBoardFRQs.wordArray;
+import com.example.sping_portfolio.rachelCollegeBoardFRQs.*;
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.hibernate.annotations.Parameter;
 import org.springframework.stereotype.Controller;
@@ -55,6 +52,7 @@ public class rachelAboutMe {
                               @RequestParam(name="streakstr", required = false, defaultValue = "test") String streakstr,
                               @RequestParam(name="startingCoins", required = false, defaultValue = "1") Integer startingCoins,
                               @RequestParam(name="maxRounds", required = false, defaultValue = "1") Integer maxRounds,
+                              @RequestParam(name="input", required = false, defaultValue = "CCAAAAATTT!") String s,
                               @RequestParam(name="host", required = false, defaultValue = "host") String host,
                               @RequestParam(name="guest", required = false, defaultValue = "guest") String guest,
                               @RequestParam(name="address", required = false, defaultValue = "12345 Address Street") String address,
@@ -63,6 +61,17 @@ public class rachelAboutMe {
                               @RequestParam(name="stringC", required = false, defaultValue = "testing") String stringC,
                               @RequestParam(name="stringD", required = false, defaultValue = "testing") String stringD,
                               @RequestParam(name="stringE", required = false, defaultValue = "testing") String stringE,
+                              @RequestParam(name="prefix", required = false, defaultValue = "A") String prefix,
+                              @RequestParam(name="digits", required = false, defaultValue = "1") Integer digits,
+                              @RequestParam(name="employee0Sold", required = false, defaultValue = "0") Integer employee0Sold,
+                              @RequestParam(name="employee1Sold", required = false, defaultValue = "0") Integer employee1Sold,
+                              @RequestParam(name="employee2Sold", required = false, defaultValue = "0") Integer employee2Sold,
+                              @RequestParam(name="employee3Sold", required = false, defaultValue = "0") Integer employee3Sold,
+                              @RequestParam(name="employee4Sold", required = false, defaultValue = "0") Integer employee4Sold,
+                              @RequestParam(name="employee5Sold", required = false, defaultValue = "0") Integer employee5Sold,
+                              @RequestParam(name="fixedWage", required = false, defaultValue = "10.00") Double fixedWage,
+                              @RequestParam(name="perItemWage", required = false, defaultValue = "1.50") Double perItemWage,
+
                               Model model) throws IOException, InterruptedException, ParseException {
             HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://numbersapi.p.rapidapi.com/6/21/date?fragment=true&json=true"))
@@ -112,20 +121,36 @@ public class rachelAboutMe {
         //unit 4
         CoinGame unit4frq2 = new CoinGame(startingCoins, maxRounds);
         model.addAttribute("result", unit4frq2.playGame(startingCoins, maxRounds));
+        longestStreak unit4frq1 = new longestStreak(s);
+        unit4frq1.findStreak();
+        unit4frq1.longestStreakStats();
+        model.addAttribute("finalStreak", unit4frq1.longestStreakStats());
+
 
         //unit 5
         Invitation unit5frq1 = new Invitation(host, address, guest);
         String invite = unit5frq1.invited();
         //model.addAttribute("invite", invite);
         model.addAttribute("invite", unit5frq1.invited());
+        PasswordGenerator unit5frq2 = new PasswordGenerator(digits, prefix);
+        unit5frq2.pwCount();
+        unit5frq2.pwGen();
+        model.addAttribute("passwordFinal", unit5frq2.passwordFinal());
 
         //unit 6
+        //number 1
         wordArray unit6frq1 = new wordArray(stringA, stringB, stringC, stringD, stringE);
         //array1.checkArray();
         unit6frq1.checkSuffix();
         unit6frq1.outputSuffixWords();
-        unit6frq1.generatedSuffixList();
         model.addAttribute("wordArray", unit6frq1.generatedSuffixList());
+        //number 2
+        Payroll unit6frq2 = new Payroll(employee0Sold, employee1Sold, employee2Sold, employee3Sold, employee4Sold, employee5Sold);
+        unit6frq2.removeMinMax();
+        unit6frq2.computeWages(fixedWage, perItemWage);
+        model.addAttribute("generatedWage", unit6frq2.generatedWage());
+
+
 
         //api
         var data = new ObjectMapper().readValue(response.body(), HashMap.class);

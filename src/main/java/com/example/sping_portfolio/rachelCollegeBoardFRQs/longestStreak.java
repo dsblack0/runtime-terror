@@ -1,38 +1,59 @@
 package com.example.sping_portfolio.rachelCollegeBoardFRQs;
 
-public class longestStreak {
+import javax.xml.stream.events.Characters;
+import java.util.ArrayList;
 
-    public static void main(String[] args) {
-        System.out.println(longestStreak("aaaaadslkfjslknaaaaaaaaaaa"));
+public class longestStreak {
+    private String input;
+
+    private int longestCount;
+    private char longestChar;
+    private int currentCount;
+    private char currentChar;
+
+    public longestStreak(String s) { //overloaded constructor
+        input = s;
+        currentCount=0;
+        longestChar='A';
+        currentChar='A';
     }
 
-    private static int longestStreak(String str) {
-        int maxStreak = 0; //longestCount
-        int currentStreak = 1; //currentCount
-        char prev = str.charAt(0);
-        char currentChar; //currentChar
-        int start = 1;
-
-
-        char longestChar = 0;
-        for (int i = 1; i < str.length(); i++) {
-            currentChar = str.charAt(i);
-            if (currentChar == prev) {
-                currentStreak++;
-                longestChar = str.charAt(i);
-            } else {
-                maxStreak = Math.max(maxStreak, currentStreak);
-                currentStreak = 1;
-            }
-            prev = currentChar;
+    public Integer findStreak() {
+        //convert to ArrayList
+        String str = input;
+        ArrayList<Character> chars = new ArrayList<Character>();
+        for (char c : str.toCharArray()) {
+            chars.add(c);
         }
+        System.out.println(chars);
 
-        System.out.println(longestChar);
-        System.out.println(Math.max(maxStreak, currentStreak));
+        //find longest streak
+        for (int i = 0; i < chars.size()-1; i++) {
+            if (chars.get(i) == chars.get(i+1)){
+                currentCount++;
+                currentChar = chars.get(i);
+                System.out.println(currentCount);
+            }
+            else {
+                currentCount=1;
+            }
+            if (currentCount > longestCount) {
+                longestCount = currentCount;
+                longestChar = currentChar;
+            }
+        }
+        return longestCount;
+    }
 
-        return Math.max(maxStreak, currentStreak);
+    public String longestStreakStats() {
+        System.out.println("The longest streak is " + longestCount + " characters long. The character in this streak is " + longestChar);
+        return "The longest streak is " + longestCount + " characters long. The character in this streak is " + longestChar;
+    }
 
-
+    public static void main(String[] args) {
+        longestStreak streak1 = new longestStreak("AAAABBKKKKDDDDDBBBBBBBBB");
+        streak1.findStreak();
+        streak1.longestStreakStats();
     }
 
 
