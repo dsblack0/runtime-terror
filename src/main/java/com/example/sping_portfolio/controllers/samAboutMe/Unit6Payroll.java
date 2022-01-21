@@ -2,11 +2,14 @@ package com.example.sping_portfolio.controllers.samAboutMe;
 
 public class Unit6Payroll {
     private int[] itemsSold; // number of items sold by each employee
-    private double[] wages; // wages to be computed in part (b)
+    private double wage; // wages to be computed in part (b)
 
     public Unit6Payroll() {
         itemsSold = new int[] {48, 50, 37, 62, 38, 70, 55, 37, 64, 60};
-        wages = new double[10];
+    }
+
+    public Unit6Payroll(int[] is) {
+        itemsSold = is;
     }
 
     public double computeBonusThreshold() {
@@ -27,24 +30,18 @@ public class Unit6Payroll {
         return bonusThreshold;
     }
 
-    public void computeWages(double fixedWage, double perItemWage) {
-        for (int i=0; i < wages.length; i++) {
-            wages[i] = fixedWage + (itemsSold[i] * perItemWage);
-            if (itemsSold[i] > computeBonusThreshold()) {
-                wages[i] = wages[i] * 1.1;
+    public double computeWages(double fixedWage, double perItemWage, int index) {
+            wage = fixedWage + (itemsSold[index] * perItemWage);
+            if (itemsSold[index] > computeBonusThreshold()) {
+                wage = wage * 1.1;
             }
-        }
-    }
-
-    public double getWages(int index) {
-        return wages[index];
+        return wage;
     }
 
     public static void main(String[] args) {
         Unit6Payroll employee = new Unit6Payroll();
         System.out.println(employee.computeBonusThreshold());
-        employee.computeWages(10.0, 1.5);
-        System.out.println(employee.getWages(9));
+        System.out.println(employee.computeWages(10.0, 1.5,9));
     }
 
 }
