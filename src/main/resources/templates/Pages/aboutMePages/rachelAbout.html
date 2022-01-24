@@ -167,9 +167,8 @@ tr:nth-child(even) {
             <h2>
                 CB FRQs
             </h2>
-                <div class="unit2">
-                    <br></br>
-                    <h3>Unit 2</h3>
+                <button type="button" class="collapsible">Unit 2</button>
+                <div class="content">
                     <form action="/rachelAbout" method="GET" id="changesegment">
                         <div>
                             <label for="name" style="color: teal;">Original sequence?</label>
@@ -201,9 +200,8 @@ tr:nth-child(even) {
                         </div>
                     </form>
                 </div>
-                <div class="unit3">
-                <br></br>
-                    <h3>Unit 3</h3>
+                <button type="button" class="collapsible">Unit 3</button>
+                <div class="content">
                     <form action="/rachelAbout" method="GET" id="attendance">
                         <div>
                             <label for="name" style="color: teal;">Will you be attending? (Type True for Yes, False for No)</label>
@@ -215,8 +213,8 @@ tr:nth-child(even) {
                         </div>
                     </form>
                 </div>
-                <div class="unit4">
-                    <h3>Unit 4</h3>
+                <button type="button" class="collapsible">Unit 4</button>
+                <div class="content">
                     <form action="/rachelAbout" method="GET" id="coingame">
                         <div>
                             <label for="name" style="color: teal;">How many coins should each user start with?</label>
@@ -232,59 +230,56 @@ tr:nth-child(even) {
                         </div>
                     </form>
                 </div>
-            <div class="unit5">
-                <h3>Unit 5</h3>
-                <form action="/rachelAbout" method="GET" id="invitation">
-                    <div>
-                        <label for="name" style="color: teal;">Who is the host?</label>
-                        <input name="host" id="host">
-                        <label for="name" style="color: teal;">What is the address?</label>
-                        <input name="address" id="address">
-                        <label for="name" style="color: teal;">Who is the guest?</label>
-                        <input name="guest" id="guest">
-                      <button>Generate Invitation</button>
-                        <p><b th:text="'Invitation: ' + ${invite}" style="color: teal;"></b></p>
-                        <label for="name" style="color: teal;">What is the prefix?</label>
-                        <input name="prefix" id="prefix">
-                        <label for="name" style="color: teal;">How many digits?</label>
-                        <input name="digits" id="digits">
-                        <button>Generate Password</button>
-                        <p><b th:text="${passwordFinal}" style="color: teal;"></b></p>
-                  </div>
-                </form>
+                <button type="button" class="collapsible">Unit 5</button>
+                <div class="content">
+                    <form action="/rachelAbout" method="GET" id="invitation">
+                        <div>
+                            <label for="name" style="color: teal;">Who is the host?</label>
+                            <input name="host" id="host">
+                            <label for="name" style="color: teal;">What is the address?</label>
+                            <input name="address" id="address">
+                            <label for="name" style="color: teal;">Who is the guest?</label>
+                            <input name="guest" id="guest">
+                            <button>Generate Invitation</button>
+                            <p><b th:text="'Invitation: ' + ${invite}" style="color: teal;"></b></p>
+                            <label for="name" style="color: teal;">What is the prefix?</label>
+                            <input name="prefix" id="prefix">
+                            <label for="name" style="color: teal;">How many digits?</label>
+                            <input name="digits" id="digits">
+                            <button>Generate Password</button>
+                            <p><b th:text="${passwordFinal}" style="color: teal;"></b></p>
+                        </div>
+                    </form>
+                </div>
+                <button type="button" class="collapsible">Unit 6</button>
+                <div class="content">
+                    <form action="/rachelAbout" method="GET" id="wordArray">
+                        <div>
+                            <label for="name" style="color: teal;">What words would you like to add to the array? (One word per input)</label>
+                            <input name="stringA" id="stringA">
+                            <input name="stringB" id="stringB">
+                            <input name="stringC" id="stringC">
+                            <input name="stringD" id="stringD">
+                            <input name="stringE" id="stringE">
+                            <button>Generate List</button>
+                            <p><b th:text="${wordArray}" style="color: teal;"></b></p>
+                            <label for="name" style="color: teal;">How many items did each employee sell (starting with employee 0)?</label>
+                            <input name="employee0Sold" id="employee0Sold">
+                            <input name="employee1Sold" id="employee1Sold">
+                            <input name="employee2Sold" id="employee2Sold">
+                            <input name="employee3Sold" id="employee3Sold">
+                            <input name="employee4Sold" id="employee4Sold">
+                            <input name="employee5Sold" id="employee5Sold">
+                            <label for="name" style="color: teal;">What is the fixed wage?</label>
+                            <input name="fixedWage" id="fixedWage">
+                            <label for="name" style="color: teal;">What is the wage per item?</label>
+                            <input name="perItemWage" id="perItemWage">
+                            <button>Calculate Wage</button>
+                            <p><b th:text="${generatedWage}" style="color: teal;"></b></p>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="unit6">
-                <h3>Unit 6</h3>
-                <form action="/rachelAbout" method="GET" id="wordArray">
-                    <div>
-                        <label for="name" style="color: teal;">What words would you like to add to the array? (One word per input)</label>
-                        <input name="stringA" id="stringA">
-                        <input name="stringB" id="stringB">
-                        <input name="stringC" id="stringC">
-                        <input name="stringD" id="stringD">
-                        <input name="stringE" id="stringE">
-                        <button>Generate List</button>
-                        <p><b th:text="${wordArray}" style="color: teal;"></b></p>
-                        <label for="name" style="color: teal;">How many items did each employee sell (starting with employee 0)?</label>
-                        <input name="employee0Sold" id="employee0Sold">
-                        <input name="employee1Sold" id="employee1Sold">
-                        <input name="employee2Sold" id="employee2Sold">
-                        <input name="employee3Sold" id="employee3Sold">
-                        <input name="employee4Sold" id="employee4Sold">
-                        <input name="employee5Sold" id="employee5Sold">
-                        <label for="name" style="color: teal;">What is the fixed wage?</label>
-                        <input name="fixedWage" id="fixedWage">
-                        <label for="name" style="color: teal;">What is the wage per item?</label>
-                        <input name="perItemWage" id="perItemWage">
-                        <button>Calculate Wage</button>
-                        <p><b th:text="${generatedWage}" style="color: teal;"></b></p>
-
-
-                    </div>
-                </form>
-            </div>
-
-
         </div>
     </div>
 </body>
