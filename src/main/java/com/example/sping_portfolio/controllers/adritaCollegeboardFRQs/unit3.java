@@ -40,5 +40,26 @@ public class unit3 {
         }
         return food;
     }
-
+    public String info(boolean rsvp, int selection){
+        String option2 = "Sorry you can't make it";
+        String option1 = "Thanks for attending.";
+        if (rsvp == true){
+            if (selection == 1){
+                option1 = “Thanks for attending. You will be served beef.”);
+            }
+            else if (selection == 2){
+                option1 = “Thanks for attending. You will be served chicken.”;
+            }
+            else if (selection == 3){
+                option1 = “Thanks for attending. You will be served pasta.”;
+            }
+            else{
+                option1 = “Thanks for attending. You will be served fish.”;
+            }
+        }
+        if (rsvp == false){
+            option1 = “Sorry you can’t make it.”;
+        }
+        return option1;
+    }
 }
