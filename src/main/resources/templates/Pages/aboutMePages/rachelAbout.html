@@ -26,13 +26,28 @@
       text-align:left;
       margin:10px;
     }
+    .buttons {
+      background-color: #2c6975; /* Green background */
+      border: 0px solid white; /* Green border */
+      color: white; /* White text */
+      padding: 10px 24px; /* Some padding */
+      cursor: pointer; /* Pointer/hand icon */
+      border-radius: 12px;
+      margin: 5px;
+    }
+    .buttons:hover {
+      background-color: #68B2A0;
+      border-radius: 2px;
+    }
     .btn-group button {
       background-color: #2c6975; /* Green background */
-      border: 1px solid white; /* Green border */
+      border: 0px solid white; /* Green border */
       color: white; /* White text */
       padding: 10px 24px; /* Some padding */
       cursor: pointer; /* Pointer/hand icon */
       float: left; /* Float the buttons side by side */
+      border-radius: 12px;
+      margin: 5px;
     }
     .btn-group:after {
       content: "";
@@ -43,7 +58,8 @@
       border-right: none;
     }
     .btn-group button:hover{
-      background-color: #d2e7d6;
+      background-color: #68B2A0;
+      border-radius: 2px;
     }
       table {
       border-collapse: collapse;
@@ -51,13 +67,13 @@
     }
 
     td, th {
-      border: 1px solid #dddddd;
+      border: 1px solid #d2e7d6;
       text-align: left;
       padding: 8px;
     }
 
     tr:nth-child(even) {
-      background-color: #dddddd;
+      background-color: #68B2A0;
     }
 
     .wrap-collabsible {
@@ -177,35 +193,34 @@ input[type='checkbox'] {
                         <p>What is your name?</p>
                         <!-- <label for="name">What is your name?</label> -->
                         <input name="name" id="name">
-                        <button>Hello!</button>
+                        <button class="buttons">Hello!</button>
                         <p th:text="'Hello, ' + ${name} + '!'"></p>
                     </div>
                 </form>
             </div>
         </div>
         <hr style="height: 3px; background-color: #FFFFFF;">
-        <table class="table" id="factsTable" style="margin-top: 2%;">
+        <table class="styled-table" id="factsTable" style="margin-top: 2%;">
             <tr>
                 <th>Fact</th>
                 <th>Year</th>
                 <th>Number</th>
-                <th>Found?</th>
                 <th>Type</th>
             </tr>
             <tbody>
             <td th:text="${data.text}"></td>
             <td th:text="${data.year}"></td>
             <td th:text="${data.number}"></td>
-            <td th:text="${data.found}"></td>
             <td th:text="${data.type}"></td>
             </tbody>
             <div class="row justify-content-center" style="margin-top: 10px;">
                 <form action="/rachelAbout" method="GET" id="factsForm">
-                    <button>New Fact!</button>
+                    <button class="buttons">New Fact!</button>
                 </form>
             </div>
         </table>
         <hr style="height: 3px; background-color: #FFFFFF;">
+        <br></br>
         <div>
             <h2>
                 Rachel's Links
@@ -237,10 +252,12 @@ input[type='checkbox'] {
                 </tr>
             </table>
         </div>
-
+        <hr style="height: 3px; background-color: #FFFFFF;">
+        <br></br>
         <h2>
             CB FRQs
         </h2>
+        <br></br>
         <script>
             let myLabels = document.querySelectorAll('.lbl-toggle');
 
