@@ -22,20 +22,20 @@
         input[type='checkbox'] {
             display: none;
         }
-        .unit-two, .unit-three, .unit-four, .unit-five, .unit-six {
+        .unit-two, .unit-three, .unit-four, .unit-five, .unit-six, .unit-seven {
             display: block;
             font-family: monospace;
             text-transform: uppercase;
             color: white;
             background-color: #1c1dd5;
         }
-        .two-content, .three-content, .four-content, .five-content, .six-content {
+        .two-content, .three-content, .four-content, .five-content, .six-content, .seven-content {
             max-height: 0px;
             overflow: hidden;
 
             transition: max-height .25s ease-in-out;
         }
-        .two:checked + .unit-two + .two-content, .three:checked + .unit-three + .three-content, .four:checked + .unit-four + .four-content, .five:checked + .unit-five + .five-content, .six:checked + .unit-six + .six-content {
+        .two:checked + .unit-two + .two-content, .three:checked + .unit-three + .three-content, .four:checked + .unit-four + .four-content, .five:checked + .unit-five + .five-content, .six:checked + .unit-six + .six-content, .seven:checked + .unit-seven + .seven-content {
             max-height: 100vh;
         }
     </style>
@@ -266,7 +266,7 @@
                     <input name="itemsSold" id="itemsSold">
                     <p class="fixedWage" style="color: white;">Input a fixed wage for the employees.(Default: $10.00)</p>
                     <input name="fixedWage" id="fixedWage">
-                    <p class="perItemWage" style="color: white;">Input a per Item wage for the employees. (Defauly: $1.50)</p>
+                    <p class="perItemWage" style="color: white;">Input a per Item wage for the employees. (Default: $1.50)</p>
                     <input name="perItemWage" id="perItemWage">
                     <p class="employeeIndex" style="color: white;">In your list, what is the index of the employees who's wage you want to find? (Default: 9)</p>
                     <input name="employeeIndex" id="employeeIndex">
@@ -276,6 +276,24 @@
                 </div>
             </form>
         </div>
+    <!-- Unit 7-->
+    <input id="unit-7" class="seven" type="checkbox">
+    <label for="unit-7" class="unit-seven" style="color: white; margin-top: 20px; width: 100%; text-align: center;">Unit 7</label>
+    <div class="seven-content" style="margin-left: 50px;">
+        <h2 style="color: white;">Get UserNames</h2>
+        <form action="/samAbout" method="GET" id="userNames">
+            <div style="margin-left: 10px;">
+                <p class="firstName" style="color: white;">Input your first name (Default: john)</p>
+                <input name="firstName" id="firstName">
+                <p class="lastName" style="color: white;">Input your last name (Default: smith)</p>
+                <input name="lastName" id="lastName">
+                <p class="usedNames" style="color: white;">Input already used UserNames to be removed from the UserName list. Separate each username with a comma. (Default: smithj,browns)</p>
+                <input name="usedNames" id="usedName">
+                <button>Answer</button>
+                <p><b th:text="'Possible UserNames: ' + ${possibleNames}" style="color: white;"></b></p>
+            </div>
+        </form>
+    </div>
 </div>
 </body>
 </html>
