@@ -4,7 +4,91 @@
 
 <head><div layout:fragment="metadata" th:remove="tag">
     <title>Sam Duggirala</title>
-</div></head>
+
+    <style>
+        body{
+            margin: 0;
+            height: auto;
+            width: auto;
+            background: linear-gradient(#1c1dd5, #565cd7, #9fa3e1);
+            font-family: monospace;
+        }
+
+        .picture-card {
+            background-color: #565cd7;
+            color: white;
+        }
+
+        input[type='checkbox'] {
+            display: none;
+        }
+        .unit-two, .unit-three, .unit-four, .unit-five, .unit-six, .unit-seven {
+            display: block;
+            font-family: monospace;
+            text-transform: uppercase;
+            color: white;
+            background-color: #1c1dd5;
+        }
+        .two-content, .three-content, .four-content, .five-content, .six-content, .seven-content {
+            max-height: 0px;
+            overflow: hidden;
+
+            transition: max-height .25s ease-in-out;
+        }
+        .two:checked + .unit-two + .two-content, .three:checked + .unit-three + .three-content, .four:checked + .unit-four + .four-content, .five:checked + .unit-five + .five-content, .six:checked + .unit-six + .six-content, .seven:checked + .unit-seven + .seven-content {
+            max-height: 100vh;
+        }
+    </style>
+    <script>
+        function changeImage() {
+            document.getElementById("sam").src = "images/samaboutme.jpg";
+        }
+
+        // frqs
+        let myLabels = document.querySelectorAll('.unit-two, .unit-three, .unit-four, .unit-five, .unit-six');
+
+        Array.from(myLabels).forEach(label => {
+            label.addEventListener('keydown', e => {
+                // 32 === spacebar
+                // 13 === enter
+                if (e.which === 32 || e.which === 13) {
+                    e.preventDefault();
+                    label.click();
+                };
+            });
+        });
+
+        // StringOps
+
+        function unit5(action) {
+            const body = {  // body contains all data from user input form
+                hostName: document.getElementById("hostName").value,
+                inviteName: document.getElementById("inviteName").value,
+                address: document.getElementById("address").value,
+                prefix: document.getElementById("prefix").value,
+                length: document.getElementById("length").value,
+            };
+            const request = {  // request sets up payload for api
+                method: "POST",
+                body: JSON.stringify(body),
+                cache: "no-cache",
+                headers: {
+                    "content-type": "application/json"
+                }
+            };
+            fetch("/unit5", request)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("password").innerHTML = data.password;
+                    document.getElementById("passCount").innerHTML = data.count;
+                })
+                .catch(err => {
+                    console.error(err);
+                })
+        }
+    </script>
+</div>
+</head>
 
 <body><div layout:fragment="content" th:remove="tag">
     <div class="info-about-me" style="width:500px;  margin: auto;">
@@ -24,7 +108,7 @@
          </div>
         <table class="table" style="margin-top: 25px;">
             <tr>
-            <td th:text="${quotes}"></td>
+            <td th:text="${quotes}" style="color: white;"></td>
             </tr>
         </table>
         <div class="row justify-content-md-center" style="margin-top: 10px;">
@@ -33,14 +117,15 @@
             </form>
         </div>
     </div>
-    <div class="info" style="margin-top: 20px; text-align: center; background-color: #555b65;">
-        <p><a href=https://drive.google.com/drive/folders/1Ro14W_1HDCUj0L_E7oSZH-VPDESge9l5?usp=sharing style="color: white;">CB FRQs/Journals</a></p>
+    <div class="info" style="margin-top: 20px; text-align: center; background-color: #1c1dd5;">
+        <p><a href=https://github.com/dsblack0/runtime-terror/wiki/0-Sam-Individual-Journal style="color: white;">CB FRQs/Journal</a></p>
         <p><a href=https://github.com/dsblack0/runtime-terror/commits?author=dsblack0 style="color: white;">Project Contributions</a></p>
     </div>
-
-    <div class="unit-two" style="margin-top: 20px; background-color: #555b65;">
-        <div style="margin-left: 50px;">
-            <h2 style="color: white;">Unit 2 FRQ</h2>
+    <!-- Unit 2-->
+    <input id="unit-2" class="two" type="checkbox">
+    <label for="unit-2" class="unit-two" style="color: white; margin-top: 20px; width: 100%; text-align: center;">Unit 2</label>
+        <div class="two-content" style="margin-left: 50px;">
+            <h2 style="color: white;">Light Sequence</h2>
             <form action="/samAbout" method="GET" id="changesegment">
                 <div>
                     <label for="name" style="color: white;">Original sequence?</label>
@@ -67,151 +152,148 @@
                 </div>
             </form>
         </div>
+    </label>
+    <!-- Unit 3-->
+    <input id="unit-3" class="three" type="checkbox">
+    <label for="unit-3" class="unit-three" style="color: white; margin-top: 20px; width: 100%; text-align: center;">Unit 3</label>
+        <div class="three-content" style="margin-left: 50px;">
+            <h2 style="color: white;">Party Invitation</h2>
+            <h5 style="color: white;">Set Option 1 of Preferences</h5>
+            <form action="/samAbout" method="GET" id="attendance">
+                <div style="margin-left: 10px;">
+                    <p class="rsvpattendance" style="color: white;">Will you rsvp?</p>
+                    <select name="rsvpattendance" id="rsvpattendance">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                    <p class="foodselection" style="color: white;">What food will you want? Input an integer</p>
+                    <input name="foodselection" id="foodselection">
+                    <p><b th:text="${option1}" style="color: white;"></b></p>
+                </div>
+                <h5 style="color: white;">Set Option 2 of Preferences</h5>
+                <div style="margin-left: 10px;">
+                    <p class="rsvpattendance2" style="color: white;">Will you rsvp?</p>
+                    <select name="rsvpattendance2" id="rsvpattendance2">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                    <p class="foodselection2" style="color: white;">What food will you want? Input an integer</p>
+                    <input name="foodselection2" id="foodselection2">
+                    <button>Answer</button>
+                    <p><b th:text="${option2}" style="color: white;"></b></p>
+                    <p><b th:text="'Option1 = Option2: ' + ${compare}" style="color: white"></b></p>
+                </div>
+            </form>
+        </div>
+    <!-- Unit 4-->
+    <input id="unit-4" class="four" type="checkbox">
+    <label for="unit-4" class="unit-four" style="color: white; margin-top: 20px; width: 100%; text-align: center;">Unit 4</label>
+        <div class="four-content" style="margin-left: 50px;">
+            <h2 style="color: white;">Longest Streak</h2>
+            <form action="/samAbout" method="GET" id="streak">
+                <div style="margin-left: 10px;">
+                    <p class="originalString" style="color: white;">Input a string to find its longest streak</p>
+                    <input name="originalString" id="originalString">
+                    <button>Answer</button>
+                    <p style="color:white;">Default string: CAAAAATTT!</p>
+                    <p><b th:text="'Longest Streak: ' + ${streakChar} + ' ' + ${streakLength}" style="color: white;"></b></p>
+                </div>
+            </form>
+            <h2 style="color: white;">Coin Game</h2>
+            <form action="/samAbout" method="GET" id="coingame">
+                <div style="margin-left: 10px;">
+                    <p class="Coins" style="color: white;">What is your starting amount of coins?</p>
+                    <input name="Coins" id="Coins">
+                    <p class="Rounds" style="color: white;">How many rounds will you have?</p>
+                    <input name="Rounds" id="Rounds">
+                    <button>Answer</button>
+                    <p style="color:white;">Default values: Starting coins = 10 & Rounds = 5</p>
+                    <p><b th:text="'Player 1 played ' + ${p1Move} + ' coins in their last round'" style="color: white;"></b></p>
+                    <p><b th:text="'Player 2 played ' + ${p2Move} + ' coins in their last round'" style="color: white;"></b></p>
+                    <p><b th:text="'Game Result: ' + ${gameResult}" style="color: white;"></b></p>
+                </div>
+            </form>
+        </div>
+    <!-- Unit 5-->
+    <input id="unit-5" class="five" type="checkbox">
+    <label for="unit-5" class="unit-five" style="color: white; margin-top: 20px; width: 100%; text-align: center;">Unit 5</label>
+        <div class="five-content" style="margin-left: 50px;">
+            <h2 style="color: white;">Invitation</h2>
+            <form action="/samAbout" method="GET" id="invite">
+                <div style="margin-left: 10px;">
+                    <p class="hostName" style="color: white;">Who is the host?</p>
+                    <input name="hostName" id="hostName">
+                    <p class="hostName" style="color: white;">Who are you inviting?</p>
+                    <input name="inviteName" id="inviteName">
+                    <p class="address" style="color: white;">What is the address?</p>
+                    <input name="address" id="address">
+                    <button onclick="unit5()">Answer</button>
+                    <p><b id="unit5" th:text="${invite}" style="color: white;"></b></p>
+                </div>
+            </form>
+            <h2 style="color: white;">Password Generator</h2>
+            <form action="/samAbout" method="GET" id="passwordGen">
+                <div style="margin-left: 10px;">
+                    <p class="prefix" style="color: white;">What is your desired prefix?</p>
+                    <input name="prefix" id="prefix">
+                    <p class="length" style="color: white;">How long do you want your password to be?</p>
+                    <input name="length" id="length">
+                    <button>Answer</button>
+                    <p><b id="password" th:text="'Random Password: ' + ${pwd}" style="color: white;"></b></p>
+                  <!--  <p><b id="passCount" th:text="'Number of Passwords Generated: ' + ${unit5.pwdCount()}" style="color: white;"></b></p> -->
+                </div>
+            </form>
+        </div>
+    <!-- Unit 6-->
+    <input id="unit-6" class="six" type="checkbox">
+    <label for="unit-6" class="unit-six" style="color: white; margin-top: 20px; width: 100%; text-align: center;">Unit 6</label>
+        <div class="six-content" style="margin-left: 50px;">
+            <h2 style="color: white;">Word Select</h2>
+            <form action="/samAbout" method="GET" id="words">
+                <div style="margin-left: 10px;">
+                    <p class="wordsList" style="color: white;">Input a list of words separated with commas (Default List: ten,fading,post,card,thunder,hinge,trailing,batting)</p>
+                    <input name="wordsList" id="wordsList">
+                    <p class="wordsEnding" style="color: white;">Pick a word ending (Default: ing)</p>
+                    <input name="wordsEnding" id="wordsEnding">
+                    <button>Answer</button>
+                    <p><b th:text="${resultWords}" style="color: white;"></b></p>
+                </div>
+            </form>
+            <h2 style="color: white;">Payroll</h2>
+            <form action="/samAbout" method="GET" id="payroll">
+                <div style="margin-left: 10px;">
+                    <p class="itemsSold" style="color: white;">Input a list of amounts of items sold for different employees. Separate each integer with a comma. (Default: 48, 50, 37, 62, 38, 70, 55, 37, 64, 60)</p>
+                    <input name="itemsSold" id="itemsSold">
+                    <p class="fixedWage" style="color: white;">Input a fixed wage for the employees.(Default: $10.00)</p>
+                    <input name="fixedWage" id="fixedWage">
+                    <p class="perItemWage" style="color: white;">Input a per Item wage for the employees. (Default: $1.50)</p>
+                    <input name="perItemWage" id="perItemWage">
+                    <p class="employeeIndex" style="color: white;">In your list, what is the index of the employees who's wage you want to find? (Default: 9)</p>
+                    <input name="employeeIndex" id="employeeIndex">
+                    <button>Answer</button>
+                    <p><b th:text="'BonusThreshold: ' +${bonusThreshold}" style="color: white;"></b></p>
+                    <p><b th:text="'Wage: ' +${wage}" style="color: white;"></b></p>
+                </div>
+            </form>
+        </div>
+    <!-- Unit 7-->
+    <input id="unit-7" class="seven" type="checkbox">
+    <label for="unit-7" class="unit-seven" style="color: white; margin-top: 20px; width: 100%; text-align: center;">Unit 7</label>
+    <div class="seven-content" style="margin-left: 50px;">
+        <h2 style="color: white;">Get UserNames</h2>
+        <form action="/samAbout" method="GET" id="userNames">
+            <div style="margin-left: 10px;">
+                <p class="firstName" style="color: white;">Input your first name (Default: john)</p>
+                <input name="firstName" id="firstName">
+                <p class="lastName" style="color: white;">Input your last name (Default: smith)</p>
+                <input name="lastName" id="lastName">
+                <p class="usedNames" style="color: white;">Input already used UserNames to be removed from the UserName list. Separate each username with a comma. (Default: smithj,browns)</p>
+                <input name="usedNames" id="usedName">
+                <button>Answer</button>
+                <p><b th:text="'Possible UserNames: ' + ${possibleNames}" style="color: white;"></b></p>
+            </div>
+        </form>
     </div>
-    <div>
-        <div class="unit-three" style="margin-top: 20px; background-color: #555b65;">
-            <div style="margin-left: 50px;">
-                <h2 style="color: white;">Unit 3 FRQ</h2>
-                <h5 style="color: white;">Set Option 1</h5>
-                <form action="/samAbout" method="GET" id="attendance">
-                    <div style="margin-left: 10px;">
-                        <p class="rsvpattendance" style="color: white;">Will you rsvp?</p>
-                        <select name="rsvpattendance" id="rsvpattendance">
-                            <option value="true">Yes</option>
-                            <option value="false">No</option>
-                        </select>
-                        <p class="foodselection" style="color: white;">What food will you want? Input an integer</p>
-                        <input name="foodselection" id="foodselection">
-                        <p><b th:text="${option1}" style="color: white;"></b></p>
-                    </div>
-                    <h5 style="color: white;">Set Option 2</h5>
-                    <div style="margin-left: 10px;">
-                        <p class="rsvpattendance2" style="color: white;">Will you rsvp?</p>
-                        <select name="rsvpattendance2" id="rsvpattendance2">
-                            <option value="true">Yes</option>
-                            <option value="false">No</option>
-                        </select>
-                        <p class="foodselection2" style="color: white;">What food will you want? Input an integer</p>
-                        <input name="foodselection2" id="foodselection2">
-                        <button>Answer</button>
-                        <p><b th:text="${option2}" style="color: white;"></b></p>
-                        <p><b th:text="'Option1 = Option2: ' + ${compare}" style="color: white"></b></p>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="unit-four" style="margin-top: 20px; background-color: #555b65;">
-            <div style="margin-left: 50px;">
-                <h2 style="color: white;">Unit 4 FRQ</h2>
-                <h5 style="color: white;">Longest Streak</h5>
-                <form action="/samAbout" method="GET" id="streak">
-                    <div style="margin-left: 10px;">
-                        <p class="originalString" style="color: white;">Input a string to find its longest streak</p>
-                        <input name="originalString" id="originalString">
-                        <button>Answer</button>
-                        <p style="color:white;">Default string: CAAAAATTT!</p>
-                        <p><b th:text="'Longest Streak: ' + ${streakChar} + ' ' + ${streakLength}" style="color: white;"></b></p>
-                    </div>
-                </form>
-                <h5 style="color: white;">Coin Game</h5>
-                <form action="/samAbout" method="GET" id="coingame">
-                    <div style="margin-left: 10px;">
-                        <p class="Coins" style="color: white;">What is your starting amount of coins?</p>
-                        <input name="Coins" id="Coins">
-                        <p class="Rounds" style="color: white;">How many rounds will you have?</p>
-                        <input name="Rounds" id="Rounds">
-                        <button>Answer</button>
-                        <p style="color:white;">Default values: Starting coins = 10 & Rounds = 5</p>
-                        <p><b th:text="'Player 1 played ' + ${p1Move} + ' coins in their last round'" style="color: white;"></b></p>
-                        <p><b th:text="'Player 2 played ' + ${p2Move} + ' coins in their last round'" style="color: white;"></b></p>
-                        <p><b th:text="'Game Result: ' + ${gameResult}" style="color: white;"></b></p>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="unit-five" style="margin-top: 20px; background-color: #555b65;">
-            <div style="margin-left: 50px;">
-                <h2 style="color: white;">Unit 5 FRQ</h2>
-                <h5 style="color: white;">Invitation</h5>
-                <form action="/samAbout" method="GET" id="invite">
-                    <div style="margin-left: 10px;">
-                        <p class="hostName" style="color: white;">Who is the host?</p>
-                        <input name="hostName" id="hostName">
-                        <p class="hostName" style="color: white;">Who are you inviting?</p>
-                        <input name="inviteName" id="inviteName">
-                        <p class="address" style="color: white;">What is the address?</p>
-                        <input name="address" id="address">
-                        <button>Answer</button>
-                        <p><b th:text="'Invite: ' + ${invite}" style="color: white;"></b></p>
-                    </div>
-                </form>
-                <h5 style="color: white;">Password Generator</h5>
-                <form action="/samAbout" method="GET" id="password">
-                    <div style="margin-left: 10px;">
-                        <p class="prefix" style="color: white;">What is your desired prefix?</p>
-                        <input name="prefix" id="prefix">
-                        <p class="length" style="color: white;">How long do you want your password to b?</p>
-                        <input name="length" id="length">
-                        <button>Answer</button>
-                        <p><b th:text="'Random Password: ' + ${pwd}" style="color: white;"></b></p>
-                    </div>
-                </form>
-            </div>
-        </div>
-    <style>
-        html, body{
-            margin: 0;
-            height: auto;
-            background: linear-gradient(#0e0e0e, #7a7878, #cbd2d2);
-            animation: fadein 2s;
-            -moz-animation: fadein 2s; /* Firefox */
-            -webkit-animation: fadein 2s; /* Safari and Chrome */
-            -o-animation: fadein 2s; /* Opera */
-        }
-
-        .picture-card {
-            background-color: black;
-            color: white;
-        }
-    </style>
 </div>
-    <script th:inline="javascript">
-        function changeImage() {
-            document.getElementById("sam").src = "images/samaboutme.jpg";
-        }
-
-        // StringOps
-
-   /*    function unit5(action) {
-            const url = '/api/Pages.aboutMePages/samAboutMe/';  // url contains api location for stringops
-            const body = {  // body contains all data from user input form
-                action: action,
-                hostName: document.getElementById("hostName").value,
-                inviteName: document.getElementById("inviteName").value,
-                address: document.getElementById("address").value,
-                prefix: document.getElementById("prefix").value,
-                length: document.getElementById("length").value,
-            };
-            const request = {  // request sets up payload for api
-                method: "POST",
-                body: JSON.stringify(body),
-                cache: "no-cache",
-                headers: {
-                    "content-type": "application/json"
-                }
-            };
-            fetch(url, request)
-                .then(response => response.json())
-                .then(data => {
-                    // build a visual response from JSON data to DOM element IDs
-                    document.getElementById("title").innerHTML = data.title;
-                    document.getElementById("invite").innerHTML = data.data;
-                    // cleanup event history (from previous display)
-                    const bodyContainer = document.getElementById("body");
-                    while (bodyContainer.firstChild) {
-                        bodyContainer.removeChild(bodyContainer.firstChild);
-                    }
-        } */
-    </script>
 </body>
 </html>

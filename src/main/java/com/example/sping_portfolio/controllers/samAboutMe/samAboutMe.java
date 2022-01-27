@@ -20,32 +20,37 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.text.ParseException;
 
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.Objects;
 
 @Controller
 public class samAboutMe {
-   /* Unit5Invitation string_ops = null;
+    /*Unit5PwGenerator unit5 = null;
     public JSONObject getBody() throws JSONException {
         JSONObject body = new JSONObject();
-        body.put("title", string_ops.getInvite());
-        body.put("data", string_ops.toString());
+        body.put("password", unit5.pwGen());
+        body.put("passCount", unit5.pwCount());
 
         return body;
     }
     public void stringEvent(JSONObject jo) throws JSONException {
         String action = (String) jo.get("action");
         switch (action) {
-            case "invite":  // new sequence
-                String hostName = (String) jo.get("hostName");
-                String inviteName = (String) jo.get("inviteName");
-                String address = (String) jo.get("address");
-                this.string_ops = new Unit5Invitation(hostName, address, inviteName);
-                this.string_ops.getInvite();
+            case "password":  // get password
+                String prefix = (String) jo.get("prefix");
+                int length = Integer.parseInt((String) jo.get("length"));
+                this.unit5 = new Unit5PwGenerator(length, prefix);
+                this.unit5.pwGen();
                 break;
+
+            case "count": //get password count
+                this.unit5.pwCount();
+                break;
+
             default:
         }
-    } */
+    }*/
 
     @GetMapping("/samAbout")
     public String samAbout(@RequestParam(name="name", required=false, defaultValue = "Human") String name,
@@ -62,11 +67,22 @@ public class samAboutMe {
                            @RequestParam(name="Coins", required = false, defaultValue = "10") String Coins,
                            @RequestParam(name="Rounds", required = false, defaultValue = "5") String Rounds,
                            @RequestParam(name="originalString", required = false, defaultValue = "CCAAAAATTT!") String originalString,
-                           @RequestParam(name="hostName", required = false, defaultValue = "Sam") String hostName,
-                           @RequestParam(name="inviteName", required = false, defaultValue = "Sarah") String inviteName,
-                           @RequestParam(name="address", required = false, defaultValue = "1234 Random St") String address,
                            @RequestParam(name="prefix", required = false, defaultValue = "A") String prefix,
-                           @RequestParam(name="length", required = false, defaultValue = "6") String length,Model model)
+                           @RequestParam(name="length", required = false, defaultValue = "6") String length,
+                           @RequestParam(name="hostName", required = false, defaultValue = "") String hostName,
+                           @RequestParam(name="inviteName", required = false, defaultValue = "") String inviteName,
+                           @RequestParam(name="address", required = false, defaultValue = "") String address,
+                           @RequestParam(name="wordsList", required = false, defaultValue = "ten,fading,post,card,thunder,hinge,trailing,batting") String wordsList,
+                           @RequestParam(name="wordsEnding", required = false, defaultValue = "ing") String wordsEnding,
+                           @RequestParam(name="itemsSold", required = false, defaultValue = "48,50,37,62,38,70,55,37,64,60") String itemsSold,
+                           @RequestParam(name="employeeIndex", required = false, defaultValue = "9") String employeeIndex,
+                           @RequestParam(name="fixedWage", required = false, defaultValue = "10.0") String fixedWage,
+                           @RequestParam(name="perItemWage", required = false, defaultValue = "1.5") String perItemWage,
+                           @RequestParam(name="firstName", required = false, defaultValue = "") String firstName,
+                           @RequestParam(name="lastName", required = false, defaultValue = "") String lastName,
+                           @RequestParam(name="usedNames", required = false, defaultValue = "smithj,browns") String usedNames,
+                           // @RequestParam(name="unit5", required = false, defaultValue = "") String unit5,
+                           Model model)
             throws IOException, InterruptedException, ParseException {
 
         //api
@@ -117,12 +133,36 @@ public class samAboutMe {
         char streakChar = streak.longestStreak(originalString);
         int streakLength = streak.displayLength();
 
-        //Unit 5
-        Unit5Invitation invite1 = new Unit5Invitation(hostName, address, inviteName);
+        //Unit 5 FRQ
+        Unit5Invitation invite1 = new Unit5Invitation();
+        invite1.setInvite(hostName, address, inviteName);
         String invite = invite1.getInvite();
 
+
         Unit5PwGenerator password = new Unit5PwGenerator(Integer.parseInt(length), prefix);
-        String pwd = password.pwGen();
+        password.setPwGen();
+        String pwd = password.getPwd();
+
+        //Unit 6
+        String[] wordsArray = wordsList.split(",");
+        Unit6StringSelect list1 = new Unit6StringSelect(wordsArray, wordsEnding);
+        String resultWords = list1.selectWords();
+
+        String[] itemArray = itemsSold.split(",");
+        int[] itemsSoldArr = new int[itemArray.length];
+        for (int i=0; i < itemArray.length; i++) {
+            itemsSoldArr[i] = Integer.parseInt(itemArray[i]);
+        }
+        Unit6Payroll pay = new Unit6Payroll(itemsSoldArr);
+        double wageDouble = pay.computeWages(Double.parseDouble(fixedWage), Double.parseDouble(perItemWage), Integer.parseInt(employeeIndex));
+        String wage = String.valueOf(wageDouble);
+        String bonusThreshold = String.valueOf(pay.computeBonusThreshold());
+
+        //Unit 7
+        Unit7UserName username = new Unit7UserName(firstName, lastName);
+        String[] usedArray = usedNames.split(",");
+        username.setAvailableUsers(usedArray);
+        ArrayList<String> possibleNames = username.getPossibleNames();
 
         var quotes = response.body();
         model.addAttribute("quotes", quotes);
@@ -141,26 +181,27 @@ public class samAboutMe {
         model.addAttribute("gameResult", gameResult);
         model.addAttribute("streakChar", streakChar);
         model.addAttribute("streakLength", streakLength);
-      //  model.addAttribute("object", string_ops);
-        model.addAttribute("pwd", pwd);
         model.addAttribute("invite", invite);
+        model.addAttribute("resultWords", resultWords);
+        model.addAttribute("wage", wage);
+        model.addAttribute("bonusThreshold", bonusThreshold);
+      //  model.addAttribute("unit5", unit5);
+       model.addAttribute("pwd", pwd);
+       model.addAttribute("possibleNames", possibleNames);
 
         return "Pages/aboutMePages/samAbout";
     }
-   /* @RequestMapping(value = "/api/Pages.aboutMePages/samAboutMe/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+   /* @RequestMapping(value = "/samAbout", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> stringsNew(RequestEntity<Object> request) throws JSONException {
         // extract json from RequestEntity
         JSONObject jo = new JSONObject((Map) Objects.requireNonNull(request.getBody()));
-
-        // process string sequence action(s)
-        stringEvent(jo);
 
         // create JSON object of string sequence resulting database and metadata
         JSONObject body = this.getBody();
 
         // send ResponseEntity body and status message
         return new ResponseEntity<>(body, HttpStatus.OK);
-    } */
+    }*/
 
 
 }

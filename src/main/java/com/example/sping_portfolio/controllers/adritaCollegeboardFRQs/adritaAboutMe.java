@@ -1,16 +1,10 @@
-package com.example.sping_portfolio.controllers;
+package com.example.sping_portfolio.controllers.adritaCollegeboardFRQs;
 //import lombok.Getter;
-import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.awt.image.DataBufferByte;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
+
 import java.io.IOException;
 import java.net.URI;
-import java.net.URL;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -18,14 +12,8 @@ import java.text.ParseException;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestParam;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import javax.imageio.ImageIO;
-import java.util.ArrayList;
+
 import java.util.HashMap;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import java.util.List;
 import java.lang.Math;
 
 
