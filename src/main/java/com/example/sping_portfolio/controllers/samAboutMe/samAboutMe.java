@@ -72,7 +72,7 @@ public class samAboutMe {
                            @RequestParam(name="hostName", required = false, defaultValue = "") String hostName,
                            @RequestParam(name="inviteName", required = false, defaultValue = "") String inviteName,
                            @RequestParam(name="address", required = false, defaultValue = "") String address,
-                           @RequestParam(name="wordsList", required = false, defaultValue = "fading,ten,flying,nine") String wordsList,
+                           @RequestParam(name="wordsList", required = false, defaultValue = "ten,fading,post,card,thunder,hinge,trailing,batting") String wordsList,
                            @RequestParam(name="wordsEnding", required = false, defaultValue = "ing") String wordsEnding,
                            @RequestParam(name="itemsSold", required = false, defaultValue = "48,50,37,62,38,70,55,37,64,60") String itemsSold,
                            @RequestParam(name="employeeIndex", required = false, defaultValue = "9") String employeeIndex,
