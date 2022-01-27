@@ -18,12 +18,14 @@ public class Unit6StringSelect {
     }
 
     public String selectWords() {
-        for(String ingWord : words)
+        resultWords = "Selected List:";
+        for(String endWord : words)
         {
-            if (ingWord.endsWith(ending)) {
-                resultWords += ingWord + ", ";
+            if (endWord.endsWith(ending)) {
+                resultWords += " " + endWord + ",";
             }
         }
+        resultWords = resultWords.substring(0, resultWords.length() -1);
         return resultWords;
     }
 
