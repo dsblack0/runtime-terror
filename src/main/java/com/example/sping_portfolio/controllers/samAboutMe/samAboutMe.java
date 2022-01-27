@@ -78,6 +78,9 @@ public class samAboutMe {
                            @RequestParam(name="employeeIndex", required = false, defaultValue = "9") String employeeIndex,
                            @RequestParam(name="fixedWage", required = false, defaultValue = "10.0") String fixedWage,
                            @RequestParam(name="perItemWage", required = false, defaultValue = "1.5") String perItemWage,
+                           @RequestParam(name="firstName", required = false, defaultValue = "") String firstName,
+                           @RequestParam(name="lastName", required = false, defaultValue = "") String lastName,
+                           @RequestParam(name="usedNames", required = false, defaultValue = "smithj,browns") String usedNames,
                            // @RequestParam(name="unit5", required = false, defaultValue = "") String unit5,
                            Model model)
             throws IOException, InterruptedException, ParseException {
@@ -155,6 +158,12 @@ public class samAboutMe {
         String wage = String.valueOf(wageDouble);
         String bonusThreshold = String.valueOf(pay.computeBonusThreshold());
 
+        //Unit 7
+        Unit7UserName username = new Unit7UserName(firstName, lastName);
+        String[] usedArray = usedNames.split(",");
+        username.setAvailableUsers(usedArray);
+        ArrayList<String> possibleNames = username.getPossibleNames();
+
         var quotes = response.body();
         model.addAttribute("quotes", quotes);
         model.addAttribute("name", name);
@@ -178,6 +187,7 @@ public class samAboutMe {
         model.addAttribute("bonusThreshold", bonusThreshold);
       //  model.addAttribute("unit5", unit5);
        model.addAttribute("pwd", pwd);
+       model.addAttribute("possibleNames", possibleNames);
 
         return "Pages/aboutMePages/samAbout";
     }
