@@ -22,7 +22,7 @@
       height: 100%;
       background: #d2e7d6;
     }
-    .unit2, .unit3, .unit4, .unit5 {
+    .unit2, .unit3, .unit4, .unit5, .unit6 {
       text-align:left;
       margin:10px;
     }
@@ -225,6 +225,10 @@ tr:nth-child(even) {
                             <input name="maxRounds" id="maxRounds">
                             <button>Play</button>
                             <p><b th:text="'Result: ' + ${result}" style="color: teal;"></b></p>
+                            <label for="name" style="color: teal;">String to analyze: </label>
+                            <input name="input" id="input">
+                            <button>Analyze</button>
+                            <p><b th:text="${finalStreak}" style="color: teal;"></b></p>
                         </div>
                     </form>
                 </div>
@@ -240,7 +244,43 @@ tr:nth-child(even) {
                         <input name="guest" id="guest">
                       <button>Generate Invitation</button>
                         <p><b th:text="'Invitation: ' + ${invite}" style="color: teal;"></b></p>
+                        <label for="name" style="color: teal;">What is the prefix?</label>
+                        <input name="prefix" id="prefix">
+                        <label for="name" style="color: teal;">How many digits?</label>
+                        <input name="digits" id="digits">
+                        <button>Generate Password</button>
+                        <p><b th:text="${passwordFinal}" style="color: teal;"></b></p>
                   </div>
+                </form>
+            </div>
+            <div class="unit6">
+                <h3>Unit 6</h3>
+                <form action="/rachelAbout" method="GET" id="wordArray">
+                    <div>
+                        <label for="name" style="color: teal;">What words would you like to add to the array? (One word per input)</label>
+                        <input name="stringA" id="stringA">
+                        <input name="stringB" id="stringB">
+                        <input name="stringC" id="stringC">
+                        <input name="stringD" id="stringD">
+                        <input name="stringE" id="stringE">
+                        <button>Generate List</button>
+                        <p><b th:text="${wordArray}" style="color: teal;"></b></p>
+                        <label for="name" style="color: teal;">How many items did each employee sell (starting with employee 0)?</label>
+                        <input name="employee0Sold" id="employee0Sold">
+                        <input name="employee1Sold" id="employee1Sold">
+                        <input name="employee2Sold" id="employee2Sold">
+                        <input name="employee3Sold" id="employee3Sold">
+                        <input name="employee4Sold" id="employee4Sold">
+                        <input name="employee5Sold" id="employee5Sold">
+                        <label for="name" style="color: teal;">What is the fixed wage?</label>
+                        <input name="fixedWage" id="fixedWage">
+                        <label for="name" style="color: teal;">What is the wage per item?</label>
+                        <input name="perItemWage" id="perItemWage">
+                        <button>Calculate Wage</button>
+                        <p><b th:text="${generatedWage}" style="color: teal;"></b></p>
+
+
+                    </div>
                 </form>
             </div>
 
