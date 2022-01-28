@@ -283,14 +283,17 @@
         <h2 style="color: white;">Get UserNames</h2>
         <form action="/samAbout" method="GET" id="userNames">
             <div style="margin-left: 10px;">
-                <p class="firstName" style="color: white;">Input your first name (Default: john)</p>
+                <p class="firstName" style="color: white;">Input your firstname (Default: john)</p>
                 <input name="firstName" id="firstName">
-                <p class="lastName" style="color: white;">Input your last name (Default: smith)</p>
+                <p class="lastName" style="color: white;">Input your lastname (Default: smith)</p>
                 <input name="lastName" id="lastName">
-                <p class="usedNames" style="color: white;">Input already used UserNames to be removed from the UserName list. Separate each username with a comma. (Default: smithj,browns)</p>
-                <input name="usedNames" id="usedName">
+                <p><b th:text="'Possible UserNames Set 1: ' + ${possibleNames1}" style="color: white;"></b></p>
+                <p class="firstName2" style="color: white;">Input your second firstname (Default: johnson)</p>
+                <input name="firstName2" id="firstName2">
+                <p class="lastName2" style="color: white;">Input your second lastname (Default: smith)</p>
+                <input name="lastName2" id="lastName2">
+                <p><b th:text="'Possible UserNames Set 2: ' + ${possibleNames2}" style="color: white;"></b></p>
                 <button>Answer</button>
-                <p><b th:text="'Possible UserNames: ' + ${possibleNames}" style="color: white;"></b></p>
             </div>
         </form>
     </div>
