@@ -78,9 +78,10 @@ public class samAboutMe {
                            @RequestParam(name="employeeIndex", required = false, defaultValue = "9") String employeeIndex,
                            @RequestParam(name="fixedWage", required = false, defaultValue = "10.0") String fixedWage,
                            @RequestParam(name="perItemWage", required = false, defaultValue = "1.5") String perItemWage,
-                           @RequestParam(name="firstName", required = false, defaultValue = "") String firstName,
-                           @RequestParam(name="lastName", required = false, defaultValue = "") String lastName,
-                           @RequestParam(name="usedNames", required = false, defaultValue = "smithj,browns") String usedNames,
+                           @RequestParam(name="firstName", required = false, defaultValue = "john") String firstName,
+                           @RequestParam(name="lastName", required = false, defaultValue = "smith") String lastName,
+                           @RequestParam(name="firstName2", required = false, defaultValue = "johnson") String firstName2,
+                           @RequestParam(name="lastName2", required = false, defaultValue = "smith") String lastName2,
                            // @RequestParam(name="unit5", required = false, defaultValue = "") String unit5,
                            Model model)
             throws IOException, InterruptedException, ParseException {
@@ -159,10 +160,12 @@ public class samAboutMe {
         String bonusThreshold = String.valueOf(pay.computeBonusThreshold());
 
         //Unit 7
-        Unit7UserName username = new Unit7UserName(firstName, lastName);
-        String[] usedArray = usedNames.split(",");
-        username.setAvailableUsers(usedArray);
-        ArrayList<String> possibleNames = username.getPossibleNames();
+        Unit7UserName username = new Unit7UserName();
+        username.setUserName(firstName, lastName);
+        username.setAvailableUsers();
+        ArrayList<String> possibleNames1 = username.getPossibleNames();
+        username.setUsedNames();
+        ArrayList<String> possibleNames2 = username.setAvailableUsers2(firstName2, lastName2);
 
         var quotes = response.body();
         model.addAttribute("quotes", quotes);
@@ -187,7 +190,8 @@ public class samAboutMe {
         model.addAttribute("bonusThreshold", bonusThreshold);
       //  model.addAttribute("unit5", unit5);
        model.addAttribute("pwd", pwd);
-       model.addAttribute("possibleNames", possibleNames);
+        model.addAttribute("possibleNames1", possibleNames1);
+        model.addAttribute("possibleNames2", possibleNames2);
 
         return "Pages/aboutMePages/samAbout";
     }
