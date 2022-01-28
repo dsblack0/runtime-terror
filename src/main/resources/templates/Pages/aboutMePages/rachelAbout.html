@@ -275,7 +275,7 @@ input[type='checkbox'] {
                                 <input name="oldseq" id="oldseq">
                                 <label for="name" style="color: teal;">Pick a segment to remove</label>
                                 <input name="segment" id="segment">
-                                <button>Answer</button>
+                                <button class="buttons">Answer</button>
                                 <p><b th:text="'New sequence: ' + ${newSeq}" style="color: teal;"></b></p>
                             </div>
                         </form>
@@ -286,7 +286,7 @@ input[type='checkbox'] {
                                 <input name="instsegment" id="instsegment">
                                 <label for="name" style="color: teal;">Index?</label>
                                 <input name="ind" id="ind">
-                                <button>Answer</button>
+                                <button class="buttons">Answer</button>
                                 <p><b th:text="'Resulting sequence: ' + ${resultSeq}" style="color: teal;"></b></p>
                             </div>
                         </form>
@@ -295,7 +295,7 @@ input[type='checkbox'] {
                                 <label for="name" style="color: teal;">Pick to numbers to find their distance</label>
                                 <input name="num1" id="num1">
                                 <input name="num2" id="num2">
-                                <button>Answer</button>
+                                <button class="buttons">Answer</button>
                                 <p><b th:text="'Distance from ' + ${num1} + ' to ' + ${num2} + '= ' + ${distance}" style="color: teal;"></b></p>
                             </div>
                         </form>
@@ -317,7 +317,7 @@ input[type='checkbox'] {
                                 <input name="rsvp" id="rsvp">
                                 <label for="name" style="color: teal;">What meal would you like? (1=Beef, 2=Chicken, 3=Pasta, Anything 4 or greater=Fish</label>
                                 <input name="selection" id="selection">
-                                <button>RSVP</button>
+                                <button class="buttons">RSVP</button>
                                 <p><b th:text="${option1}" style="color: teal;"></b></p>
                             </div>
                         </form>
@@ -338,11 +338,11 @@ input[type='checkbox'] {
                                 <input name="startingCoins" id="startingCoins">
                                 <label for="name" style="color: teal;">How many rounds should the game last for?</label>
                                 <input name="maxRounds" id="maxRounds">
-                                <button>Play</button>
+                                <button class="buttons">Play</button>
                                 <p><b th:text="'Result: ' + ${result}" style="color: teal;"></b></p>
                                 <label for="name" style="color: teal;">String to analyze: </label>
                                 <input name="input" id="input">
-                                <button>Analyze</button>
+                                <button class="buttons">Analyze</button>
                                 <p><b th:text="${finalStreak}" style="color: teal;"></b></p>
                             </div>
                         </form>
@@ -365,13 +365,13 @@ input[type='checkbox'] {
                                 <input name="address" id="address">
                                 <label for="name" style="color: teal;">Who is the guest?</label>
                                 <input name="guest" id="guest">
-                                <button>Generate Invitation</button>
+                                <button class="buttons">Generate Invitation</button>
                                 <p><b th:text="'Invitation: ' + ${invite}" style="color: teal;"></b></p>
                                 <label for="name" style="color: teal;">What is the prefix?</label>
                                 <input name="prefix" id="prefix">
                                 <label for="name" style="color: teal;">How many digits?</label>
                                 <input name="digits" id="digits">
-                                <button>Generate Password</button>
+                                <button class="buttons">Generate Password</button>
                                 <p><b th:text="${passwordFinal}" style="color: teal;"></b></p>
                             </div>
                         </form>
@@ -394,7 +394,7 @@ input[type='checkbox'] {
                                 <input name="stringC" id="stringC">
                                 <input name="stringD" id="stringD">
                                 <input name="stringE" id="stringE">
-                                <button>Generate List</button>
+                                <button class="buttons">Generate List</button>
                                 <p><b th:text="${wordArray}" style="color: teal;"></b></p>
                                 <label for="name" style="color: teal;">How many items did each employee sell (starting with employee 0)?</label>
                                 <input name="employee0Sold" id="employee0Sold">
@@ -407,7 +407,7 @@ input[type='checkbox'] {
                                 <input name="fixedWage" id="fixedWage">
                                 <label for="name" style="color: teal;">What is the wage per item?</label>
                                 <input name="perItemWage" id="perItemWage">
-                                <button>Calculate Wage</button>
+                                <button class="buttons">Calculate Wage</button>
                                 <p><b th:text="${generatedWage}" style="color: teal;"></b></p>
                             </div>
                         </form>
@@ -429,7 +429,7 @@ input[type='checkbox'] {
                                 <input name="firstname" id="firstname">
                                 <label for="name" style="color: teal;">What is your last name?</label>
                                 <input name="lastname" id="lastname">
-                                <button>Generate</button>
+                                <button class="buttons">Generate</button>
                                 <p><b th:text="${username}" style="color: teal;"></b></p>
                             </div>
                         </form>
