@@ -147,8 +147,7 @@ input[type='checkbox'] {
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
   padding: .5rem 1rem;
-
-
+}
   </style>
     <!-- End of head content specific to page -->
 </div></head>
@@ -200,7 +199,7 @@ input[type='checkbox'] {
             </div>
         </div>
         <hr style="height: 3px; background-color: #FFFFFF;">
-        <table class="styled-table" id="factsTable" style="margin-top: 2%;">
+        <table id="factsTable" style="margin-top: 2%;">
             <tr>
                 <th>Fact</th>
                 <th>Year</th>
@@ -222,33 +221,24 @@ input[type='checkbox'] {
         <hr style="height: 3px; background-color: #FFFFFF;">
         <br></br>
         <div>
-            <h2>
-                Rachel's Links
-            </h2>
             <table>
                 <tr>
-                    <th>Entry</th>
-                    <th>Link</th>
+                    <td style="text-align:center"><strong>Important Links</strong></td>
                 </tr>
                 <tr>
-                    <td>Github Profile</td>
-                    <td>https://github.com/rachelklee</td>
+                    <td style="text-align:center"><a href="https://github.com/rachelklee">Github Profile</a></td>
                 </tr>
                 <tr>
-                    <td>Team Repository</td>
-                    <td>https://github.com/dsblack0/runtime-terror</td>
+                    <td style="text-align:center"><a href="https://github.com/dsblack0/runtime-terror">Team Repository</a></td>
                 </tr>
                 <tr>
-                    <td>Individual Journal</td>
-                    <td>https://docs.google.com/document/d/15mil-mSpv7Ma4rNcUr_b5NjWCx2yM9FR3MIMcpM767U/edit?usp=sharing</td>
+                    <td style="text-align:center"><a href="https://github.com/dsblack0/runtime-terror/wiki/0-Rachel-Individual-Journal">Individual Journal</a></td>
                 </tr>
                 <tr>
-                    <td>Tickets</td>
-                    <td>https://github.com/dsblack0/runtime-terror/issues/assigned/rachelklee</td>
+                    <td style="text-align:center"><a href="https://github.com/dsblack0/runtime-terror/issues/assigned/rachelklee">Tickets</a></td>
                 </tr>
                 <tr>
-                    <td>Commits</td>
-                    <td>https://github.com/dsblack0/runtime-terror/commits?author=rachelklee</td>
+                    <td style="text-align:center"><a href="https://github.com/dsblack0/runtime-terror/commits?author=rachelklee">Commits</a></td>
                 </tr>
             </table>
         </div>
@@ -419,6 +409,28 @@ input[type='checkbox'] {
                                 <input name="perItemWage" id="perItemWage">
                                 <button>Calculate Wage</button>
                                 <p><b th:text="${generatedWage}" style="color: teal;"></b></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-collabsible">
+            <input id="collapsible7" class="toggle" type="checkbox">
+            <label for="collapsible7" class="lbl-toggle">Unit 3</label>
+            <div class="collapsible-content">
+                <div class="content-inner">
+                    <div class="unit7">
+                        <br></br>
+                        <h3>Unit 7</h3>
+                        <form action="/rachelAbout" method="GET" id="userName">
+                            <div>
+                                <label for="name" style="color: teal;">What is your first name?</label>
+                                <input name="firstname" id="firstname">
+                                <label for="name" style="color: teal;">What is your last name?</label>
+                                <input name="lastname" id="lastname">
+                                <button>Generate</button>
+                                <p><b th:text="${username}" style="color: teal;"></b></p>
                             </div>
                         </form>
                     </div>
