@@ -71,6 +71,8 @@ public class rachelAboutMe {
                               @RequestParam(name="employee5Sold", required = false, defaultValue = "0") Integer employee5Sold,
                               @RequestParam(name="fixedWage", required = false, defaultValue = "10.00") Double fixedWage,
                               @RequestParam(name="perItemWage", required = false, defaultValue = "1.50") Double perItemWage,
+                              @RequestParam(name="first", required = false, defaultValue = "first") String first,
+                              @RequestParam(name="last", required = false, defaultValue = "last") String last,
 
                               Model model) throws IOException, InterruptedException, ParseException {
             HttpRequest request = HttpRequest.newBuilder()
@@ -150,7 +152,12 @@ public class rachelAboutMe {
         unit6frq2.computeWages(fixedWage, perItemWage);
         model.addAttribute("generatedWage", unit6frq2.generatedWage());
 
-
+        //unit 7
+        UserName unit7frq1 = new UserName(first, last);
+        String[] used = {"smithj", "jsmith"};
+        unit7frq1.setAvailableUserNames(used);
+        unit7frq1.generatedNames();
+        model.addAttribute("generatedUserNames", unit7frq1.generatedNames());
 
         //api
         var data = new ObjectMapper().readValue(response.body(), HashMap.class);
