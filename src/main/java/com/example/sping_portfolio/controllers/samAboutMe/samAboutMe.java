@@ -69,9 +69,9 @@ public class samAboutMe {
                            @RequestParam(name="originalString", required = false, defaultValue = "CCAAAAATTT!") String originalString,
                            @RequestParam(name="prefix", required = false, defaultValue = "A") String prefix,
                            @RequestParam(name="length", required = false, defaultValue = "6") String length,
-                           @RequestParam(name="hostName", required = false, defaultValue = "") String hostName,
-                           @RequestParam(name="inviteName", required = false, defaultValue = "") String inviteName,
-                           @RequestParam(name="address", required = false, defaultValue = "") String address,
+                           @RequestParam(name="hostName", required = false, defaultValue = "Sam") String hostName,
+                           @RequestParam(name="inviteName", required = false, defaultValue = "Sally") String inviteName,
+                           @RequestParam(name="address", required = false, defaultValue = "12345 Random St") String address,
                            @RequestParam(name="wordsList", required = false, defaultValue = "ten,fading,post,card,thunder,hinge,trailing,batting") String wordsList,
                            @RequestParam(name="wordsEnding", required = false, defaultValue = "ing") String wordsEnding,
                            @RequestParam(name="itemsSold", required = false, defaultValue = "48,50,37,62,38,70,55,37,64,60") String itemsSold,
@@ -131,8 +131,8 @@ public class samAboutMe {
         String gameResult = game.playGame();
 
         Unit4Streak streak = new Unit4Streak("streak1");
-        char streakChar = streak.longestStreak(originalString);
-        int streakLength = streak.displayLength();
+        streak.longestStreak(originalString);
+        String resultStreak = streak.streakInfo();
 
         //Unit 5 FRQ
         Unit5Invitation invite1 = new Unit5Invitation();
@@ -182,8 +182,7 @@ public class samAboutMe {
         model.addAttribute("p1Move", p1Move);
         model.addAttribute("p2Move", p2Move);
         model.addAttribute("gameResult", gameResult);
-        model.addAttribute("streakChar", streakChar);
-        model.addAttribute("streakLength", streakLength);
+        model.addAttribute("resultStreak", resultStreak);
         model.addAttribute("invite", invite);
         model.addAttribute("resultWords", resultWords);
         model.addAttribute("wage", wage);
