@@ -119,6 +119,7 @@
     </div>
     <div class="info" style="margin-top: 20px; text-align: center; background-color: #1c1dd5;">
         <p><a href=https://github.com/dsblack0/runtime-terror/wiki/0-Sam-Individual-Journal style="color: white;">CB FRQs/Journal</a></p>
+        <p><a href=https://github.com/dsblack0/runtime-terror/tree/master/src/main/java/com/example/sping_portfolio/controllers/samAboutMe style="color: white;">FRQ Java Code</a></p>
         <p><a href=https://github.com/dsblack0/runtime-terror/commits?author=dsblack0 style="color: white;">Project Contributions</a></p>
     </div>
     <!-- Unit 2-->
@@ -196,7 +197,7 @@
                     <input name="originalString" id="originalString">
                     <button>Answer</button>
                     <p style="color:white;">Default string: CAAAAATTT!</p>
-                    <p><b th:text="'Longest Streak: ' + ${streakChar} + ' ' + ${streakLength}" style="color: white;"></b></p>
+                    <p><b th:text="'Longest Streak ' + ${resultStreak}" style="color: white;"></b></p>
                 </div>
             </form>
             <h2 style="color: white;">Coin Game</h2>
@@ -292,6 +293,7 @@
                 <input name="firstName2" id="firstName2">
                 <p class="lastName2" style="color: white;">Input your second lastname (Default: smith)</p>
                 <input name="lastName2" id="lastName2">
+                <p style="color: white;">Eliminating all repeated usernames...</p>
                 <p><b th:text="'Possible UserNames Set 2: ' + ${possibleNames2}" style="color: white;"></b></p>
                 <button>Answer</button>
             </div>
