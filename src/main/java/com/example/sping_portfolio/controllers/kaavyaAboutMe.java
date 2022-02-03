@@ -31,6 +31,9 @@ public class kaavyaAboutMe {
                               @RequestParam(name="attendee", required = false, defaultValue = "Cheryl") String attendee,
                               @RequestParam(name="prefix", required = false, defaultValue = "A") String prefix,
                               @RequestParam(name="digits", required = false, defaultValue = "4") int digits,
+                              @RequestParam(name="fixedWage", required = false, defaultValue = "10.0")double fixedWage,
+                              @RequestParam(name="perItemWage", required = false, defaultValue = "1.5")double perItemWage,
+                              @RequestParam(name="itemsSold", required = false, defaultValue = "1")int[] itemsSold,
                               Model model) {
 
         LightSequence frq2 = new LightSequence();
@@ -68,6 +71,9 @@ public class kaavyaAboutMe {
         }
         model.addAttribute("pw", frq5_2.pwGen());
         model.addAttribute("count", frq5_2.pwCount());
+
+        PayrollFRQ6 frq6_2 = new PayrollFRQ6();
+        model.addAttribute("wages", frq6_2.computeWages(fixedWage, perItemWage, itemsSold));
 
         return "Pages/aboutMePages/kaavyaAbout"; }
 }

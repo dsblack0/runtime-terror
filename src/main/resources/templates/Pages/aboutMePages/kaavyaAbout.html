@@ -136,6 +136,7 @@
                     <p><b th:text="'Distance from ' + ${a} + ' to ' + ${b} + '= ' + ${straightDist}" style="color: teal;"></b></p>
                 </div>
             </form>
+            <p>Creating objects and manipulating parameters and behaviors of the object. Ex: Calculating distance using the position attributes of the object</p>
         </div>
         <div class="container" style="margin: 30px">
             <h2>
@@ -175,6 +176,7 @@
                     <p><b th:text="'Options 1 and 2 are the same? ' + ${compareOptions}" style="color: teal;"></b></p>
                 </div>
             </form>
+            <p>Boolean Expressions and if-statements to print various values depending on what the user inputs. Ex: If the user types "yes", their rsvp is "attending"</p>
         </div>
         <div class="container" style="margin: 30px">
             <h2>
@@ -189,6 +191,8 @@
                     <p><b th:text="'Most common consecutive char: ' + ${output}" style="color: teal;"></b></p>
                 </div>
             </form>
+            <p>Iteration through a string to determine the most common consecutive character. Use of for loops for String iteration</p>
+            <br>
             <p>Question 2: Coin Game</p>
             <form action="/kaavyaAbout" method="GET" id="frq4_2">
                 <div>
@@ -200,6 +204,7 @@
                     <p><b th:text="'Outcome: ' + ${outcome}" style="color: teal;"></b></p>
                 </div>
             </form>
+            <p>Using various conditions to determine the outcome of a game (based on differences between different values). Lots of if/else statements</p>
         </div>
         <div class="container" style="margin: 30px">
             <h2>
@@ -244,6 +249,8 @@
                     <button onclick="inviteMessage()">Generate Invitation</button>
                     <p><b id="inviteMessage" style="color: teal;"></b></p>
                 </div>
+            <p>Writing classes for the concatenation of strings. (Originally also had asynch on this, but it is not working right now)</p>
+            <br>
             <p>Question 2: Password Generator</p>
             <form action="/kaavyaAbout" method="GET" id="frq5_2">
                 <div>
@@ -254,6 +261,45 @@
                     <button>Generate Password</button>
                     <p><b th:text="'New Password: ' + ${pw}" style="color: teal;"></b></p>
                     <p><b th:text="${count} + ' passwords have been generated.'" style="color: teal;"></b></p>
+                </div>
+            </form>
+            <p>Generates passwords using the Math.random method. Also, can make passwords based on a specific starting prefix (if given)</p>
+        </div>
+        <div class="container" style="margin: 30px">
+            <h2>
+                FRQ#6
+            </h2>
+            <p>Question 1: Word Endings</p>
+            <form action="/kaavyaAbout" method="GET" id="frq6_1">
+                <div>
+                    <label for = "word" style="color: teal;">Input Word</label>
+                    <input name="word" id="word">
+                    <button>Output word</button>
+                </div>
+            </form>
+            <p>Uses String methods (like String.substring) to remove the "ing" ending on words.</p>
+            <br>
+            <p>Question 2: Payroll</p>
+            <form action="/kaavyaAbout" method="GET" id="frq6_2">
+                <div>
+                    <label for = "fixedWage" style="color: teal;">Baseline Pay</label>
+                    <input name="fixedWage" id="fixedWage">
+                    <label for = "perItemWage" style="color: teal;">Added Wage per Item</label>
+                    <input name="perItemWage" id="perItemWage">
+                    <label for = "itemsSold" style="color: teal;">itemsSold</label>
+                    <input name="itemsSold" id="itemsSold">
+                    <button>Employee Payroll</button>
+                    <p><b th:text="'Payroll: ' + ${wages}" style="color: teal;"></b></p>
+                </div>
+            </form>
+            <p>Uses for loops in combination with if and else statements to determine the payroll of various employees. </p>
+        </div>
+        <div class="container" style="margin: 30px">
+            <h2>
+                FRQ#7
+            </h2>
+            <form action="/kaavyaAbout" method="GET" id="frq7">
+                <div>
                 </div>
             </form>
         </div>
