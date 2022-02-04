@@ -11,17 +11,9 @@ public class Book {
         author = a;
     }
 
-    public Book() {
-
-    }
-
     public String printBookInfo() {
         System.out.print(title + ", written by " + author);
         return title + ", written by " + author;
-    }
-
-    public void printDescription(){
-        System.out.println(toString());
     }
 
     public static void main(String[] args) {
