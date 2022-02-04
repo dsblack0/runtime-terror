@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class ExperimentalFarm {
     private Plot[][] farmPlots;
-
+    private String output;
 
     public ExperimentalFarm(Plot[][] p){
         farmPlots=p;
@@ -26,6 +26,7 @@ public class ExperimentalFarm {
         }
         if(plot != null){
             System.out.println("Hightest Yield is " + plot);
+            output = "Highest Yield is " + plot;
             return plot;
         }
         else {
@@ -51,12 +52,12 @@ public class ExperimentalFarm {
         return status;
 
     }
-/*
-    public String farm(String type){
-        
+
+    public String farm(){
+        System.out.println(output);
         return output;
     }
-*/
+
     public static void main(String[] args) {
         Plot p1 = new Plot("corn",20);
         Plot p2 = new Plot("corn", 30);
@@ -71,10 +72,10 @@ public class ExperimentalFarm {
         Plot p11 = new Plot("corn",30);
         Plot p12 = new Plot("peas", 30);
         Plot[][] plots = {{p1,p2,p3},{p4,p5,p6},{p7,p8,p9},{p10,p11,p12}};
-        ExperimentalFarm f = new ExperimentalFarm(plots);
+        ExperimentalFarm f1 = new ExperimentalFarm(plots);
         System.out.println(Arrays.deepToString(plots));
-        f.getHighestYield("corn"); //returns farmPlots[1][2]
-        f.getHighestYield("peas"); //returns farmPlots[1][0] or farmPlots[3][2]
-        f.getHighestYield("bananas"); //returns null
+        f1.getHighestYield("corn"); //returns farmPlots[1][2]
+        f1.getHighestYield("peas"); //returns farmPlots[1][0] or farmPlots[3][2]
+        f1.getHighestYield("bananas"); //returns null
     }
 }
