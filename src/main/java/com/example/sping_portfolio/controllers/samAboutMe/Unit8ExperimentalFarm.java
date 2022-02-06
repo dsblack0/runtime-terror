@@ -7,10 +7,10 @@ public class Unit8ExperimentalFarm {
         Unit8Plot p1 = new Unit8Plot("corn",20);
         Unit8Plot p2 = new Unit8Plot("corn", 30);
         Unit8Plot p3 = new Unit8Plot("peas",10);
-        Unit8Plot p4 = new Unit8Plot("peas", 30);
+        Unit8Plot p4 = new Unit8Plot("peas", 70);
         Unit8Plot p5 = new Unit8Plot("corn",40);
         Unit8Plot p6 = new Unit8Plot("corn", 62);
-        Unit8Plot p7 = new Unit8Plot("wheat",10);
+        Unit8Plot p7 = new Unit8Plot("wheat",60);
         Unit8Plot p8 = new Unit8Plot("corn", 50);
         Unit8Plot p9 = new Unit8Plot("rice",30);
         Unit8Plot p10 = new Unit8Plot("corn",55);
@@ -32,13 +32,13 @@ public class Unit8ExperimentalFarm {
                 int currentYield = farmPlots[row][col].getCropYield();
                 if (currentType.equals(cr) && currentYield > highestYeild) {
                     highestYeild = currentYield;
-                    r = row + 1;
-                    c = col + 1;
+                    r = row;
+                    c = col;
                   // plotLocation = farmPlots[row+1][col+1];
                 }
             }
         }
-       return "row: " + r + " & col: " + c;
+       return "row " + r + " & col " + c;
     }
 
     public boolean sameCrop(int col) {
@@ -55,7 +55,7 @@ public class Unit8ExperimentalFarm {
 
      public static void main(String[] args) {
          Unit8ExperimentalFarm f = new Unit8ExperimentalFarm();
-         String highestYield = f.getHighestYield("peas");
+         String highestYield = f.getHighestYield("wheat");
          System.out.println(highestYield);
          System.out.println(f.sameCrop(2));
      }

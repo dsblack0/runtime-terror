@@ -2,6 +2,12 @@ package com.example.sping_portfolio.controllers.samAboutMe;
 
 //import org.json.JSONException;
 //import org.json.JSONObject;
+import com.example.sping_portfolio.controllers.samAboutMe.Unit9Animal.Unit9Animal;
+import com.example.sping_portfolio.controllers.samAboutMe.Unit9Animal.Unit9Elephant;
+import com.example.sping_portfolio.controllers.samAboutMe.Unit9Animal.Unit9Herbivore;
+import com.example.sping_portfolio.controllers.samAboutMe.Unit9Book.Unit9Book;
+import com.example.sping_portfolio.controllers.samAboutMe.Unit9Book.Unit9BookListing;
+import com.example.sping_portfolio.controllers.samAboutMe.Unit9Book.Unit9PictureBook;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.RequestEntity;
@@ -82,6 +88,9 @@ public class samAboutMe {
                            @RequestParam(name="lastName", required = false, defaultValue = "smith") String lastName,
                            @RequestParam(name="firstName2", required = false, defaultValue = "johnson") String firstName2,
                            @RequestParam(name="lastName2", required = false, defaultValue = "smith") String lastName2,
+                           @RequestParam(name="cropType", required = false, defaultValue = "corn") String cropType,
+                           @RequestParam(name="column", required = false, defaultValue = "0") String column,
+                           @RequestParam(name="fraction", required = false, defaultValue = "30/3") String fraction,
                            // @RequestParam(name="unit5", required = false, defaultValue = "") String unit5,
                            Model model)
             throws IOException, InterruptedException, ParseException {
@@ -106,6 +115,7 @@ public class samAboutMe {
         double b = Double.parseDouble(num2);
         double c = Unit2LightSequence.mathSqrt(a, b);
         String distance = String.valueOf(c);
+        String[] unit2 = new String[]{newSeq, oldSeq, resultSeq, num1, num2, distance};
 
         //Unit 3 FRQ
         int selection = Integer.parseInt(foodselection);
@@ -121,6 +131,7 @@ public class samAboutMe {
         } else {
             compare = "false";
         }
+        String[] unit3 = new String[]{option1, option2, compare};
 
         //Unit 4 FRQ
         int startingCoins = Integer.parseInt(Coins);
@@ -133,16 +144,17 @@ public class samAboutMe {
         Unit4Streak streak = new Unit4Streak("streak1");
         streak.longestStreak(originalString);
         String resultStreak = streak.streakInfo();
+        String[] unit4 = new String[]{resultStreak, p1Move, p2Move, gameResult};
 
         //Unit 5 FRQ
         Unit5Invitation invite1 = new Unit5Invitation();
         invite1.setInvite(hostName, address, inviteName);
         String invite = invite1.getInvite();
 
-
         Unit5PwGenerator password = new Unit5PwGenerator(Integer.parseInt(length), prefix);
         password.setPwGen();
         String pwd = password.getPwd();
+        String[] unit5 = new String[]{invite, pwd};
 
         //Unit 6
         String[] wordsArray = wordsList.split(",");
@@ -158,6 +170,7 @@ public class samAboutMe {
         double wageDouble = pay.computeWages(Double.parseDouble(fixedWage), Double.parseDouble(perItemWage), Integer.parseInt(employeeIndex));
         String wage = String.valueOf(wageDouble);
         String bonusThreshold = String.valueOf(pay.computeBonusThreshold());
+        String[] unit6 = new String[]{resultWords, bonusThreshold, wage};
 
         //Unit 7
         Unit7UserName username = new Unit7UserName();
@@ -166,31 +179,51 @@ public class samAboutMe {
         ArrayList<String> possibleNames1 = username.getPossibleNames();
         username.setUsedNames();
         ArrayList<String> possibleNames2 = username.setAvailableUsers2(firstName2, lastName2);
+        ArrayList[] unit7 = new ArrayList[]{possibleNames1, possibleNames2};
+
+        //Unit 8
+        Unit8ExperimentalFarm plot = new Unit8ExperimentalFarm();
+        String highestYield = plot.getHighestYield(cropType);
+        String sameCrop = String.valueOf(plot.sameCrop(Integer.parseInt(column)));
+        String[] unit8 = new String[]{cropType, highestYield, column, sameCrop};
+
+        //Unit 9
+        Unit9Animal lisa = new Unit9Animal("carnivore", "lion", "Lisa");
+        Unit9Herbivore gary = new Unit9Herbivore("giraffe", "Gary");
+        Unit9Herbivore kate = new Unit9Herbivore("koala", "Kate");
+        Unit9Elephant percy = new Unit9Elephant("Percy", 2.0);
+        Unit9Elephant elly = new Unit9Elephant("Elly", 3.2);
+        Unit9Animal[] unit9a = new Unit9Animal[]{lisa, gary, percy, kate, elly};
+
+        Unit9PictureBook myBook = new Unit9PictureBook("Peter and Wendy", "J.M. Barrie", "F.D. Bedford");
+        Unit9Book book1 = new Unit9Book("Frankenstein", "Marry Shelley");
+        Unit9PictureBook book2 = new Unit9PictureBook("The Wonderful Wizard of Oz",  "L. Frank Baum", "W.W. Denslow");
+        Unit9BookListing listing1 = new Unit9BookListing(book1, 10.99);
+        Unit9BookListing listing2 = new Unit9BookListing(book2, 12.99);
+        Unit9Book[] unit9b = new Unit9Book[]{myBook, book1, book2};
+        Unit9BookListing[] unit9c = new Unit9BookListing[]{listing1, listing2};
+
+        //Unit 10
+        String[] numbers = fraction.split("/");
+        Unit10NumberSystem fractions = new Unit10NumberSystem();
+        String gcf = String.valueOf(fractions.gcf(Integer.parseInt(numbers[0]), Integer.parseInt(numbers[1])));
+        String reducedFraction = fractions.reduceFraction(Integer.parseInt(numbers[0]), Integer.parseInt(numbers[1]));
+        String[] unit10 = new String[]{gcf, reducedFraction};
 
         var quotes = response.body();
         model.addAttribute("quotes", quotes);
         model.addAttribute("name", name);
-        model.addAttribute("newSeq", newSeq);
-        model.addAttribute("oldSeq", oldSeq);
-        model.addAttribute("resultSeq", resultSeq);
-        model.addAttribute("num1", num1);
-        model.addAttribute("num2", num2);
-        model.addAttribute("distance", distance);
-        model.addAttribute("option1", option1);
-        model.addAttribute("compare", compare);
-        model.addAttribute("option2", option2);
-        model.addAttribute("p1Move", p1Move);
-        model.addAttribute("p2Move", p2Move);
-        model.addAttribute("gameResult", gameResult);
-        model.addAttribute("resultStreak", resultStreak);
-        model.addAttribute("invite", invite);
-        model.addAttribute("resultWords", resultWords);
-        model.addAttribute("wage", wage);
-        model.addAttribute("bonusThreshold", bonusThreshold);
-      //  model.addAttribute("unit5", unit5);
-       model.addAttribute("pwd", pwd);
-        model.addAttribute("possibleNames1", possibleNames1);
-        model.addAttribute("possibleNames2", possibleNames2);
+        model.addAttribute("unit2", unit2);
+        model.addAttribute("unit3", unit3);
+        model.addAttribute("unit4", unit4);
+        model.addAttribute("unit5", unit5);
+        model.addAttribute("unit6", unit6);
+        model.addAttribute("unit7", unit7);
+        model.addAttribute("unit8", unit8);
+        model.addAttribute("unit9a", unit9a);
+        model.addAttribute("unit9b", unit9b);
+        model.addAttribute("unit9c", unit9c);
+        model.addAttribute("unit10", unit10);
 
         return "Pages/aboutMePages/samAbout";
     }
