@@ -2,6 +2,7 @@ package com.example.sping_portfolio.controllers;
 //import lombok.Getter;
 import com.example.sping_portfolio.controllers.samAboutMe.Unit5Invitation;
 import com.example.sping_portfolio.rachelCollegeBoardFRQs.*;
+import com.example.sping_portfolio.rachelCollegeBoardFRQs.Unit9.*;
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.hibernate.annotations.Parameter;
 import org.springframework.stereotype.Controller;
@@ -23,6 +24,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javax.imageio.ImageIO;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -158,6 +160,76 @@ public class rachelAboutMe {
         unit7frq1.setAvailableUserNames(used);
         unit7frq1.generatedNames();
         model.addAttribute("generatedUserNames", unit7frq1.generatedNames());
+
+        //unit 8
+        Plot p1 = new Plot("corn",20);
+        Plot p2 = new Plot("corn", 30);
+        Plot p3 = new Plot("peas", 10);
+        Plot p4 = new Plot("peas", 30);
+        Plot p5 = new Plot("corn",40);
+        Plot p6 = new Plot("corn",62);
+        Plot p7 = new Plot("wheat",10);
+        Plot p8 = new Plot("corn",50);
+        Plot p9 = new Plot("rice",30);
+        Plot p10 = new Plot("corn", 55);
+        Plot p11 = new Plot("corn",30);
+        Plot p12 = new Plot("peas", 30);
+        Plot[][] plots = {{p1,p2,p3},{p4,p5,p6},{p7,p8,p9},{p10,p11,p12}};
+        ExperimentalFarm f1 = new ExperimentalFarm(plots);
+        System.out.println(Arrays.deepToString(plots));
+        //f1.getHighestYield("corn"); //returns farmPlots[1][2]
+        //f1.getHighestYield("peas"); //returns farmPlots[1][0] or farmPlots[3][2]
+        //f1.getHighestYield("bananas"); //returns null
+
+        model.addAttribute("corn",f1.getHighestYield("corn"));
+        model.addAttribute("peas",f1.getHighestYield("peas"));
+        model.addAttribute("bananas",f1.getHighestYield("bananas"));
+
+        //unit 9
+        PictureBook myBook = new PictureBook("Peter and Wendy", "J.M. Barrie", "F.D. Bedford");
+        myBook.printBookInfo();
+        ArrayList<Book> myLibrary = new ArrayList<Book>();
+        Book book1 = new Book("Frankenstein", "Mary Shelley");
+        Book book2 = new PictureBook("The Wonderful Wizard of Oz", "L. Frank Baum", "W.W. Denslow");
+        myLibrary.add(book1);
+        myLibrary.add(book2);
+
+        BookListing listing1 = new BookListing(book1,10.99);
+        listing1.printDescription();
+        BookListing listing2 = new BookListing(book2, 12.99);
+        listing2.printDescription();
+
+        model.addAttribute("listing1",listing1.printDescription());
+        model.addAttribute("listing2",listing2.printDescription());
+
+        Animal lisa = new Animal("carnivore", "lion", "Lisa");
+        lisa.toString();
+        Herbivore gary = new Herbivore("giraffe", "Gary");
+        gary.toString();
+        Elephant percy = new Elephant("Percy", 2.0);
+        percy.toString();
+
+        model.addAttribute("lisa",lisa.toString());
+        model.addAttribute("gary",gary.toString());
+        model.addAttribute("percy",percy.toString());
+
+        //unit10
+        NumberSystem r1 = new NumberSystem();
+        NumberSystem r2 = new NumberSystem();
+        NumberSystem r3 = new NumberSystem();
+        NumberSystem r4 = new NumberSystem();
+        NumberSystem r5 = new NumberSystem();
+        r1.reduceFraction(30,3);
+        r2.reduceFraction(8,20);
+        r3.reduceFraction(24,9);
+        r4.reduceFraction(7,3);
+        r5.reduceFraction(10,6);
+
+        model.addAttribute("r1",r1.output());
+        model.addAttribute("r2",r2.output());
+        model.addAttribute("r3",r3.output());
+        model.addAttribute("r4",r4.output());
+        model.addAttribute("r5",r5.output());
 
         //api
         var data = new ObjectMapper().readValue(response.body(), HashMap.class);

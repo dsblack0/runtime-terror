@@ -417,7 +417,7 @@ input[type='checkbox'] {
         </div>
         <div class="wrap-collabsible">
             <input id="collapsible7" class="toggle" type="checkbox">
-            <label for="collapsible7" class="lbl-toggle">Unit 3</label>
+            <label for="collapsible7" class="lbl-toggle">Unit 7</label>
             <div class="collapsible-content">
                 <div class="content-inner">
                     <div class="unit7">
@@ -426,11 +426,99 @@ input[type='checkbox'] {
                         <form action="/rachelAbout" method="GET" id="userName">
                             <div>
                                 <label for="name" style="color: teal;">What is your first name?</label>
-                                <input name="firstname" id="firstname">
+                                <input name="first" id="first">
                                 <label for="name" style="color: teal;">What is your last name?</label>
-                                <input name="lastname" id="lastname">
+                                <input name="last" id="last">
                                 <button class="buttons">Generate</button>
                                 <p><b th:text="${generatedUserNames}" style="color: teal;"></b></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-collabsible">
+            <input id="collapsible8" class="toggle" type="checkbox">
+            <label for="collapsible8" class="lbl-toggle">Unit 8</label>
+            <div class="collapsible-content">
+                <div class="content-inner">
+                    <div class="unit8">
+                        <br></br>
+                        <h3>Unit 8</h3>
+                        <form action="/rachelAbout" method="GET" id="experimentalFarm">
+                            <div>
+                                <h5>Plots</h5>
+                                <h2>HTML Table</h2>
+                                <table>
+                                    <tr>
+                                        <td>corn,20</td>
+                                        <td>corn,30</td>
+                                        <td>peas,10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>peas,30</td>
+                                        <td>corn,40</td>
+                                        <td>corn,62</td>
+                                    </tr>
+                                    <tr>
+                                        <td>wheat,10</td>
+                                        <td>corn,50</td>
+                                        <td>rice,30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>corn,55</td>
+                                        <td>corn,30</td>
+                                        <td>peas,30</td>
+                                    </tr>
+                                </table>
+                                <p><b th:text="${corn}" style="color: teal;"></b></p>
+                                <p><b th:text="${peas}" style="color: teal;"></b></p>
+                                <p><b th:text="${banana}" style="color: teal;"></b></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-collabsible">
+            <input id="collapsible9" class="toggle" type="checkbox">
+            <label for="collapsible9" class="lbl-toggle">Unit 9</label>
+            <div class="collapsible-content">
+                <div class="content-inner">
+                    <div class="unit9">
+                        <br></br>
+                        <h3>Unit 9</h3>
+                        <form action="/rachelAbout" method="GET" id="book">
+                            <div>
+                                <h4>Part A</h4>
+                                <p><b th:text="'Listing 1: ' + ${listing1}" style="color: teal;"></b></p>
+                                <p><b th:text="'Listing 2: ' + ${listing2}" style="color: teal;"></b></p>
+                                <h4>Part B</h4>
+                                <p><b th:text="${lisa}" style="color: teal;"></b></p>
+                                <p><b th:text="${gary}" style="color: teal;"></b></p>
+                                <p><b th:text="${percy}" style="color: teal;"></b></p>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-collabsible">
+            <input id="collapsible10" class="toggle" type="checkbox">
+            <label for="collapsible10" class="lbl-toggle">Unit 10</label>
+            <div class="collapsible-content">
+                <div class="content-inner">
+                    <div class="unit10">
+                        <br></br>
+                        <h3>Unit 10</h3>
+                        <form action="/rachelAbout" method="GET" id="">
+                            <div>
+                                <p><b th:text="'Reduce 30/3: ' + ${r1}" style="color: teal;"></b></p>
+                                <p><b th:text="'Reduce 8/20: ' + ${r2}" style="color: teal;"></b></p>
+                                <p><b th:text="'Reduce 24/9: ' + ${r3}" style="color: teal;"></b></p>
+                                <p><b th:text="'Reduce 7/3: ' + ${r4}" style="color: teal;"></b></p>
+                                <p><b th:text="'Reduce 10/6: ' + ${r5}" style="color: teal;"></b></p>
                             </div>
                         </form>
                     </div>
