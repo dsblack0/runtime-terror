@@ -11,6 +11,15 @@
 > | 3 | [Week 1](https://github.com/dsblack0/runtime-terror/blob/master/README.md#week-1---project-approval) |
 > | 4 | [Week 2](https://github.com/dsblack0/runtime-terror/blob/master/README.md#week-2---home-pages) |
 > | 5 | [Week 3](https://github.com/dsblack0/runtime-terror/blob/master/README.md#week-3---wip-project-review) |
+> | 6 | [Week 4](https://github.com/dsblack0/runtime-terror#week-4---new-year-time-to-be-resolute) |
+> | 7 | [Week 5](https://github.com/dsblack0/runtime-terror#week-5---pbl-showing-the-how-theme-technicals) |
+> | 8 | [Week 6](https://github.com/dsblack0/runtime-terror#week-6---mid-term-frq-and-vocab) |
+> | 9 | [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) |
+> | 10 | [Week 8](https://github.com/dsblack0/runtime-terror#week-8---frq-showing-2-indi-to-indi-outside-of-previous-pairtrio) |
+> | 11 | [Week 9]() |
+> | 12 | [Week 10]() |
+> | 13 | [Week 11]() |
+> | 14 | [Week 12]() |
 
 ## Project Info and Notable Links
 [Runtime](http://www.dnclubsearch.tech/)
@@ -39,35 +48,63 @@
 | Sami | [@SamiDeshatty](https://github.com/SamiDeshatty) | [Tickets](https://github.com/dsblack0/runtime-terror/issues/assigned/SamiDeshatty) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1?card_filter_query=assignee%3ASamiDeshatty) | [Commits](https://github.com/dsblack0/runtime-terror/commits?author=SamiDeshatty) | Web Designer |
 | Kaavya | [@KaavyaU](https://github.com/KaavyaU) | [Tickets](https://github.com/dsblack0/runtime-terror/issues/assigned/KaavyaU) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1?card_filter_query=assignee%3AKaavyaU) | [Commits](https://github.com/dsblack0/runtime-terror/commits?author=KaavyaU) | Deployment Manager |
 
+
+## Week 12 - Team Final
+| Name | Requirement | Evidence | Complete |
+| ---   | ---        | ---      | ---        |
+| Sami | | | <ul><li>[ ] DONE</li></ul> | 
+| Rachel | | | <ul><li>[ ] DONE</li></ul> | 
+| Adrita | | | <ul><li>[ ] DONE</li></ul> | 
+| Kaavya | | | <ul><li>[ ] DONE</li></ul> | 
+| Sam | | | <ul><li>[ ] DONE</li></ul> |
+
+## Week 11 - PBL Part 2
+| Name | Requirement | Evidence | Complete |
+| ---   | ---        | ---      | ---        |
+| Sami | | | <ul><li>[ ] DONE</li></ul> | 
+| Rachel | | | <ul><li>[ ] DONE</li></ul> | 
+| Adrita | | | <ul><li>[ ] DONE</li></ul> | 
+| Kaavya | | | <ul><li>[ ] DONE</li></ul> | 
+| Sam | | | <ul><li>[ ] DONE</li></ul> |
+
+## Week 9 - PBL Part 1
+| Name | Requirement | Evidence | Complete |
+| ---   | ---        | ---      | ---        |
+| Sami | | | <ul><li>[ ] DONE</li></ul> | 
+| Rachel | | | <ul><li>[ ] DONE</li></ul> | 
+| Adrita | | | <ul><li>[ ] DONE</li></ul> | 
+| Kaavya | | | <ul><li>[ ] DONE</li></ul> | 
+| Sam | | | <ul><li>[ ] DONE</li></ul> | 
+
 ## Week 8 - FRQ Showing 2 (Indi to Indi, outside of previous Pair/Trio)
-| Name | Requirement | Evidence | Complete | Grade |
-| ---   | ---        | ---      | ---        | ---   |
-| Sami | FRQ Crossover | | <ul><li>[ ] DONE</li></ul> | |
-| Rachel | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/76) | <ul><li>[x] DONE</li></ul> | |
-| Adrita | FRQ Crossover | | <ul><li>[ ] DONE</li></ul> | |
-| Kaavya | FRQ Crossover | | <ul><li>[ ] DONE</li></ul> | |
-| Sam | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/77) | <ul><li>[x] DONE</li></ul> | |
+| Name | Requirement | Evidence | Complete |
+| ---   | ---        | ---      | ---        |
+| Sami | FRQ Crossover | | <ul><li>[ ] DONE</li></ul> | 
+| Rachel | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/76) | <ul><li>[x] DONE</li></ul> | 
+| Adrita | FRQ Crossover | | <ul><li>[ ] DONE</li></ul> | 
+| Kaavya | FRQ Crossover | | <ul><li>[ ] DONE</li></ul> | 
+| Sam | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/77) | <ul><li>[x] DONE</li></ul> | 
 
 ## Week 7 - FRQ Showing 1 (Indi/Pair/Trio)
-| Name | Requirement | Evidence | Complete | Grade |
-| ---   | ---        | ---      | ---        | ---   |
-| Sami | FRQ | Done with Mr. M | <ul><li>[x] DONE</li></ul> | |
-| Rachel | FRQ | Done with Mr. M | <ul><li>[x] DONE</li></ul> | |
-| Adrita | FRQ | Done with Mr. M | <ul><li>[x] DONE</li></ul> | |
-| Kaavya | FRQ |Done with Mr. M  | <ul><li>[x] DONE</li></ul> | |
-| Sam | FRQ | Done with Mr. M | <ul><li>[x] DONE</li></ul> | |
+| Name | Requirement | Evidence | Complete |
+| ---   | ---        | ---      | ---       |
+| Sami | FRQ | Done with Mr. M | <ul><li>[x] DONE</li></ul> | 
+| Rachel | FRQ | Done with Mr. M | <ul><li>[x] DONE</li></ul> | 
+| Adrita | FRQ | Done with Mr. M | <ul><li>[x] DONE</li></ul> | 
+| Kaavya | FRQ |Done with Mr. M  | <ul><li>[x] DONE</li></ul> | 
+| Sam | FRQ | Done with Mr. M | <ul><li>[x] DONE</li></ul> | 
 
 
 ## Week 6 - Mid Term FRQ and Vocab
-| Name | Requirement | Evidence | Complete | Grade |
-| ---   | ---        | ---      | ---        | ---   |
-| Sami | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) | <ul><li>[x] DONE</li></ul> | |
-| Rachel | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) | <ul><li>[x] DONE</li></ul> | |
-| Adrita | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) | <ul><li>[x] DONE</li></ul> | |
-| Kaavya | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) | <ul><li>[x] DONE</li></ul> | |
-| Sam | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) | <ul><li>[x] DONE</li></ul> | |
-| Sami & Kaavya | Pair Midterm Vocab | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Week-6-Midterm-(Kaavya-and-Sami)) | <ul><li>[x] DONE</li></ul> | |
-| Adrita & Sam & Rachel | Trio Midterm Vocab | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Week-6-Midterm-(Adrita,-Sam,-Rachel)) | <ul><li>[x] DONE</li></ul> | |
+| Name | Requirement | Evidence | Complete |
+| ---   | ---        | ---      | ---        |
+| Sami | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) | <ul><li>[x] DONE</li></ul> | 
+| Rachel | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) | <ul><li>[x] DONE</li></ul> | 
+| Adrita | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) | <ul><li>[x] DONE</li></ul> | 
+| Kaavya | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) | <ul><li>[x] DONE</li></ul> | 
+| Sam | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) | <ul><li>[x] DONE</li></ul> | 
+| Sami & Kaavya | Pair Midterm Vocab | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Week-6-Midterm-(Kaavya-and-Sami)) | <ul><li>[x] DONE</li></ul> | 
+| Adrita & Sam & Rachel | Trio Midterm Vocab | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Week-6-Midterm-(Adrita,-Sam,-Rachel)) | <ul><li>[x] DONE</li></ul> | 
 
 ## Week 5 - PBL showing the How, Theme, Technicals
 
