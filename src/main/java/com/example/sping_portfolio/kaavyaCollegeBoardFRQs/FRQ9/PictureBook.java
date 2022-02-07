@@ -14,7 +14,9 @@ public class PictureBook extends Book{
 
     public String printBookInfo() {
         info = super.printBookInfo();
-        info += " and illustrated by " + illustrator;
+        if (!illustrator.equals("")) {
+            info += " and illustrated by " + illustrator;
+        }
         return info;
     }
 

@@ -3,8 +3,6 @@ package com.example.sping_portfolio.kaavyaCollegeBoardFRQs.FRQ9;
 public class Elephant extends Herbivore{
 
     private double tusk;
-    private String name;
-    private String result;
 
     public Elephant(String name, double tusk){
         super("elephant", name);
@@ -12,8 +10,7 @@ public class Elephant extends Herbivore{
     }
 
     public String toString (){
-        result = super.toString() + " with tusk " + tusk + " meters long";
-        return result;
+        return super.toString() + " with tusk " + tusk + " meters long";
     }
 
 }

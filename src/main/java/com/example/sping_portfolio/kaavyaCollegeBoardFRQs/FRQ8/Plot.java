@@ -17,4 +17,5 @@ public class Plot {
     public int getCropYield() {
         return cropYield;
     }
+
 }

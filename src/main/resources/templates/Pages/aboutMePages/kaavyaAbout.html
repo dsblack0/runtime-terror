@@ -300,6 +300,73 @@
             </h2>
             <form action="/kaavyaAbout" method="GET" id="frq7">
                 <div>
+                    <label for = "firstName" style="color: teal;">First Name</label>
+                    <input name="firstName" id="firstName">
+                    <label for = "lastName" style="color: teal;">Last Name</label>
+                    <input name="lastName" id="lastName">
+                    <button>Get Results</button>
+                    <p><b th:text="'Possible Usernames: ' + ${usernames[1]}" style="color: teal;"></b></p>
+                </div>
+            </form>
+        </div>
+        <div class="container" style="margin: 30px">
+            <h2>
+                FRQ#8
+            </h2>
+            <form action="/kaavyaAbout" method="GET" id="frq8">
+                <div>
+                        <label for = "cropType" style="color: teal;">Crop type</label>
+                        <input name="cropType" id="cropType">
+                    <label for = "rowNum" style="color: teal;">Row Number</label>
+                    <input name="rowNum" id="rowNum">
+                        <button>Get Results</button>
+                        <p><b th:text="'Highest Yield: ' + ${highestyield.getCropYield()}" style="color: teal;"></b></p>
+                    <p><b th:text="'Same crop: ' + ${samecrop}" style="color: teal;"></b></p>
+                </div>
+            </form>
+        </div>
+        <div class="container" style="margin: 30px">
+            <h2>
+                FRQ#9
+            </h2>
+            <form action="/kaavyaAbout" method="GET" id="frq9_1">
+                <div>
+                    <label for = "title" style="color: teal;">Book Title</label>
+                    <input name="title" id="title">
+                    <author for = "author" style="color: teal;">Author</author>
+                    <input name="author" id="author">
+                    <label for = "illustrator" style="color: teal;">Illustrator</label>
+                    <input name="illustrator" id="illustrator">
+                    <label for = "cost" style="color: teal;">cost</label>
+                    <input name="cost" id="cost">
+                    <button>Print Booklisting</button>
+                    <p><b th:text="'Booklisting: ' + ${booklisting}" style="color: teal;"></b></p>
+                </div>
+            </form>
+            <form action="/kaavyaAbout" method="GET" id="frq9_2">
+                <div>
+                    <label for = "species" style="color: teal;">Species name</label>
+                    <input name="species" id="species">
+                    <label for = "animalName" style="color: teal;">Animal name</label>
+                    <input name="animalName" id="animalName">
+                    <label for = "carnivore" style="color: teal;">Carnivore? </label>
+                    <select name="carnivore" id="carnivore">
+                        <option value="carnivore">Yes</option>
+                        <option value="herbivore">No</option>
+                    </select>
+                    <label for = "trunkLen" style="color: teal;">Trunk length (only if elephant)</label>
+                    <input name="trunkLen" id="trunkLen">
+                    <button>Print info</button>
+                    <p><b th:text="'Animal : ' + ${animalinfo}" style="color: teal;"></b></p>
+                </div>
+            </form>
+        </div>
+        <div class="container" style="margin: 30px">
+            <h2>
+                FRQ#10
+            </h2>
+            <form action="/kaavyaAbout" method="GET" id="frq10">
+                <div>
                 </div>
             </form>
         </div>

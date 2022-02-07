@@ -6,9 +6,16 @@ public class BookListing {
     private double cost;
     private String description;
 
-    public String printDescription (Book bookObj, double cost){
+    public BookListing(Book bookObj, double cost) {
         this.bookObj = bookObj;
         this.cost = cost;
+    }
+
+    public Book getBookObj() {
+        return bookObj;
+    }
+
+    public String printDescription (){
         description = bookObj.printBookInfo() + ", $" + cost;
         return description;
     }
