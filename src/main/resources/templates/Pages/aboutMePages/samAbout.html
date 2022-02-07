@@ -11,7 +11,6 @@
             height: auto;
             width: auto;
             background: linear-gradient(#1c1dd5, #565cd7, #9fa3e1);
-            font-family: monospace;
         }
 
         .picture-card {
@@ -22,21 +21,39 @@
         input[type='checkbox'] {
             display: none;
         }
-        .unit-two, .unit-three, .unit-four, .unit-five, .unit-six, .unit-seven {
+        .unit-two, .unit-three, .unit-four, .unit-five, .unit-six, .unit-seven, .unit-eight, .unit-nine, .unit-ten {
             display: block;
             font-family: monospace;
             text-transform: uppercase;
             color: white;
+            text-align: justify-all;
+            height: 25px;
             background-color: #1c1dd5;
         }
-        .two-content, .three-content, .four-content, .five-content, .six-content, .seven-content {
+        .two-content, .three-content, .four-content, .five-content, .six-content, .seven-content, .eight-content, .nine-content, .ten-content {
             max-height: 0px;
             overflow: hidden;
 
             transition: max-height .25s ease-in-out;
         }
-        .two:checked + .unit-two + .two-content, .three:checked + .unit-three + .three-content, .four:checked + .unit-four + .four-content, .five:checked + .unit-five + .five-content, .six:checked + .unit-six + .six-content, .seven:checked + .unit-seven + .seven-content {
+        .two:checked + .unit-two + .two-content, .three:checked + .unit-three + .three-content, .four:checked + .unit-four + .four-content, .five:checked + .unit-five + .five-content, .six:checked + .unit-six + .six-content, .seven:checked + .unit-seven + .seven-content, .eight:checked + .unit-eight +.eight-content, .nine:checked + .unit-nine + .nine-content, .ten:checked + .unit-ten + .ten-content {
             max-height: 100vh;
+        }
+        td {
+            border: 2px solid #1c1dd5;
+            text-align: center;
+            color: #1c1dd5;
+        }
+        th {
+            text-align: center;
+            color: #1c1dd5;
+            font-size: larger;
+        }
+        .button {
+            background-color: #1c1dd5;
+            color: white;
+            border-radius: 40px;
+            border-color: #1c1dd5;
         }
     </style>
     <script>
@@ -90,35 +107,35 @@
 </div>
 </head>
 
-<body><div layout:fragment="content" th:remove="tag">
+<body><div layout:fragment="content" th:remove="tag" style="font-family: monospace;">
     <div class="info-about-me" style="width:500px;  margin: auto;">
-         <div class="picture-card" style="margin-top: 50px;">
+         <div class="picture-card" style="margin-top: 50px; border:2px solid #1c1dd5;">
              <div style="width:100%; text-align:center">
                 <img id="sam" class="img-responsive py-3" th:src="@{/images/samaboutme_mask.jpg}" width="50%" height="Auto" alt="" style="width:50%; height:50%;">
                 <form action="/samAbout" method="GET" id="samForm">
                  <div>
                      <label for="name">What is you name?</label>
                      <input name="name" id="name">
-                     <button>Answer</button>
-                     <input type="button"  onclick="changeImage();" value="Greet">
+                     <button class="button">Answer</button>
+                     <input class="button" type="button"  onclick="changeImage();" value="Greet">
                      <p th:text="'Hi, ' + ${name} + '! My name is Sam.'"></p>
                  </div>
              </form>
              </div>
          </div>
-        <table class="table" style="margin-top: 25px;">
+        <table class="table" style="margin-top: 25px; background-color: #565cd7; border:2px solid #1c1dd5;">
             <tr>
             <td th:text="${quotes}" style="color: white;"></td>
             </tr>
         </table>
         <div class="row justify-content-md-center" style="margin-top: 10px;">
             <form action="/samAbout" method="GET" id="quoteForm">
-                <button>Get Quote!</button>
+                <button class="button">Get Quote!</button>
             </form>
         </div>
     </div>
     <div class="info" style="margin-top: 20px; text-align: center; background-color: #1c1dd5;">
-        <p><a href=https://github.com/dsblack0/runtime-terror/wiki/0-Sam-Individual-Journal style="color: white;">CB FRQs/Journal</a></p>
+        <p><a href=https://github.com/dsblack0/runtime-terror/wiki/0-Sam-Individual-Journal style="color: white;">Individual Journal</a></p>
         <p><a href=https://github.com/dsblack0/runtime-terror/tree/master/src/main/java/com/example/sping_portfolio/controllers/samAboutMe style="color: white;">FRQ Java Code</a></p>
         <p><a href=https://github.com/dsblack0/runtime-terror/commits?author=dsblack0 style="color: white;">Project Contributions</a></p>
     </div>
@@ -126,21 +143,21 @@
     <input id="unit-2" class="two" type="checkbox">
     <label for="unit-2" class="unit-two" style="color: white; margin-top: 20px; width: 100%; text-align: center;">Unit 2</label>
         <div class="two-content" style="margin-left: 50px;">
-            <h2 style="color: white;">Light Sequence</h2>
+            <h2 style="color: #1c1dd5; font-weight: bolder;">Light Sequence</h2>
             <form action="/samAbout" method="GET" id="changesegment">
                 <div>
                     <label for="name" style="color: white;">Original sequence?</label>
                     <input name="oldSeq" id="oldSeq">
                     <label for="name" style="color: white;">Pick a segment to remove</label>
                     <input name="segment" id="segment">
-                    <p><b th:text="'New sequence: ' + ${newSeq}" style="color: white;"></b></p>
-                    <p><b th:text="'Original sequence: ' + ${oldSeq}" style="color: white;"></b></p>
+                    <p><b th:text="'New sequence: ' + ${unit2[0]}" style="color: white;"></b></p>
+                    <p><b th:text="'Original sequence: ' + ${unit2[1]}" style="color: white;"></b></p>
                     <label for="name" style="color: white;">Pick a segment to insert</label>
                     <input name="instsegment" id="instsegment">
                     <label for="name" style="color: white;">Index?</label>
                     <input name="ind" id="ind">
-                    <button>Answer</button>
-                    <p><b th:text="'Resulting sequence: ' + ${resultSeq}" style="color: white;"></b></p>
+                    <button class="button">Answer</button>
+                    <p><b th:text="'Resulting sequence: ' + ${unit2[2]}" style="color: white;"></b></p>
                 </div>
             </form>
             <form>
@@ -148,17 +165,16 @@
                     <label for="name" style="color: white;">Pick to numbers to find their distance</label>
                     <input name="num1" id="num1">
                     <input name="num2" id="num2">
-                    <button>Answer</button>
-                    <p><b th:text="'Distance from ' + ${num1} + ' to ' + ${num2} + '= ' + ${distance}" style="color: white;"></b></p>
+                    <button class="button">Answer</button>
+                    <p><b th:text="'Distance from ' + ${unit2[3]} + ' to ' + ${unit2[4]} + '= ' + ${unit2[5]}" style="color: white;"></b></p>
                 </div>
             </form>
         </div>
-    </label>
     <!-- Unit 3-->
     <input id="unit-3" class="three" type="checkbox">
     <label for="unit-3" class="unit-three" style="color: white; margin-top: 20px; width: 100%; text-align: center;">Unit 3</label>
         <div class="three-content" style="margin-left: 50px;">
-            <h2 style="color: white;">Party Invitation</h2>
+            <h2 style="color: #1c1dd5; font-weight: bolder;">Party Invitation</h2>
             <h5 style="color: white;">Set Option 1 of Preferences</h5>
             <form action="/samAbout" method="GET" id="attendance">
                 <div style="margin-left: 10px;">
@@ -169,7 +185,7 @@
                     </select>
                     <p class="foodselection" style="color: white;">What food will you want? Input an integer</p>
                     <input name="foodselection" id="foodselection">
-                    <p><b th:text="${option1}" style="color: white;"></b></p>
+                    <p><b th:text="${unit3[0]}" style="color: white;"></b></p>
                 </div>
                 <h5 style="color: white;">Set Option 2 of Preferences</h5>
                 <div style="margin-left: 10px;">
@@ -180,9 +196,9 @@
                     </select>
                     <p class="foodselection2" style="color: white;">What food will you want? Input an integer</p>
                     <input name="foodselection2" id="foodselection2">
-                    <button>Answer</button>
-                    <p><b th:text="${option2}" style="color: white;"></b></p>
-                    <p><b th:text="'Option1 = Option2: ' + ${compare}" style="color: white"></b></p>
+                    <button class="button">Answer</button>
+                    <p><b th:text="${unit3[1]}" style="color: white;"></b></p>
+                    <p><b th:text="'Option1 = Option2: ' + ${unit3[2]}" style="color: white"></b></p>
                 </div>
             </form>
         </div>
@@ -190,36 +206,36 @@
     <input id="unit-4" class="four" type="checkbox">
     <label for="unit-4" class="unit-four" style="color: white; margin-top: 20px; width: 100%; text-align: center;">Unit 4</label>
         <div class="four-content" style="margin-left: 50px;">
-            <h2 style="color: white;">Longest Streak</h2>
+            <h2 style="color: #1c1dd5; font-weight: bolder;">Longest Streak</h2>
             <form action="/samAbout" method="GET" id="streak">
                 <div style="margin-left: 10px;">
                     <p class="originalString" style="color: white;">Input a string to find its longest streak</p>
                     <input name="originalString" id="originalString">
-                    <button>Answer</button>
+                    <button class="button">Answer</button>
                     <p style="color:white;">Default string: CAAAAATTT!</p>
-                    <p><b th:text="'Longest Streak ' + ${resultStreak}" style="color: white;"></b></p>
+                    <p><b th:text="'Longest Streak ' + ${unit4[0]}" style="color: white;"></b></p>
                 </div>
             </form>
-            <h2 style="color: white;">Coin Game</h2>
+            <h2 style="color: #1c1dd5; font-weight: bolder;">Coin Game</h2>
             <form action="/samAbout" method="GET" id="coingame">
                 <div style="margin-left: 10px;">
                     <p class="Coins" style="color: white;">What is your starting amount of coins?</p>
                     <input name="Coins" id="Coins">
                     <p class="Rounds" style="color: white;">How many rounds will you have?</p>
                     <input name="Rounds" id="Rounds">
-                    <button>Answer</button>
+                    <button class="button">Answer</button>
                     <p style="color:white;">Default values: Starting coins = 10 & Rounds = 5</p>
-                    <p><b th:text="'Player 1 played ' + ${p1Move} + ' coins in their last round'" style="color: white;"></b></p>
-                    <p><b th:text="'Player 2 played ' + ${p2Move} + ' coins in their last round'" style="color: white;"></b></p>
-                    <p><b th:text="'Game Result: ' + ${gameResult}" style="color: white;"></b></p>
+                    <p><b th:text="'Player 1 played ' + ${unit4[1]} + ' coins in their last round'" style="color: white;"></b></p>
+                    <p><b th:text="'Player 2 played ' + ${unit4[2]} + ' coins in their last round'" style="color: white;"></b></p>
+                    <p><b th:text="'Game Result: ' + ${unit4[3]}" style="color: white;"></b></p>
                 </div>
             </form>
         </div>
     <!-- Unit 5-->
-    <input id="unit-5" class="five" type="checkbox">
+  <input id="unit-5" class="five" type="checkbox">
     <label for="unit-5" class="unit-five" style="color: white; margin-top: 20px; width: 100%; text-align: center;">Unit 5</label>
         <div class="five-content" style="margin-left: 50px;">
-            <h2 style="color: white;">Invitation</h2>
+            <h2 style="color: #1c1dd5; font-weight: bolder;">Invitation</h2>
             <form action="/samAbout" method="GET" id="invite">
                 <div style="margin-left: 10px;">
                     <p class="hostName" style="color: white;">Who is the host?</p>
@@ -228,39 +244,38 @@
                     <input name="inviteName" id="inviteName">
                     <p class="address" style="color: white;">What is the address?</p>
                     <input name="address" id="address">
-                    <button onclick="unit5()">Answer</button>
-                    <p><b id="unit5" th:text="${invite}" style="color: white;"></b></p>
+                    <button onclick="unit5()" class="button">Answer</button>
+                    <p><b id="unit5" th:text="${unit5[0]}" style="color: white;"></b></p>
                 </div>
             </form>
-            <h2 style="color: white;">Password Generator</h2>
+            <h2 style="color: #1c1dd5; font-weight: bolder;">Password Generator</h2>
             <form action="/samAbout" method="GET" id="passwordGen">
                 <div style="margin-left: 10px;">
                     <p class="prefix" style="color: white;">What is your desired prefix?</p>
                     <input name="prefix" id="prefix">
                     <p class="length" style="color: white;">How long do you want your password to be?</p>
                     <input name="length" id="length">
-                    <button>Answer</button>
-                    <p><b id="password" th:text="'Random Password: ' + ${pwd}" style="color: white;"></b></p>
-                  <!--  <p><b id="passCount" th:text="'Number of Passwords Generated: ' + ${unit5.pwdCount()}" style="color: white;"></b></p> -->
-                </div>
+                    <button class="button">Answer</button>
+                    <p><b id="password" th:text="'Random Password: ' + ${unit5[1]}" style="color: white;"></b></p>
+                  </div>
             </form>
         </div>
     <!-- Unit 6-->
-    <input id="unit-6" class="six" type="checkbox">
+ <input id="unit-6" class="six" type="checkbox">
     <label for="unit-6" class="unit-six" style="color: white; margin-top: 20px; width: 100%; text-align: center;">Unit 6</label>
         <div class="six-content" style="margin-left: 50px;">
-            <h2 style="color: white;">Word Select</h2>
+            <h2 style="color: #1c1dd5; font-weight: bolder;">Word Select</h2>
             <form action="/samAbout" method="GET" id="words">
                 <div style="margin-left: 10px;">
                     <p class="wordsList" style="color: white;">Input a list of words separated with commas (Default List: ten,fading,post,card,thunder,hinge,trailing,batting)</p>
                     <input name="wordsList" id="wordsList">
                     <p class="wordsEnding" style="color: white;">Pick a word ending (Default: ing)</p>
                     <input name="wordsEnding" id="wordsEnding">
-                    <button>Answer</button>
-                    <p><b th:text="${resultWords}" style="color: white;"></b></p>
+                    <button class="button">Answer</button>
+                    <p><b th:text="${unit6[0]}" style="color: white;"></b></p>
                 </div>
             </form>
-            <h2 style="color: white;">Payroll</h2>
+            <h2 style="color: #1c1dd5; font-weight: bolder;">Payroll</h2>
             <form action="/samAbout" method="GET" id="payroll">
                 <div style="margin-left: 10px;">
                     <p class="itemsSold" style="color: white;">Input a list of amounts of items sold for different employees. Separate each integer with a comma. (Default: 48, 50, 37, 62, 38, 70, 55, 37, 64, 60)</p>
@@ -271,9 +286,12 @@
                     <input name="perItemWage" id="perItemWage">
                     <p class="employeeIndex" style="color: white;">In your list, what is the index of the employees who's wage you want to find? (Default: 9)</p>
                     <input name="employeeIndex" id="employeeIndex">
-                    <button>Answer</button>
-                    <p><b th:text="'BonusThreshold: ' +${bonusThreshold}" style="color: white;"></b></p>
-                    <p><b th:text="'Wage: ' +${wage}" style="color: white;"></b></p>
+                    <button class="button">Answer</button>
+                    <p style="color: white">Bonus Threshold = Average items sold excluding the highest & lowest amounts sold.</p>
+                    <p><b th:text="'BonusThreshold: ' +${unit6[1]}" style="color: white;"></b></p>
+                    <p style="color: white">Wage = fixedWage + (perItemWage * itemsSold)</p>
+                    <p style="color: white">If more than the bonus threshold is sold, the employee gets a 10% bonus.</p>
+                    <p><b th:text="'Wage: ' +${unit6[2]}" style="color: white;"></b></p>
                 </div>
             </form>
         </div>
@@ -281,21 +299,115 @@
     <input id="unit-7" class="seven" type="checkbox">
     <label for="unit-7" class="unit-seven" style="color: white; margin-top: 20px; width: 100%; text-align: center;">Unit 7</label>
     <div class="seven-content" style="margin-left: 50px;">
-        <h2 style="color: white;">Get UserNames</h2>
+        <h2 style="color: #1c1dd5; font-weight: bolder;">Get UserNames</h2>
         <form action="/samAbout" method="GET" id="userNames">
             <div style="margin-left: 10px;">
                 <p class="firstName" style="color: white;">Input your firstname (Default: john)</p>
                 <input name="firstName" id="firstName">
                 <p class="lastName" style="color: white;">Input your lastname (Default: smith)</p>
                 <input name="lastName" id="lastName">
-                <p><b th:text="'Possible UserNames Set 1: ' + ${possibleNames1}" style="color: white;"></b></p>
+                <p><b th:text="'Possible UserNames Set 1: ' + ${unit7[0]}" style="color: white;"></b></p>
                 <p class="firstName2" style="color: white;">Input your second firstname (Default: johnson)</p>
                 <input name="firstName2" id="firstName2">
                 <p class="lastName2" style="color: white;">Input your second lastname (Default: smith)</p>
                 <input name="lastName2" id="lastName2">
                 <p style="color: white;">Eliminating all repeated usernames...</p>
-                <p><b th:text="'Possible UserNames Set 2: ' + ${possibleNames2}" style="color: white;"></b></p>
-                <button>Answer</button>
+                <p><b th:text="'Possible UserNames Set 2: ' + ${unit7[1]}" style="color: white;"></b></p>
+                <button class="button">Answer</button>
+            </div>
+        </form>
+    </div>
+    <!-- Unit 8-->
+    <input id="unit-8" class="eight" type="checkbox">
+    <label for="unit-8" class="unit-eight" style="color: white; margin-top: 20px; width: 100%; text-align: center;">Unit 8</label>
+    <div class="eight-content" style="margin-left: 50px;">
+        <h2 style="color: #1c1dd5; font-weight: bolder;">Experimental Farm Plots</h2>
+        <form action="/samAbout" method="GET" id="farmplots">
+            <div style="margin-left: 10px;">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>0</th>
+                        <th>1</th>
+                        <th>2</th>
+                    </tr>
+                    <tr>
+                        <th>0</th>
+                        <td>corn-20</td>
+                        <td>corn-30</td>
+                        <td>peas-10</td>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <td>peas-70</td>
+                        <td>corn-40</td>
+                        <td>corn-62</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>wheat-60</td>
+                        <td>corn-50</td>
+                        <td>rice-30</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>corn-55</td>
+                        <td>corn-30</td>
+                        <td>peas-30</td>
+                    </tr>
+                </table>
+                <p class="cropType" style="color: white;">Input a crop type to find which plot will produce the highest yield. (Default: corn)</p>
+                <select name="cropType" id="cropType">
+                    <option value="corn">Corn</option>
+                    <option value="peas">Peas</option>
+                    <option value="wheat">Wheat</option>
+                    <option value="rice">Rice</option>
+                </select>
+                <p><b th:text="'Plot with highest yield of ' +${unit8[0]}+ ' is at ' + ${unit8[1]}" style="color: white;"></b></p>
+                <p class="column" style="color: white;">Pick a column number to see if all the plots produce the same crop. (Default: 1)</p>
+                <select name="column" id="column">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+                <p><b th:text="'All the plots in column ' +${unit8[2]}+ ' have the same crop: ' + ${unit8[3]}" style="color: white;"></b></p>
+                <button class="button">Answer</button>
+            </div>
+        </form>
+    </div>
+    <!-- Unit 9-->
+    <input id="unit-9" class="nine" type="checkbox">
+    <label for="unit-9" class="unit-nine" style="color: white; margin-top: 20px; width: 100%; text-align: center;">Unit 9</label>
+    <div class="nine-content" style="margin-left: 50px;">
+        <h2 style="color: #1c1dd5; font-weight: bolder;">Animal Information</h2>
+            <p th:text="${unit9a[0]}" style="margin-left: 10px; color: white;"></p>
+        <h6 style="color: white; font-weight: bold;">Herbivores</h6>
+            <p th:text="${unit9a[1]}" style="margin-left: 10px; color: white;"></p>
+            <p th:text="${unit9a[3]}" style="margin-left: 10px; color: white;"></p>
+        <h6 style="color: white; font-weight: bold;">Elephants (with tusk lengths)</h6>
+            <p th:text="${unit9a[2]}" style="margin-left: 10px; color: white;"></p>
+            <p th:text="${unit9a[4]}" style="margin-left: 10px; color: white;"></p>
+        <h2 style="color: #1c1dd5; font-weight: bolder;">Book Information</h2>
+            <p th:text="${unit9b[1]}" style="margin-left: 10px; color: white;"></p>
+        <h6 style="color: white; font-weight: bold;">Books with Illustrators</h6>
+            <p th:text="${unit9b[0]}" style="margin-left: 10px; color: white;"></p>
+            <p th:text="${unit9b[2]}" style="margin-left: 10px; color: white;"></p>
+        <h6 style="color: white; font-weight: bold;">Book Price Listings</h6>
+            <p th:text="${unit9c[0]}" style="color: white; margin-left: 10px"></p>
+            <p th:text="${unit9c[1]}" style="color: white; margin-left: 10px"></p>
+    </div>
+    <!-- Unit 10-->
+    <input id="unit-10" class="ten" type="checkbox">
+    <label for="unit-10" class="unit-ten" style="color: white; margin-top: 20px; width: 100%; text-align: center;">Unit 10</label>
+    <div class="ten-content" style="margin-left: 50px;">
+        <h2 style="color: #1c1dd5; font-weight: bolder;">Number Systems</h2>
+        <form action="/samAbout" method="GET" id="numberSystems">
+            <div style="margin-left: 10px;">
+                <p class="fraction" style="color: white;">Input a fraction to reduce it and find the numerator's and denominator's Greatest Common Factor (Default: 30/3)</p>
+                <input name="fraction" id="fraction">
+                <button class="button">Answer</button>
+                <p><b th:text="'GCF of numerator & denominator: ' + ${unit10[0]}" style="color: white;"></b></p>
+                <p><b th:text="'Reduced Fraction: ' + ${unit10[1]}" style="color: white;"></b></p>
             </div>
         </form>
     </div>
