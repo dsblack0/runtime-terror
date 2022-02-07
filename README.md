@@ -43,19 +43,19 @@
 | Name | Requirement | Evidence | Complete | Grade |
 | ---   | ---        | ---      | ---        | ---   |
 | Sami | FRQ Crossover | | <ul><li>[ ] DONE</li></ul> | |
-| Rachel | FRQ Crossover | | <ul><li>[ ] DONE</li></ul> | |
+| Rachel | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/76) | <ul><li>[x] DONE</li></ul> | |
 | Adrita | FRQ Crossover | | <ul><li>[ ] DONE</li></ul> | |
 | Kaavya | FRQ Crossover | | <ul><li>[ ] DONE</li></ul> | |
-| Sam | FRQ Crossover | | <ul><li>[ ] DONE</li></ul> | |
+| Sam | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/77) | <ul><li>[x] DONE</li></ul> | |
 
 ## Week 7 - FRQ Showing 1 (Indi/Pair/Trio)
 | Name | Requirement | Evidence | Complete | Grade |
 | ---   | ---        | ---      | ---        | ---   |
-| Sami | FRQ | | <ul><li>[ ] DONE</li></ul> | |
-| Rachel | FRQ | | <ul><li>[ ] DONE</li></ul> | |
-| Adrita | FRQ | | <ul><li>[ ] DONE</li></ul> | |
-| Kaavya | FRQ | | <ul><li>[ ] DONE</li></ul> | |
-| Sam | FRQ | | <ul><li>[ ] DONE</li></ul> | |
+| Sami | FRQ | | <ul><li>[x] DONE</li></ul> | |
+| Rachel | FRQ | | <ul><li>[x] DONE</li></ul> | |
+| Adrita | FRQ | | <ul><li>[x] DONE</li></ul> | |
+| Kaavya | FRQ | | <ul><li>[x] DONE</li></ul> | |
+| Sam | FRQ | | <ul><li>[x] DONE</li></ul> | |
 
 
 ## Week 6 - Mid Term FRQ and Vocab
@@ -66,7 +66,7 @@
 | Adrita | FRQ 1-6 | | <ul><li>[x] DONE</li></ul> | |
 | Kaavya | FRQ 1-6 | | <ul><li>[x] DONE</li></ul> | |
 | Sam | FRQ 1-6 | | <ul><li>[x] DONE</li></ul> | |
-| Sami & Kaavya | Pair Midterm Vocab | | <ul><li>[x] DONE</li></ul> | |
+| Sami & Kaavya | Pair Midterm Vocab | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Week-6-Midterm-(Kaavya-and-Sami)) | <ul><li>[x] DONE</li></ul> | |
 | Adrita & Sam & Rachel | Trio Midterm Vocab | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Week-6-Midterm-(Adrita,-Sam,-Rachel)) | <ul><li>[x] DONE</li></ul> | |
 
 ## Week 5 - PBL showing the How, Theme, Technicals
