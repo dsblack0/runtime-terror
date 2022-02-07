@@ -78,10 +78,10 @@
 ## Week 8 - FRQ Showing 2 (Indi to Indi, outside of previous Pair/Trio)
 | Name | Requirement | Evidence | Complete |
 | ---   | ---        | ---      | ---        |
-| Sami | FRQ Crossover | | <ul><li>[ ] DONE</li></ul> | 
+| Sami | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/81) | <ul><li>[ ] DONE</li></ul> | 
 | Rachel | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/76) | <ul><li>[x] DONE</li></ul> | 
-| Adrita | FRQ Crossover | | <ul><li>[ ] DONE</li></ul> | 
-| Kaavya | FRQ Crossover | | <ul><li>[ ] DONE</li></ul> | 
+| Adrita | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/79) | <ul><li>[ ] DONE</li></ul> | 
+| Kaavya | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/80) | <ul><li>[ ] DONE</li></ul> | 
 | Sam | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/77) | <ul><li>[x] DONE</li></ul> | 
 
 ## Week 7 - FRQ Showing 1 (Indi/Pair/Trio)
