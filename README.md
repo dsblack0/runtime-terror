@@ -16,10 +16,9 @@
 > | 8 | [Week 6](https://github.com/dsblack0/runtime-terror#week-6---mid-term-frq-and-vocab) |
 > | 9 | [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) |
 > | 10 | [Week 8](https://github.com/dsblack0/runtime-terror#week-8---frq-showing-2-indi-to-indi-outside-of-previous-pairtrio) |
-> | 11 | [Week 9]() |
-> | 12 | [Week 10]() |
-> | 13 | [Week 11]() |
-> | 14 | [Week 12]() |
+> | 11 | [Week 9](https://github.com/dsblack0/runtime-terror#week-9---pbl-part-1) |
+> | 12 | [Week 10](https://github.com/dsblack0/runtime-terror#week-10---pbl-part-2) |
+> | 13 | [Week 11](https://github.com/dsblack0/runtime-terror#week-11---team-final) |
 
 ## Project Info and Notable Links
 [Runtime](http://www.dnclubsearch.tech/)
@@ -49,7 +48,7 @@
 | Kaavya | [@KaavyaU](https://github.com/KaavyaU) | [Tickets](https://github.com/dsblack0/runtime-terror/issues/assigned/KaavyaU) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1?card_filter_query=assignee%3AKaavyaU) | [Commits](https://github.com/dsblack0/runtime-terror/commits?author=KaavyaU) | Deployment Manager |
 
 
-## Week 12 - Team Final
+## Week 11 - Team Final
 | Name | Requirement | Evidence | Complete |
 | ---   | ---        | ---      | ---        |
 | Sami | | | <ul><li>[ ] DONE</li></ul> | 
@@ -58,7 +57,7 @@
 | Kaavya | | | <ul><li>[ ] DONE</li></ul> | 
 | Sam | | | <ul><li>[ ] DONE</li></ul> |
 
-## Week 11 - PBL Part 2
+## Week 10 - PBL Part 2
 | Name | Requirement | Evidence | Complete |
 | ---   | ---        | ---      | ---        |
 | Sami | | | <ul><li>[ ] DONE</li></ul> | 
