@@ -102,8 +102,8 @@
 | Adrita | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) | <ul><li>[x] DONE</li></ul> | 
 | Kaavya | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) | <ul><li>[x] DONE</li></ul> | 
 | Sam | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) | <ul><li>[x] DONE</li></ul> | 
-| Sami & Kaavya | Pair Midterm Vocab | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Week-6-Midterm-(Kaavya-and-Sami)) | <ul><li>[x] DONE</li></ul> | 
-| Adrita & Sam & Rachel | Trio Midterm Vocab | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Week-6-Midterm-(Adrita,-Sam,-Rachel)) | <ul><li>[x] DONE</li></ul> | 
+| Sami & Kaavya | Pair Midterm Vocab | [Ticket](https://github.com/dsblack0/runtime-terror/issues/78), [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Week-6-Midterm-(Kaavya-and-Sami)) | <ul><li>[x] DONE</li></ul> | 
+| Adrita & Sam & Rachel | Trio Midterm Vocab | [Ticket](https://github.com/dsblack0/runtime-terror/issues/78), [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Week-6-Midterm-(Adrita,-Sam,-Rachel)) | <ul><li>[x] DONE</li></ul> | 
 
 ## Week 5 - PBL showing the How, Theme, Technicals
 
