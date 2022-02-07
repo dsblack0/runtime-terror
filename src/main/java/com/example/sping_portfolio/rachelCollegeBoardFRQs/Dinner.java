@@ -68,6 +68,15 @@ public class Dinner {
         return null;
     }
 
+    public static void main(String[] args) {
+        Dinner unit3frq1 = new Dinner();
+        unit3frq1.printSelection(3);
+        unit3frq1.dinnerOption1(true,2);
+        unit3frq1.dinnerOption2(true,1);
+        unit3frq1.compare();
+
+    }
+
 }
 
 
