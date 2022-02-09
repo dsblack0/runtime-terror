@@ -3,6 +3,8 @@ package com.example.sping_portfolio.controllers.samAboutMe;
 public class Unit4Streak {
     static char streakCharacter = ' ';
     static int length = 0;
+    static int startingIndex;
+    static int endingIndex;
 
     public Unit4Streak(String name) {
     }
@@ -11,8 +13,6 @@ public class Unit4Streak {
         char character = '_';
         String largestStreak = "";
         String currentStreak = "";
-        int endingIndex = 0;
-        int startingIndex = 0;
 
         for (int i=0; i < str.length(); i++) {
             if (str.charAt(i) != character) {
@@ -30,15 +30,20 @@ public class Unit4Streak {
         streakCharacter = largestStreak.charAt(0);
         startingIndex = str.indexOf(largestStreak);
         length = largestStreak.length();
-        System.out.println("Char: " + streakCharacter + length + " Start: " + startingIndex + " End: " + endingIndex);
         return streakCharacter;
+    }
+
+    public static String streakInfo() {
+        return "Char: " + streakCharacter + length + " Start: " + startingIndex + " End: " + endingIndex;
     }
 
     public static int displayLength() {
         return length;
     }
 
-    /* public static void main(String[] args) {
-        longestStreak("CCAACAAAATTT!");
-    } */
+    public static void main(String[] args) {
+        Unit4Streak streak = new Unit4Streak("streak1");
+        streak.longestStreak("CAAAAAATT!");
+        System.out.println(streak.streakInfo());
+    }
 }

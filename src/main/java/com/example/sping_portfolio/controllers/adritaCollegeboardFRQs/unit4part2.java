@@ -1,4 +1,4 @@
-package com.example.sping_portfolio.adritaCollegeboardFRQs;
+package com.example.sping_portfolio.controllers.adritaCollegeboardFRQs;
 
 public class unit4part2 {
     private int start;
