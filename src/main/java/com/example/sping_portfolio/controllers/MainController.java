@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MainController {
+    //Team About Us Page
     @GetMapping ("/teamAbout")
     public String teamAbout(@RequestParam(name="inputx", required = false, defaultValue = "0") String inputx,
                             @RequestParam(name="inputy", required = false, defaultValue = "0") String inputy,
@@ -23,5 +24,10 @@ public class MainController {
 
         return "Pages/aboutMePages/teamAbout";
     }
+
+  /*  @GetMapping ("/reviewsPage")
+    public String reviewsPage(@RequestParam(name="clubName", required = false, defaultValue = "") String clubName, Model model) {
+
+    } */
 }
 
