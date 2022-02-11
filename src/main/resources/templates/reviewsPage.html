@@ -9,21 +9,22 @@
 <body>
 <div layout:fragment="content" th:remove="tag">
     <div class="review-box" style="width: 95%">
-        <h2>Club Name</h2>
-        <p>Review Content: This is going to be a block of text probably of varying length where the main actually content of the review is.</p>
-        <p>Additional information about club</p>
-        <p>Reviewed By: Name</p>
+        <h2 th:text="${information[0]}">Club Name</h2>
+        <p th:text="${information[1]}">Review Content: This is going to be a block of text probably of varying length where the main actually content of the review is.</p>
+        <p th:text="${information[2]}">Additional information about club</p>
+        <p th:text="${information[3]}">Reviewed By: Name</p>
     </div><
     <div class="add-reviews" style="width:95%">
         <h5>Write your own review for a club</h5>
         <label for="club-name">Club Name?</label>
         <input name="club-name" id="club-name">
-        <label for="club-q1">Why should people join this club?</label>
+        <label for="club-q1" >Why should people join this club?</label>
         <input name="club-q1" id="club-q1">
         <label for="club-q2">Is there additional information you would like people to know about this club?</label>
         <input name="club-q2" id="club-q2">
         <label for="reviewer-name">Name? (You can choose to remain anonymous)</label>
         <input name="reviewer-name" id="reviewer-name">
+        <button>Answer</button>
     </div>
 </div>
 </body>
