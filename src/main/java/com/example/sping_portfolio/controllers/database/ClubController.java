@@ -27,6 +27,9 @@ public class ClubController implements WebMvcConfigurer {
         return "/database";
     }
 
-    @GetMapping("")
-
+    @GetMapping("/database/clubcreate")
+    public String clubAdd(Club club) {
+        return "/database/clubcreate";
+    }
+    //ask which one of the GetMappings are actually relevant to the base code
 }
