@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <div th:replace="fragments/head :: header"></div>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background: #96d7c6;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            background: #2c6975;
+            color: white;
+            margin: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        clubName {
+            background-color: #17a2b8;
+            padding: 30px;
+            margin: 20 px;
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        aboutClub {
+            background-color: #17a2b8;
+            padding: 30px;
+            margin: 20 px;
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        notableLinks {
+            background-color: #17a2b8;
+            list-style-type: none;
+            padding: 0;
+            margin: 20px;
+        }
+
+        aboutClub {
+            background-color: #17a2b8;
+            float: left;
+            padding: 20px;
+            width: 70%;
+            margin: 20px;
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px; /* only for demonstration, should be removed */
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px;
+        }
+
+        footer {
+            background: #2c6975;
+            color: #f7cb2d;
+        }
+    </style>
+</head>
+<body>
+    <div th:replace="fragments/nav :: header"></div>
+    <div clas="clubName" layout:fragment="clubName">
+        <h1>Club Name</h1>
+    </div>
+    <div class="aboutClub" layout:fragment="aboutClub">
+        <section>
+            About Club
+        </section>
+    </div>
+    <div class="notableLinks" layout:fragment="notableLinks">
+        <section>
+            <nav>
+                <ul>
+                    Notable Links
+                </ul>
+            </nav>
+    </div>
+    <!--
+    <div class="clubDetails" layout:fragment="clubDetails">
+        <section>Club Details</section>
+    </div>
+    -->
+
+</body>
+</html>
