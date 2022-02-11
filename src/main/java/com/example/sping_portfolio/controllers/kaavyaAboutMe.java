@@ -1,7 +1,11 @@
 package com.example.sping_portfolio.controllers;
 
 import com.example.sping_portfolio.kaavyaCollegeBoardFRQs.*;
+import com.example.sping_portfolio.kaavyaCollegeBoardFRQs.FRQ8.ExperimentalFarm;
+import com.example.sping_portfolio.kaavyaCollegeBoardFRQs.FRQ8.Plot;
+import com.example.sping_portfolio.kaavyaCollegeBoardFRQs.FRQ9.*;
 import com.example.sping_portfolio.kaavyaCollegeBoardFRQs.LightSequence;
+import jdk.jfr.Experimental;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,6 +35,21 @@ public class kaavyaAboutMe {
                               @RequestParam(name="attendee", required = false, defaultValue = "Cheryl") String attendee,
                               @RequestParam(name="prefix", required = false, defaultValue = "A") String prefix,
                               @RequestParam(name="digits", required = false, defaultValue = "4") int digits,
+                              @RequestParam(name="fixedWage", required = false, defaultValue = "10.0")double fixedWage,
+                              @RequestParam(name="perItemWage", required = false, defaultValue = "1.5")double perItemWage,
+                              @RequestParam(name="itemsSold", required = false, defaultValue = "1")int[] itemsSold,
+                              @RequestParam(name="firstName", required = false, defaultValue = "john")String firstName,
+                              @RequestParam(name="lastName", required = false, defaultValue = "smith")String lastName,
+                              @RequestParam(name="cropType", required = false, defaultValue = "beans")String cropType,
+                              @RequestParam(name="rowNum", required = false, defaultValue = "2")int rowNum,
+                              @RequestParam(name="title", required = false, defaultValue = "The Wonderful Wizard of Oz")String title,
+                              @RequestParam(name="author", required = false, defaultValue = "L. Frank Baum")String author,
+                              @RequestParam(name="illustrator", required = false, defaultValue = "")String illustrator,
+                              @RequestParam(name="cost", required = false, defaultValue = "2")double cost,
+                              @RequestParam(name="species", required = false, defaultValue = "Tiger")String species,
+                              @RequestParam(name="animalName", required = false, defaultValue = "Tigger")String animalName,
+                              @RequestParam(name="carnivore", required = false, defaultValue = "carnivore")String carnivore,
+                              @RequestParam(name="trunkLen", required = false, defaultValue = "4")double trunkLen,
                               Model model) {
 
         LightSequence frq2 = new LightSequence();
@@ -68,6 +87,34 @@ public class kaavyaAboutMe {
         }
         model.addAttribute("pw", frq5_2.pwGen());
         model.addAttribute("count", frq5_2.pwCount());
+
+        PayrollFRQ6 frq6_2 = new PayrollFRQ6();
+        model.addAttribute("wages", frq6_2.computeWages(fixedWage, perItemWage, itemsSold));
+
+        UserNameFRQ7 frq7 = new UserNameFRQ7();
+        frq7.userNames(firstName, lastName);
+        model.addAttribute("usernames",frq7.setAvailableUserNames());
+
+        ExperimentalFarm farm = new ExperimentalFarm();
+        model.addAttribute("highestyield", farm.getHighestYield(cropType));
+        model.addAttribute("samecrop", farm.sameCrop(rowNum));
+
+        PictureBook aBook = new PictureBook(title, author, illustrator);
+        BookListing bookListing = new BookListing(aBook, cost);
+        model.addAttribute("booklisting", bookListing.printDescription());
+
+        Animal animal = null;
+        if (species.equals("elephant")){
+            animal = new Elephant(animalName, trunkLen);
+        }
+        else if (!carnivore.equals("carnivore")){
+            animal = new Herbivore(species, animalName);
+        }
+        else {
+            animal = new Animal("carnivore", species, animalName);
+        }
+
+        model.addAttribute("animalinfo", animal.toString());
 
         return "Pages/aboutMePages/kaavyaAbout"; }
 }

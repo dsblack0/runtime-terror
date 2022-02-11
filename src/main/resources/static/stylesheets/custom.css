@@ -25,8 +25,8 @@ $success:       $green;
 $info:          $cyan;
 $warning:       $yellow;
 $danger:        $red;
-$light:         $gray-100;
-$dark:          $gray-900;
+$light:         $purple;
+$dark:          $pink;
 
 Key colors are are mapped to words we use in HTML (text-primary, text-dark, bg-primary, bg-dark)
 $theme-colors: (
@@ -11182,7 +11182,7 @@ html, body {
 
 .dark-mode {
   /* redefine theme colors */
-  background-color: #0a53be;
+  background-color: yellow;
   font-color: red;
   /* set background values */
   --bs-body-bg: #455a64;
