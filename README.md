@@ -73,7 +73,7 @@
 | Rachel | Individual Club Page | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Rachel---End-of-TRI-Plan) | <ul><li>[ ] DONE</li></ul> | 
 | Adrita | Database and AboutMe Page | | <ul><li>[ ] DONE</li></ul> | 
 | Kaavya | Themes and Sassy/CSS | | <ul><li>[ ] DONE</li></ul> | 
-| Sam | Review Page | | <ul><li>[ ] DONE</li></ul> | 
+| Sam | Review Page | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Sam-Individual-Journal#pbl) | <ul><li>[x] DONE</li></ul> | 
 
 ## Week 8 - FRQ Showing 2 (Indi to Indi, outside of previous Pair/Trio)
 | Name | Requirement | Evidence | Complete |
