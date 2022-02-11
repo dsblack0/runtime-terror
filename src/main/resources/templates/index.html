@@ -173,6 +173,7 @@
 </head>
 
 <body onload="getSchedule()"><div layout:fragment="content" th:remove="tag">
+    <!--- banner -->
     <div class="banner" style="position: relative;">
         <div class="slideshow">
             <div class="pop-up-box" style="padding-top: 50px; text-align: center; position: absolute; background-color: midnightblue; opacity:80%; width: 33%; height: 33%; margin-top: 100px; margin-left: 33%;">
@@ -192,6 +193,7 @@
         </div>
         <img th:src="@{/images/del-norte-hs-01.jpg}" style="width: 100%; height: 450px;">
     </div>
+    <!-- buttons for each day of the week -->
     <div class="btn-group" style="background-color:#96d7c6; width: 100%; height: 15%">
         <button style="width:20%" onclick=monday()>Monday</button>
         <button style="width:20%" onclick="tuesday()">Tuesday</button>
@@ -199,6 +201,7 @@
         <button style="width:20%" onclick="thursday()">Thursday</button>
         <button style="width:20%" onclick="friday()">Friday</button>
     </div>
+    <!-- club icons/boxes -->
     <div class="club-icons" style="padding-left: 25px;">
         <div class="monday" id="monday" style="width: 100%; height: 400px; margin-top: 15px;">
             <h4>Monday Clubs</h4>

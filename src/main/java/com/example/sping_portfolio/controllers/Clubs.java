@@ -15,12 +15,14 @@ public class Clubs implements Serializable {
     String description;
     String dates;
 
+    // method to create Clubs Object
     public void clubCreate(String t, String d, String de) {
         title = t;
         description = d;
         dates = de;
     }
 
+    // getters for each of the attributes
     public String getTitle(){
         return title;
     }
@@ -33,6 +35,7 @@ public class Clubs implements Serializable {
         return dates;
     }
 
+    // Create ArrayList of clubs
     public ArrayList<Clubs> clubslist(){
         Clubs club1 = new Clubs();//creating an object of Student
         Clubs club2 = new Clubs();
