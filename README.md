@@ -69,7 +69,7 @@
 ## Week 9 - PBL Part 1
 | Name | Requirement | Evidence | Complete |
 | ---   | ---        | ---      | ---        |
-| Sami | CB FOCUS | | <ul><li>[ ] DONE</li></ul> | 
+| Sami | CB FOCUS | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Sameeksha-Individual-Journal) | <ul><li>[ ] DONE</li></ul> | 
 | Rachel | Individual Club Page | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Rachel---End-of-TRI-Plan) | <ul><li>[ ] DONE</li></ul> | 
 | Adrita | Database and AboutMe Page | | <ul><li>[ ] DONE</li></ul> | 
 | Kaavya | Themes and Sassy/CSS | | <ul><li>[ ] DONE</li></ul> | 
