@@ -27,18 +27,16 @@ public class MainController {
     }
 
     @GetMapping ("/reviewsPage")
-    public String reviewsPage(@RequestParam(name="clubName", required = false, defaultValue = "Robotics") String clubName,
-                              @RequestParam(name="q1",required = false, defaultValue = "a random answer to question 1") String q1,
-                              @RequestParam(name="q2", required = false, defaultValue = "additional interesting information") String q2,
-                              @RequestParam(name="reviewerName", required = false, defaultValue = "anonymous") String reviewerName, Model model) {
+    public String reviewsPage(@RequestParam(name="clubName", required = false, defaultValue = "Club Name") String clubName,
+                              @RequestParam(name="reviewText",required = false, defaultValue = "review text") String reviewText,
+                              @RequestParam(name="reviewerName", required = false, defaultValue = "") String reviewerName, Model model) {
 
         reviewsPage review1 = new reviewsPage();
-        review1.reviewCreate(clubName, q1, q2, reviewerName);
-        ArrayList<ArrayList<String>> list1 = review1.reviewslist();
-        ArrayList<String> info = list1.get(0);
-        Object[] information = info.toArray();
+        review1.reviewCreate(clubName, reviewText, reviewerName);
+        ArrayList<reviewsPage> reviews = new ArrayList<>();
+        reviews.add(review1);
 
-        model.addAttribute("information", information);
+        model.addAttribute("reviews", reviews);
 
         return "reviewsPage";
     }

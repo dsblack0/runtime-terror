@@ -8,7 +8,7 @@
 </head>
 <body>
 <div layout:fragment="content" th:remove="tag">
-    <div class="review-box" style="width: 95%">
+    <div class="review-box" style="width: 95%" th:each="review : ${reviews}">
         <h2 th:text="${information[0]}">Club Name</h2>
         <p th:text="${information[1]}">Review Content: This is going to be a block of text probably of varying length where the main actually content of the review is.</p>
         <p th:text="${information[2]}">Additional information about club</p>
