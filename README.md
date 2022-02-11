@@ -70,7 +70,7 @@
 | Name | Requirement | Evidence | Complete |
 | ---   | ---        | ---      | ---        |
 | Sami | | | <ul><li>[ ] DONE</li></ul> | 
-| Rachel | Individual Club Page | | <ul><li>[ ] DONE</li></ul> | 
+| Rachel | Individual Club Page | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Rachel---End-of-TRI-Plan) | <ul><li>[ ] DONE</li></ul> | 
 | Adrita | Database and AboutMe Page | | <ul><li>[ ] DONE</li></ul> | 
 | Kaavya | | | <ul><li>[ ] DONE</li></ul> | 
 | Sam | Review Page | | <ul><li>[ ] DONE</li></ul> | 
