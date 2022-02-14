@@ -1,10 +1,10 @@
 package com.example.sping_portfolio.controllers.database;
 
-import com.nighthawk.csa.database.scrum.ScrumSqlRepository;
+//import com.nighthawk.csa.database.scrum.ScrumSqlRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
+//import org.springframework.transaction.annotation.Transactional;
+/**
 import javax.transaction.Transactional;
 import java.util.List;
 @Service
@@ -29,7 +29,7 @@ public class ClubSqlRepository {
 
     public Club get(long id){
         return (jpa.findById(id).isPresent())
-                ? jpa.findById(id.get()
+                ? jpa.findById(id.get())
                 : null;
     }
 
@@ -37,3 +37,4 @@ public class ClubSqlRepository {
         jpa.deleteById(id);
     }
 }
+ **/
