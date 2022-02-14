@@ -1,30 +1,60 @@
 <!DOCTYPE html>
-<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+<html xmlns:layout="http://www.w3.org/1999/xhtml " xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layout}" lang="en">
-<head>
-    <meta charset="UTF-8">
+<head><div layout:fragment="metadata" th:remove="tag">
     <title>Club Reviews</title>
-    <th:block th:fragment="header"></th:block>
+    <style>
+        .large-box {
+            margin: 20px 10px 10px;
+            background-color: #17a2b8;
+        }
+        .add-reviews, .review-box {
+            background-color: #f7cb2d;
+            border-radius: 30px;
+            margin: 20px;
+        }
+        .input {
+            border-radius: 15px;
+        }
+        .button {
+            background-color: #96d7c6;
+            border-color: #96d7c6;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</div>
 </head>
 <body>
 <div layout:fragment="content" th:remove="tag">
-    <div class="review-box" style="width: 95%" th:each="review : ${reviews}">
-        <h2 th:text="${information[0]}">Club Name</h2>
-        <p th:text="${information[1]}">Review Content: This is going to be a block of text probably of varying length where the main actually content of the review is.</p>
-        <p th:text="${information[2]}">Additional information about club</p>
-        <p th:text="${information[3]}">Reviewed By: Name</p>
-    </div><
-    <div class="add-reviews" style="width:95%">
-        <h5>Write your own review for a club</h5>
-        <label for="club-name">Club Name?</label>
-        <input name="club-name" id="club-name">
-        <label for="club-q1" >Why should people join this club?</label>
-        <input name="club-q1" id="club-q1">
-        <label for="club-q2">Is there additional information you would like people to know about this club?</label>
-        <input name="club-q2" id="club-q2">
-        <label for="reviewer-name">Name? (You can choose to remain anonymous)</label>
-        <input name="reviewer-name" id="reviewer-name">
-        <button>Answer</button>
+    <div class = "large-box">
+        <!-- get user input to add new reviews -->
+        <h2 style="text-align: center;">ADD YOUR OWN REVIEW</h2>
+        <div class="add-reviews">
+            <form action="/reviewsPage" method="GET" id="reviewsForm" style="margin-left: 50px; margin-inside: 20px">
+                <div>
+                    <label style="margin-top: 20px;" for="clubName">Name of Club:</label>
+                    <input class="input" name="clubName" id="clubName">
+                    <p><label for="reviewText" >Write your review:</label></p>
+                    <input class="input" name="reviewText" id="reviewText" style="width: 80%; height: 45px;">
+                    <p><label for="reviewerName">Name (optional):</label></p>
+                    <input class="input" name="reviewerName" id="reviewerName">
+                    <button class="button">Add</button>
+                </div>
+            </form>
+        </div>
+        <!-- output box for each review -->
+        <h2 style="text-align: center">CLUB REVIEWS</h2>
+        <div class="club-reviews" style="margin-bottom: 50px;">
+            <div class="review-box" th:each="review : ${reviews}">
+                <div style="margin: 20px 50px;">
+                    <h3 th:text="${review.clubName}" style="text-align: center">Club Name</h3>
+                    <p th:text="${review.reviewText}">Review Content: This is going to be a block of text probably of varying length where the main actually content of the review is.</p>
+                    <p th:text="'~ ' + ${review.reviewerName}">Additional information about club</p>
+                </div>
+            </div>
+        </div>
+        <h4 style="text-align: center; margin-bottom: 10px;">Look to each club's individual page from more information.</h4>
     </div>
 </div>
 </body>
