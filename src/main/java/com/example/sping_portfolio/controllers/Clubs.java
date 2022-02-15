@@ -15,12 +15,14 @@ public class Clubs implements Serializable {
     String description;
     String dates;
 
+    // method to create Clubs Object
     public void clubCreate(String t, String d, String de) {
         title = t;
         description = d;
         dates = de;
     }
 
+    // getters for each of the attributes
     public String getTitle(){
         return title;
     }
@@ -33,6 +35,7 @@ public class Clubs implements Serializable {
         return dates;
     }
 
+    // Create ArrayList of clubs
     public ArrayList<Clubs> clubslist(){
         Clubs club1 = new Clubs();//creating an object of Student
         Clubs club2 = new Clubs();
@@ -51,44 +54,5 @@ public class Clubs implements Serializable {
         //Creating an object or instance
 
     }
-
-
-    @GetMapping("/")
-    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
-    public String index(Model model) {
-
-        Clubs club1 = new Clubs();//creating an object of Student
-        Clubs club2 = new Clubs();
-        Clubs club3 = new Clubs();
-        Clubs club4 = new Clubs();//creating an object of Student
-        Clubs club5 = new Clubs();
-        Clubs club6 = new Clubs();
-        Clubs club7 = new Clubs();//creating an object of Student
-        Clubs club8 = new Clubs();
-
-        club1.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
-        club2.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
-        club3.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
-        club4.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
-        club5.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
-        club6.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
-        club7.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
-        club8.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
-
-        ArrayList<Clubs> list = new ArrayList<>();
-        list.add(club1);
-        list.add(club2);
-        list.add(club3);
-        list.add(club4);
-        list.add(club5);
-        list.add(club6);
-        list.add(club7);
-        list.add(club8);
-        model.addAttribute("list", list);
-
-        return "index"; // returns HTML VIEW (greeting)
-
-    }
-
 
 }
