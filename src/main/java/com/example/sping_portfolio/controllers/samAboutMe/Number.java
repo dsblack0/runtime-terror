@@ -1,6 +1,7 @@
 package com.example.sping_portfolio.controllers.samAboutMe;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 // Write a Class Number
 public class Number {
@@ -11,7 +12,7 @@ public class Number {
     // It initializes a random number between 3 and 36, ie the number of squirrels in class
     public Number() {
         index += 1;
-        numSquirrels = (int) (Math.random()*11+3);
+        numSquirrels = (int) (Math.random()*11+4);
     }
 
     public int getNumSquirrels() {
@@ -44,28 +45,19 @@ public class Number {
 
 
         // Insert Number instance into ArrayList Squirrel in least to greatest order by random number, mine required nested loops
+        Number[] array = new Number[]{squirrel1, squirrel2, squirrel3, squirrel4, squirrel5, squirrel6, squirrel7, squirrel8, squirrel9, squirrel10};
         ArrayList<Number> squirrelsList = new ArrayList<>();
-        squirrelsList.add(squirrel1);
-        squirrelsList.add(squirrel2);
-        squirrelsList.add(squirrel3);
-        squirrelsList.add(squirrel4);
-        squirrelsList.add(squirrel5);
-        squirrelsList.add(squirrel6);
-        squirrelsList.add(squirrel7);
-        squirrelsList.add(squirrel8);
-        squirrelsList.add(squirrel9);
-        squirrelsList.add(squirrel10);
-
+        for (int i=0; i< array.length; i++) {
+            squirrelsList.add(array[i]);
+        }
         Number leastSquirrel;
-        for (int i=0; i<10; i++) {
-            for (int n=0; n<squirrelsList.size()-1; n++) {
+        for (int i=0; i<squirrelsList.size(); i++) {
+            for (int n=0; n<squirrelsList.size(); n++) {
                 if (squirrelsList.get(i).getNumSquirrels() < squirrelsList.get(n).getNumSquirrels()) {
                     leastSquirrel = squirrelsList.get(i);
-                } else {
-                    leastSquirrel = squirrelsList.get(n);
+                    squirrels.add(leastSquirrel);
+                    squirrelsList.remove(leastSquirrel);
                 }
-                squirrels.add(leastSquirrel);
-                squirrelsList.remove(leastSquirrel);
             }
         }
         System.out.println(squirrels.size());
