@@ -12,8 +12,15 @@
             font-size: 25px;
         }
 
-        .addClub {
-            background-color: f7cb2d;
+        .button {
+            background-color: #f7cb2d;
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            border-radius: 25px;
         }
     </style>
 </head>
@@ -99,9 +106,12 @@
                 // Clock refresh frequency
                 setInterval(clock, 1000);
             </script>
-            <div class="addClub" type="button">
-                Add Club
+
+            <!-- Add Club -->
+            <div>
+                <input type="button" class="button" value="Add Club">
             </div>
+
         </div>
 
     </nav>
