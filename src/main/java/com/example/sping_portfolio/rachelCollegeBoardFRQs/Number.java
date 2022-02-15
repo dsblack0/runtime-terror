@@ -43,9 +43,27 @@ public class Number {
         Number s10 = new Number();
 
         // Insert Number instance into ArrayList Squirrel in least to greatest order by random number, mine required nested loops
+        //Number newsquirrels[] = {s1,s2,s3,s4,s5,s6,s7,s8,s9,s10};
+        ArrayList<Integer> newsquirrels = new ArrayList<>();
+        newsquirrels.add(s1.getNumber());
+        newsquirrels.add(s2.getNumber());
+        newsquirrels.add(s3.getNumber());
+        newsquirrels.add(s4.getNumber());
+        newsquirrels.add(s5.getNumber());
+        newsquirrels.add(s6.getNumber());
+        newsquirrels.add(s7.getNumber());
+        newsquirrels.add(s8.getNumber());
+        newsquirrels.add(s9.getNumber());
+        newsquirrels.add(s10.getNumber());
+        int min = 36;
+        int minindex = newsquirrels.get(newsquirrels.size());
 
-        for () {
-
+        for (int i =10; i>0; i--) {
+            if(newsquirrels.get(i)<min) {
+                min = newsquirrels.get(i);
+                minindex = i;
+            }
+            squirrels.add(newsquirrels.get(minindex));
         }
 
 
@@ -54,7 +72,7 @@ public class Number {
 
         // Print a formatted message with number of Squirrels and Index by which they were created, use enhanced for loop
         for (Number i : squirrels) {
-            System.out.println("Squirrels: " + squirrels.get(i) + " Day: " + i);
+            System.out.println("Squirrels: " + i.getNumber() + " Day: " + i.getIndex());
         }
     }
 
