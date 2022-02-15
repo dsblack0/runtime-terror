@@ -12,6 +12,7 @@
             background-color: #f7cb2d;
             border-radius: 30px;
             margin: 20px;
+            padding-bottom: 1px;
         }
         .input {
             border-radius: 15px;
@@ -20,7 +21,7 @@
             background-color: #96d7c6;
             border-color: #96d7c6;
             border-radius: 10px;
-            margin-bottom: 20px;
+            margin-top: 10px;
         }
     </style>
 </div>
@@ -35,11 +36,11 @@
                 <div>
                     <label style="margin-top: 20px;" for="clubName">Name of Club:</label>
                     <input class="input" name="clubName" id="clubName">
-                    <p><label for="reviewText" >Write your review:</label></p>
-                    <input class="input" name="reviewText" id="reviewText" style="width: 80%; height: 45px;">
-                    <p><label for="reviewerName">Name (optional):</label></p>
+                    <p style="margin-bottom: 5px"><label for="reviewText">Write your review:</label></p>
+                    <textarea class="input" name="reviewText" id="reviewText" style="width: 90%; height: 75px;"></textarea>
+                    <p style="margin-bottom: 5px"><label for="reviewerName">Name (optional):</label></p>
                     <input class="input" name="reviewerName" id="reviewerName">
-                    <button class="button">Add</button>
+                    <p><button class="button">Add</button></p>
                 </div>
             </form>
         </div>
