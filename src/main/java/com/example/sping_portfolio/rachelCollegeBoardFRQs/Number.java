@@ -5,24 +5,25 @@ import java.util.ArrayList;
 // Write a Class Number
 public class Number {
     // instance variables
-    double random;
-    int index;
+    private int instance;
+    private int random;
+    private static int index=0;
     // Number has a zero Argument constructor
     // It initializes a random number between 3 and 36, ie the number of squirrels in class
     public Number() {
-        random = (Math.random() * 33) + 3; //random number 3<=x<36
+        random = (int)(Math.random() * 34) + 3; //random number siz-min+1
+        instance = index;
+        index++;
     }
 
     // It contains a getter for the Random Number
     public int getNumber() {
-        getIndex();
-        return (int) random;
+        return random;
     }
 
     // It contains a getter for Index, or the order it was initialized
     public int getIndex() {
-        index++;
-        return index;
+        return instance;
     }
 
     // Write a tester method
@@ -43,37 +44,34 @@ public class Number {
         Number s10 = new Number();
 
         // Insert Number instance into ArrayList Squirrel in least to greatest order by random number, mine required nested loops
-        //Number newsquirrels[] = {s1,s2,s3,s4,s5,s6,s7,s8,s9,s10};
-        ArrayList<Integer> newsquirrels = new ArrayList<>();
-        newsquirrels.add(s1.getNumber());
-        newsquirrels.add(s2.getNumber());
-        newsquirrels.add(s3.getNumber());
-        newsquirrels.add(s4.getNumber());
-        newsquirrels.add(s5.getNumber());
-        newsquirrels.add(s6.getNumber());
-        newsquirrels.add(s7.getNumber());
-        newsquirrels.add(s8.getNumber());
-        newsquirrels.add(s9.getNumber());
-        newsquirrels.add(s10.getNumber());
-        int min = 36;
-        int minindex = newsquirrels.get(newsquirrels.size());
+        ArrayList<Number> newsquirrels = new ArrayList<Number>();
+        newsquirrels.add(s1);
+        newsquirrels.add(s2);
+        newsquirrels.add(s3);
+        newsquirrels.add(s4);
+        newsquirrels.add(s5);
+        newsquirrels.add(s6);
+        newsquirrels.add(s7);
+        newsquirrels.add(s8);
+        newsquirrels.add(s9);
+        newsquirrels.add(s10);
 
-        for (int i =10; i>0; i--) {
-            if(newsquirrels.get(i)<min) {
-                min = newsquirrels.get(i);
-                minindex = i;
+        for (int i =0; i<newsquirrels.size(); i++) {
+            for(int j=i+1; j<newsquirrels.size(); j++){
+                if(newsquirrels.get(i).getNumber() > newsquirrels.get(j).getNumber() ) {
+                    Number sorting = newsquirrels.get(i);
+                    newsquirrels.set(i, newsquirrels.get(j));
+                    newsquirrels.set(j, sorting);
+                }
             }
-            squirrels.add(newsquirrels.get(minindex));
         }
 
 
-
-
-
         // Print a formatted message with number of Squirrels and Index by which they were created, use enhanced for loop
-        for (Number i : squirrels) {
+        for (Number i : newsquirrels) {
             System.out.println("Squirrels: " + i.getNumber() + " Day: " + i.getIndex());
         }
     }
 
 }
+
