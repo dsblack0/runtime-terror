@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<!-- Start of head content specific to page -->
+<head><div layout:fragment="metadata" th:remove="tag">
+
+
+    <title>Search</title>
+    <style>
+    header {
+            background-color: #17a2b8;
+            padding: 10px;
+            text-align: center;
+            font-size: 75px;
+            margin: 25px;
+            color: #003060;
+        }
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    body{
+      text-align: center;
+      align-items: center;
+      align-content: center;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+
+      .container{
+        align-content: center;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        align: center;
+        border-width: 10px;
+        border-color: var(--white);
+        border-radius: 5px;
+      }
+
+    }
+
+    .button {
+        background-color: #f7cb2d;
+        border-color: #f7cb2d;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        align-content: center;
+    }
+  </style>
+    <!-- End of head content specific to page -->
+</div></head>
+
+<body><div layout:fragment="content" th:remove="tag">
+    <!-- Start of body content specific to page -->
+    <div class="contact" style="height: 35vh;">
+        <div class="container">
+            <header>
+                <div class="clubName" layout:fragment="clubName">
+                    <h1>Add Your Club</h1>
+                </div>
+            </header>
+        </div>
+        <form action="/admin" method="GET" id="admin" style="margin-left: 50px; margin-inside: 20px">
+            <div>
+                <label style="margin-top: 20px;" for="clubname">Club Name</label>
+                <input class="input" name="clubname" id="clubname" style="width: 80%; height: 45px;">
+                <label for="aboutclub">About the Club</label>
+                <input class="input" name="aboutclub" id="aboutclub" style="width: 80%; height: 45px;">
+                <label for="clublinks">Important Club Links</label>
+                <input class="input" name="clublinks" id="clublinks" style="width: 80%; height: 45px;">
+                <button class="button">Submit</button>
+            </div>
+        </form>
+    </div>
+    <!-- End of body content specific to page -->
+</div></body>
+
+</html>
