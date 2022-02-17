@@ -27,6 +27,7 @@ public class MainController {
         return "Pages/aboutMePages/teamAbout";
     }
 
+    //Club Reviews
     @GetMapping ("/reviewsPage")
     public String reviewsPage(@RequestParam(name="clubName", required = false, defaultValue = "") String clubName,
                               @RequestParam(name="reviewText",required = false, defaultValue = "") String reviewText,
@@ -49,6 +50,8 @@ public class MainController {
         reviews.add(review2);
         reviews.add(review3);
         reviews.add(review4);
+
+        // If not club name is inputted, the review won't be created
         if(!Objects.equals(clubName, "")) {
             reviews.add(review5);
         }
