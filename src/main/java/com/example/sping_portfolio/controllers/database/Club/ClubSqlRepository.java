@@ -1,4 +1,4 @@
-package com.example.sping_portfolio.controllers.database;
+package com.example.sping_portfolio.controllers.database.Club;
 
 //import com.nighthawk.csa.database.scrum.ScrumSqlRepository;
 import org.springframework.beans.factory.annotation.Autowired;

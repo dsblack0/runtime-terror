@@ -1,4 +1,4 @@
-package com.example.sping_portfolio.controllers.database;
+package com.example.sping_portfolio.controllers.database.Club;
 //import com.example.sping_portfolio.controllers.database.Club;
 //import com.example.sping_portfolio.controllers.database.ClubSqlRepository;
 import org.springframework.beans.factory.annotation.Autowired;

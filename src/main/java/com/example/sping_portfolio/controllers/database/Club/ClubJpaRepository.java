@@ -1,4 +1,4 @@
-package com.example.sping_portfolio.controllers.database;
+package com.example.sping_portfolio.controllers.database.Club;
 
 //import org.springframework.data.jpa.repository.JpaRepository; //check these
 //import org.springframework.data.jpa.repository.Query;
