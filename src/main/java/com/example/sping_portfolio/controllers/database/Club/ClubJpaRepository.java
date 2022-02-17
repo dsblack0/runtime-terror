@@ -1,11 +1,11 @@
 package com.example.sping_portfolio.controllers.database.Club;
 
-//import org.springframework.data.jpa.repository.JpaRepository; //check these
+import org.springframework.data.jpa.repository.JpaRepository;
 //import org.springframework.data.jpa.repository.Query;
 
 import javax.persistence.QueryHint;
 import java.util.List;
-/**
+
 public interface ClubJpaRepository extends JpaRepository<Club, Long> {
     List<Club> findClubName(String name, String president);
 
@@ -16,4 +16,3 @@ public interface ClubJpaRepository extends JpaRepository<Club, Long> {
     List<Club> findByLikeTermNative(String term);
 
 }
-**/

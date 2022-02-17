@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
-/**
+
 @Setter
 @Getter
 @ToString
@@ -37,4 +37,3 @@ public class Club {
 //        }
 //    }
 }
-**/
