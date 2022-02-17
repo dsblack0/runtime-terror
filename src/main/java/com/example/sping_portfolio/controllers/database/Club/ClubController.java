@@ -14,7 +14,7 @@ import javax.validation.Valid;
 import java.text.SimpleDateFormat;
 
 import java.util.*;
-/**
+
 @Controller
 public class ClubController implements WebMvcConfigurer {
     @Autowired
@@ -33,4 +33,3 @@ public class ClubController implements WebMvcConfigurer {
     }
     //ask which one of the GetMappings are actually relevant to the base code
 }
-**/
