@@ -62,10 +62,12 @@
         <div class="club-reviews">
             <table id="club-reviews">
                 <tr th:each="review : ${reviews}"><td style="width: 1000000px">
-                    <div class="review-box" style="margin: 20px">
+                    <div class="review-box">
+                        <div style="margin: 20px">
                             <h3 th:text="${review.clubName}" style="text-align: center">Club Name</h3>
                             <p th:text="${review.reviewText}">Review Content: This is going to be a block of text probably of varying length where the main actually content of the review is.</p>
                             <p th:text="'~ ' + ${review.reviewerName}">Additional information about club</p>
+                        </div>
                     </div>
                 </td></tr>
             </table>
