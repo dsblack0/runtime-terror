@@ -45,6 +45,14 @@ $theme-colors: (
 $secondary: #5B9D82;
 $body-bg: #ffff77;
 
+//Defining theme colors
+$lightYellow: #f9e07f;
+$goldenYellow: #f7cb2d;
+$lightTeal: #96d7c6;
+$teal: #5aa7a7;
+$darkTeal: #2c6975;
+$darkestTeal: #264d59;
+
 // redefine body background
 @import "../../../../../node_modules/bootstrap/scss/bootstrap";
 
