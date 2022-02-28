@@ -6,7 +6,7 @@
 <head><div layout:fragment="metadata" th:remove="tag">
 
 
-    <title>Search</title>
+    <title>Admin (Add Club)</title>
     <style>
         header {
             background-color: #17a2b8;
@@ -46,11 +46,24 @@
 
         .button {
             background-color: #f7cb2d;
-            border-color: #f7cb2d;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            align-content: center;
+            color: black; /* White text */
+            padding: 10px 24px; /* Some padding */
+            cursor: pointer; /* Pointer/hand icon */
+            border-radius: 12px;
+            margin: 5px;
+        ;
         }
+
+         input[type=text], select {
+             width: 100%;
+             padding: 20px 20px;
+             margin: 8px 0;
+             display: inline-block;
+             border: 1px solid #ccc;
+             border-radius: 12px;
+             box-sizing: border-box;
+         }
+
 
     </style>
     <!-- End of head content specific to page -->
@@ -68,27 +81,19 @@
         </div>
         <form action="/admin" method="GET" style="margin-left: 50px; margin-inside: 20px">
             <div>
-                <label for="clubname">Club Name</label>
+                <input class="input" name="clubname" id="clubname" style="width: 80%; height: 45px;" placeholder="Club Name">
                 <br><br>
-                <input class="input" name="clubname" id="clubname" style="width: 80%; height: 45px;">
+                <input class="input" name="aboutclub" id="aboutclub" style="width: 80%; height: 45px;" placeholder="About the Club">
                 <br><br>
-                <label for="aboutclub">About the Club</label>
+                <input class="input" type="number" name="membercount" id="membercount" style="width: 80%; height: 45px;" placeholder="Approximate Number of Members">
                 <br><br>
-                <input class="input" name="aboutclub" id="aboutclub" style="width: 80%; height: 45px;">
+                <input class="input" name="president" id="president" style="width: 80%; height: 45px;" placeholder="President Name">
                 <br><br>
-                <input class="input" type="number" name="membercount" id="membercount" style="width: 80%; height: 45px;">
+                <input class="input" name="clublinks" id="clublinks" style="width: 80%; height: 45px;" placeholder="Important Club Links">
                 <br><br>
-                <label for="clublinks">Member Count</label>
                 <br><br>
-                <input class="input" name="president" id="president" style="width: 80%; height: 45px;">
-                <br><br>
-                <label for="clublinks">President</label>
-                <br><br>
-                <label for="clublinks">Important Club Links</label>
-                <br><br>
-                <input class="input" name="clublinks" id="clublinks" style="width: 80%; height: 45px;">
-                <br><br>
-                <button class="button">Submit</button>
+                <button class="button">APPLY</button>
+                <p><b th:text="'Your ID Is: ' + ${id}" style="color: teal;"></b></p>
             </div>
         </form>
     </div>

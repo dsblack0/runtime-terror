@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.Objects;
-
+/**
 @Controller
 public class MainController {
     //Team About Us
@@ -26,8 +26,8 @@ public class MainController {
         model.addAttribute("inpy", inpy);
 
         return "Pages/aboutMePages/teamAbout";
-    }
-  
+    }**/
+  /**
     //Club Reviews
     @GetMapping ("/reviewsPage")
     public String reviewsPage(@RequestParam(name="clubName", required = false, defaultValue = "") String clubName,
@@ -59,9 +59,9 @@ public class MainController {
 
         model.addAttribute("reviews", reviews);
 
-        return "reviewsPage";
+        return "reviewsPage";**/
   
-    @GetMapping("/")
+    /**@GetMapping("/")
     // Home Page
     public String index(Model model) {
 
@@ -98,3 +98,4 @@ public class MainController {
     }
 }
 
+**/
