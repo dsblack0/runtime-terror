@@ -29,9 +29,10 @@ public class admin {
     @GetMapping("/admin")
     // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
     public String login(@RequestParam(name="clubname", required = false, defaultValue = "") String clubname,
-                        @RequestParam(name="clubpresident", required = false, defaultValue = "") String clubpresident,
+                        @RequestParam(name="president", required = false, defaultValue = "") String clubpresident,
                         @RequestParam(name="membercount", required = false, defaultValue = "0") int membercount,
                         @RequestParam(name="aboutclub", required = false, defaultValue = "") String aboutclub,
+
                         @RequestParam(name="clublinks", required = false, defaultValue = "") String clublinks, Model model) throws IOException, InterruptedException, ParseException {
         if (clubname != "" && clubpresident != "" && membercount != 0 && aboutclub!=""&&clublinks!=""){
 
@@ -45,7 +46,20 @@ public class admin {
                 ps.setString(3, aboutclub);
                 ps.setString(4, clublinks);
                 ps.setString(5, clubname);
+                PreparedStatement ps1 = con.prepareStatement("SELECT id FROM clubs WHERE president=? AND aboutclub=? AND clublinks=? AND clubname=? LIMIT 1");
                 ps.executeUpdate();
+
+                ps1.setString(1, clubpresident);
+                ps1.setString(2, aboutclub);
+                ps1.setString(3, clublinks);
+                ps1.setString(4, clubname);
+                ResultSet rs = ps1.executeQuery();
+                while (rs.next()) {
+                    model.addAttribute("id", rs.getString(1));
+                }
+                ps1.close();
+
+
 
                 ps.close();
                 con.close();
@@ -53,6 +67,7 @@ public class admin {
                 e.printStackTrace();
             }
         }
+
 
         return "databasePages/admin"; // returns HTML VIEW (greeting)
     }
