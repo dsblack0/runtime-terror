@@ -50,7 +50,7 @@
 
 ## Week 11 - Team Final
 | Name | Requirement | Evidence | Complete |
-| ---   | ---        | ---      | ---        |
+| ---  | ---         | ---      | ---      |
 | Sami | | | <ul><li>[ ] DONE</li></ul> | 
 | Rachel | | [Loom](https://www.loom.com/share/4b84972de0e0416cb550df14d07bd77c) | <ul><li>[ ] DONE</li></ul> | 
 | Adrita | | | <ul><li>[ ] DONE</li></ul> | 
@@ -59,7 +59,7 @@
 
 ## Week 10 - PBL Part 2
 | Name | Requirement | Evidence | Complete |
-| ---   | ---        | ---      | ---        |
+| ---  | ---         | ---      | ---      |
 | Sami | | | <ul><li>[ ] DONE</li></ul> | 
 | Rachel | Implement Database on Search | | <ul><li>[ ] DONE</li></ul> | 
 | Adrita | | | <ul><li>[ ] DONE</li></ul> | 
@@ -68,7 +68,7 @@
 
 ## Week 9 - PBL Part 1
 | Name | Requirement | Evidence | Complete |
-| ---   | ---        | ---      | ---        |
+| ---  | ---         | ---      | ---      |
 | Sami | CB FOCUS | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Sameeksha-Individual-Journal) | <ul><li>[ ] DONE</li></ul> | 
 | Rachel | Individual Club Page | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Rachel-Individual-Journal) | <ul><li>[ ] DONE</li></ul> | 
 | Adrita | Database and AboutMe Page | | <ul><li>[ ] DONE</li></ul> | 
@@ -77,7 +77,7 @@
 
 ## Week 8 - FRQ Showing 2 (Indi to Indi, outside of previous Pair/Trio)
 | Name | Requirement | Evidence | Complete |
-| ---   | ---        | ---      | ---        |
+| ---  | ---         | ---      | ---      |
 | Sami | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/81) | <ul><li>[x] DONE</li></ul> | 
 | Rachel | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/76) | <ul><li>[x] DONE</li></ul> | 
 | Adrita | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/79) | <ul><li>[x] DONE</li></ul> | 
