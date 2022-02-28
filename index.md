@@ -62,7 +62,7 @@
 
 | Name | Requirement | Evidence |
 | ---   | ---        | ---      |
-| Sami | Independent Work | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Sameeksha-Individual-Journal) | <ul><li>[ ] DONE</li></ul> | 
+| Sami | Independent Work | - | <ul><li>[ ] DONE</li></ul> | 
 | Rachel | Implement Database on Search | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Rachel-Individual-Journal) | <ul><li>[ ] DONE</li></ul> | 
 | Adrita | Work on Database with POJOs | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Adrita-Individual-Journal) | <ul><li> [ ] DONE</li></ul> | 
 | Kaavya | SCSS Styling | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Kaavya-Individual-Journal) | <ul><li>[ ] DONE</li></ul> | 
@@ -74,7 +74,7 @@
 | ---   | ---        | ---      |
 | Sami | CB FOCUS | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Sameeksha-Individual-Journal) | <ul><li>[ ] DONE</li></ul> | 
 | Rachel | Individual Club Page | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Rachel-Individual-Journal) | <ul><li>[ ] DONE</li></ul> | 
-| Adrita | Database and AboutMe Page | | <ul><li>[ ] DONE</li></ul> | 
+| Adrita | Database and AboutMe Page | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Adrita-Individual-Journal) | <ul><li>[ ] DONE</li></ul> | 
 | Kaavya | Themes and Sassy/CSS | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Kaavya-Individual-Journal) | <ul><li>[ ] DONE</li></ul> | 
 | Sam | Review Page | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Sam-Individual-Journal#pbl) | <ul><li>[x] DONE</li></ul> | 
 
