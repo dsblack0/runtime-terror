@@ -1,4 +1,4 @@
-package com.example.sping_portfolio.kaavyaCollegeBoardFRQs;
+package com.example.sping_portfolFio.kaavyaCollegeBoardFRQs;
 
 public class InviteParams {
     private String hostName;

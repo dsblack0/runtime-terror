@@ -5,12 +5,26 @@
 
     <style>
         body {
+            border-radius: 25px;
             padding: 25px;
             background-color: blue;
             color: black;
             font-size: 25px;
         }
 
+        .buttons {
+      background-color: #2c6975; /* Green background */
+      border: 0px solid white; /* Green border */
+      color: white; /* White text */
+      padding: 10px 24px; /* Some padding */
+      cursor: pointer; /* Pointer/hand icon */
+      border-radius: 12px;
+      margin: 5px;
+    }
+    .buttons:hover {
+      background-color: #68B2A0;
+      border-radius: 2px;
+    }
     </style>
 </head>
 <body>
@@ -68,17 +82,29 @@
                 </li>
 
             </ul>
-            <!-- Clock display -->
+            <!-- Add Club -->
+            <div>
+                <button class="buttons" style="background-color: #f7cb2d; /* Yellow background */
+      border: 0px solid white; /* no border */
+      color: black; /* black text */
+      padding: 10px 24px; /* Some padding */
+      cursor: pointer; /* Pointer/hand icon */
+      border-radius: 12px;
+      margin: 5px;">Add Club</button>
+            </div>
+
+            <!--
+
             <div>
                 <span id="clock"></span>
             </div>
-            <!-- Dark mode action -->
             <div class="custom-control custom-switch">
-                <input type="checkbox" onclick="darkFunction()" class="custom-control-input" id="darkSwitch">
+                <input type="checkbox" onclick="myFunction()" class="custom-control-input" id="darkSwitch">
                 <label class="custom-control-label" for="darkSwitch"></label>
             </div>
-            <!-- Navigation bar JavaScript support -->
             <button onclick="myFunction()">Dark Mode</button>
+
+            -->
 
             <script>
                 function myFunction() {
@@ -95,7 +121,9 @@
                 // Clock refresh frequency
                 setInterval(clock, 1000);
             </script>
+
         </div>
+
     </nav>
     <!-- Begin navigation fragments -->
 </body>

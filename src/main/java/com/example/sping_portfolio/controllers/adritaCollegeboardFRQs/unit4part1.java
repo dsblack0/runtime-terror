@@ -1,4 +1,4 @@
-package com.example.sping_portfolio.adritaCollegeboardFRQs;
+package com.example.sping_portfolio.controllers.adritaCollegeboardFRQs;
 
 import java.util.Scanner;
 

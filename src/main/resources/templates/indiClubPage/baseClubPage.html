@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:clubLayout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Individual Club Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <div th:replace="fragments/head :: header"></div>
+    <div clubLayout:fragment="metadata"></div>
+
+</head>
+<body>
+<div th:replace="fragments/nav :: header"></div>
+
+<div clubLayout:fragment="vertical"></div>
+
+<div clubLayout:fragment="content"></div>
+
+<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+
+<div clubLayout:fragment="script"></div>
+
+</body>
+</html>

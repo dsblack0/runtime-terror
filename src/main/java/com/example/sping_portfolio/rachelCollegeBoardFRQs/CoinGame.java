@@ -110,5 +110,10 @@ public class CoinGame {
 
     }
 
+    public static void main(String[] args) {
+        CoinGame unit4frq2 = new CoinGame(10, 5);
+        unit4frq2.playGame(10,5);
+    }
+
 
 }
