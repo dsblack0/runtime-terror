@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 @Controller
 public class MainController {
@@ -26,10 +27,42 @@ public class MainController {
 
         return "Pages/aboutMePages/teamAbout";
     }
+  
+    //Club Reviews
+    @GetMapping ("/reviewsPage")
+    public String reviewsPage(@RequestParam(name="clubName", required = false, defaultValue = "") String clubName,
+                              @RequestParam(name="reviewText",required = false, defaultValue = "") String reviewText,
+                              @RequestParam(name="reviewerName", required = false, defaultValue = "") String reviewerName, Model model) {
 
-    // Home Page
+        reviewsPage review5 = new reviewsPage();
+        review5.reviewCreate(clubName, reviewText, reviewerName);
+
+        reviewsPage review1 = new reviewsPage();
+        review1.reviewCreate("Robotics", "This is some random default review text that is ment mainly to just test this out because I don't know what to set", "");
+        reviewsPage review2 = new reviewsPage();
+        review2.reviewCreate("Speech & Debate", "This is some random default review text that is ment mainly to just test this out because I don't know what to set", "a person");
+        reviewsPage review3 = new reviewsPage();
+        review3.reviewCreate("Math Club", "This is some random default review text that is ment mainly to just test this out because I don't know what to set", "");
+        reviewsPage review4 = new reviewsPage();
+        review4.reviewCreate("Key Club", "This is some random default review text that is ment mainly to just test this out because I don't know what to set", "");
+
+        ArrayList<reviewsPage> reviews = new ArrayList<>();
+        reviews.add(review1);
+        reviews.add(review2);
+        reviews.add(review3);
+        reviews.add(review4);
+
+        // If not club name is inputted, the review won't be created
+        if(!Objects.equals(clubName, "")) {
+            reviews.add(review5);
+        }
+
+        model.addAttribute("reviews", reviews);
+
+        return "reviewsPage";
+  
     @GetMapping("/")
-    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
+    // Home Page
     public String index(Model model) {
 
         Clubs club1 = new Clubs();//creating an object of Student
@@ -62,7 +95,6 @@ public class MainController {
         model.addAttribute("list", list);
 
         return "index"; // returns HTML VIEW (greeting)
-
     }
 }
 

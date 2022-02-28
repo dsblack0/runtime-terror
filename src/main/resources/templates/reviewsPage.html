@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml " xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+<head><div layout:fragment="metadata" th:remove="tag">
+    <title>Club Reviews</title>
+    <!-- CSS Styling -->
+    <style>
+        .large-box {
+            margin: 20px 10px 10px;
+            background-color: #17a2b8;
+        }
+        .add-reviews, .review-box {
+            background-color: #f7cb2d;
+            border-radius: 30px;
+            margin: 20px;
+            padding-bottom: 1px;
+        }
+        .input {
+            border-radius: 15px;
+        }
+        .button {
+            background-color: #96d7c6;
+            border-color: #96d7c6;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        #search-bar {
+            background-color: #f7cb2d;
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin: 20px 10px 10px;
+            width: 98%;
+        }
+    </style>
+</div>
+</head>
+<body>
+<div layout:fragment="content" th:remove="tag">
+    <!-- reviews search bar -->
+    <input type="text" id="search-bar" onkeyup="searchReviews()" placeholder="Search Reviews" title="Search reviews">
+    <div class = "large-box">
+        <!-- get user input to add new reviews -->
+        <h2 style="text-align: center;">ADD YOUR OWN REVIEW</h2>
+        <div class="add-reviews">
+            <form action="/reviewsPage" method="GET" id="reviewsForm" style="margin-left: 50px; margin-inside: 20px">
+                <div>
+                    <label style="margin-top: 20px;" for="clubName">Name of Club:</label>
+                    <input class="input" name="clubName" id="clubName">
+                    <p style="margin-bottom: 5px"><label for="reviewText">Write your review:</label></p>
+                    <textarea class="input" name="reviewText" id="reviewText" style="width: 90%; height: 75px;"></textarea>
+                    <p style="margin-bottom: 5px"><label for="reviewerName">Name (optional):</label></p>
+                    <input class="input" name="reviewerName" id="reviewerName">
+                    <p><button class="button">Add</button></p>
+                </div>
+            </form>
+        </div>
+        <!-- output box for each review -->
+        <h2 style="text-align: center">CLUB REVIEWS</h2>
+        <div class="club-reviews">
+            <table id="club-reviews">
+                <tr th:each="review : ${reviews}"><td style="width: 1000000px">
+                    <div class="review-box">
+                        <div style="margin: 20px">
+                            <h3 th:text="${review.clubName}" style="text-align: center">Club Name</h3>
+                            <p th:text="${review.reviewText}">Review Content: This is going to be a block of text probably of varying length where the main actually content of the review is.</p>
+                            <p th:text="'~ ' + ${review.reviewerName}">Additional information about club</p>
+                        </div>
+                    </div>
+                </td></tr>
+            </table>
+        </div>
+        <h4 style="text-align: center; padding-bottom: 20px;">Look to each club's individual page from more information.</h4>
+    </div>
+    <!-- JavaScript to search through reviews -->
+    <script>
+        function searchReviews() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("search-bar");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("club-reviews");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</div>
+</body>
+</html>
