@@ -35,6 +35,12 @@
             display: inline-block;
             transition: background-color 0.6s ease;
         }
+        .card {
+            background-color: #5aa7a7;
+            background-clip: unset;
+            border: none;
+            border-radius: unset;
+        }
         .card-flip > div {
             backface-visibility: hidden;
             transition: transform 300ms;
@@ -69,7 +75,7 @@
         .monday, .tuesday, .wednesday, .thursday, .friday {
             display: none;
         }
-        .h4 {
+        h4 {
             text-align: center;
         }
     </style>
@@ -200,64 +206,74 @@
         <button style="width:20%" onclick="thursday()">Thursday</button>
         <button style="width:20%" onclick="friday()">Friday</button>
     </div>
-    <div class="club-icons" style="padding-left: 25px; background-color: #5aa7a7">
+    <div class="club-icons" style="padding-left: 25px; background-color: #5aa7a7; height: 100%;">
         <div class="monday" id="monday" style="width: 100%; height: 400px; margin-top: 15px;">
             <h4>Monday Clubs</h4>
             <div class="card card-flip" style="width: 16rem; height: 16rem; margin-top: 10px; margin-left:50px; margin-right: 50px; display: inline-block;" th:each="clubs : ${list}">
-                <div class="card-front" style="background-color: #96d7c6;">
+                <div class="card-front justify-content-center align-items-center">
                     <h5 class="card-title" th:text="${clubs.title}">Club name</h5>
                 </div>
                 <div class="card-back">
-                    <p class="card-text" th:text="${clubs.description}">Brief description</p>
-                    <p class="card-details" th:text="${clubs.dates}">Meeting Date</p>
+                    <div style="margin-top: 20px; margin-left: 20px;">
+                        <p class="card-text" th:text="${clubs.description}"></p>
+                        <p class="card-details" style="margin-top: 50%" th:text="'Club Timings' + ${clubs.dates}"></p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="tuesday" id="tuesday" style="width: 100%; height: 400px; margin-top: 15px;">
             <h4>Tuesday Clubs</h4>
             <div class="card card-flip" style="width: 16rem; height: 16rem; margin-top: 10px; margin-left:50px; margin-right: 50px; display: inline-block;" th:each="clubs : ${list}">
-                <div class="card-front" style="background-color: #f7cb2d">
+                <div class="card-front justify-content-center align-items-center">
                     <h5 class="card-title" th:text="${clubs.title}">Club name</h5>
                 </div>
                 <div class="card-back">
-                    <p class="card-text" th:text="${clubs.description}">Brief description</p>
-                    <p class="card-details" th:text="${clubs.dates}">Meeting Date</p>
+                    <div style="margin-top: 20px; margin-left: 20px;">
+                        <p class="card-text" th:text="${clubs.description}"></p>
+                        <p class="card-details" style="margin-top: 50%" th:text="'Club Timings' + ${clubs.dates}"></p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="wednesday" id="wednesday" style="width: 100%; height: 400px; margin-top: 15px;">
             <h4>Wednesday Clubs</h4>
             <div class="card card-flip" style="width: 16rem; height: 16rem; margin-top: 10px; margin-left:50px; margin-right: 50px; display: inline-block;" th:each="clubs : ${list}">
-                <div class="card-front" style="background-color: #f7cb2d">
+                <div class="card-front justify-content-center align-items-center">
                     <h5 class="card-title" th:text="${clubs.title}">Club name</h5>
                 </div>
                 <div class="card-back">
-                    <p class="card-text" th:text="${clubs.description}">Brief description</p>
-                    <p class="card-details" th:text="${clubs.dates}">Meeting Date</p>
+                    <div style="margin-top: 20px; margin-left: 20px;">
+                        <p class="card-text" th:text="${clubs.description}"></p>
+                        <p class="card-details" style="margin-top: 50%" th:text="'Club Timings' + ${clubs.dates}"></p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="thursday" id="thursday" style="width: 100%; height: 400px; margin-top: 15px;">
             <h4>Thursday Clubs</h4>
-            <div class="card card-flip" style="width: 16rem; height: 16rem; margin-top: 10px; margin-left:50px; margin-right: 50px; display: inline-block;" th:each="clubs : ${list}">
-                <div class="card-front" style="background-color: #f7cb2d">
+            <div class="card card-flip" style="width: 15rem; height: 15rem; display: inline-block;" th:each="clubs : ${list}">
+                <div class="card-front justify-content-center align-items-center">
                     <h5 class="card-title" th:text="${clubs.title}">Club name</h5>
                 </div>
                 <div class="card-back">
-                    <p class="card-text" th:text="${clubs.description}">Brief description</p>
-                    <p class="card-details" th:text="${clubs.dates}">Meeting Date</p>
+                    <div style="margin-top: 20px; margin-left: 20px;">
+                        <p class="card-text" th:text="${clubs.description}"></p>
+                        <p class="card-details" style="margin-top: 50%" th:text="'Club Timings' + ${clubs.dates}"></p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="friday" id="friday" style="width: 100%; height: 400px; margin-top: 15px;">
             <h4>Friday Clubs</h4>
             <div class="card card-flip" style="width: 16rem; height: 16rem; margin-top: 10px; margin-left:50px; margin-right: 50px; display: inline-block;" th:each="clubs : ${list}">
-                <div class="card-front" style="background-color: #f7cb2d">
+                <div class="card-front justify-content-center align-items-center">
                     <h5 class="card-title" th:text="${clubs.title}">Club name</h5>
                 </div>
-                <div class="card-back">
-                    <p class="card-text" th:text="${clubs.description}">Brief description</p>
-                    <p class="card-details" th:text="${clubs.dates}">Meeting Date</p>
+                <div class="card-back justify-content-center">
+                    <div style="margin-top: 20px; margin-left: 20px;">
+                        <p class="card-text" th:text="${clubs.description}"></p>
+                        <p class="card-details" style="margin-top: 50%" th:text="'Club Timings' + ${clubs.dates}"></p>
+                    </div>
                 </div>
             </div>
         </div>
