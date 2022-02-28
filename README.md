@@ -49,6 +49,7 @@
 
 
 ## Week 11 - Team Final
+
 | Name | Requirement | Evidence | Complete |
 | ---   | ---        | ---      | ---        |
 | Sami | |  | <ul><li>[ ] DONE</li></ul> | 
@@ -58,6 +59,7 @@
 | Sam | Finish Home & Reviews Pages | [Loom](https://www.loom.com/share/fbdbc86cd83b43008ca6d9685a7cdf2d) | <ul><li>[ ] DONE</li></ul> |
 
 ## Week 10 - PBL Part 2
+
 | Name | Requirement | Evidence | Complete |
 | ---   | ---        | ---      | ---        |
 | Sami | | | <ul><li>[ ] DONE</li></ul> | 
@@ -67,6 +69,7 @@
 | Sam | Implement Database on Home Page | | <ul><li>[ ] DONE</li></ul> |
 
 ## Week 9 - PBL Part 1
+
 | Name | Requirement | Evidence | Complete |
 | ---   | ---        | ---      | ---        |
 | Sami | CB FOCUS | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Sameeksha-Individual-Journal) | <ul><li>[ ] DONE</li></ul> | 
@@ -76,6 +79,7 @@
 | Sam | Review Page | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Sam-Individual-Journal#pbl) | <ul><li>[x] DONE</li></ul> | 
 
 ## Week 8 - FRQ Showing 2 (Indi to Indi, outside of previous Pair/Trio)
+
 | Name | Requirement | Evidence | Complete |
 | ---   | ---        | ---      | ---        |
 | Sami | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/81) | <ul><li>[x] DONE</li></ul> | 
@@ -85,6 +89,7 @@
 | Sam | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/77) | <ul><li>[x] DONE</li></ul> | 
 
 ## Week 7 - FRQ Showing 1 (Indi/Pair/Trio)
+
 | Name | Requirement | Evidence | Complete |
 | ---   | ---        | ---      | ---       |
 | Sami | FRQ | Done with Mr. M | <ul><li>[x] DONE</li></ul> | 
@@ -95,6 +100,7 @@
 
 
 ## Week 6 - Mid Term FRQ and Vocab
+
 | Name | Requirement | Evidence | Complete |
 | ---   | ---        | ---      | ---        |
 | Sami | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) | <ul><li>[x] DONE</li></ul> | 
