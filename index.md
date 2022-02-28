@@ -56,7 +56,7 @@
 | Rachel | | [Loom](https://www.loom.com/share/4b84972de0e0416cb550df14d07bd77c) | <ul><li>[ ] DONE</li></ul> | 
 | Adrita | | | <ul><li>[ ] DONE</li></ul> | 
 | Kaavya | | | <ul><li>[ ] DONE</li></ul> | 
-| Sam | Finish Home & Reviews Pages | [Loom](https://www.loom.com/share/fbdbc86cd83b43008ca6d9685a7cdf2d) | <ul><li>[ ] DONE</li></ul> |
+| Sam | Finish Home & Reviews Pages | [Loom](https://www.loom.com/share/fbdbc86cd83b43008ca6d9685a7cdf2d) | <ul><li>[x] DONE</li></ul> |
 
 ## Week 10 - PBL Part 2
 
@@ -66,7 +66,7 @@
 | Rachel | Implement Database on Search | | <ul><li>[ ] DONE</li></ul> | 
 | Adrita | | | <ul><li>[ ] DONE</li></ul> | 
 | Kaavya | | | <ul><li>[ ] DONE</li></ul> | 
-| Sam | Implement Database on Home Page | | <ul><li>[ ] DONE</li></ul> |
+| Sam | Implement Database on Home Page | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Sam-Individual-Journal) | <ul><li>[x] DONE</li></ul> |
 
 ## Week 9 - PBL Part 1
 
