@@ -52,86 +52,86 @@
 
 | Name | Requirement | Evidence |
 | ---   | ---        | ---      |
-| Sami | Independent Work | - | <ul><li>[ ] DONE</li></ul> | 
-| Rachel | Individual Club Pages + Adding Clubs | [Loom](https://www.loom.com/share/4b84972de0e0416cb550df14d07bd77c) | <ul><li>[ ] DONE</li></ul> | 
-| Adrita | Database with POJOs | [Video ](https://drive.google.com/file/d/1JGylJwymUGD5dQh3J_vEoODF_lNCQIU6/view?usp=sharing) | <ul><li>[ ] DONE</li></ul> | 
-| Kaavya | Finish Styling | | <ul><li>[ ] DONE</li></ul> | 
-| Sam | Finish Home & Reviews Pages | [Loom](https://www.loom.com/share/fbdbc86cd83b43008ca6d9685a7cdf2d) | <ul><li>[ ] DONE</li></ul> |
+| Sami | Independent Work | - |
+| Rachel | Individual Club Pages + Adding Clubs | [Loom](https://www.loom.com/share/4b84972de0e0416cb550df14d07bd77c) |
+| Adrita | Database with POJOs | [Video ](https://drive.google.com/file/d/1JGylJwymUGD5dQh3J_vEoODF_lNCQIU6/view?usp=sharing) |
+| Kaavya | Finish Styling | |
+| Sam | Finish Home & Reviews Pages | [Loom](https://www.loom.com/share/fbdbc86cd83b43008ca6d9685a7cdf2d) |
 
 ## Week 10 - PBL Part 2
 
 | Name | Requirement | Evidence |
 | ---   | ---        | ---      |
-| Sami | Independent Work | - | <ul><li>[ ] DONE</li></ul> | 
-| Rachel | Implement Database on Search | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Rachel-Individual-Journal) | <ul><li>[ ] DONE</li></ul> | 
-| Adrita | Work on Database with POJOs | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Adrita-Individual-Journal) | <ul><li> [ ] DONE</li></ul> | 
-| Kaavya | SCSS Styling | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Kaavya-Individual-Journal) | <ul><li>[ ] DONE</li></ul> | 
-| Sam | Implement Database on Home Page | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Sam-Individual-Journal) | <ul><li>[ ] DONE</li></ul> |
+| Sami | Independent Work | - |
+| Rachel | Implement Database on Search | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Rachel-Individual-Journal) |
+| Adrita | Work on Database with POJOs | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Adrita-Individual-Journal) |
+| Kaavya | SCSS Styling | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Kaavya-Individual-Journal) |
+| Sam | Implement Database on Home Page | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Sam-Individual-Journal) |
 
 ## Week 9 - PBL Part 1
 
 | Name | Requirement | Evidence |
 | ---   | ---        | ---      |
-| Sami | CB FOCUS | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Sameeksha-Individual-Journal) | <ul><li>[ ] DONE</li></ul> | 
-| Rachel | Individual Club Page | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Rachel-Individual-Journal) | <ul><li>[ ] DONE</li></ul> | 
-| Adrita | Database and AboutMe Page | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Adrita-Individual-Journal) | <ul><li>[ ] DONE</li></ul> | 
-| Kaavya | Themes and Sassy/CSS | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Kaavya-Individual-Journal) | <ul><li>[ ] DONE</li></ul> | 
-| Sam | Review Page | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Sam-Individual-Journal#pbl) | <ul><li>[x] DONE</li></ul> | 
+| Sami | CB FOCUS | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Sameeksha-Individual-Journal) |
+| Rachel | Individual Club Page | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Rachel-Individual-Journal) |
+| Adrita | Database and AboutMe Page | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Adrita-Individual-Journal) |
+| Kaavya | Themes and Sassy/CSS | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Kaavya-Individual-Journal) |
+| Sam | Review Page | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/0-Sam-Individual-Journal#pbl) |
 
 ## Week 8 - FRQ Showing 2 (Indi to Indi, outside of previous Pair/Trio)
 
 | Name | Requirement | Evidence |
 | ---   | ---        | ---      |
-| Sami | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/81) | <ul><li>[x] DONE</li></ul> | 
-| Rachel | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/76) | <ul><li>[x] DONE</li></ul> | 
-| Adrita | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/79) | <ul><li>[x] DONE</li></ul> | 
-| Kaavya | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/80) | <ul><li>[x] DONE</li></ul> | 
-| Sam | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/77) | <ul><li>[x] DONE</li></ul> | 
+| Sami | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/81) |
+| Rachel | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/76) |
+| Adrita | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/79) |
+| Kaavya | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/80) |
+| Sam | FRQ Crossover | [Ticket](https://github.com/dsblack0/runtime-terror/issues/77) |
 
 ## Week 7 - FRQ Showing 1 (Indi/Pair/Trio)
 
 | Name | Requirement | Evidence |
 | ---   | ---        | ---      |
-| Sami | FRQ | Done with Mr. M | <ul><li>[x] DONE</li></ul> | 
-| Rachel | FRQ | Done with Mr. M | <ul><li>[x] DONE</li></ul> | 
-| Adrita | FRQ | Done with Mr. M | <ul><li>[x] DONE</li></ul> | 
-| Kaavya | FRQ |Done with Mr. M  | <ul><li>[x] DONE</li></ul> | 
-| Sam | FRQ | Done with Mr. M | <ul><li>[x] DONE</li></ul> | 
+| Sami | FRQ | Done with Mr. M |
+| Rachel | FRQ | Done with Mr. M |
+| Adrita | FRQ | Done with Mr. M |
+| Kaavya | FRQ |Done with Mr. M  |
+| Sam | FRQ | Done with Mr. M | 
 
 
 ## Week 6 - Mid Term FRQ and Vocab
 
 | Name | Requirement | Evidence |
 | ---   | ---        | ---      |
-| Sami | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) | <ul><li>[x] DONE</li></ul> | 
-| Rachel | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) | <ul><li>[x] DONE</li></ul> | 
-| Adrita | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) | <ul><li>[x] DONE</li></ul> | 
-| Kaavya | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) | <ul><li>[x] DONE</li></ul> | 
-| Sam | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) | <ul><li>[x] DONE</li></ul> | 
-| Sami & Kaavya | Pair Midterm Vocab | [Ticket](https://github.com/dsblack0/runtime-terror/issues/78), [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Week-6-Midterm-(Kaavya-and-Sami)) | <ul><li>[x] DONE</li></ul> | 
-| Adrita & Sam & Rachel | Trio Midterm Vocab | [Ticket](https://github.com/dsblack0/runtime-terror/issues/78), [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Week-6-Midterm-(Adrita,-Sam,-Rachel)) | <ul><li>[x] DONE</li></ul> | 
+| Sami | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) |
+| Rachel | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) |
+| Adrita | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) |
+| Kaavya | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) |
+| Sam | FRQ 1-6 | Continued on [Week 7](https://github.com/dsblack0/runtime-terror#week-7---frq-showing-1-indipairtrio) |
+| Sami & Kaavya | Pair Midterm Vocab | [Ticket](https://github.com/dsblack0/runtime-terror/issues/78), [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Week-6-Midterm-(Kaavya-and-Sami)) |
+| Adrita & Sam & Rachel | Trio Midterm Vocab | [Ticket](https://github.com/dsblack0/runtime-terror/issues/78), [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Week-6-Midterm-(Adrita,-Sam,-Rachel)) |
 
 ## Week 5 - PBL showing the How, Theme, Technicals
 
 | Name | Requirement | Evidence |
 | ---   | ---        | ---      |
-| Sami | Calendar Page and CSS | [Issue#1](https://github.com/dsblack0/runtime-terror/issues/52) [Issue#2](https://github.com/dsblack0/runtime-terror/issues/63) | <ul><li>[x] DONE</li></ul> | |
-| Rachel | Search Bar and Jekyll| [Issue#1](https://github.com/dsblack0/runtime-terror/issues/47) [Issue#2](https://github.com/dsblack0/runtime-terror/issues/62) | <ul><li>[x] DONE</li></ul> | |
-| Adrita | Database | [Issue](https://github.com/dsblack0/runtime-terror/issues/43) | <ul><li>[ ] DONE</li></ul> | |
-| Kaavya | Individual Club Page and Jekyll | [Issue#1](https://github.com/dsblack0/runtime-terror/issues/68) [Issue#2](https://github.com/dsblack0/runtime-terror/issues/47) | <ul><li>[x] DONE</li></ul> | |
-| Sam | Home Page | [Issue](https://github.com/dsblack0/runtime-terror/issues/48) | <ul><li>[x] DONE</li></ul> | |
-| Team | Unit #5 FRQ Online | [Issue](https://github.com/dsblack0/runtime-terror/issues/66) | <ul><li>[x] DONE</li></ul> | |
+| Sami | Calendar Page and CSS | [Issue#1](https://github.com/dsblack0/runtime-terror/issues/52) [Issue#2](https://github.com/dsblack0/runtime-terror/issues/63) |
+| Rachel | Search Bar and Jekyll| [Issue#1](https://github.com/dsblack0/runtime-terror/issues/47) [Issue#2](https://github.com/dsblack0/runtime-terror/issues/62) |
+| Adrita | Database | [Issue](https://github.com/dsblack0/runtime-terror/issues/43) |
+| Kaavya | Individual Club Page and Jekyll | [Issue#1](https://github.com/dsblack0/runtime-terror/issues/68) [Issue#2](https://github.com/dsblack0/runtime-terror/issues/47) |
+| Sam | Home Page | [Issue](https://github.com/dsblack0/runtime-terror/issues/48) |
+| Team | Unit #5 FRQ Online | [Issue](https://github.com/dsblack0/runtime-terror/issues/66) |
 
 ## Week 4 - New Year "Time to be Resolute"
 
 | Name | Requirement | Evidence |
 | ---   | ---        | ---      |
-| Sami | Calendar Page Setup and Technicals| [Issue](https://github.com/dsblack0/runtime-terror/issues/52) | <ul><li>[x] DONE</li></ul> | |
-| Rachel | Jekyll | [Issue](https://github.com/dsblack0/runtime-terror/issues/47) | <ul><li>[ ] DONE</li></ul> | |
-| Adrita | Database Setup | [Issue](https://github.com/dsblack0/runtime-terror/issues/43) | <ul><li>[ ] DONE</li></ul> | |
-| Kaavya | Deployment | [Issue](https://github.com/dsblack0/runtime-terror/issues/42) | <ul><li>[ ] DONE</li></ul> | |
-| Sam | Home Page Technicals | [Issue](https://github.com/dsblack0/runtime-terror/issues/48) | <ul><li>[ ] DONE</li></ul> | |
-| Team | Unit #4 FRQ Online | [Issue](https://github.com/dsblack0/runtime-terror/issues/46) | <ul><li>[x] DONE</li></ul> | |
+| Sami | Calendar Page Setup and Technicals| [Issue](https://github.com/dsblack0/runtime-terror/issues/52) |
+| Rachel | Jekyll | [Issue](https://github.com/dsblack0/runtime-terror/issues/47) |
+| Adrita | Database Setup | [Issue](https://github.com/dsblack0/runtime-terror/issues/43) |
+| Kaavya | Deployment | [Issue](https://github.com/dsblack0/runtime-terror/issues/42) |
+| Sam | Home Page Technicals | [Issue](https://github.com/dsblack0/runtime-terror/issues/48) |
+| Team | Unit #4 FRQ Online | [Issue](https://github.com/dsblack0/runtime-terror/issues/46) |
 
 ## Week 3 - WIP Project Review
 
@@ -139,15 +139,14 @@
 
 | Name | Requirement | Evidence |
 | ---   | ---        | ---      |
-| Sami | Design Manager BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/18) | <ul><li>[ ] DONE</li></ul> | .5/1 |
-| Rachel | Scrum Master BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/19) | <ul><li>[x] DONE</li></ul> | .75/1 |
-| Adrita | Technical Officer BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/20) | <ul><li>[x] DONE</li></ul> | .75/1 |
-| Kaavya | Deployment Manager BOF  | [Issue](https://github.com/dsblack0/runtime-terror/issues/21) | <ul><li>[ ] DONE</li></ul> | .5/1 |
-| Sam | Github Admin BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/22) | <ul><li>[x] DONE</li></ul> | 1/1 |
-| Team | AP FRQ Test and Review | [Issue](https://github.com/dsblack0/runtime-terror/issues/23) | <ul><li>[x] DONE</li></ul> (OPTIONAL)| ## |
-| Team | Unit #3 FRQ Online | [Issue](https://github.com/dsblack0/runtime-terror/issues/24) | <ul><li>[x] DONE</li></ul> | 0.75/1 |
-| Team | Unit #2 FRQ Online | [Issue](https://github.com/dsblack0/runtime-terror/issues/9) | <ul><li>[x] DONE</li></ul> | TOTAL: 0.75-1/1 |
-| | | | | 4.5-5.25/7 |
+| Sami | Design Manager BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/18) |
+| Rachel | Scrum Master BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/19) |
+| Adrita | Technical Officer BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/20) |
+| Kaavya | Deployment Manager BOF  | [Issue](https://github.com/dsblack0/runtime-terror/issues/21) |
+| Sam | Github Admin BOF | [Issue](https://github.com/dsblack0/runtime-terror/issues/22) |
+| Team | AP FRQ Test and Review | [Issue](https://github.com/dsblack0/runtime-terror/issues/23) |
+| Team | Unit #3 FRQ Online | [Issue](https://github.com/dsblack0/runtime-terror/issues/24) |
+| Team | Unit #2 FRQ Online | [Issue](https://github.com/dsblack0/runtime-terror/issues/9) |
 
 
 ## Week 2 - Home Pages
@@ -156,10 +155,10 @@
 
 | Name | Requirement | Evidence |
 | ---   | ---        | ---      |
-| Rachel | ReadME Quality | [Issue](https://github.com/dsblack0/runtime-terror/issues/17) | <ul><li>[x] DONE</li></ul> | ## |
-| Kaavya | Deployed Website | [Issue](https://github.com/dsblack0/runtime-terror/issues/16) | <ul><li>[x] DONE</li></ul> | ## |
-| Team | Individual About Pages | [Issue](https://github.com/dsblack0/runtime-terror/issues/8) | <ul><li>[x] DONE</li></ul> | ## |
-| Team | TPT Journal and quiz (Unit #2 Deployed | [Issue](https://github.com/dsblack0/runtime-terror/issues/9) | <ul><li>[x] DONE</li></ul> | ## |
+| Rachel | ReadME Quality | [Issue](https://github.com/dsblack0/runtime-terror/issues/17) |
+| Kaavya | Deployed Website | [Issue](https://github.com/dsblack0/runtime-terror/issues/16) |
+| Team | Individual About Pages | [Issue](https://github.com/dsblack0/runtime-terror/issues/8) |
+| Team | TPT Journal and quiz (Unit #2 Deployed | [Issue](https://github.com/dsblack0/runtime-terror/issues/9) |
 
 ## Week 1 - Project Approval
 
@@ -169,16 +168,15 @@
 
 | Name | Requirement | Evidence |
 | ---   | ---        | ---      |
-| Sami | Design (Wiki Theme, Brain Write & Wire Frame) | [Issue](https://github.com/dsblack0/runtime-terror/issues/12) | <ul><li>[x] DONE</li></ul> | 1/1 |
-| Adrita | Technicals (10 to 12 key ideas) | [Issue](https://github.com/dsblack0/runtime-terror/issues/13) | <ul><li>[x] DONE</li></ul> | 1/1 |
-| Sam | Github (On Wiki containing Management Plan, forking, branching, pull request, etc) | [Issue](https://github.com/dsblack0/runtime-terror/issues/14) | <ul><li>[x] DONE</li></ul> | 1/1 |
-| Kaavya | Deployment (On Wiki containing Hardware, frequency, etc) | [Issue](https://github.com/dsblack0/runtime-terror/issues/15) | <ul><li>[x] DONE</li></ul> | 1/1 |
-| Rachel | Scrum Board (Assignments and Backlock) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1) | <ul><li>[x] DONE</li></ul> | 1/1 |
-| | | | | TOTAL: 5/5 |
+| Sami | Design (Wiki Theme, Brain Write & Wire Frame) | [Issue](https://github.com/dsblack0/runtime-terror/issues/12) |
+| Adrita | Technicals (10 to 12 key ideas) | [Issue](https://github.com/dsblack0/runtime-terror/issues/13) |
+| Sam | Github (On Wiki containing Management Plan, forking, branching, pull request, etc) | [Issue](https://github.com/dsblack0/runtime-terror/issues/14) |
+| Kaavya | Deployment (On Wiki containing Hardware, frequency, etc) | [Issue](https://github.com/dsblack0/runtime-terror/issues/15) |
+| Rachel | Scrum Board (Assignments and Backlock) | [Scrum Board](https://github.com/dsblack0/runtime-terror/projects/1) |
 
 ## Week 0
 
 | Topic | Issue/Link |
 | ---   | ---        |
-| Project Ideas! | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Brainstorm) | (Part of WK1) |
-| Intro Organization | [Ticket](https://github.com/dsblack0/runtime-terror/issues/1) | 0.5/0.5 |
+| Project Ideas! | [Wiki](https://github.com/dsblack0/runtime-terror/wiki/Brainstorm) |
+| Intro Organization | [Ticket](https://github.com/dsblack0/runtime-terror/issues/1) |
