@@ -6,13 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 @Setter
 @Getter
 @ToString
 @NoArgsConstructor
 @Entity
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 
 public class Club {
     @Id
