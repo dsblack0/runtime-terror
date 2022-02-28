@@ -94,32 +94,32 @@ public class MainController {
 
 
 
-        club1.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
-        club2.clubCreate("Team OPTIX Robotics", "Team Optix.", "Mondays & Wednesdays & Tuesday & Thursday");
-        club3.clubCreate("WHAT Center", "Get help with writing tutors.", "Mondays & Wednesdays & Thursdays");
-        club4.clubCreate("Quiz Bowl", "Participate in tournaments.", "Thursdays");
-        club5.clubCreate("Academic League", "Participate in tournaments.", "Mondays & Wednesdays");
-        club6.clubCreate("Best Buddies", "Participate in tournaments.", "Mondays & Wednesdays");
-        club7.clubCreate("All Girls STEM Society", "Participate in tournaments.", "Mondays & Wednesdays");
+        club1.clubCreate("Speech & Debate", "To recite speeches and practice debates on current events; compete at tournaments", "Mondays & Wednesdays 3:30-4:30");
+        club2.clubCreate("Team OPTIX Robotics", "To build a robot for the FRC regional competition in March. Also to fun and market the robot.", "Mondays & Wednesdays & Tuesday & Thursday");
+        club3.clubCreate("WHAT Center", "Peer writing tutors for Del Norte High School.", "Mondays & Wednesdays & Thursdays");
+        club4.clubCreate("Quiz Bowl", "Prepare academic trivia competitions: encourage participation, breadth and depth of academic knowledge.", "Thursdays");
+        club5.clubCreate("Academic League", "To cultivate a desire for learning through team based trivia competitions.", "Mondays & Wednesdays");
+        club6.clubCreate("Best Buddies", "Create friendships among disabled & ablebodied student.", "Mondays & Wednesdays");
+        club7.clubCreate("All Girls STEM Society", "Create workshops to inspire young girls to pursue STEM.", "Mondays & Wednesdays");
         club8.clubCreate("American Red Cross Club", "To provide volunteer opportunities and help others in need", "Mondays Lunch (biweekly)");
-        club9.clubCreate("Bishops and Knights", "", "Mondays & Wednesdays");
-        club10.clubCreate("Chemistry Tutoring Club", "", "by appointment");
-        club11.clubCreate("DECA", "", "Tuesday Lunch");
-        club12.clubCreate("HOSA", "", "Wednesdays Lunch + Tutorial");
-        club13.clubCreate("Key Club", "", "Tuesdays Lunch (monthly)");
-        club14.clubCreate("LINK CREW", "", "");
-        club15.clubCreate("Mock Trial", "", "");
-        club16.clubCreate("Model United Nations", "", "");
-        club17.clubCreate("Mountain Biking", "", "");
-        club18.clubCreate("National Honors Society", "", "");
-        club19.clubCreate("Peer Counseling", "", "");
-        club20.clubCreate("Rocketry Club", "", "");
-        club21.clubCreate("Science Olympiad", "", "");
-        club22.clubCreate("SD STEM Startups", "", "");
-        club23.clubCreate("The Featheralist", "", "");
-        club24.clubCreate("The Talon", "", "");
-        club25.clubCreate("Tri-Music Honor Society", "", "");
-        club26.clubCreate("Sock Puppet Club", "", "");
+        club9.clubCreate("Bishops and Knights", "To get other people involved in Chess and Compete in chess Tournaments\n", "Mondays & Wednesdays");
+        club10.clubCreate("Chemistry Tutoring Club", "To provide one-on-one chemistry tutoring from Chem 1 to AP Chem", "Mondays/Tuesdays/Wednesdays/Thursdays/Fridays (by appointment)");
+        club11.clubCreate("DECA", "To prepare emerging leaders and entrepreneurs in marketing, finance, hospitality and business management in high schools and the globe\n", "Tuesday Lunch");
+        club12.clubCreate("HOSA", "Helps students explore the medical field and participate in community device projects", "Wednesdays Lunch + Tutorial");
+        club13.clubCreate("Key Club", "A club that promotes volunteering and fundraising for the communities.", "Tuesdays Lunch (monthly)");
+        club14.clubCreate("LINK CREW", "To create a welcoming environment for freshman Nighthawks", "Fridays Homeroom");
+        club15.clubCreate("Mock Trial", "To help students understand the legal system, develop speaking skills, and compete in annual competitions ", "Wednesdays 7-8pm");
+        club16.clubCreate("Model United Nations", "To raise awareness of global affairs and help students improve their speaking and collaborative skills", "Tuesdays Lunch");
+        club17.clubCreate("Mountain Biking", "MTB Discussion, provide an opportunity to high school and middle school boys and girls of all abilities and enjoy the outdoors", "Tuesdays & Thursdays & Saturdays");
+        club18.clubCreate("National Honors Society", "A National Volunteer Organization for high school students who got out into the community with 4 pillars in mind: Scholarships, leadership service and character", "Tuesdays/Wednesdays/Thursdays Lunch (monthly)");
+        club19.clubCreate("Peer Counseling", "To counsel fellow students through tutoring and mentoring, as well as organizing events", "Fridays Homeroom");
+        club20.clubCreate("Rocketry Club", "To foster interest in aerospace and mechanical engineering. We will launch rockets and encourage members to join TARC and Stellar Xplorers\n", "Fridays Lunch (biweekly)");
+        club21.clubCreate("Science Olympiad", "To improve the quality of science education, increase interest in science among students of all grade levels, races and genders, create a technologicallyliterate workforce and provide recognition for outstanding achievement by students ", "Mondays/Tuesdays/Wednesdays/Thursdays/Fridays (varies by event)");
+        club22.clubCreate("SD STEM Startups", "We strive to build a community of dedicated product developers, designers, and entrepreneurs to create software startups that solve real-world problems.", "Thursdays");
+        club23.clubCreate("The Featheralist", "To create magazines for politics, world affairs, and the humanities", "Mondays/Tuesdays/Wednesdays/Thursdays/Fridays (varies by need)");
+        club24.clubCreate("The Talon", "A student-run forum dedicated to providing information to public through ethical, truthful and professional journalism", "Thursdays 3:15");
+        club25.clubCreate("Tri-Music Honor Society", "Provide volunteer hours for people in the music program (music related)", "Mondays Lunch");
+        club26.clubCreate("Sock Puppet Club", "Gather those passionate about the art of sock puppets and create and share ", "First Tuesday of Each Month");
 
 
         ArrayList<Clubs> list = new ArrayList<>();
