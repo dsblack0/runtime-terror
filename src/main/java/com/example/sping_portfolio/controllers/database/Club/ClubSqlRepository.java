@@ -1,10 +1,10 @@
-package com.example.sping_portfolio.controllers.database;
+package com.example.sping_portfolio.controllers.database.Club;
 
 //import com.nighthawk.csa.database.scrum.ScrumSqlRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-//import org.springframework.transaction.annotation.Transactional;
-/**
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.transaction.Transactional;
 import java.util.List;
 @Service
@@ -13,14 +13,9 @@ public class ClubSqlRepository {
     @Autowired
     private ClubJpaRepository jpa;
 
-    public List<Club>listlike(String term){
-        return jpa.findClubName(term, term);
+    public List<Club>listAll(){
+        return jpa.findAll();
 
-    }
-
-    public List<Club>listLike(String term) {
-        String like_term = String.format("%%%s%%",term);
-        return jpa.findByLikeTermNative(like_term);
     }
 
     public void save(Club club) {
@@ -37,4 +32,4 @@ public class ClubSqlRepository {
         jpa.deleteById(id);
     }
 }
- **/
+

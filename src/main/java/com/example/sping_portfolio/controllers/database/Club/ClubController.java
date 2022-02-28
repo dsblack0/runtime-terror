@@ -1,4 +1,4 @@
-package com.example.sping_portfolio.controllers.database;
+package com.example.sping_portfolio.controllers.database.Club;
 //import com.example.sping_portfolio.controllers.database.Club;
 //import com.example.sping_portfolio.controllers.database.ClubSqlRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import javax.validation.Valid;
 import java.text.SimpleDateFormat;
 
 import java.util.*;
-/**
+
 @Controller
 public class ClubController implements WebMvcConfigurer {
     @Autowired
@@ -33,4 +33,3 @@ public class ClubController implements WebMvcConfigurer {
     }
     //ask which one of the GetMappings are actually relevant to the base code
 }
-**/
