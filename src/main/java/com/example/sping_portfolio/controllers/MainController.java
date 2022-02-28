@@ -26,10 +26,9 @@ public class MainController {
 
         return "Pages/aboutMePages/teamAbout";
     }
-
-    // Home Page
+  
     @GetMapping("/")
-    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
+    // Home Page
     public String index(Model model) {
 
         Clubs club1 = new Clubs();//creating an object of Student

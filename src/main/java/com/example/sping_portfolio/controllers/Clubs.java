@@ -54,5 +54,4 @@ public class Clubs implements Serializable {
         //Creating an object or instance
 
     }
-
 }
