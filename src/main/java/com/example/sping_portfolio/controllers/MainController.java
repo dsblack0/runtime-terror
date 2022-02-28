@@ -11,6 +11,7 @@ import java.util.Objects;
 
 @Controller
 public class MainController {
+    //Team About Us
     @GetMapping ("/teamAbout")
     public String teamAbout(@RequestParam(name="inputx", required = false, defaultValue = "0") String inputx,
                             @RequestParam(name="inputy", required = false, defaultValue = "0") String inputy,
@@ -26,7 +27,7 @@ public class MainController {
 
         return "Pages/aboutMePages/teamAbout";
     }
-
+  
     //Club Reviews
     @GetMapping ("/reviewsPage")
     public String reviewsPage(@RequestParam(name="clubName", required = false, defaultValue = "") String clubName,
@@ -59,6 +60,41 @@ public class MainController {
         model.addAttribute("reviews", reviews);
 
         return "reviewsPage";
+  
+    @GetMapping("/")
+    // Home Page
+    public String index(Model model) {
+
+        Clubs club1 = new Clubs();//creating an object of Student
+        Clubs club2 = new Clubs();
+        Clubs club3 = new Clubs();
+        Clubs club4 = new Clubs();//creating an object of Student
+        Clubs club5 = new Clubs();
+        Clubs club6 = new Clubs();
+        Clubs club7 = new Clubs();//creating an object of Student
+        Clubs club8 = new Clubs();
+
+        club1.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
+        club2.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
+        club3.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
+        club4.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
+        club5.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
+        club6.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
+        club7.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
+        club8.clubCreate("Speech & Debate", "Participate in tournaments.", "Mondays & Wednesdays");
+
+        ArrayList<Clubs> list = new ArrayList<>();
+        list.add(club1);
+        list.add(club2);
+        list.add(club3);
+        list.add(club4);
+        list.add(club5);
+        list.add(club6);
+        list.add(club7);
+        list.add(club8);
+        model.addAttribute("list", list);
+
+        return "index"; // returns HTML VIEW (greeting)
     }
 }
 

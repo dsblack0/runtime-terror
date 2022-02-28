@@ -24,11 +24,11 @@
                 <h3>Club Name</h3>
                 <br>
                 <div class="card-columns">
-                    <div class="card">
+                    <div class="card" style="width:50rem; height:auto;">
                         <div class="card-body">
                             <h4>Club Description</h4>
                             <p id = "text"></p>
-                            <button type="button" onclick="edit()">Edit Description</button>
+                            <button type="button" onclick = "document.getElementById('description').style.display = 'block'">Edit Description</button>
                         </div>
                     </div>
                 </div>
@@ -37,15 +37,20 @@
                         function display() {
                             var text = document.getElementById("description").value;
                             document.getElementById("text").innerHTML = text;
-                            document.getElementById("description").style.visibility = "none";
+                            document.getElementById('description').style.display = 'unblock';
                         }
-                        function edit() {
-                            document.getElementById("description").style.visibility = "show";
+                        <!-- Not sure if this will work -->
+                        function showDiv1() {
+                            var my_disply = document.getElementById('description').style.display;
+                            if(my_disply == "block")
+                                document.getElementById('description').style.display = "none";
+                            else
+                                document.getElementById('description').style.display = "block";
                         }
                     </script>
                     <label for="description"></label>
-                    <textarea class="form-control" rows="5" id="description" placeholder="Add Club Description Here"></textarea>
-                    <button type="button" onclick="display()">Update Description</button>
+                    <textarea class="form-control" rows="5" id="description" placeholder="Add Club Description Here" name="hide" style="display:none;"></textarea>
+                    <button type="button" onclick="display()" onclick="">Update Description</button>
                 </div>
             </div>
         </div>

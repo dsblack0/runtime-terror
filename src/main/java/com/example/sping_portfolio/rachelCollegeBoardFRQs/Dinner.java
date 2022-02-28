@@ -52,7 +52,7 @@ public class Dinner {
 
     public String dinnerOption2(boolean rsvp, int selection) {
         if (rsvp == true) {
-            this.option2 = "Thank you for attending. You will be served " + choice;
+            this.option2 = "Thank you for attending! You will be served " + choice;
         } else {
             this.option2 = "Sorry you can't make it.";
         }
@@ -66,6 +66,15 @@ public class Dinner {
             System.out.println("false");
         }
         return null;
+    }
+
+    public static void main(String[] args) {
+        Dinner unit3frq1 = new Dinner();
+        unit3frq1.printSelection(3);
+        unit3frq1.dinnerOption1(true,2);
+        unit3frq1.dinnerOption2(true,1);
+        unit3frq1.compare();
+
     }
 
 }

@@ -22,17 +22,32 @@
       height: 100%;
       background: #d2e7d6;
     }
-    .unit2, .unit3, .unit4 {
+    .unit2, .unit3, .unit4, .unit5, .unit6 {
       text-align:left;
       margin:10px;
     }
+    .buttons {
+      background-color: #2c6975; /* Green background */
+      border: 0px solid white; /* Green border */
+      color: white; /* White text */
+      padding: 10px 24px; /* Some padding */
+      cursor: pointer; /* Pointer/hand icon */
+      border-radius: 12px;
+      margin: 5px;
+    }
+    .buttons:hover {
+      background-color: #68B2A0;
+      border-radius: 2px;
+    }
     .btn-group button {
       background-color: #2c6975; /* Green background */
-      border: 1px solid white; /* Green border */
+      border: 0px solid white; /* Green border */
       color: white; /* White text */
       padding: 10px 24px; /* Some padding */
       cursor: pointer; /* Pointer/hand icon */
       float: left; /* Float the buttons side by side */
+      border-radius: 12px;
+      margin: 5px;
     }
     .btn-group:after {
       content: "";
@@ -43,21 +58,95 @@
       border-right: none;
     }
     .btn-group button:hover{
-      background-color: #d2e7d6;
+      background-color: #68B2A0;
+      border-radius: 2px;
     }
       table {
       border-collapse: collapse;
       width: 100%;
     }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+    td, th {
+      border: 1px solid #d2e7d6;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #68B2A0;
+    }
+
+    .wrap-collabsible {
+  margin-bottom: 1.2rem 0;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle {
+  display: block;
+
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 1rem;
+
+  color: #68B2A0;
+  background: #2c6975;
+
+  cursor: pointer;
+
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+  color: #d2e7d6;
+}
+
+.lbl-toggle::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 100vh;
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content .content-inner {
+  background: rgb(44, 105, 117,);
+  border-bottom: 1px solid rgb(44, 105, 117,);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
 }
   </style>
     <!-- End of head content specific to page -->
@@ -103,132 +192,341 @@ tr:nth-child(even) {
                         <p>What is your name?</p>
                         <!-- <label for="name">What is your name?</label> -->
                         <input name="name" id="name">
-                        <button>Hello!</button>
+                        <button class="buttons">Hello!</button>
                         <p th:text="'Hello, ' + ${name} + '!'"></p>
                     </div>
                 </form>
             </div>
         </div>
         <hr style="height: 3px; background-color: #FFFFFF;">
-        <table class="table" id="factsTable" style="margin-top: 2%;">
+        <table id="factsTable" style="margin-top: 2%;">
             <tr>
                 <th>Fact</th>
                 <th>Year</th>
                 <th>Number</th>
-                <th>Found?</th>
                 <th>Type</th>
             </tr>
             <tbody>
             <td th:text="${data.text}"></td>
             <td th:text="${data.year}"></td>
             <td th:text="${data.number}"></td>
-            <td th:text="${data.found}"></td>
             <td th:text="${data.type}"></td>
             </tbody>
             <div class="row justify-content-center" style="margin-top: 10px;">
                 <form action="/rachelAbout" method="GET" id="factsForm">
-                    <button>New Fact!</button>
+                    <button class="buttons">New Fact!</button>
                 </form>
             </div>
         </table>
         <hr style="height: 3px; background-color: #FFFFFF;">
+        <br></br>
         <div>
-            <h2>
-                Rachel's Links
-            </h2>
             <table>
                 <tr>
-                    <th>Entry</th>
-                    <th>Link</th>
+                    <td style="text-align:center"><strong>Important Links</strong></td>
                 </tr>
                 <tr>
-                    <td>Github Profile</td>
-                    <td>https://github.com/rachelklee</td>
+                    <td style="text-align:center"><a href="https://github.com/rachelklee">Github Profile</a></td>
                 </tr>
                 <tr>
-                    <td>Team Repository</td>
-                    <td>https://github.com/dsblack0/runtime-terror</td>
+                    <td style="text-align:center"><a href="https://github.com/dsblack0/runtime-terror">Team Repository</a></td>
                 </tr>
                 <tr>
-                    <td>Individual Journal</td>
-                    <td>https://docs.google.com/document/d/15mil-mSpv7Ma4rNcUr_b5NjWCx2yM9FR3MIMcpM767U/edit?usp=sharing</td>
+                    <td style="text-align:center"><a href="https://github.com/dsblack0/runtime-terror/wiki/0-Rachel-Individual-Journal">Individual Journal</a></td>
                 </tr>
                 <tr>
-                    <td>Tickets</td>
-                    <td>https://github.com/dsblack0/runtime-terror/issues/assigned/rachelklee</td>
+                    <td style="text-align:center"><a href="https://github.com/dsblack0/runtime-terror/issues/assigned/rachelklee">Tickets</a></td>
                 </tr>
                 <tr>
-                    <td>Commits</td>
-                    <td>https://github.com/dsblack0/runtime-terror/commits?author=rachelklee</td>
+                    <td style="text-align:center"><a href="https://github.com/dsblack0/runtime-terror/commits?author=rachelklee">Commits</a></td>
                 </tr>
             </table>
         </div>
+        <hr style="height: 3px; background-color: #FFFFFF;">
+        <br></br>
+        <h2>
+            CB FRQs
+        </h2>
+        <br></br>
+        <script>
+            let myLabels = document.querySelectorAll('.lbl-toggle');
 
-            <h2>
-                CB FRQs
-            </h2>
-                <div class="unit2">
-                    <br></br>
-                    <h3>Unit 2</h3>
-                    <form action="/rachelAbout" method="GET" id="changesegment">
-                        <div>
-                            <label for="name" style="color: teal;">Original sequence?</label>
-                            <input name="oldseq" id="oldseq">
-                            <label for="name" style="color: teal;">Pick a segment to remove</label>
-                            <input name="segment" id="segment">
-                            <button>Answer</button>
-                            <p><b th:text="'New sequence: ' + ${newSeq}" style="color: teal;"></b></p>
-                        </div>
-                    </form>
-                    <form>
-                        <div>
-                            <p><b th:text="'Original sequence: ' + ${originalSeq}" style="color: teal;"></b></p>
-                            <label for="name" style="color: teal;">Pick a segment to insert</label>
-                            <input name="instsegment" id="instsegment">
-                            <label for="name" style="color: teal;">Index?</label>
-                            <input name="ind" id="ind">
-                            <button>Answer</button>
-                            <p><b th:text="'Resulting sequence: ' + ${resultSeq}" style="color: teal;"></b></p>
-                        </div>
-                    </form>
-                    <form>
-                        <div>
-                            <label for="name" style="color: teal;">Pick to numbers to find their distance</label>
-                            <input name="num1" id="num1">
-                            <input name="num2" id="num2">
-                            <button>Answer</button>
-                            <p><b th:text="'Distance from ' + ${num1} + ' to ' + ${num2} + '= ' + ${distance}" style="color: teal;"></b></p>
-                        </div>
-                    </form>
+            Array.from(myLabels).forEach(label => {
+                label.addEventListener('keydown', e => {
+                    // 32 === spacebar
+                    // 13 === enter
+                    if (e.which === 32 || e.which === 13) {
+                        e.preventDefault();
+                        label.click();
+                    };
+                });
+            });
+        </script>
+        <div class="wrap-collabsible">
+            <input id="collapsible2" class="toggle" type="checkbox">
+            <label for="collapsible2" class="lbl-toggle">Unit 2</label>
+            <div class="collapsible-content">
+                <div class="content-inner">
+                    <div class="unit2">
+                        <h3>Unit 2</h3>
+                        <form action="/rachelAbout" method="GET" id="changesegment">
+                            <div>
+                                <label for="name" style="color: teal;">Original sequence?</label>
+                                <input name="oldseq" id="oldseq">
+                                <label for="name" style="color: teal;">Pick a segment to remove</label>
+                                <input name="segment" id="segment">
+                                <button class="buttons">Answer</button>
+                                <p><b th:text="'New sequence: ' + ${newSeq}" style="color: teal;"></b></p>
+                            </div>
+                        </form>
+                        <form>
+                            <div>
+                                <p><b th:text="'Original sequence: ' + ${originalSeq}" style="color: teal;"></b></p>
+                                <label for="name" style="color: teal;">Pick a segment to insert</label>
+                                <input name="instsegment" id="instsegment">
+                                <label for="name" style="color: teal;">Index?</label>
+                                <input name="ind" id="ind">
+                                <button class="buttons">Answer</button>
+                                <p><b th:text="'Resulting sequence: ' + ${resultSeq}" style="color: teal;"></b></p>
+                            </div>
+                        </form>
+                        <form>
+                            <div>
+                                <label for="name" style="color: teal;">Pick to numbers to find their distance</label>
+                                <input name="num1" id="num1">
+                                <input name="num2" id="num2">
+                                <button class="buttons">Answer</button>
+                                <p><b th:text="'Distance from ' + ${num1} + ' to ' + ${num2} + '= ' + ${distance}" style="color: teal;"></b></p>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            <div class="unit3">
-                <br></br>
-                <h3>Unit 3</h3>
-                <form action="/rachelAbout" method="GET" id="attendance">
-                    <div>
-                        <label for="name" style="color: teal;">Will you be attending (Type True for Yes, False for No)</label>
-                        <input name="rsvp" id="rsvp">
-                        <label for="name" style="color: teal;">What meal would you like? (1=Beef, 2=Chicken, 3=Pasta, Anything 4 or greater=Fish</label>
-                        <input name="selection" id="selection">
-                        <button>RSVP</button>
-                        <p><b th:text="${option1}" style="color: teal;"></b></p>
-                    </div>
-                </form>
             </div>
-            <div class="unit4">
-                <h3>Unit 4</h3>
-                <form action="/rachelAbout" method="GET" id="coingame">
-                    <div>
-                        <label for="name" style="color: teal;">How many coins should each user start with?</label>
-                        <input name="startingCoins" id="startingCoins">
-                        <label for="name" style="color: teal;">How many rounds should the game last for?</label>
-                        <input name="maxRounds" id="maxRounds">
-                        <button>Play</button>
-                        <p><b th:text="'Result: ' + ${result}" style="color: teal;"></b></p>
+        </div>
+        <div class="wrap-collabsible">
+            <input id="collapsible3" class="toggle" type="checkbox">
+            <label for="collapsible3" class="lbl-toggle">Unit 3</label>
+            <div class="collapsible-content">
+                <div class="content-inner">
+                    <div class="unit3">
+                        <br></br>
+                        <h3>Unit 3</h3>
+                        <form action="/rachelAbout" method="GET" id="attendance">
+                            <div>
+                                <label for="name" style="color: teal;">Will you be attending? (Type True for Yes, False for No)</label>
+                                <input name="rsvp" id="rsvp">
+                                <label for="name" style="color: teal;">What meal would you like? (1=Beef, 2=Chicken, 3=Pasta, Anything 4 or greater=Fish</label>
+                                <input name="selection" id="selection">
+                                <button class="buttons">RSVP</button>
+                                <p><b th:text="${option1}" style="color: teal;"></b></p>
+                            </div>
+                        </form>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-collabsible">
+            <input id="collapsible4" class="toggle" type="checkbox">
+            <label for="collapsible4" class="lbl-toggle">Unit 4</label>
+            <div class="collapsible-content">
+                <div class="content-inner">
+                    <div class="unit4">
+                        <h3>Unit 4</h3>
+                        <form action="/rachelAbout" method="GET" id="coingame">
+                            <div>
+                                <label for="name" style="color: teal;">How many coins should each user start with?</label>
+                                <input name="startingCoins" id="startingCoins">
+                                <label for="name" style="color: teal;">How many rounds should the game last for?</label>
+                                <input name="maxRounds" id="maxRounds">
+                                <button class="buttons">Play</button>
+                                <p><b th:text="'Result: ' + ${result}" style="color: teal;"></b></p>
+                                <label for="name" style="color: teal;">String to analyze: </label>
+                                <input name="input" id="input">
+                                <button class="buttons">Analyze</button>
+                                <p><b th:text="${finalStreak}" style="color: teal;"></b></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-collabsible">
+            <input id="collapsible5" class="toggle" type="checkbox">
+            <label for="collapsible5" class="lbl-toggle">Unit 5</label>
+            <div class="collapsible-content">
+                <div class="content-inner">
+                    <div class="unit5">
+                        <h3>Unit 5</h3>
+                        <form action="/rachelAbout" method="GET" id="invitation">
+                            <div>
+                                <label for="name" style="color: teal;">Who is the host?</label>
+                                <input name="host" id="host">
+                                <label for="name" style="color: teal;">What is the address?</label>
+                                <input name="address" id="address">
+                                <label for="name" style="color: teal;">Who is the guest?</label>
+                                <input name="guest" id="guest">
+                                <button class="buttons">Generate Invitation</button>
+                                <p><b th:text="'Invitation: ' + ${invite}" style="color: teal;"></b></p>
+                                <label for="name" style="color: teal;">What is the prefix?</label>
+                                <input name="prefix" id="prefix">
+                                <label for="name" style="color: teal;">How many digits?</label>
+                                <input name="digits" id="digits">
+                                <button class="buttons">Generate Password</button>
+                                <p><b th:text="${passwordFinal}" style="color: teal;"></b></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-collabsible">
+            <input id="collapsible6" class="toggle" type="checkbox">
+            <label for="collapsible6" class="lbl-toggle">Unit 6</label>
+            <div class="collapsible-content">
+                <div class="content-inner">
+                    <div class="unit6">
+                        <h3>Unit 6</h3>
+                        <form action="/rachelAbout" method="GET" id="wordArray">
+                            <div>
+                                <label for="name" style="color: teal;">What words would you like to add to the array? (One word per input)</label>
+                                <input name="stringA" id="stringA">
+                                <input name="stringB" id="stringB">
+                                <input name="stringC" id="stringC">
+                                <input name="stringD" id="stringD">
+                                <input name="stringE" id="stringE">
+                                <button class="buttons">Generate List</button>
+                                <p><b th:text="${wordArray}" style="color: teal;"></b></p>
+                                <label for="name" style="color: teal;">How many items did each employee sell (starting with employee 0)?</label>
+                                <input name="employee0Sold" id="employee0Sold">
+                                <input name="employee1Sold" id="employee1Sold">
+                                <input name="employee2Sold" id="employee2Sold">
+                                <input name="employee3Sold" id="employee3Sold">
+                                <input name="employee4Sold" id="employee4Sold">
+                                <input name="employee5Sold" id="employee5Sold">
+                                <label for="name" style="color: teal;">What is the fixed wage?</label>
+                                <input name="fixedWage" id="fixedWage">
+                                <label for="name" style="color: teal;">What is the wage per item?</label>
+                                <input name="perItemWage" id="perItemWage">
+                                <button class="buttons">Calculate Wage</button>
+                                <p><b th:text="${generatedWage}" style="color: teal;"></b></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-collabsible">
+            <input id="collapsible7" class="toggle" type="checkbox">
+            <label for="collapsible7" class="lbl-toggle">Unit 7</label>
+            <div class="collapsible-content">
+                <div class="content-inner">
+                    <div class="unit7">
+                        <br></br>
+                        <h3>Unit 7</h3>
+                        <form action="/rachelAbout" method="GET" id="userName">
+                            <div>
+                                <label for="name" style="color: teal;">What is your first name?</label>
+                                <input name="first" id="first">
+                                <label for="name" style="color: teal;">What is your last name?</label>
+                                <input name="last" id="last">
+                                <button class="buttons">Generate</button>
+                                <p><b th:text="${generatedUserNames}" style="color: teal;"></b></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-collabsible">
+            <input id="collapsible8" class="toggle" type="checkbox">
+            <label for="collapsible8" class="lbl-toggle">Unit 8</label>
+            <div class="collapsible-content">
+                <div class="content-inner">
+                    <div class="unit8">
+                        <br></br>
+                        <h3>Unit 8</h3>
+                        <form action="/rachelAbout" method="GET" id="experimentalFarm">
+                            <div>
+                                <h5>Plots</h5>
+                                <h2>HTML Table</h2>
+                                <table>
+                                    <tr>
+                                        <td>corn,20</td>
+                                        <td>corn,30</td>
+                                        <td>peas,10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>peas,30</td>
+                                        <td>corn,40</td>
+                                        <td>corn,62</td>
+                                    </tr>
+                                    <tr>
+                                        <td>wheat,10</td>
+                                        <td>corn,50</td>
+                                        <td>rice,30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>corn,55</td>
+                                        <td>corn,30</td>
+                                        <td>peas,30</td>
+                                    </tr>
+                                </table>
+                                <p><b th:text="${corn}" style="color: teal;"></b></p>
+                                <p><b th:text="${peas}" style="color: teal;"></b></p>
+                                <p><b th:text="${banana}" style="color: teal;"></b></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-collabsible">
+            <input id="collapsible9" class="toggle" type="checkbox">
+            <label for="collapsible9" class="lbl-toggle">Unit 9</label>
+            <div class="collapsible-content">
+                <div class="content-inner">
+                    <div class="unit9">
+                        <br></br>
+                        <h3>Unit 9</h3>
+                        <form action="/rachelAbout" method="GET" id="book">
+                            <div>
+                                <h4>Part A</h4>
+                                <p><b th:text="'Listing 1: ' + ${listing1}" style="color: teal;"></b></p>
+                                <p><b th:text="'Listing 2: ' + ${listing2}" style="color: teal;"></b></p>
+                                <h4>Part B</h4>
+                                <p><b th:text="${lisa}" style="color: teal;"></b></p>
+                                <p><b th:text="${gary}" style="color: teal;"></b></p>
+                                <p><b th:text="${percy}" style="color: teal;"></b></p>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-collabsible">
+            <input id="collapsible10" class="toggle" type="checkbox">
+            <label for="collapsible10" class="lbl-toggle">Unit 10</label>
+            <div class="collapsible-content">
+                <div class="content-inner">
+                    <div class="unit10">
+                        <br></br>
+                        <h3>Unit 10</h3>
+                        <form action="/rachelAbout" method="GET" id="">
+                            <div>
+                                <p><b th:text="'Reduce 30/3: ' + ${r1}" style="color: teal;"></b></p>
+                                <p><b th:text="'Reduce 8/20: ' + ${r2}" style="color: teal;"></b></p>
+                                <p><b th:text="'Reduce 24/9: ' + ${r3}" style="color: teal;"></b></p>
+                                <p><b th:text="'Reduce 7/3: ' + ${r4}" style="color: teal;"></b></p>
+                                <p><b th:text="'Reduce 10/6: ' + ${r5}" style="color: teal;"></b></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+</div>
 </body>
 
 </html>

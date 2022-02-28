@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <div th:replace="fragments/head :: header"></div>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        header {
+            background-color: #17a2b8;
+            padding: 10px;
+            text-align: center;
+            font-size: 75px;
+            margin: 2%;
+            color: #003060;
+        }
+
+        .column {
+            float: left;
+            padding: 10px;
+            height: 300px;
+            background-color: #17a2b8;
+            margin: 15px;
+            margin-left: 2%;
+            margin-right: 2%;
+            color: #003060;
+        }
+
+        .notableLinks {
+            width 25%;
+        }
+
+        .aboutClub {
+            width: 75%;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        body {
+            background: #96d7c6;
+            color: black;
+            margin: 0;
+            padding: 0;
+            text-align: justify;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div th:replace="fragments/nav :: header"></div>
+    <header>
+        <div class="clubName" layout:fragment="clubName">
+            <h1>Club Name</h1>
+        </div>
+    </header>
+    <div class="column notableLinks" layout:fragment="notableLinks">
+        <section>
+            Notable Links
+        </section>
+    </div>
+    <div class="column aboutClub" layout:fragment="aboutClub">
+        <section>
+            About Club
+        </section>
+    </div>
+    <!--
+    <div class="clubDetails" layout:fragment="clubDetails">
+        <section>Club Details</section>
+    </div>
+    -->
+</body>
+</html>

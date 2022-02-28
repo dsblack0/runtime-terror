@@ -136,6 +136,7 @@
                     <p><b th:text="'Distance from ' + ${a} + ' to ' + ${b} + '= ' + ${straightDist}" style="color: teal;"></b></p>
                 </div>
             </form>
+            <p>Creating objects and manipulating parameters and behaviors of the object. Ex: Calculating distance using the position attributes of the object</p>
         </div>
         <div class="container" style="margin: 30px">
             <h2>
@@ -175,6 +176,7 @@
                     <p><b th:text="'Options 1 and 2 are the same? ' + ${compareOptions}" style="color: teal;"></b></p>
                 </div>
             </form>
+            <p>Boolean Expressions and if-statements to print various values depending on what the user inputs. Ex: If the user types "yes", their rsvp is "attending"</p>
         </div>
         <div class="container" style="margin: 30px">
             <h2>
@@ -189,6 +191,8 @@
                     <p><b th:text="'Most common consecutive char: ' + ${output}" style="color: teal;"></b></p>
                 </div>
             </form>
+            <p>Iteration through a string to determine the most common consecutive character. Use of for loops for String iteration</p>
+            <br>
             <p>Question 2: Coin Game</p>
             <form action="/kaavyaAbout" method="GET" id="frq4_2">
                 <div>
@@ -198,6 +202,171 @@
                     <input name="maxRounds" id="maxRounds">
                     <button>Game Outcome</button>
                     <p><b th:text="'Outcome: ' + ${outcome}" style="color: teal;"></b></p>
+                </div>
+            </form>
+            <p>Using various conditions to determine the outcome of a game (based on differences between different values). Lots of if/else statements</p>
+        </div>
+        <div class="container" style="margin: 30px">
+            <h2>
+                FRQ#5
+            </h2>
+            <p>Question 1: Invitation</p>
+            <script>
+                function inviteMessage() {
+                    const body = {  // body contains all data from user input form
+                        hostName: document.getElementById("hostName").value,
+                        attendee: document.getElementById("attendee").value,
+                        address: document.getElementById("address").value,
+                    };
+                    const request = {  // request sets up payload for api
+                        method: "POST",
+                        body: JSON.stringify(body),
+                        cache: "no-cache",
+                        headers: {
+                            "content-type": "application/json"
+                        }
+                    };
+
+                fetch("/inviteMessage", request)
+                    .then(response => {
+                        return response.text();
+                    })
+                    .then(inviteMessage => {
+                        document.getElementById("inviteMessage").innerHTML = inviteMessage;
+                    })
+                    .catch(err => {
+                        console.error(err);
+                    });
+                }
+            </script>
+                <div>
+                    <label for = "hostName" style="color: teal;">Host Name (default:"Host") :</label>
+                    <input name="hostName" id="hostName">
+                    <label for = "address" style="color: teal;">Address:</label>
+                    <input name="address" id="address">
+                    <label for = "attendee" style="color: teal;">Attendee:</label>
+                    <input name="attendee" id="attendee">
+                    <button onclick="inviteMessage()">Generate Invitation</button>
+                    <p><b id="inviteMessage" style="color: teal;"></b></p>
+                </div>
+            <p>Writing classes for the concatenation of strings. (Originally also had asynch on this, but it is not working right now)</p>
+            <br>
+            <p>Question 2: Password Generator</p>
+            <form action="/kaavyaAbout" method="GET" id="frq5_2">
+                <div>
+                    <label for = "digits" style="color: teal;">Number of digits:</label>
+                    <input name="digits" id="digits">
+                    <label for = "prefix" style="color: teal;">Password's prefix (Default: "A"): </label>
+                    <input name="prefix" id="prefix">
+                    <button>Generate Password</button>
+                    <p><b th:text="'New Password: ' + ${pw}" style="color: teal;"></b></p>
+                    <p><b th:text="${count} + ' passwords have been generated.'" style="color: teal;"></b></p>
+                </div>
+            </form>
+            <p>Generates passwords using the Math.random method. Also, can make passwords based on a specific starting prefix (if given)</p>
+        </div>
+        <div class="container" style="margin: 30px">
+            <h2>
+                FRQ#6
+            </h2>
+            <p>Question 1: Word Endings</p>
+            <form action="/kaavyaAbout" method="GET" id="frq6_1">
+                <div>
+                    <label for = "word" style="color: teal;">Input Word</label>
+                    <input name="word" id="word">
+                    <button>Output word</button>
+                </div>
+            </form>
+            <p>Uses String methods (like String.substring) to remove the "ing" ending on words.</p>
+            <br>
+            <p>Question 2: Payroll</p>
+            <form action="/kaavyaAbout" method="GET" id="frq6_2">
+                <div>
+                    <label for = "fixedWage" style="color: teal;">Baseline Pay</label>
+                    <input name="fixedWage" id="fixedWage">
+                    <label for = "perItemWage" style="color: teal;">Added Wage per Item</label>
+                    <input name="perItemWage" id="perItemWage">
+                    <label for = "itemsSold" style="color: teal;">itemsSold</label>
+                    <input name="itemsSold" id="itemsSold">
+                    <button>Employee Payroll</button>
+                    <p><b th:text="'Payroll: ' + ${wages}" style="color: teal;"></b></p>
+                </div>
+            </form>
+            <p>Uses for loops in combination with if and else statements to determine the payroll of various employees. </p>
+        </div>
+        <div class="container" style="margin: 30px">
+            <h2>
+                FRQ#7
+            </h2>
+            <form action="/kaavyaAbout" method="GET" id="frq7">
+                <div>
+                    <label for = "firstName" style="color: teal;">First Name</label>
+                    <input name="firstName" id="firstName">
+                    <label for = "lastName" style="color: teal;">Last Name</label>
+                    <input name="lastName" id="lastName">
+                    <button>Get Results</button>
+                    <p><b th:text="'Possible Usernames: ' + ${usernames[1]}" style="color: teal;"></b></p>
+                </div>
+            </form>
+        </div>
+        <div class="container" style="margin: 30px">
+            <h2>
+                FRQ#8
+            </h2>
+            <form action="/kaavyaAbout" method="GET" id="frq8">
+                <div>
+                        <label for = "cropType" style="color: teal;">Crop type</label>
+                        <input name="cropType" id="cropType">
+                    <label for = "rowNum" style="color: teal;">Row Number</label>
+                    <input name="rowNum" id="rowNum">
+                        <button>Get Results</button>
+                        <p><b th:text="'Highest Yield: ' + ${highestyield.getCropYield()}" style="color: teal;"></b></p>
+                    <p><b th:text="'Same crop: ' + ${samecrop}" style="color: teal;"></b></p>
+                </div>
+            </form>
+        </div>
+        <div class="container" style="margin: 30px">
+            <h2>
+                FRQ#9
+            </h2>
+            <form action="/kaavyaAbout" method="GET" id="frq9_1">
+                <div>
+                    <label for = "title" style="color: teal;">Book Title</label>
+                    <input name="title" id="title">
+                    <author for = "author" style="color: teal;">Author</author>
+                    <input name="author" id="author">
+                    <label for = "illustrator" style="color: teal;">Illustrator</label>
+                    <input name="illustrator" id="illustrator">
+                    <label for = "cost" style="color: teal;">cost</label>
+                    <input name="cost" id="cost">
+                    <button>Print Booklisting</button>
+                    <p><b th:text="'Booklisting: ' + ${booklisting}" style="color: teal;"></b></p>
+                </div>
+            </form>
+            <form action="/kaavyaAbout" method="GET" id="frq9_2">
+                <div>
+                    <label for = "species" style="color: teal;">Species name</label>
+                    <input name="species" id="species">
+                    <label for = "animalName" style="color: teal;">Animal name</label>
+                    <input name="animalName" id="animalName">
+                    <label for = "carnivore" style="color: teal;">Carnivore? </label>
+                    <select name="carnivore" id="carnivore">
+                        <option value="carnivore">Yes</option>
+                        <option value="herbivore">No</option>
+                    </select>
+                    <label for = "trunkLen" style="color: teal;">Trunk length (only if elephant)</label>
+                    <input name="trunkLen" id="trunkLen">
+                    <button>Print info</button>
+                    <p><b th:text="'Animal : ' + ${animalinfo}" style="color: teal;"></b></p>
+                </div>
+            </form>
+        </div>
+        <div class="container" style="margin: 30px">
+            <h2>
+                FRQ#10
+            </h2>
+            <form action="/kaavyaAbout" method="GET" id="frq10">
+                <div>
                 </div>
             </form>
         </div>
