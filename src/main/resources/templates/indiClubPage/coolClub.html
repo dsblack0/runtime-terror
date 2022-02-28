@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="indiClubPage/_layout">
+<body>
+<div layout:fragment="content">
+
+    <p>the content page with layout :)</p>
+
+</div>
+
+<div layout:fragment="clubName">
+    <div>
+        <p><b th:text="${clubname}" style="color: teal;"></b></p>
+    </div>
+</div>
+<div layout:fragment="aboutClub">
+    <div>
+        <p><b th:text="'President' + ${president}" style="color: teal;"></b></p>
+        <p><b th:text="${aboutclub}" style="color: teal;"></b></p>
+
+    </div>
+</div>
+<div layout:fragment="notableLinks">
+    <div>
+        <p><b th:text="${clublinks}" style="color: teal;"></b></p>
+    </div>
+</div>
+</body>
+</html>
