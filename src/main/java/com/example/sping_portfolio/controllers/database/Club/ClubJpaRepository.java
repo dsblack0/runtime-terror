@@ -1,19 +1,15 @@
 package com.example.sping_portfolio.controllers.database.Club;
 
-import org.springframework.data.jpa.repository.JpaRepository; //DON'T KNOW THE LOCATION OF THIS
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-//import org.springframework.data.jpa.repository.Query;
 
-//import javax.persistence.QueryHint;
 import java.util.List;
 
 public interface ClubJpaRepository extends JpaRepository<Club, Long> {
-    List<Club> findClubName(String name, String president);
+//
+//    @Query(value = "SELECT p FROM Club p WHERE p.name LIKE :Name or p.president LIKE :President", nativeQuery = true)
+//    List<Club> findByLikeTermNative(String Name, String President);
+    List<Club> findByName(String name);
 
-    @Query( //check this
-            value = "SELECT * FROM Club p WHERE p.name LIKE ?1 or p.president LIKE ?1",
-            nativeQuery = true)
-
-    List<Club> findByLikeTermNative(String term);
 
 }

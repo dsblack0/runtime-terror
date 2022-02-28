@@ -18,7 +18,7 @@ import java.util.*;
 @Controller
 public class ClubController implements WebMvcConfigurer {
     @Autowired
-    private ClubSqlRepository repository;
+    private ClubSqlRepository repository = new ClubSqlRepository();
 
     @GetMapping("/database")
     public String club(Model model){
@@ -26,10 +26,14 @@ public class ClubController implements WebMvcConfigurer {
         model.addAttribute("list", "list");
         return "/database";
     }
-
-    @GetMapping("/database/clubcreate")
-    public String clubAdd(Club club) {
-        return "/database/clubcreate";
+    @GetMapping("/databse")
+    public Club save(@RequestBody Club clubObj){
+        return repository.save(clubObj);
     }
+
+//    @GetMapping("/database/clubcreate")
+//    public String clubAdd(Club club) {
+//        return "/database/clubcreate";
+//    }
     //ask which one of the GetMappings are actually relevant to the base code
 }
