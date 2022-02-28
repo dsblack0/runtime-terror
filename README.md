@@ -54,7 +54,7 @@
 | ---   | ---        | ---      | ---        |
 | Sami | |  | <ul><li>[ ] DONE</li></ul> | 
 | Rachel | | [Loom](https://www.loom.com/share/4b84972de0e0416cb550df14d07bd77c) | <ul><li>[ ] DONE</li></ul> | 
-| Adrita | | | <ul><li>[ ] DONE</li></ul> | 
+| Adrita | | [Video ](https://drive.google.com/file/d/1JGylJwymUGD5dQh3J_vEoODF_lNCQIU6/view?usp=sharing) | <ul><li>[ ] DONE</li></ul> | 
 | Kaavya | | | <ul><li>[ ] DONE</li></ul> | 
 | Sam | Finish Home & Reviews Pages | [Loom](https://www.loom.com/share/fbdbc86cd83b43008ca6d9685a7cdf2d) | <ul><li>[ ] DONE</li></ul> |
 
@@ -64,7 +64,7 @@
 | ---   | ---        | ---      | ---        |
 | Sami | | | <ul><li>[ ] DONE</li></ul> | 
 | Rachel | Implement Database on Search | | <ul><li>[ ] DONE</li></ul> | 
-| Adrita | | | <ul><li>[ ] DONE</li></ul> | 
+| Adrita | | | <ul><li> [ ] DONE</li></ul> | 
 | Kaavya | | | <ul><li>[ ] DONE</li></ul> | 
 | Sam | Implement Database on Home Page | | <ul><li>[ ] DONE</li></ul> |
 
