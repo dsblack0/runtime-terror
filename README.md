@@ -54,7 +54,7 @@
 | ---   | ---        | ---      | ---        |
 | Sami | Independent Work | - | <ul><li>[ ] DONE</li></ul> | 
 | Rachel | Individual Club Pages + Adding Clubs | [Loom](https://www.loom.com/share/4b84972de0e0416cb550df14d07bd77c) | <ul><li>[ ] DONE</li></ul> | 
-| Adrita | Database with POJOs | [Video ](https://drive.google.com/file/d/1JGylJwymUGD5dQh3J_vEoODF_lNCQIU6/view?usp=sharing) | <ul><li>[ ] DONE</li></ul> | 
+| Adrita | Database with POJOs | [Video ](https://drive.google.com/file/d/1JGylJwymUGD5dQh3J_vEoODF_lNCQIU6/view?usp=sharing) | <ul><li>[x] DONE</li></ul> | 
 | Kaavya | Finish Styling | | <ul><li>[ ] DONE</li></ul> | 
 | Sam | Finish Home & Reviews Pages | [Loom](https://www.loom.com/share/fbdbc86cd83b43008ca6d9685a7cdf2d) | <ul><li>[ ] DONE</li></ul> |
 
