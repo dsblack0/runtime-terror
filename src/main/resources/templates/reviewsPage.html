@@ -45,14 +45,14 @@
         <!-- get user input to add new reviews -->
         <h2 style="text-align: center;">ADD YOUR OWN REVIEW</h2>
         <div class="add-reviews">
-            <form action="#" th:action="@{/reviewsPage}" method="GET" id="reviewsForm" th:object="${review}" method="POST" style="margin-left: 50px; margin-inside: 20px">
+            <form action="/reviewsPage" method="GET" id="reviewsForm" style="margin-left: 50px; margin-inside: 20px">
                 <div>
-                    <label style="margin-top: 20px;" for="name">Name of Club:</label>
-                    <input class="input" th:field="*{name}" name="clubName" id="name">
-                    <p style="margin-bottom: 5px"><label for="review">Write your review:</label></p>
-                    <textarea class="input" th:field="*{review}" name="reviewText" id="review" style="width: 90%; height: 75px;"></textarea>
-                    <p style="margin-bottom: 5px"><label for="author">Name (optional):</label></p>
-                    <input class="input" th:field="*{author}" name="reviewerName" id="author">
+                    <label style="margin-top: 20px;" for="clubName">Name of Club:</label>
+                    <input class="input" name="clubName" id="clubName">
+                    <p style="margin-bottom: 5px"><label for="reviewText">Write your review:</label></p>
+                    <textarea class="input" name="reviewText" id="reviewText" style="width: 90%; height: 75px;"></textarea>
+                    <p style="margin-bottom: 5px"><label for="reviewerName">Name (optional):</label></p>
+                    <input class="input" name="reviewerName" id="reviewerName">
                     <p><button class="button">Add</button></p>
                 </div>
             </form>

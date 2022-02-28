@@ -176,7 +176,7 @@ public class MainController {
         model.addAttribute("tuesday", tuesday);
         model.addAttribute("wednesday", wednesday);
         model.addAttribute("thursday", thursday);
-        model.addAttribute("fridat", friday);
+        model.addAttribute("friday", friday);
 
         return "index"; // returns HTML VIEW (greeting)
     }
