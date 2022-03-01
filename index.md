@@ -56,7 +56,7 @@
 | Rachel | Individual Club Pages + Adding Clubs | [Loom](https://www.loom.com/share/4b84972de0e0416cb550df14d07bd77c) |
 | Adrita | Database with POJOs | [Video ](https://drive.google.com/file/d/1JGylJwymUGD5dQh3J_vEoODF_lNCQIU6/view?usp=sharing) |
 | Kaavya | Finish Styling | |
-| Sam | Finish Home & Reviews Pages | [Loom](https://www.loom.com/share/fbdbc86cd83b43008ca6d9685a7cdf2d) |
+| Sam | Finish Home & Reviews Pages | [Loom](https://www.loom.com/share/0bd914f03ef54c4894128d1e3f7785f1) |
 
 ## Week 10 - PBL Part 2
 
