@@ -86,6 +86,11 @@
                     </div>
                 </li>
             </ul>
+
+            <!-- Google Search -->
+            <div class="px-3">
+                <input id="search" type="search" placeholder="Search Google" aria-label="Search" style="background-color: #f7cb2d; border: none; height: 30px; width: 200px;">
+            </div>
             <!-- Add Club -->
             <div>
                 <button style="background-color: #f7cb2d; /* Yellow background */
@@ -124,6 +129,24 @@
                 }
                 // Clock refresh frequency
                 setInterval(clock, 1000);
+            </script>
+            <script>
+                const search = document.getElementById('search');
+                const google = 'https://www.google.com/search?q=site%3A+';
+                const site = 'https://dnclubsearch.tech';
+
+                function submitted(event) {
+                    if (event.key === 'Enter') {
+                        event.preventDefault();
+                        const url = google
+                            + site
+                            + '+'
+                            + search.value;
+                        const win = window.open(url, '_blank');
+                        win.focus();
+                    }
+                }
+                search.addEventListener('keypress', submitted);
             </script>
 
         </div>
