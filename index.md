@@ -53,7 +53,7 @@
 | Name | Requirement | Evidence |
 | ---   | ---        | ---      |
 | Sami | Independent Work | - |
-| Rachel | Individual Club Pages + Adding Clubs | [Loom](https://www.loom.com/share/4b84972de0e0416cb550df14d07bd77c) |
+| Rachel | Individual Club Pages + Adding Clubs | [Loom](https://www.loom.com/share/29e54257836c43d0bd8351aa9e8cd5de) |
 | Adrita | Database with POJOs | [Video ](https://drive.google.com/file/d/1JGylJwymUGD5dQh3J_vEoODF_lNCQIU6/view?usp=sharing) |
 | Kaavya | Finish Styling | |
 | Sam | Finish Home & Reviews Pages | [Loom](https://www.loom.com/share/0bd914f03ef54c4894128d1e3f7785f1) |
